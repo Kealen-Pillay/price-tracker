@@ -141,3 +141,35 @@ def test_jsonld_product_group_pools_variant_offers():
       {"@type":"Product","name":"XT-6 - 9","offers":{"@type":"Offer","price":"200.00","availability":"http://schema.org/InStock"}}]}</script>"""
     o = parse_html(html)
     assert (o.price, o.in_stock, o.title) == (200.0, True, "XT-6")
+
+
+# ---- out-of-stock offers are disregarded
+def test_out_of_stock_offers_never_alert():
+    item = {"id": "o", "name": "Thing", "target_price": 100}
+    state = {}
+    assert alerts.evaluate(item, "u", "S", {"price": 50.0, "in_stock": False}, {"price": 150.0, "in_stock": True}, [], state) == []
+    assert "target_at" not in state["alerts"]["o|u"]  # a later in-stock hit still alerts
+    assert alerts.evaluate(item, "u", "S", {"price": 90.0, "in_stock": True}, {"price": 50.0, "in_stock": False}, [], state)
+
+
+def test_lowest_seen_ignores_out_of_stock_history():
+    item = {"id": "o", "name": "Thing"}
+    history = [{"price": 100.0, "in_stock": True}, {"price": 60.0, "in_stock": False}]
+    msgs = alerts.evaluate(item, "u", "S", {"price": 80.0, "in_stock": True}, {"price": 100.0, "in_stock": True}, history, {})
+    assert "20%" in msgs[0] and "lowest price seen" in msgs[0]
+    assert alerts.buyable_prices(history) == [100.0]
+
+
+def test_back_in_stock_is_not_reported_as_a_drop():
+    item = {"id": "o", "name": "Thing"}
+    msgs = alerts.evaluate(item, "u", "S", {"price": 80.0, "in_stock": True}, {"price": 200.0, "in_stock": False}, [], {})
+    assert len(msgs) == 1 and "Back in stock" in msgs[0]
+
+
+def test_all_time_low_and_best_offer_skip_out_of_stock():
+    import tracker.__main__ as cli
+    entry = {"offers": {
+        "a": {"retailer": "A", "price": 50.0, "in_stock": False, "history": [{"price": 50.0, "in_stock": False}]},
+        "b": {"retailer": "B", "price": 90.0, "in_stock": True, "history": [{"price": 95.0, "in_stock": True}, {"price": 90.0, "in_stock": True}]},
+    }}
+    assert cli.best_offer(entry)[0] == "b" and cli.all_time_low(entry) == 90.0

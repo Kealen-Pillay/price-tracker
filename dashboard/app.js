@@ -112,12 +112,16 @@ function render() {
     const urls = item.urls || [];
     const offers = Object.fromEntries(urls.map((u) => [u, entry.offers?.[u] || { retailer: new URL(u).hostname.replace(/^www\./, "") }]));
     const best = bestOffer(offers);
-    const allHist = Object.values(offers).flatMap((o) => o.history || []).filter((h) => h.price != null);
+    // Out-of-stock prices can't be bought, so they don't count towards "lowest seen" or the chart.
+    const allHist = Object.values(offers).flatMap((o) => o.history || []).filter((h) => h.price != null && h.in_stock !== false);
+    const rows = Object.entries(offers);
+    const soldOut = rows.filter(([, o]) => o.in_stock === false);
+    const available = rows.filter(([, o]) => o.in_stock !== false);
     const low = allHist.length ? Math.min(...allHist.map((h) => h.price)) : null;
     const target = item.target_price;
     let badge = "";
     if (best && target != null && best[1].price <= target) badge = `<span class="badge good">At or below target</span>`;
-    else if (best && low != null && best[1].price <= low && allHist.length > 1) badge = `<span class="badge good">Lowest seen</span>`;
+    else if (best && low != null && best[1].price <= low && (best[1].history || []).length > 1) badge = `<span class="badge good">Lowest seen</span>`;
     else if (best && best[1].was) badge = `<span class="badge warn">On sale</span>`;
 
     const card = document.createElement("section");
@@ -134,15 +138,15 @@ function render() {
       <div class="stats">
         <div class="stat"><div class="label">Best now</div>
           <div class="price">${best ? money(best[1].price) : "—"}</div>
-          <div class="muted small">${best ? esc(best[1].retailer) : "Waiting for first check"} ${badge}</div></div>
+          <div class="muted small">${best ? esc(best[1].retailer) : soldOut.length === rows.length && rows.length ? "Out of stock everywhere" : "Waiting for first check"} ${badge}</div></div>
         <div class="stat"><div class="label">Target</div><div class="price">${money(target)}</div></div>
         <div class="stat"><div class="label">Lowest seen</div><div class="price">${money(low)}</div></div>
       </div>
       ${allHist.length > 1 ? `<div class="chart"><canvas></canvas></div>` : ""}
       <div class="table-wrap"><table>
         <thead><tr><th>Store</th><th>Price</th><th>Stock</th><th>Checked</th><th></th></tr></thead>
-        <tbody>${Object.entries(offers).map(([u, o]) => `
-          <tr>
+        <tbody>${[...available, ...soldOut].map(([u, o]) => `
+          <tr class="${o.in_stock === false ? "oos" : ""}">
             <td>${esc(o.retailer)}${o.title ? `<div class="muted small">${esc(o.title)}</div>` : ""}${o.method === "json-ld-range" ? `<div class="err">Multi-size page: price may not be your size</div>` : ""}
                 ${o.error ? `<div class="err">${esc(o.error)}</div>` : ""}</td>
             <td class="num">${money(o.price)}${o.was ? `<span class="was">${money(o.was)}</span>` : ""}</td>
@@ -150,7 +154,8 @@ function render() {
             <td class="muted small">${ago(o.checked)}</td>
             <td><a href="${esc(u)}" target="_blank" rel="noopener">Open ↗</a></td>
           </tr>`).join("")}
-        </tbody></table></div>`;
+        </tbody></table></div>
+      ${soldOut.length ? `<button class="link" data-act="oos">Show ${soldOut.length} out of stock</button>` : ""}`;
     main.append(card);
 
     card.querySelector('[data-act="remove"]').onclick = () => {
@@ -174,6 +179,12 @@ function render() {
       }, `Add store to ${id}`).catch(fail);
     };
 
+    const oosBtn = card.querySelector('[data-act="oos"]');
+    if (oosBtn) oosBtn.onclick = () => {
+      const shown = card.classList.toggle("show-oos");
+      oosBtn.textContent = `${shown ? "Hide" : "Show"} ${soldOut.length} out of stock`;
+    };
+
     const canvas = card.querySelector("canvas");
     if (canvas) drawChart(canvas, offers, target);
   }
@@ -184,16 +195,18 @@ function drawChart(canvas, offers, target) {
   const grid = css.getPropertyValue("--border").trim();
   const text = css.getPropertyValue("--muted").trim();
   const datasets = Object.values(offers)
-    .filter((o) => (o.history || []).length)
+    .filter((o) => (o.history || []).some((h) => h.price != null && h.in_stock !== false))
     .map((o, i) => ({
-      label: o.retailer,
-      data: o.history.filter((h) => h.price != null).map((h) => ({ x: h.t, y: h.price })),
+      label: o.title && o.title !== o.retailer ? `${o.retailer} – ${o.title}` : o.retailer,
+      // Out-of-stock periods become gaps in the line.
+      data: o.history.filter((h) => h.price != null).map((h) => ({ x: h.t, y: h.in_stock === false ? null : h.price })),
       borderColor: COLORS[i % COLORS.length],
       backgroundColor: COLORS[i % COLORS.length],
       stepped: "before", pointRadius: 2, borderWidth: 2,
     }));
   if (target != null) {
     const xs = datasets.flatMap((d) => d.data.map((p) => p.x)).sort();
+    if (!xs.length) return;
     datasets.push({ label: "Target", data: [{ x: xs[0], y: target }, { x: xs.at(-1), y: target }],
       borderColor: text, borderDash: [5, 5], pointRadius: 0, borderWidth: 1 });
   }
@@ -203,7 +216,7 @@ function drawChart(canvas, offers, target) {
     options: {
       maintainAspectRatio: false, interaction: { mode: "nearest", intersect: false },
       scales: {
-        x: { type: "time", time: { unit: "day", tooltipFormat: "d MMM yyyy" }, grid: { color: grid }, ticks: { color: text, maxRotation: 0, autoSkipPadding: 16 } },
+        x: { type: "time", time: { minUnit: "hour", tooltipFormat: "d MMM yyyy, h:mm a" }, grid: { color: grid }, ticks: { color: text, maxRotation: 0, autoSkipPadding: 16 } },
         y: { grid: { color: grid }, ticks: { color: text, callback: (v) => "$" + v } },
       },
       plugins: {

@@ -11,42 +11,48 @@ def fmt(p: float | None) -> str:
     return "?" if p is None else f"${p:,.2f}"
 
 
+def buyable_prices(history: list[dict]) -> list[float]:
+    return [h["price"] for h in history if h.get("price") is not None and h.get("in_stock") is not False]
+
+
 def evaluate(item: dict, url: str, retailer: str, offer: dict, prev: dict | None,
              history: list[dict], state: dict) -> list[str]:
     """Return alert lines for one retailer offer. Mutates state['alerts'] for de-duplication."""
     key = f"{item['id']}|{url}"
     sent = state.setdefault("alerts", {}).setdefault(key, {})
     price, in_stock = offer.get("price"), offer.get("in_stock")
-    if price is None:
-        return []
+    if price is None or in_stock is False:
+        return []  # out-of-stock offers can't be bought, so they never trigger alerts
     lines: list[str] = []
     label = f"<b>{escape(item['name'])}</b> at {escape(retailer)}: {fmt(price)}"
     if offer.get("was"):
         label += f" (was {fmt(offer['was'])}, save {fmt(offer['was'] - price)})"
     link = f'\n<a href="{escape(url)}">View deal</a>'
 
-    prev_price = prev.get("price") if prev else None
-    past = [h["price"] for h in history if h.get("price") is not None]  # history before this check
+    back_in_stock = bool(prev) and prev.get("in_stock") is False
+    prev_price = prev.get("price") if prev and not back_in_stock else None
+    # Buyable prices before this check; out-of-stock prices don't count towards "lowest seen".
+    past = buyable_prices(history)
+    atl = " — 🏆 lowest price seen" if past and price < min(past) else ""
 
     # 1. Target price reached (alert again only if it drops further below the last alerted price).
     target = item.get("target_price")
-    if target is not None and price <= float(target) and in_stock is not False:
+    if target is not None and price <= float(target):
         if sent.get("target_at") is None or price < sent["target_at"]:
-            lines.append(f"🎯 Target hit (≤ {fmt(float(target))}) — {label}{link}")
+            lines.append(f"🎯 Target hit (≤ {fmt(float(target))}) — {label}{atl}{link}")
             sent["target_at"] = price
-    elif target is not None and price > float(target):
+    elif target is not None:
         sent.pop("target_at", None)  # re-arm once it goes back above target
 
-    # 2. Meaningful drop vs the previous check, flagged as an all-time low where applicable.
-    if prev_price and price < prev_price and not lines:
+    # 2. Back in stock (replaces the drop check, since there's no buyable previous price to compare).
+    if back_in_stock and not lines:
+        lines.append(f"✅ Back in stock — {label}{atl}{link}")
+
+    # 3. Meaningful drop vs the previous check.
+    elif prev_price and price < prev_price and not lines:
         pct = (prev_price - price) / prev_price * 100
         if pct >= MIN_DROP_PCT:
-            atl = " — 🏆 lowest price seen" if past and price < min(past) else ""
             lines.append(f"📉 Price drop {pct:.0f}% (from {fmt(prev_price)}) — {label}{atl}{link}")
-
-    # 3. Back in stock.
-    if prev and prev.get("in_stock") is False and in_stock is True:
-        lines.append(f"✅ Back in stock — {label}{link}")
 
     return lines
 

@@ -31,7 +31,7 @@ def best_offer(entry: dict) -> tuple[str, dict] | None:
 
 
 def all_time_low(entry: dict) -> float | None:
-    prices = [h["price"] for o in entry.get("offers", {}).values() for h in o.get("history", []) if h.get("price")]
+    prices = [p for o in entry.get("offers", {}).values() for p in alerts.buyable_prices(o.get("history", []))]
     return min(prices) if prices else None
 
 
