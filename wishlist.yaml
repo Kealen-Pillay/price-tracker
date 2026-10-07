@@ -1,0 +1,9 @@
+# Wishlist — items to track. Edit by hand, from the dashboard, or via Telegram (/add, /link, /target, /remove).
+# Each item lists one product URL per retailer. target_price (NZD) is optional: you get an alert when any retailer is at or below it.
+items:
+- id: dior-sauvage-edp-100ml
+  name: Dior Sauvage EDP 100ml
+  target_price: 220
+  urls:
+  - https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml
+  - https://pricespy.co.nz/product.php?p=4682013

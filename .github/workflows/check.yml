@@ -1,0 +1,82 @@
+name: Check prices
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # price check 4x a day
+    - cron: "0 20 * * 0"    # weekly digest: Monday ~8–9am NZ time
+  push:
+    branches: [main]
+    paths: [wishlist.yaml, retailers.yaml, dashboard/**, tracker/**]
+  workflow_dispatch:
+    inputs:
+      digest:
+        description: Also send the weekly digest
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: price-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Run tests
+        run: pip install pytest && python -m pytest -q
+
+      - name: Check prices
+        if: github.event.schedule != '0 20 * * 0'
+        run: python -m tracker check
+
+      - name: Send weekly digest
+        if: github.event.schedule == '0 20 * * 0' || inputs.digest
+        run: python -m tracker digest
+
+      - name: Commit price data
+        run: |
+          git config user.name "price-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data wishlist.yaml
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update prices $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push
+
+      - name: Build dashboard
+        run: python -m tracker build-site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: check
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

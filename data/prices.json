@@ -1,0 +1,52 @@
+{
+ "updated": "2026-10-07T01:43:49+00:00",
+ "items": {
+  "dior-sauvage-edp-100ml": {
+   "offers": {
+    "https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml": {
+     "history": [
+      {
+       "t": "2026-10-07T01:43:48+00:00",
+       "price": 249.99,
+       "was": 259.0,
+       "in_stock": true
+      }
+     ],
+     "retailer": "Chemist Warehouse",
+     "title": "Christian Dior Sauvage Eau De Parfum 100ml",
+     "price": 249.99,
+     "was": 259.0,
+     "in_stock": true,
+     "method": "microdata",
+     "checked": "2026-10-07T01:43:48+00:00",
+     "error": null
+    },
+    "https://pricespy.co.nz/product.php?p=4682013": {
+     "history": [
+      {
+       "t": "2026-10-07T01:43:48+00:00",
+       "price": 255.0,
+       "was": null,
+       "in_stock": null
+      }
+     ],
+     "retailer": "PriceSpy (lowest NZ price)",
+     "title": "Dior Sauvage edp 100ml",
+     "price": 255.0,
+     "was": null,
+     "in_stock": null,
+     "method": "json-ld",
+     "checked": "2026-10-07T01:43:48+00:00",
+     "error": null
+    }
+   },
+   "name": "Dior Sauvage EDP 100ml",
+   "target_price": 220,
+   "tracked": true,
+   "urls": [
+    "https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml",
+    "https://pricespy.co.nz/product.php?p=4682013"
+   ]
+  }
+ }
+}

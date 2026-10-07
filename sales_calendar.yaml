@@ -1,0 +1,28 @@
+# Recurring NZ sale events used for the weekly digest. Dates are approximate — retailers shift them each year.
+# Fixed:   start: "MM-DD", end: "MM-DD"
+# Rule:    rule: black_friday | cyber_monday | mothers_day | fathers_day  (computed each year), lead_days: days of promos before
+events:
+- name: Valentine's Day fragrance promos
+  start: "02-01"
+  end: "02-14"
+- name: Mother's Day gift sales (2nd Sunday in May)
+  rule: mothers_day
+  lead_days: 14
+- name: Father's Day gift sales (1st Sunday in September) — men's fragrance often discounted
+  rule: fathers_day
+  lead_days: 14
+- name: Singles' Day (11.11) online sales
+  start: "11-10"
+  end: "11-12"
+- name: Black Friday
+  rule: black_friday
+  lead_days: 7
+- name: Cyber Monday
+  rule: cyber_monday
+  lead_days: 0
+- name: Christmas gift-set season (fragrance gift sets, often cheaper than the bottle alone)
+  start: "11-15"
+  end: "12-24"
+- name: Boxing Day / New Year sales
+  start: "12-26"
+  end: "01-05"

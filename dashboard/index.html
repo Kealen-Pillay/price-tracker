@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wishlist Prices</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏷️</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Wishlist Prices</h1>
+      <p class="muted" id="updated">Loading…</p>
+    </div>
+    <div class="actions">
+      <button id="addBtn" class="primary">+ Add item</button>
+      <button id="settingsBtn" title="GitHub connection">⚙︎</button>
+    </div>
+  </header>
+
+  <main id="items"></main>
+
+  <dialog id="addDialog">
+    <form method="dialog" id="addForm">
+      <h2>Track a new item</h2>
+      <label>Name <input name="name" required placeholder="Dior Sauvage EDP 100ml"></label>
+      <label>Target price (NZD, optional) <input name="target" type="number" step="0.01" min="0" placeholder="220"></label>
+      <label>Product URLs — one per retailer, one per line
+        <textarea name="urls" rows="5" required placeholder="https://www.chemistwarehouse.co.nz/buy/…&#10;https://pricespy.co.nz/product.php?p=…"></textarea>
+      </label>
+      <p class="muted small">Tip: use the link for the exact size you want. Farmers can't be scraped, so add its PriceSpy listing instead.</p>
+      <div class="row"><button value="cancel" formnovalidate>Cancel</button><button class="primary" value="save">Save</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="settingsDialog">
+    <form method="dialog" id="settingsForm">
+      <h2>Connect to GitHub</h2>
+      <p class="muted small">The dashboard saves wishlist changes by committing <code>wishlist.yaml</code> to your repo, which
+        triggers a price check. Create a <b>fine-grained token</b> limited to this repo with <i>Contents: Read and write</i>.
+        It's stored only in this browser.</p>
+      <label>Repository (owner/name) <input name="repo" required placeholder="you/price-tracker"></label>
+      <label>Token <input name="token" type="password" required placeholder="github_pat_…"></label>
+      <div class="row"><button value="cancel" formnovalidate>Cancel</button><button class="primary" value="save">Save</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

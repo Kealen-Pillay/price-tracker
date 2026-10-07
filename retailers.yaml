@@ -1,0 +1,26 @@
+# Per-retailer settings, keyed by domain. Unknown domains still work via the generic parser
+# (JSON-LD -> microdata -> meta tags), so only add entries for names, overrides, or browser rendering.
+#   name:               display name
+#   js: true            always render with headless Chromium (Playwright)
+#   price_selector:     CSS selector override for the current price
+#   was_price_selector: CSS selector for the RRP / "was" price
+#   blocked: "<reason>" skip this retailer and explain why
+www.chemistwarehouse.co.nz:
+  name: Chemist Warehouse
+  was_price_selector: .retailPrice
+pricespy.co.nz:
+  name: PriceSpy (lowest NZ price)
+www.bargainchemist.co.nz:
+  name: Bargain Chemist
+www.lifepharmacy.co.nz:
+  name: Life Pharmacy
+www.mecca.com:
+  name: MECCA
+  js: true
+www.sephora.nz:
+  name: Sephora NZ
+www.adorebeauty.co.nz:
+  name: Adore Beauty
+www.farmers.co.nz:
+  name: Farmers
+  blocked: Farmers' Akamai firewall blocks automated requests (even headless Chrome). Track it via its PriceSpy listing instead.
