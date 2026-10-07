@@ -65,7 +65,8 @@ class Fetcher:
             return None
         handle = p.path.split("/products/", 1)[1].strip("/").split("/")[0]
         try:
-            r = self.client.get(f"{p.scheme}://{p.netloc}/products/{handle}.js")
+            # country=NZ selects NZD pricing on multi-market stores; GitHub's runners are in the US.
+            r = self.client.get(f"{p.scheme}://{p.netloc}/products/{handle}.js", params={"country": "NZ"})
             if r.status_code == 200:
                 data = r.json()
                 if isinstance(data, dict) and "variants" in data:

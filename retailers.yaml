@@ -24,3 +24,15 @@ www.adorebeauty.co.nz:
 www.farmers.co.nz:
   name: Farmers
   blocked: Farmers' Akamai firewall blocks automated requests (even headless Chrome). Track it via its PriceSpy listing instead.
+www.jbhifi.co.nz:
+  name: JB Hi-Fi
+www.pbtech.co.nz:
+  name: PB Tech
+www.drmartens.co.nz:
+  name: Dr Martens NZ
+www.birkenstock.co.nz:
+  name: Birkenstock NZ
+www.jdsports.co.nz:
+  name: JD Sports
+www.orbitkey.com.au:
+  name: Orbitkey

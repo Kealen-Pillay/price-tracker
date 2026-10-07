@@ -187,11 +187,15 @@ def parse_shopify_js(data: dict) -> Offer:
     v = min(avail, key=lambda x: x.get("price") or 0) if avail else {}
     price = (v.get("price") if v else data.get("price")) or 0
     was = v.get("compare_at_price") if v else data.get("compare_at_price")
+    title = data.get("title")
+    colour = next((t.split(":", 1)[1] for t in data.get("tags") or [] if "PRIMARYCOLOUR:" in t.upper()), None)
+    if title and colour and colour.lower() not in title.lower():  # e.g. JD Sports titles every colourway "XT-6"
+        title = f"{title} – {colour.title()}"
     return Offer(
         price=price / 100,
         was_price=(was / 100) if was and was > price else None,
         in_stock=bool(data.get("available")),
-        title=data.get("title"),
+        title=title,
         currency=None,
         method="shopify",
     )

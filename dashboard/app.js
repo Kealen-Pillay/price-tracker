@@ -143,7 +143,7 @@ function render() {
         <thead><tr><th>Store</th><th>Price</th><th>Stock</th><th>Checked</th><th></th></tr></thead>
         <tbody>${Object.entries(offers).map(([u, o]) => `
           <tr>
-            <td>${esc(o.retailer)}${o.method === "json-ld-range" ? `<div class="err">Multi-size page: price may not be your size</div>` : ""}
+            <td>${esc(o.retailer)}${o.title ? `<div class="muted small">${esc(o.title)}</div>` : ""}${o.method === "json-ld-range" ? `<div class="err">Multi-size page: price may not be your size</div>` : ""}
                 ${o.error ? `<div class="err">${esc(o.error)}</div>` : ""}</td>
             <td class="num">${money(o.price)}${o.was ? `<span class="was">${money(o.was)}</span>` : ""}</td>
             <td>${o.in_stock === false ? "Out" : o.in_stock ? "In stock" : "—"}</td>

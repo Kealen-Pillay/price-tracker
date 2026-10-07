@@ -131,8 +131,10 @@ def cmd_check(args) -> int:
             entry = prices["items"].setdefault(item["id"], {"offers": {}})
             entry.update(name=item["name"], target_price=item.get("target_price"), tracked=True,
                          urls=list(item["urls"]))
+            hosts = [urlparse(u).netloc for u in item["urls"]]
             for url in item["urls"]:
                 retailer_name = fetcher.retailer_for(url)["name"]
+                shared_host = hosts.count(urlparse(url).netloc) > 1  # e.g. several colours at one store
                 slot = entry["offers"].setdefault(url, {"history": []})
                 prev = {k: slot.get(k) for k in ("price", "was", "in_stock")} if slot.get("price") is not None else None
                 checked = store.now_iso()
@@ -147,7 +149,8 @@ def cmd_check(args) -> int:
                 print(f"  ✓ {item['name']} @ {retailer['name']}: {alerts.fmt(offer.price)}"
                       f"{' (was ' + alerts.fmt(offer.was_price) + ')' if offer.was_price else ''}"
                       f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}  [{offer.method}]")
-                messages += alerts.evaluate(item, url, retailer["name"], point, prev, slot["history"], state)
+                label = f"{retailer['name']} ({offer.title})" if shared_host and offer.title else retailer["name"]
+                messages += alerts.evaluate(item, url, label, point, prev, slot["history"], state)
                 alerts.recovered(item, url, state)
                 store.record(slot["history"], point)
                 slot.update(retailer=retailer["name"], title=offer.title, price=offer.price, was=offer.was_price,

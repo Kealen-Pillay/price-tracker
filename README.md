@@ -11,7 +11,8 @@ GitHub Actions + GitHub Pages — no paid APIs.
 |---|---|---|
 | Chemist Warehouse NZ | schema.org microdata in page HTML | also reads the "Why pay $X" RRP |
 | PriceSpy NZ | JSON-LD `AggregateOffer` | lowest price across the NZ shops PriceSpy lists |
-| Bargain Chemist, Life Pharmacy (and any Shopify store) | public `/products/<handle>.js` JSON | exact variant price + compare-at price |
+| Bargain Chemist, Life Pharmacy, JB Hi-Fi, Birkenstock, JD Sports, Orbitkey (any Shopify store) | public `/products/<handle>.js?country=NZ` JSON | exact variant price + compare-at price, in NZD |
+| Dr Martens NZ, PB Tech | JSON-LD | |
 | MECCA | JSON-LD via headless Chromium | use the **size-specific** URL (ends in `I-xxxxxx`) |
 | Any other store | JSON-LD → microdata → meta tags, browser fallback | add CSS selectors in `retailers.yaml` if needed |
 | **Farmers** | ❌ blocked | Akamai firewall rejects all automated traffic. Add Farmers' PriceSpy listing instead. |
