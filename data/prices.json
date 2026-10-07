@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T03:55:49+00:00",
+ "updated": "2026-10-07T04:01:21+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -18,7 +18,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-07T03:52:17+00:00",
+     "checked": "2026-10-07T03:57:53+00:00",
      "error": null
     },
     "https://pricespy.co.nz/product.php?p=4682013": {
@@ -36,7 +36,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-07T03:52:31+00:00",
+     "checked": "2026-10-07T03:58:06+00:00",
      "error": null
     }
    },
@@ -65,7 +65,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-07T03:52:33+00:00",
+     "checked": "2026-10-07T03:58:08+00:00",
      "error": null
     },
     "https://www.bargainchemist.co.nz/products/cd-sauvage-elixir-60ml": {
@@ -83,7 +83,7 @@
      "was": 299.99,
      "in_stock": false,
      "method": "shopify",
-     "checked": "2026-10-07T03:52:50+00:00",
+     "checked": "2026-10-07T03:58:21+00:00",
      "error": null
     },
     "https://www.lifepharmacy.co.nz/products/christian-dior-sauvage-elixir-60ml": {
@@ -101,7 +101,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:52:51+00:00",
+     "checked": "2026-10-07T03:58:21+00:00",
      "error": null
     }
    },
@@ -131,7 +131,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-07T03:52:51+00:00",
+     "checked": "2026-10-07T03:58:22+00:00",
      "error": null
     }
    },
@@ -159,7 +159,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-07T03:52:52+00:00",
+     "checked": "2026-10-07T03:58:23+00:00",
      "error": null
     }
    },
@@ -187,7 +187,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:52:56+00:00",
+     "checked": "2026-10-07T03:58:28+00:00",
      "error": null
     }
    },
@@ -215,7 +215,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:52:56+00:00",
+     "checked": "2026-10-07T03:58:28+00:00",
      "error": null
     }
    },
@@ -243,7 +243,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:52:58+00:00",
+     "checked": "2026-10-07T03:58:32+00:00",
      "error": null
     },
     "https://pricespy.co.nz/product.php?p=5010999": {
@@ -261,7 +261,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-07T03:53:01+00:00",
+     "checked": "2026-10-07T03:58:36+00:00",
      "error": null
     }
    },
@@ -290,7 +290,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-07T03:53:02+00:00",
+     "checked": "2026-10-07T03:58:38+00:00",
      "error": null
     },
     "https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html": {
@@ -308,7 +308,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-07T03:53:18+00:00",
+     "checked": "2026-10-07T03:58:53+00:00",
      "error": null
     },
     "https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html": {
@@ -326,7 +326,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-07T03:53:34+00:00",
+     "checked": "2026-10-07T03:59:09+00:00",
      "error": null
     }
    },
@@ -356,7 +356,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:53:50+00:00",
+     "checked": "2026-10-07T03:59:25+00:00",
      "error": null
     },
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-tobacco-brown": {
@@ -374,7 +374,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:53:50+00:00",
+     "checked": "2026-10-07T03:59:25+00:00",
      "error": null
     },
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-habana": {
@@ -392,7 +392,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:53:53+00:00",
+     "checked": "2026-10-07T03:59:29+00:00",
      "error": null
     }
    },
@@ -422,7 +422,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:53:57+00:00",
+     "checked": "2026-10-07T03:59:32+00:00",
      "error": null
     },
     "https://www.birkenstock.co.nz/products/boston-oiled-leather-tobacco-brown": {
@@ -440,7 +440,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:54:02+00:00",
+     "checked": "2026-10-07T03:59:35+00:00",
      "error": null
     },
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-leather-thyme": {
@@ -458,7 +458,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:54:04+00:00",
+     "checked": "2026-10-07T03:59:37+00:00",
      "error": null
     },
     "https://www.birkenstock.co.nz/products/boston-suede-leather-faded-khaki": {
@@ -476,7 +476,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:54:07+00:00",
+     "checked": "2026-10-07T03:59:42+00:00",
      "error": null
     },
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-taupe": {
@@ -494,7 +494,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:54:10+00:00",
+     "checked": "2026-10-07T03:59:43+00:00",
      "error": null
     }
    },
@@ -532,7 +532,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-07T03:54:13+00:00",
+     "checked": "2026-10-07T03:59:45+00:00",
      "error": null
     },
     "https://www.jdsports.co.nz/products/xt6-120119224": {
@@ -550,7 +550,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-07T03:54:40+00:00",
+     "checked": "2026-10-07T04:00:13+00:00",
      "error": null
     }
    },
@@ -579,7 +579,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:55:07+00:00",
+     "checked": "2026-10-07T04:00:34+00:00",
      "error": null
     }
    },
@@ -607,7 +607,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:55:07+00:00",
+     "checked": "2026-10-07T04:00:34+00:00",
      "error": null
     }
    },
@@ -624,7 +624,7 @@
      "history": [],
      "retailer": "PB Tech",
      "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-     "checked": "2026-10-07T03:55:08+00:00"
+     "checked": "2026-10-07T04:00:34+00:00"
     }
    },
    "name": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger",
@@ -651,7 +651,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-07T03:55:35+00:00",
+     "checked": "2026-10-07T04:01:04+00:00",
      "error": null
     }
    },
@@ -679,7 +679,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-07T03:55:35+00:00",
+     "checked": "2026-10-07T04:01:05+00:00",
      "error": null
     },
     "https://pricespy.co.nz/product.php?p=14502997": {
@@ -697,7 +697,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-07T03:55:47+00:00",
+     "checked": "2026-10-07T04:01:20+00:00",
      "error": null
     }
    },
