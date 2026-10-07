@@ -33,6 +33,7 @@ class Fetcher:
         self._pw = None
         self._browser = None
         self._last_host: dict[str, float] = {}
+        self._warmed: set[str] = set()
 
     # -- lifecycle -------------------------------------------------------
     def __enter__(self):
@@ -99,7 +100,16 @@ class Fetcher:
         retailer = self.retailer_for(url)
         if retailer.get("blocked"):
             raise ScrapeError(f"{retailer['name']} is not supported: {retailer['blocked']}")
-        self._throttle(urlparse(url).netloc)
+        host = urlparse(url).netloc
+        self._throttle(host)
+        if retailer.get("warmup") and host not in self._warmed:
+            # Some bot filters reject a cold first request; visiting the homepage first sets their cookies.
+            self._warmed.add(host)
+            try:
+                self.client.get(f"https://{host}/")
+                time.sleep(random.uniform(2, 4))
+            except httpx.HTTPError:
+                pass
 
         offer = self._shopify(url)
         if offer:

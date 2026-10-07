@@ -4,6 +4,7 @@
 #   js: true            always render with headless Chromium (Playwright)
 #   price_selector:     CSS selector override for the current price
 #   was_price_selector: CSS selector for the RRP / "was" price
+#   warmup: true       visit the homepage first (sets bot-filter cookies)
 #   blocked: "<reason>" skip this retailer and explain why
 www.chemistwarehouse.co.nz:
   name: Chemist Warehouse
@@ -28,6 +29,7 @@ www.jbhifi.co.nz:
   name: JB Hi-Fi
 www.pbtech.co.nz:
   name: PB Tech
+  warmup: true  # its bot filter blocks the first cold request from GitHub's servers
 www.drmartens.co.nz:
   name: Dr Martens NZ
 www.birkenstock.co.nz:
