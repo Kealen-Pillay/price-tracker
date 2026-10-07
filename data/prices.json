@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T03:15:12+00:00",
+ "updated": "2026-10-07T03:17:50+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -18,7 +18,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-07T03:15:06+00:00",
+     "checked": "2026-10-07T03:17:44+00:00",
      "error": null
     },
     "https://pricespy.co.nz/product.php?p=4682013": {
@@ -36,7 +36,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-07T03:15:10+00:00",
+     "checked": "2026-10-07T03:17:49+00:00",
      "error": null
     }
    },
