@@ -21,6 +21,7 @@ WISHLIST_HEADER = (
     "# Wishlist — items to track. Edit by hand, from the dashboard, or via Telegram (/add, /link, /target, /remove).\n"
     "# Each item lists one product URL per retailer. target_price (NZD) is optional: you get an alert when any "
     "retailer is at or below it.\n"
+    "# only_for: men skips products detected as women's or kids' (unisex and unlabelled products are kept).\n"
 )
 
 
@@ -48,6 +49,11 @@ def load_calendar() -> list[dict]:
     return _load_yaml(CALENDAR).get("events", [])
 
 
+def load_settings() -> dict:
+    """Top-level wishlist settings (everything except `items`), e.g. only_for: men."""
+    return {k: v for k, v in _load_yaml(WISHLIST).items() if k != "items"}
+
+
 def load_wishlist() -> list[dict]:
     items = _load_yaml(WISHLIST).get("items") or []
     for it in items:
@@ -57,7 +63,7 @@ def load_wishlist() -> list[dict]:
 
 
 def save_wishlist(items: list[dict]) -> None:
-    body = yaml.safe_dump({"items": items}, sort_keys=False, allow_unicode=True)
+    body = yaml.safe_dump({**load_settings(), "items": items}, sort_keys=False, allow_unicode=True)
     WISHLIST.write_text(WISHLIST_HEADER + body)
 
 

@@ -63,7 +63,7 @@ async function saveWishlist(mutate, message) {
   const doc = jsyaml.load(text) || {};
   doc.items = doc.items || [];
   mutate(doc.items);
-  const body = (header ? header + "\n" : "") + jsyaml.dump({ items: doc.items }, { lineWidth: -1, noRefs: true });
+  const body = (header ? header + "\n" : "") + jsyaml.dump({ ...doc, items: doc.items }, { lineWidth: -1, noRefs: true });
   const res = await gh("contents/wishlist.yaml", {
     method: "PUT",
     body: JSON.stringify({ message, content: b64encode(body), sha }),

@@ -32,6 +32,13 @@ Three ways, all editing `wishlist.yaml`:
    (processed at the next scheduled run).
 3. **By hand** — edit `wishlist.yaml` and push.
 
+### Men's only
+
+`only_for: men` at the top of `wishlist.yaml` skips any product detected as women's or kids' — from the product
+name, category, gender tags/fields, or the URL (e.g. `…/xt6-womens-…`). Unisex and unlabelled products are kept.
+Skipped links show the reason on the dashboard and never alert; Telegram `/add` refuses them. Remove the line to
+turn the filter off.
+
 ## Setup (one-off, ~10 minutes)
 
 1. **Create a GitHub repo and push this folder**

@@ -11,6 +11,13 @@ from dataclasses import dataclass, asdict
 
 from bs4 import BeautifulSoup
 
+GENDER_PATTERNS = {
+    # Order matters only for readability; "women" never matches the men pattern thanks to \b.
+    "women": re.compile(r"(?i)\b(women'?s?|womens|woman|ladies|female|femme|for her|\(w\))(?![a-z])"),
+    "men": re.compile(r"(?i)\b(men'?s?|mens|man|male|homme|for him|\(m\))(?![a-z])"),
+    "kids": re.compile(r"(?i)\b(kids?'?s?|junior|youth|toddler|infant|baby|girls?'?|boys?'?|child(ren)?)(?![a-z])"),
+    "unisex": re.compile(r"(?i)\bunisex\b"),
+}
 MONEY_RE = re.compile(r"(\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?|\d+(?:\.\d{1,2})?)")
 
 
@@ -22,6 +29,7 @@ class Offer:
     title: str | None = None
     currency: str | None = None
     method: str | None = None  # which extractor found the price
+    genders: list[str] | None = None  # e.g. ["men"], ["men", "women"] (unisex), ["kids"]; None = unknown
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -35,6 +43,21 @@ def money(value) -> float | None:
         return float(value)
     m = MONEY_RE.search(str(value).replace("\xa0", " "))
     return float(m.group(1).replace(",", "")) if m else None
+
+
+def detect_gender(*texts) -> list[str] | None:
+    """Which audiences a product is for, from its name, category and gender fields. None if nothing says."""
+    found = set()
+    for t in texts:
+        if isinstance(t, dict):  # schema.org PeopleAudience
+            t = " ".join(str(v) for v in t.values())
+        if not t or not isinstance(t, str):
+            continue
+        found |= {g for g, pat in GENDER_PATTERNS.items() if pat.search(t)}
+    if "unisex" in found:
+        found |= {"men", "women"}
+    found.discard("unisex")
+    return sorted(found) or None
 
 
 def _availability(value) -> bool | None:
@@ -113,6 +136,8 @@ def from_jsonld(soup: BeautifulSoup) -> Offer | None:
                 best = min(live, key=lambda c: c.price)
                 if any(c.in_stock for c in cands):
                     best.in_stock = True
+                best.genders = detect_gender(node.get("name"), node.get("gender"), node.get("audience"),
+                                             node.get("category") if isinstance(node.get("category"), str) else None)
                 return best
     return None
 
@@ -188,7 +213,14 @@ def parse_html(html: str, retailer: dict | None = None) -> Offer | None:
     if not offer.title:
         t = soup.find("meta", attrs={"property": "og:title"}) or soup.title
         offer.title = t.get("content") if t and t.name == "meta" else (t.get_text(strip=True) if t else None)
+    if offer.genders is None:
+        offer.genders = detect_gender(offer.title)
     return offer
+
+
+def excluded_for(genders: list[str] | None, wanted: str | None) -> bool:
+    """True if a product is known to be only for other audiences (unknown and unisex products are kept)."""
+    return bool(wanted and genders and wanted not in genders)
 
 
 def parse_shopify_js(data: dict) -> Offer:
@@ -209,4 +241,7 @@ def parse_shopify_js(data: dict) -> Offer:
         title=title,
         currency=None,
         method="shopify",
+        # Only gender-ish tags (e.g. Birkenstock "gender:Mens"); other tags often name unrelated categories.
+        genders=detect_gender(data.get("title"), data.get("type"),
+                              *[t.split(":", 1)[-1] for t in data.get("tags") or [] if "gender" in t.lower()]),
     )

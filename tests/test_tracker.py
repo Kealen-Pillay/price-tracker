@@ -173,3 +173,60 @@ def test_all_time_low_and_best_offer_skip_out_of_stock():
         "b": {"retailer": "B", "price": 90.0, "in_stock": True, "history": [{"price": 95.0, "in_stock": True}, {"price": 90.0, "in_stock": True}]},
     }}
     assert cli.best_offer(entry)[0] == "b" and cli.all_time_low(entry) == 90.0
+
+
+# ---- men's-only filter
+from tracker.parse import detect_gender, excluded_for
+
+
+@pytest.mark.parametrize("text,expected", [
+    ("XT-6 Women's", ["women"]), ("Arizona Kids EVA", ["kids"]), ("Bleu de Chanel Pour Homme", ["men"]),
+    ("Versace Dylan Blue Pour Femme EDP 100ml for women", ["women"]), ("Unisex Tee", ["men", "women"]),
+    ("XT-6", None), ("Superman Tee", None), ("Manchester United Jersey", None),
+])
+def test_detect_gender(text, expected):
+    assert detect_gender(text) == expected
+
+
+def test_excluded_for_men():
+    assert excluded_for(["women"], "men") and excluded_for(["kids"], "men")
+    assert not excluded_for(["men", "women"], "men")  # unisex is kept
+    assert not excluded_for(None, "men")  # unknown is kept
+    assert not excluded_for(["women"], None)  # filter off
+
+
+def test_shopify_gender_comes_from_gender_tags_only():
+    data = {"title": "Arizona", "type": "Sandals", "available": True, "variants": [{"price": 30000, "available": True}],
+            "tags": ["gender:Mens", "gender:Womens", "Collection:Womens Sale"]}
+    assert parse_shopify_js(data).genders == ["men", "women"]
+    data["tags"] = ["gender:Womens", "Collection:Mens"]
+    assert parse_shopify_js(data).genders == ["women"]
+
+
+def test_telegram_add_refuses_womens_product(monkeypatch):
+    import tracker.__main__ as cli
+    from tracker import telegram
+    from tracker.parse import Offer
+
+    sent = []
+    monkeypatch.setattr(telegram, "pending_commands", lambda off: (["/add https://x.example/products/xt6-w"], off + 1))
+    monkeypatch.setattr(telegram, "send", sent.append)
+    monkeypatch.setattr(store, "load_settings", lambda: {"only_for": "men"})
+
+    class FakeFetcher:
+        def get_offer(self, url):
+            return Offer(price=360.0, title="XT-6 Women's", genders=["women"]), {"name": "JD"}
+
+    items = []
+    assert not cli.handle_commands(FakeFetcher(), items, {"items": {}}, {"telegram_offset": 0})
+    assert items == [] and "Not added" in sent[0]
+
+
+def test_gender_falls_back_to_url_slug(monkeypatch):
+    from tracker.fetch import Fetcher
+    from tracker.parse import Offer
+
+    f = Fetcher({})
+    monkeypatch.setattr(f, "_get_offer", lambda url: (Offer(price=1.0, title="XT-6"), {"name": "JD"}))
+    assert f.get_offer("https://www.jdsports.co.nz/products/xt6-womens-120525865")[0].genders == ["women"]
+    assert f.get_offer("https://www.jdsports.co.nz/products/xt6-120733321")[0].genders is None

@@ -2,12 +2,13 @@
 from __future__ import annotations
 
 import random
+import re
 import time
 from urllib.parse import urlparse
 
 import httpx
 
-from .parse import Offer, parse_html, parse_shopify_js
+from .parse import Offer, detect_gender, parse_html, parse_shopify_js
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -97,6 +98,12 @@ class Fetcher:
             ctx.close()
 
     def get_offer(self, url: str) -> tuple[Offer, dict]:
+        offer, retailer = self._get_offer(url)
+        if offer.genders is None:  # fall back to the URL slug, e.g. JD's ".../xt6-womens-120525865"
+            offer.genders = detect_gender(re.sub(r"[-_/]+", " ", urlparse(url).path))
+        return offer, retailer
+
+    def _get_offer(self, url: str) -> tuple[Offer, dict]:
         retailer = self.retailer_for(url)
         if retailer.get("blocked"):
             raise ScrapeError(f"{retailer['name']} is not supported: {retailer['blocked']}")

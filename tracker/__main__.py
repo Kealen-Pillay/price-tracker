@@ -19,6 +19,7 @@ from urllib.parse import urlparse
 
 from . import alerts, sales, store, telegram
 from .fetch import Fetcher, ScrapeError
+from .parse import excluded_for
 
 NZ = timezone(timedelta(hours=12))  # good enough for "which day is it" in NZ
 
@@ -72,7 +73,12 @@ def handle_commands(fetcher: Fetcher, items: list[dict], prices: dict, state: di
                     offer, _ = fetcher.get_offer(url)
                     name = (offer.title or "").strip() or None
                 except ScrapeError:
-                    name = None
+                    offer, name = None, None
+                only_for = store.load_settings().get("only_for")
+                if offer and excluded_for(offer.genders, only_for):
+                    telegram.send(f"🚫 Not added: <b>{escape(name or url)}</b> looks like a "
+                                  f"{'/'.join(offer.genders)} product, and your wishlist is {escape(only_for)}'s only.")
+                    continue
                 name = name or urlparse(url).path.rstrip("/").split("/")[-1].replace("-", " ").title()
                 base = store.slugify(name)
                 iid, n = base, 2
@@ -117,6 +123,7 @@ def cmd_check(args) -> int:
     items = store.load_wishlist()
     prices = store.load_prices()
     state = store.load_state()
+    only_for = store.load_settings().get("only_for")
     messages: list[str] = []
 
     with Fetcher(store.load_retailers()) as fetcher:
@@ -144,6 +151,13 @@ def cmd_check(args) -> int:
                     print(f"  ✗ {item['name']} @ {retailer_name}: {e}")
                     slot.update(retailer=retailer_name, error=str(e), checked=checked)
                     messages += alerts.failure(item, url, retailer_name, str(e), state)
+                    continue
+                if excluded_for(offer.genders, only_for):
+                    reason = f"Skipped: detected as a {'/'.join(offer.genders)} product (wishlist is {only_for}'s only)"
+                    print(f"  – {item['name']} @ {retailer['name']}: {reason}")
+                    slot.update(retailer=retailer["name"], title=offer.title, price=None, was=None, in_stock=None,
+                                checked=checked, error=reason)
+                    alerts.recovered(item, url, state)  # not a scrape failure, so no warning
                     continue
                 point = {"t": checked, "price": offer.price, "was": offer.was_price, "in_stock": offer.in_stock}
                 print(f"  ✓ {item['name']} @ {retailer['name']}: {alerts.fmt(offer.price)}"

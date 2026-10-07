@@ -1,5 +1,7 @@
 # Wishlist — items to track. Edit by hand, from the dashboard, or via Telegram (/add, /link, /target, /remove).
 # Each item lists one product URL per retailer. target_price (NZD) is optional: you get an alert when any retailer is at or below it.
+# only_for: men skips products detected as women's or kids' (unisex and unlabelled products are kept).
+only_for: men
 items:
 # ---------------------------------------------------------------- Perfume
 - id: dior-sauvage-edp-100ml
