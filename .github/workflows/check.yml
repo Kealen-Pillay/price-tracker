@@ -32,6 +32,8 @@ jobs:
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main  # latest data, not the commit that triggered a queued run
 
       - uses: actions/setup-python@v5
         with:
@@ -61,7 +63,8 @@ jobs:
           git add data wishlist.yaml
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update prices $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase origin main
+          # If another run pushed meanwhile, keep this run's (newer) data on conflict.
+          git pull --rebase -X theirs origin main
           git push
 
       - name: Build dashboard
