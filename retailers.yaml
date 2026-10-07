@@ -34,5 +34,6 @@ www.birkenstock.co.nz:
   name: Birkenstock NZ
 www.jdsports.co.nz:
   name: JD Sports
+  was_price_selector: .compare-at-price  # used when its Shopify JSON is blocked
 www.orbitkey.com.au:
   name: Orbitkey

@@ -122,3 +122,22 @@ def test_telegram_commands(monkeypatch):
     assert state["telegram_offset"] == 16
     assert "Tracking" in sent[0] and "Foo Eau de Parfum" in sent[3]
     assert all("Didn't understand" in s for s in sent[4:6])  # unknown command and unknown item id
+
+
+def test_jsonld_per_size_offers_prefer_in_stock():
+    html = """<script type="application/ld+json">{"@type":"Product","name":"XT-6","offers":[
+      {"@type":"Offer","price":"200.00","availability":"https://schema.org/OutOfStock"},
+      {"@type":"Offer","price":"220.00","availability":"https://schema.org/InStock"},
+      {"@type":"Offer","price":"200.00","availability":"https://schema.org/InStock"}]}</script>"""
+    o = parse_html(html)
+    assert o.price == 200.0 and o.in_stock is True
+    sold_out = html.replace("InStock", "OutOfStock")
+    assert parse_html(sold_out).in_stock is False
+
+
+def test_jsonld_product_group_pools_variant_offers():
+    html = """<script type="application/ld+json">{"@type":"ProductGroup","name":"XT-6","hasVariant":[
+      {"@type":"Product","name":"XT-6 - 3","offers":{"@type":"Offer","price":"200.00","availability":"http://schema.org/OutOfStock"}},
+      {"@type":"Product","name":"XT-6 - 9","offers":{"@type":"Offer","price":"200.00","availability":"http://schema.org/InStock"}}]}</script>"""
+    o = parse_html(html)
+    assert (o.price, o.in_stock, o.title) == (200.0, True, "XT-6")

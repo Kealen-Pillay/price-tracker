@@ -109,6 +109,9 @@ class Fetcher:
         if not retailer.get("js"):
             try:
                 r = self.client.get(url)
+                if r.status_code in BLOCK_STATUSES:  # often a transient rate limit: wait and retry once
+                    time.sleep(random.uniform(8, 15))
+                    r = self.client.get(url)
                 status = r.status_code
                 if r.status_code == 404:
                     raise ScrapeError("Product page not found (404) — the URL may have changed")

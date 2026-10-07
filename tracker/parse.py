@@ -71,12 +71,19 @@ def from_jsonld(soup: BeautifulSoup) -> Offer | None:
             data = json.loads(tag.string or tag.get_text() or "")
         except (json.JSONDecodeError, TypeError):
             continue
-        for node in _walk_jsonld(data):
-            if "product" not in _types(node):
+        nodes = list(_walk_jsonld(data))
+        # A ProductGroup (one Product per size/colour) is checked first, with all its variants' offers pooled.
+        groups = [n for n in nodes if "productgroup" in _types(n)]
+        for g in groups:
+            variants = g.get("hasVariant") or []
+            g["offers"] = [o for v in (variants if isinstance(variants, list) else [variants]) if isinstance(v, dict)
+                           for o in (v.get("offers") if isinstance(v.get("offers"), list) else [v.get("offers")]) if o]
+        for node in groups + nodes:
+            if not _types(node) & {"product", "productgroup"}:
                 continue
             offers = node.get("offers")
             offers = offers if isinstance(offers, list) else [offers] if offers else []
-            best: Offer | None = None
+            cands: list[Offer] = []
             for o in offers:
                 if not isinstance(o, dict):
                     continue
@@ -99,9 +106,13 @@ def from_jsonld(soup: BeautifulSoup) -> Offer | None:
                     currency=o.get("priceCurrency"),
                     method="json-ld-range" if is_range else "json-ld",
                 )
-                if best is None or price < best.price:
-                    best = cand
-            if best:
+                cands.append(cand)
+            if cands:
+                # Per-size/colour offers: cheapest in-stock one wins; in stock if any offer is.
+                live = [c for c in cands if c.in_stock is not False] or cands
+                best = min(live, key=lambda c: c.price)
+                if any(c.in_stock for c in cands):
+                    best.in_stock = True
                 return best
     return None
 
