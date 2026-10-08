@@ -144,9 +144,15 @@ class Fetcher:
             page = ctx.new_page()
             page.goto(url, wait_until="domcontentloaded", timeout=60_000)
             try:
-                page.wait_for_load_state("networkidle", timeout=15_000)
+                # Product data is usually server-rendered: stop as soon as it's there instead of waiting for
+                # the network to go quiet (which took ~15s per page on analytics-heavy sites).
+                page.wait_for_selector('script[type="application/ld+json"], [itemprop="price"]',
+                                       state="attached", timeout=8_000)
             except Exception:
-                pass
+                try:
+                    page.wait_for_load_state("networkidle", timeout=15_000)
+                except Exception:
+                    pass
             return page.content()
         finally:
             ctx.close()
