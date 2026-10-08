@@ -29,6 +29,12 @@ CURRENCY = "NZD"
 NZ_COOKIES = {"localization": "NZ", "cart_currency": CURRENCY}
 
 
+PRODUCT_DATA_READY_JS = """() =>
+    !!document.querySelector('[itemprop="price"]') ||
+    [...document.querySelectorAll('script[type="application/ld+json"]')]
+        .some(s => /"@type"\\s*:\\s*\\[?\\s*"Product(Group)?"/.test(s.textContent))"""
+
+
 class ScrapeError(Exception):
     pass
 
@@ -156,8 +162,9 @@ class Fetcher:
             try:
                 # Product data is usually server-rendered: stop as soon as it's there instead of waiting for
                 # the network to go quiet (which took ~15s per page on analytics-heavy sites).
-                page.wait_for_selector('script[type="application/ld+json"], [itemprop="price"]',
-                                       state="attached", timeout=8_000)
+                # Wait for *product* data specifically: some sites render an Organization block first and
+                # inject the Product one later.
+                page.wait_for_function(PRODUCT_DATA_READY_JS, timeout=8_000)
             except Exception:
                 try:
                     page.wait_for_load_state("networkidle", timeout=15_000)
