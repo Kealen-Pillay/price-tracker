@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T13:13:56+00:00",
+ "updated": "2026-10-08T20:36:44+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -24,8 +24,12 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T13:03:17+00:00",
-     "error": null
+     "checked": "2026-10-08T20:28:42+00:00",
+     "error": null,
+     "identity": {
+      "id": null,
+      "title": "Christian Dior Sauvage Eau De Parfum 100ml"
+     }
     },
     "https://pricespy.co.nz/product.php?p=4682013": {
      "history": [
@@ -48,8 +52,12 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T13:03:33+00:00",
-     "error": null
+     "checked": "2026-10-08T20:29:01+00:00",
+     "error": null,
+     "identity": {
+      "id": null,
+      "title": "Dior Sauvage edp 100ml"
+     }
     }
    },
    "name": "Dior Sauvage EDP 100ml",
@@ -83,8 +91,12 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T13:03:35+00:00",
-     "error": null
+     "checked": "2026-10-08T20:29:02+00:00",
+     "error": null,
+     "identity": {
+      "id": null,
+      "title": "Christian Dior Sauvage Elixir Parfum 60ml"
+     }
     },
     "https://www.bargainchemist.co.nz/products/cd-sauvage-elixir-60ml": {
      "history": [
@@ -107,8 +119,12 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-08T13:03:54+00:00",
-     "error": null
+     "checked": "2026-10-08T20:29:19+00:00",
+     "error": null,
+     "identity": {
+      "id": "gtin:3348901567572",
+      "title": "Dior Sauvage Elixir 60ml"
+     }
     },
     "https://www.lifepharmacy.co.nz/products/christian-dior-sauvage-elixir-60ml": {
      "history": [
@@ -117,6 +133,13 @@
        "price": 318.0,
        "was": null,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-08T20:29:46+00:00",
+       "price": 318.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -125,8 +148,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:04:19+00:00",
-     "error": null
+     "checked": "2026-10-08T20:29:46+00:00",
+     "error": null,
+     "identity": {
+      "id": "sku:20012813",
+      "title": "Christian Dior Sauvage Elixir 60ml"
+     }
     }
    },
    "name": "Dior Sauvage Elixir 60ml",
@@ -161,8 +188,12 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T13:04:46+00:00",
-     "error": null
+     "checked": "2026-10-08T20:30:16+00:00",
+     "error": null,
+     "identity": {
+      "id": null,
+      "title": "Chanel Bleu De Chanel edp 100ml"
+     }
     }
    },
    "name": "Bleu de Chanel EDP 100ml",
@@ -195,8 +226,12 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T13:04:47+00:00",
-     "error": null
+     "checked": "2026-10-08T20:30:18+00:00",
+     "error": null,
+     "identity": {
+      "id": null,
+      "title": "Chanel Bleu De Chanel Parfum 100ml"
+     }
     }
    },
    "name": "Bleu de Chanel Parfum 100ml",
@@ -215,6 +250,13 @@
        "price": 275.0,
        "was": null,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-08T20:30:21+00:00",
+       "price": 275.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -223,8 +265,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:04:51+00:00",
-     "error": null
+     "checked": "2026-10-08T20:30:21+00:00",
+     "error": null,
+     "identity": {
+      "id": "sku:20037873",
+      "title": "Prada Paradigme EDP 100ml"
+     }
     }
    },
    "name": "Prada Paradigme EDP 100ml",
@@ -243,6 +289,13 @@
        "price": 319.0,
        "was": null,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-08T20:30:49+00:00",
+       "price": 319.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -251,8 +304,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:05:18+00:00",
-     "error": null
+     "checked": "2026-10-08T20:30:49+00:00",
+     "error": null,
+     "identity": {
+      "id": "sku:20031013",
+      "title": "Yves Saint Laurent Myslf Le Parfum 100ml"
+     }
     }
    },
    "name": "YSL MYSLF Le Parfum 100ml",
@@ -271,6 +328,13 @@
        "price": 226.0,
        "was": null,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-08T20:31:17+00:00",
+       "price": 226.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -279,8 +343,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:05:48+00:00",
-     "error": null
+     "checked": "2026-10-08T20:31:17+00:00",
+     "error": null,
+     "identity": {
+      "id": "sku:20010314",
+      "title": "Stronger with You Intensely EDP Spray 100ml"
+     }
     },
     "https://pricespy.co.nz/product.php?p=5010999": {
      "history": [
@@ -303,8 +371,12 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T13:06:15+00:00",
-     "error": null
+     "checked": "2026-10-08T20:31:48+00:00",
+     "error": null,
+     "identity": {
+      "id": null,
+      "title": "Giorgio Armani Stronger With You Intensely edp 100ml"
+     }
     }
    },
    "name": "Armani Stronger With You Intensely EDP 100ml",
@@ -338,8 +410,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:06:16+00:00",
-     "error": null
+     "checked": "2026-10-08T20:31:50+00:00",
+     "error": null,
+     "identity": {
+      "id": "sku:22209001.BLK",
+      "title": "Adrian Tassel Smooth Loafer"
+     }
     },
     "https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html": {
      "history": [
@@ -362,8 +438,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:06:32+00:00",
-     "error": null
+     "checked": "2026-10-08T20:32:06+00:00",
+     "error": null,
+     "identity": {
+      "id": "sku:30917201.BRN",
+      "title": "Adrian Tassel Loafer Crazy Horse"
+     }
     },
     "https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html": {
      "history": [
@@ -386,8 +466,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:06:48+00:00",
-     "error": null
+     "checked": "2026-10-08T20:32:22+00:00",
+     "error": null,
+     "identity": {
+      "id": "sku:14573601.RED",
+      "title": "Adrian Tassel Loafer Arcadia"
+     }
     }
    },
    "name": "Dr Martens Adrian Tassel Loafer (black / brown / red)",
@@ -422,8 +506,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:07:04+00:00",
-     "error": null
+     "checked": "2026-10-08T20:32:37+00:00",
+     "error": null,
+     "identity": {
+      "id": "productGroupID:8326675005738",
+      "title": "Arizona"
+     }
     },
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-tobacco-brown": {
      "history": [
@@ -445,9 +533,13 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-08T13:07:31+00:00",
-     "error": null
+     "method": "shopify",
+     "checked": "2026-10-08T20:32:53+00:00",
+     "error": null,
+     "identity": {
+      "id": "shopify:8326706233642",
+      "title": "Arizona"
+     }
     },
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-habana": {
      "history": [
@@ -469,9 +561,13 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-08T13:08:02+00:00",
-     "error": null
+     "method": "shopify",
+     "checked": "2026-10-08T20:32:54+00:00",
+     "error": null,
+     "identity": {
+      "id": "shopify:8505714671914",
+      "title": "Arizona"
+     }
     }
    },
    "name": "Birkenstock Arizona oiled leather (black / brown)",
@@ -505,9 +601,13 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-08T13:08:32+00:00",
-     "error": null
+     "method": "shopify",
+     "checked": "2026-10-08T20:32:58+00:00",
+     "error": null,
+     "identity": {
+      "id": "shopify:8326831997226",
+      "title": "Boston"
+     }
     },
     "https://www.birkenstock.co.nz/products/boston-oiled-leather-tobacco-brown": {
      "history": [
@@ -529,9 +629,13 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-08T13:08:58+00:00",
-     "error": null
+     "method": "shopify",
+     "checked": "2026-10-08T20:32:59+00:00",
+     "error": null,
+     "identity": {
+      "id": "shopify:8573581033770",
+      "title": "Boston"
+     }
     },
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-leather-thyme": {
      "history": [
@@ -553,9 +657,13 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-08T13:09:28+00:00",
-     "error": null
+     "method": "shopify",
+     "checked": "2026-10-08T20:33:02+00:00",
+     "error": null,
+     "identity": {
+      "id": "shopify:10025825796394",
+      "title": "Boston Soft Footbed"
+     }
     },
     "https://www.birkenstock.co.nz/products/boston-suede-leather-faded-khaki": {
      "history": [
@@ -577,9 +685,13 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-08T13:10:00+00:00",
-     "error": null
+     "method": "shopify",
+     "checked": "2026-10-08T20:33:05+00:00",
+     "error": null,
+     "identity": {
+      "id": "shopify:9535876858154",
+      "title": "Boston"
+     }
     },
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-taupe": {
      "history": [
@@ -601,9 +713,13 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-08T13:10:31+00:00",
-     "error": null
+     "method": "shopify",
+     "checked": "2026-10-08T20:33:08+00:00",
+     "error": null,
+     "identity": {
+      "id": "shopify:8538568327466",
+      "title": "Boston Soft Footbed"
+     }
     }
    },
    "name": "Birkenstock Boston (brown / olive / taupe)",
@@ -640,8 +756,12 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:10:42+00:00",
-     "error": null
+     "checked": "2026-10-08T20:33:12+00:00",
+     "error": null,
+     "identity": {
+      "id": "productGroupID:8841999712308",
+      "title": "XT-6"
+     }
     },
     "https://www.jdsports.co.nz/products/xt6-120119224": {
      "history": [
@@ -664,8 +784,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:11:09+00:00",
-     "error": null
+     "checked": "2026-10-08T20:33:39+00:00",
+     "error": null,
+     "identity": {
+      "id": "productGroupID:8809713631284",
+      "title": "XT-6"
+     }
     }
    },
    "name": "Salomon XT-6 (white)",
@@ -699,8 +823,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:11:35+00:00",
-     "error": null
+     "checked": "2026-10-08T20:34:02+00:00",
+     "error": null,
+     "identity": {
+      "id": "gtin:9346396003487",
+      "title": "Mbeat activiva Heavy Duty Single Monitor Screen Gas Spring Monitor Arm for Flat Panel & Curved Screen (Black & Space Grey)"
+     }
     }
    },
    "name": "Mbeat Activiva Heavy Duty Monitor Arm (curved screens)",
@@ -733,8 +861,8 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T13:12:00+00:00",
-     "error": null
+     "checked": "2026-10-08T20:34:32+00:00",
+     "error": "Orbitkey answered in AUD, not NZD; reading discarded"
     }
    },
    "name": "Orbitkey Desk Mat Slim",
@@ -762,8 +890,8 @@
       }
      ],
      "retailer": "PB Tech",
-     "error": null,
-     "checked": "2026-10-08T13:12:22+00:00",
+     "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
+     "checked": "2026-10-08T20:34:56+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -797,8 +925,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:12:42+00:00",
-     "error": null
+     "checked": "2026-10-08T20:35:26+00:00",
+     "error": null,
+     "identity": {
+      "id": "gtin:745883865932",
+      "title": "Belkin BoostCharge Pro2-in-1 Magnetic Wireless Charging Pad with Qi2 15W (Black)"
+     }
     }
    },
    "name": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger",
@@ -832,8 +964,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:13:08+00:00",
-     "error": null
+     "checked": "2026-10-08T20:35:53+00:00",
+     "error": null,
+     "identity": {
+      "id": "gtin:5397184962398",
+      "title": "Dell 34 Plus 34\" UWQHD 120Hz USB-C Curved Monitor"
+     }
     }
    },
    "name": "Dell 34 Plus 34\" UWQHD 120Hz Curved Monitor",
@@ -866,8 +1002,8 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T13:13:38+00:00",
-     "error": null
+     "checked": "2026-10-08T20:36:19+00:00",
+     "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml"
     },
     "https://pricespy.co.nz/product.php?p=14502997": {
      "history": [
@@ -890,8 +1026,12 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T13:13:55+00:00",
-     "error": null
+     "checked": "2026-10-08T20:36:42+00:00",
+     "error": null,
+     "identity": {
+      "id": null,
+      "title": "MSI Modern MD342CQP 34\" UWQHD"
+     }
     }
    },
    "name": "MSI Modern MD342CQP 34\" Ultrawide Curved Monitor",
