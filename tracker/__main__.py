@@ -10,6 +10,9 @@
 from __future__ import annotations
 
 import argparse
+import logging
+import os
+import time
 import functools
 import http.server
 import shutil
@@ -146,6 +149,7 @@ def cmd_check(args) -> int:
                 slot = entry["offers"].setdefault(url, {"history": []})
                 prev = {k: slot.get(k) for k in ("price", "was", "in_stock")} if slot.get("price") is not None else None
                 checked = store.now_iso()
+                started = time.monotonic()
                 try:
                     offer, retailer = fetcher.get_offer(url)
                 except ScrapeError as e:
@@ -182,7 +186,8 @@ def cmd_check(args) -> int:
 
                 print(f"  ✓ {item['name']} @ {retailer['name']}: {alerts.fmt(offer.price)}"
                       f"{' (was ' + alerts.fmt(offer.was_price) + ')' if offer.was_price else ''}"
-                      f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}  [{offer.method}]")
+                      f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}  [{offer.method}, "
+                      f"{time.monotonic() - started:.0f}s]")
                 messages += alerts.evaluate(item, url, label, point, prev, slot["history"], state)
                 store.record(slot["history"], point)
                 slot.update(retailer=retailer["name"], title=offer.title, price=offer.price, was=offer.was_price,
@@ -324,6 +329,10 @@ def main(argv=None) -> int:
     s.add_argument("--port", type=int, default=8000)
     s.set_defaults(fn=cmd_serve)
     args = p.parse_args(argv)
+    # TRACKER_LOG=INFO explains every fallback (set in the GitHub workflow); output is flushed line by line.
+    logging.basicConfig(level=os.environ.get("TRACKER_LOG", "WARNING"), format="    · %(message)s", stream=sys.stdout)
+    sys.stdout.reconfigure(line_buffering=True)
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     return args.fn(args)
 
 

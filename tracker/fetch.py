@@ -7,6 +7,7 @@ import time
 from urllib.parse import urlparse
 
 import httpx
+import logging
 
 from .parse import Offer, detect_gender, parse_html, parse_shopify_js
 
@@ -19,6 +20,7 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-NZ,en;q=0.9",
 }
+log = logging.getLogger("tracker")
 BLOCK_STATUSES = {401, 403, 429, 503}
 CURRENCY = "NZD"
 # Shopify picks a "market" (currency, shipping country, availability) from the visitor's location. GitHub's
@@ -71,28 +73,49 @@ class Fetcher:
         if "/products/" not in p.path:
             return None
         handle = p.path.split("/products/", 1)[1].strip("/").split("/")[0]
+        currency = self._store_currency(p)  # settle the market first, so the price below is in this currency
         try:
             # country=NZ selects NZD pricing on multi-market stores; GitHub's runners are in the US.
             r = self.client.get(f"{p.scheme}://{p.netloc}/products/{handle}.js", params={"country": "NZ"})
             if r.status_code != 200:
+                log.info("shopify json %s -> HTTP %s (final %s); falling back to the page", handle, r.status_code, r.url)
                 return None
             data = r.json()
-        except (httpx.HTTPError, ValueError):
+        except (httpx.HTTPError, ValueError) as e:
+            log.info("shopify json %s failed: %r; falling back to the page", handle, e)
             return None
         if not (isinstance(data, dict) and "variants" in data):
             return None
         offer = parse_shopify_js(data)
-        offer.currency = self._store_currency(p)
+        offer.currency = currency
         return offer
 
+    def _cart_currency(self, base: str) -> str | None:
+        try:
+            return (self.client.get(f"{base}/cart.js").json().get("currency") or "").upper() or None
+        except (httpx.HTTPError, ValueError, AttributeError):
+            return None
+
     def _store_currency(self, p) -> str | None:
-        """Currency a Shopify store is pricing this session in (from /cart.js), cached per host."""
+        """Currency a Shopify store is pricing this session in (from /cart.js), cached per host.
+
+        If the store ignored our NZ cookies (seen from GitHub's US runners), ask it to switch country the way its
+        own country picker does — POST /localization — and check again.
+        """
         if p.netloc not in self._shopify_currency:
-            try:
-                cart = self.client.get(f"{p.scheme}://{p.netloc}/cart.js").json()
-                self._shopify_currency[p.netloc] = (cart.get("currency") or "").upper() or None
-            except (httpx.HTTPError, ValueError, AttributeError):
-                self._shopify_currency[p.netloc] = None
+            base = f"{p.scheme}://{p.netloc}"
+            cur = self._cart_currency(base)
+            if cur and cur != CURRENCY:
+                log.info("%s priced in %s; requesting NZ via /localization", p.netloc, cur)
+                try:
+                    self.client.post(f"{base}/localization", data={
+                        "form_type": "localization", "utf8": "✓", "_method": "put",
+                        "country_code": "NZ", "return_to": "/"})
+                except httpx.HTTPError as e:
+                    log.info("/localization failed: %r", e)
+                cur = self._cart_currency(base)
+                log.info("%s now priced in %s", p.netloc, cur)
+            self._shopify_currency[p.netloc] = cur
         return self._shopify_currency[p.netloc]
 
     def _page_offer(self, url: str, retailer: dict) -> Offer | None:
@@ -177,6 +200,8 @@ class Fetcher:
                     html, final_url = r.text, str(r.url)
             except httpx.HTTPError as e:
                 status = str(e)
+            if html is None:
+                log.info("page %s -> %s; trying the headless browser", url, status)
         if html:
             offer = parse_html(html, retailer)
             if offer:

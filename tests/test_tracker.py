@@ -347,3 +347,21 @@ def test_glitch_that_reverts_is_discarded(monkeypatch, tmp_path):
     slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=100.0, in_stock=True)])
     assert "pending" not in slot and slot["in_stock"] is True and not sent
     assert [h["in_stock"] for h in slot["history"]] == [True]
+
+
+def test_shopify_currency_is_settled_before_reading_the_price(monkeypatch):
+    from tracker.fetch import Fetcher
+    f = Fetcher({}, polite_delay=(0, 0))
+    calls = []
+    monkeypatch.setattr(f, "_store_currency", lambda p: calls.append("currency") or "NZD")
+
+    class R:
+        status_code = 200
+        url = "x"
+        def json(self):
+            calls.append("price")
+            return {"id": 1, "title": "Mat", "available": True, "variants": [{"price": 13900, "available": True}]}
+
+    monkeypatch.setattr(f.client, "get", lambda *a, **k: R())
+    o = f._shopify("https://www.orbitkey.com.au/products/desk-mat-slim")
+    assert calls == ["currency", "price"] and o.currency == "NZD" and o.price == 139.0
