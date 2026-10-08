@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T21:11:03+00:00",
+ "updated": "2026-10-08T21:14:17+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -24,7 +24,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T21:08:38+00:00",
+     "checked": "2026-10-08T21:12:14+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -52,7 +52,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:08:56+00:00",
+     "checked": "2026-10-08T21:12:27+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -91,7 +91,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T21:08:58+00:00",
+     "checked": "2026-10-08T21:12:28+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -119,7 +119,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:01+00:00",
+     "checked": "2026-10-08T21:12:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -150,7 +150,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:02+00:00",
+     "checked": "2026-10-08T21:12:31+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -192,7 +192,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:07+00:00",
+     "checked": "2026-10-08T21:12:34+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -230,7 +230,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:09+00:00",
+     "checked": "2026-10-08T21:12:36+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -269,7 +269,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:11+00:00",
+     "checked": "2026-10-08T21:12:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -310,7 +310,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:13+00:00",
+     "checked": "2026-10-08T21:12:42+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -351,7 +351,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:16+00:00",
+     "checked": "2026-10-08T21:12:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -381,7 +381,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:20+00:00",
+     "checked": "2026-10-08T21:12:49+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -420,7 +420,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:21+00:00",
+     "checked": "2026-10-08T21:12:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -450,7 +450,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:26+00:00",
+     "checked": "2026-10-08T21:12:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -480,10 +480,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:30+00:00",
-     "error": "No price found on page (http status 200). The site may block bots or need a price_selector in retailers.yaml",
+     "checked": "2026-10-08T21:12:55+00:00",
+     "error": null,
      "identity": {
-      "id": "sku:14573601.RED",
+      "ids": {
+       "sku": "14573601.RED"
+      },
       "title": "Adrian Tassel Loafer Arcadia"
      }
     }
@@ -520,7 +522,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:35+00:00",
+     "checked": "2026-10-08T21:12:58+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -550,7 +552,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:37+00:00",
+     "checked": "2026-10-08T21:12:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -581,7 +583,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:40+00:00",
+     "checked": "2026-10-08T21:13:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -624,7 +626,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:42+00:00",
+     "checked": "2026-10-08T21:13:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -655,7 +657,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:46+00:00",
+     "checked": "2026-10-08T21:13:06+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -686,7 +688,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:50+00:00",
+     "checked": "2026-10-08T21:13:09+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -717,7 +719,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:54+00:00",
+     "checked": "2026-10-08T21:13:14+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -748,7 +750,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:56+00:00",
+     "checked": "2026-10-08T21:13:16+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -793,7 +795,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:09:58+00:00",
+     "checked": "2026-10-08T21:13:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -823,7 +825,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:10:03+00:00",
+     "checked": "2026-10-08T21:13:22+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -864,7 +866,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:10:06+00:00",
+     "checked": "2026-10-08T21:13:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -904,7 +906,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T21:10:08+00:00",
+     "checked": "2026-10-08T21:13:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -940,7 +942,7 @@
      ],
      "retailer": "PB Tech",
      "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-     "checked": "2026-10-08T21:10:18+00:00",
+     "checked": "2026-10-08T21:13:31+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -978,7 +980,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:10:53+00:00",
+     "checked": "2026-10-08T21:14:07+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1019,7 +1021,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:10:55+00:00",
+     "checked": "2026-10-08T21:14:08+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1059,7 +1061,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:10:59+00:00",
+     "checked": "2026-10-08T21:14:13+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1089,7 +1091,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:11:01+00:00",
+     "checked": "2026-10-08T21:14:15+00:00",
      "error": null,
      "identity": {
       "ids": {},
