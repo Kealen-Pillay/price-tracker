@@ -117,19 +117,13 @@
        "price": 318.0,
        "was": null,
        "in_stock": true
-      },
-      {
-       "t": "2026-10-08T05:12:35+00:00",
-       "price": 318.0,
-       "was": null,
-       "in_stock": false
       }
      ],
      "retailer": "Life Pharmacy",
      "title": "Christian Dior Sauvage Elixir 60ml",
      "price": 318.0,
      "was": null,
-     "in_stock": false,
+     "in_stock": true,
      "method": "json-ld",
      "checked": "2026-10-08T13:04:19+00:00",
      "error": null
@@ -221,19 +215,13 @@
        "price": 275.0,
        "was": null,
        "in_stock": true
-      },
-      {
-       "t": "2026-10-08T05:13:06+00:00",
-       "price": 275.0,
-       "was": null,
-       "in_stock": false
       }
      ],
      "retailer": "Life Pharmacy",
      "title": "Prada Paradigme EDP 100ml",
      "price": 275.0,
      "was": null,
-     "in_stock": false,
+     "in_stock": true,
      "method": "json-ld",
      "checked": "2026-10-08T13:04:51+00:00",
      "error": null
@@ -255,19 +243,13 @@
        "price": 319.0,
        "was": null,
        "in_stock": true
-      },
-      {
-       "t": "2026-10-08T05:13:37+00:00",
-       "price": 319.0,
-       "was": null,
-       "in_stock": false
       }
      ],
      "retailer": "Life Pharmacy",
      "title": "Yves Saint Laurent Myslf Le Parfum 100ml",
      "price": 319.0,
      "was": null,
-     "in_stock": false,
+     "in_stock": true,
      "method": "json-ld",
      "checked": "2026-10-08T13:05:18+00:00",
      "error": null
@@ -289,19 +271,13 @@
        "price": 226.0,
        "was": null,
        "in_stock": true
-      },
-      {
-       "t": "2026-10-08T05:14:02+00:00",
-       "price": 226.0,
-       "was": null,
-       "in_stock": false
       }
      ],
      "retailer": "Life Pharmacy",
      "title": "Stronger with You Intensely EDP Spray 100ml",
      "price": 226.0,
      "was": null,
-     "in_stock": false,
+     "in_stock": true,
      "method": "json-ld",
      "checked": "2026-10-08T13:05:48+00:00",
      "error": null
@@ -646,12 +622,6 @@
     "https://www.jdsports.co.nz/products/xt6-120733321": {
      "history": [
       {
-       "t": "2026-10-07T03:45:50+00:00",
-       "price": 200.0,
-       "was": null,
-       "in_stock": false
-      },
-      {
        "t": "2026-10-07T03:54:13+00:00",
        "price": 200.0,
        "was": 340.0,
@@ -755,17 +725,11 @@
        "price": 139.0,
        "was": null,
        "in_stock": true
-      },
-      {
-       "t": "2026-10-08T13:12:00+00:00",
-       "price": 130.0,
-       "was": null,
-       "in_stock": true
       }
      ],
      "retailer": "Orbitkey",
      "title": "Desk Mat Pro Slim",
-     "price": 130.0,
+     "price": 139.0,
      "was": null,
      "in_stock": true,
      "method": "microdata",

@@ -54,6 +54,7 @@ th { font-size: 12px; color: var(--muted); font-weight: 500; text-transform: upp
 td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .was { color: var(--muted); text-decoration: line-through; font-size: 13px; margin-left: 4px; }
 .err { color: var(--bad); font-size: 13px; }
+.note { color: var(--warn); font-size: 13px; }
 .table-wrap { overflow-x: auto; }
 .card:not(.show-oos) tr.oos { display: none; }
 tr.oos td { color: var(--muted); }

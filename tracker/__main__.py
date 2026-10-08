@@ -3,6 +3,7 @@
   python -m tracker check [--dry-run]   scrape every wishlist URL, record prices, send alerts
   python -m tracker probe <url>...      test what the scraper sees on any product page
   python -m tracker digest              send the weekly summary + upcoming sale events
+  python -m tracker history show|drop   inspect or remove bad history points (preview unless --apply)
   python -m tracker build-site          assemble the dashboard into _site/
   python -m tracker serve               build and serve the dashboard at http://localhost:8000
 """
@@ -17,7 +18,7 @@ from datetime import date, timedelta, timezone, datetime
 from html import escape
 from urllib.parse import urlparse
 
-from . import alerts, sales, store, telegram
+from . import alerts, sales, store, telegram, verify
 from .fetch import Fetcher, ScrapeError
 from .parse import excluded_for
 
@@ -159,13 +160,30 @@ def cmd_check(args) -> int:
                                 checked=checked, error=reason)
                     alerts.recovered(item, url, state)  # not a scrape failure, so no warning
                     continue
-                point = {"t": checked, "price": offer.price, "was": offer.was_price, "in_stock": offer.in_stock}
+                point = {"t": checked, "price": offer.price, "was": offer.was_price, "in_stock": offer.in_stock,
+                         "cur": offer.currency or "NZD"}
+                label = f"{retailer['name']} ({offer.title})" if shared_host and offer.title else retailer["name"]
+                alerts.recovered(item, url, state)
+                if warning := verify.identity_warning(item, url, label, slot, offer):
+                    messages.append(warning)
+
+                # Big moves (≥15% or a stock flip) must be seen twice before they're believed: once now and
+                # again from a fresh session, or else on the next run. One-off glitches never reach history.
+                if verify.is_big_change(prev, point) and not verify.readings_match(slot.get("pending"), point):
+                    again = fetcher.recheck(url) if not args.dry_run else None
+                    again_pt = again and {"price": again.price, "in_stock": again.in_stock}
+                    if not verify.readings_match(again_pt, point):
+                        slot.update(pending={**point, "first_seen": checked}, checked=checked, error=None)
+                        print(f"  ? {item['name']} @ {retailer['name']}: {alerts.fmt(offer.price)}"
+                              f"{'' if offer.in_stock is not False else ' OUT OF STOCK'} — unconfirmed, "
+                              f"was {alerts.fmt(prev['price'])}; will recheck next run")
+                        continue
+                slot.pop("pending", None)
+
                 print(f"  ✓ {item['name']} @ {retailer['name']}: {alerts.fmt(offer.price)}"
                       f"{' (was ' + alerts.fmt(offer.was_price) + ')' if offer.was_price else ''}"
                       f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}  [{offer.method}]")
-                label = f"{retailer['name']} ({offer.title})" if shared_host and offer.title else retailer["name"]
                 messages += alerts.evaluate(item, url, label, point, prev, slot["history"], state)
-                alerts.recovered(item, url, state)
                 store.record(slot["history"], point)
                 slot.update(retailer=retailer["name"], title=offer.title, price=offer.price, was=offer.was_price,
                             in_stock=offer.in_stock, method=offer.method, checked=checked, error=None)
@@ -180,6 +198,46 @@ def cmd_check(args) -> int:
     store.save_state(state)
     if messages:
         telegram.send("\n\n".join(messages))
+    return 0
+
+
+def cmd_history(args) -> int:
+    """Show or remove bad history points (e.g. readings taken in the wrong currency or a false sold-out)."""
+    prices = store.load_prices()
+    ids = list(prices["items"]) if args.item == "all" else [args.item]
+    matched = 0
+    for iid in ids:
+        entry = prices["items"].get(iid)
+        if not entry:
+            sys.exit(f"Unknown item id: {iid}")
+        for url, slot in entry["offers"].items():
+            if args.url and args.url not in url:
+                continue
+            keep = []
+            for h in slot.get("history", []):
+                hit = args.action == "drop" and (
+                    (not args.at or any(h["t"].startswith(a) for a in args.at))
+                    and (args.price is None or h.get("price") == args.price)
+                    and (not args.out_of_stock or h.get("in_stock") is False))
+                stock = "out" if h.get("in_stock") is False else "in" if h.get("in_stock") else "?"
+                if args.action == "show" or hit:
+                    print(f"{'DROP ' if hit else ''}{iid} | {slot.get('retailer')} | {h['t']} | "
+                          f"{alerts.fmt(h.get('price'))} | stock {stock}")
+                matched += hit
+                if not hit:
+                    keep.append(h)
+            if args.apply and len(keep) != len(slot.get("history", [])):
+                slot["history"] = keep
+                # Re-sync the "current" values to the last good reading so the next check compares correctly.
+                last = keep[-1] if keep else {}
+                slot.update(price=last.get("price"), was=last.get("was"), in_stock=last.get("in_stock"))
+                slot.pop("pending", None)
+    if args.action == "drop":
+        if args.apply:
+            store.save_prices(prices)
+            print(f"Removed {matched} point(s).")
+        else:
+            print(f"{matched} point(s) would be removed. Re-run with --apply to remove them.")
     return 0
 
 
@@ -252,6 +310,15 @@ def main(argv=None) -> int:
     d = sub.add_parser("digest")
     d.add_argument("--dry-run", action="store_true")
     d.set_defaults(fn=cmd_digest)
+    h = sub.add_parser("history", help="show or remove bad price-history points")
+    h.add_argument("action", choices=["show", "drop"])
+    h.add_argument("item", help="item id, or 'all'")
+    h.add_argument("--url", help="only links containing this text")
+    h.add_argument("--at", nargs="*", help="only points whose timestamp starts with this (e.g. 2026-10-08T13)")
+    h.add_argument("--price", type=float, help="only points at this price")
+    h.add_argument("--out-of-stock", action="store_true", help="only points recorded as out of stock")
+    h.add_argument("--apply", action="store_true", help="actually remove (default is a preview)")
+    h.set_defaults(fn=cmd_history)
     sub.add_parser("build-site").set_defaults(fn=cmd_build_site)
     s = sub.add_parser("serve")
     s.add_argument("--port", type=int, default=8000)

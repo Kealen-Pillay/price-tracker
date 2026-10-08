@@ -20,6 +20,11 @@ HEADERS = {
     "Accept-Language": "en-NZ,en;q=0.9",
 }
 BLOCK_STATUSES = {401, 403, 429, 503}
+CURRENCY = "NZD"
+# Shopify picks a "market" (currency, shipping country, availability) from the visitor's location. GitHub's
+# runners are in the US, which made Orbitkey answer in AUD and Life Pharmacy report items as unavailable.
+# These cookies pin every request to New Zealand; /cart.js then confirms which currency we actually got.
+NZ_COOKIES = {"localization": "NZ", "cart_currency": CURRENCY}
 
 
 class ScrapeError(Exception):
@@ -30,11 +35,11 @@ class Fetcher:
     def __init__(self, retailers: dict, polite_delay: tuple[float, float] = (2.0, 5.0)):
         self.retailers = retailers
         self.polite_delay = polite_delay
-        self.client = httpx.Client(headers=HEADERS, follow_redirects=True, timeout=30, http2=False)
+        self.client = httpx.Client(headers=HEADERS, cookies=NZ_COOKIES, follow_redirects=True, timeout=30)
         self._pw = None
         self._browser = None
         self._last_host: dict[str, float] = {}
-        self._warmed: set[str] = set()
+        self._shopify_currency: dict[str, str | None] = {}
 
     # -- lifecycle -------------------------------------------------------
     def __enter__(self):
@@ -69,13 +74,33 @@ class Fetcher:
         try:
             # country=NZ selects NZD pricing on multi-market stores; GitHub's runners are in the US.
             r = self.client.get(f"{p.scheme}://{p.netloc}/products/{handle}.js", params={"country": "NZ"})
-            if r.status_code == 200:
-                data = r.json()
-                if isinstance(data, dict) and "variants" in data:
-                    return parse_shopify_js(data)
+            if r.status_code != 200:
+                return None
+            data = r.json()
         except (httpx.HTTPError, ValueError):
-            pass
-        return None
+            return None
+        if not (isinstance(data, dict) and "variants" in data):
+            return None
+        offer = parse_shopify_js(data)
+        offer.currency = self._store_currency(p)
+        return offer
+
+    def _store_currency(self, p) -> str | None:
+        """Currency a Shopify store is pricing this session in (from /cart.js), cached per host."""
+        if p.netloc not in self._shopify_currency:
+            try:
+                cart = self.client.get(f"{p.scheme}://{p.netloc}/cart.js").json()
+                self._shopify_currency[p.netloc] = (cart.get("currency") or "").upper() or None
+            except (httpx.HTTPError, ValueError, AttributeError):
+                self._shopify_currency[p.netloc] = None
+        return self._shopify_currency[p.netloc]
+
+    def _page_offer(self, url: str, retailer: dict) -> Offer | None:
+        try:
+            r = self.client.get(url)
+            return parse_html(r.text, retailer) if r.status_code == 200 else None
+        except httpx.HTTPError:
+            return None
 
     def _browser_html(self, url: str) -> str:
         if self._browser is None:
@@ -86,6 +111,7 @@ class Fetcher:
                 args=["--disable-blink-features=AutomationControlled"]
             )
         ctx = self._browser.new_context(user_agent=UA, locale="en-NZ", viewport={"width": 1366, "height": 900})
+        ctx.add_cookies([{"name": k, "value": v, "url": url} for k, v in NZ_COOKIES.items()])
         try:
             page = ctx.new_page()
             page.goto(url, wait_until="domcontentloaded", timeout=60_000)
@@ -97,8 +123,26 @@ class Fetcher:
         finally:
             ctx.close()
 
+    def recheck(self, url: str, wait: tuple[float, float] = (20, 40)) -> Offer | None:
+        """Read a URL again a little later with a brand-new session (fresh cookies, no cached currency)."""
+        time.sleep(random.uniform(*wait))
+        old_client, old_cur = self.client, self._shopify_currency
+        self.client = httpx.Client(headers=HEADERS, cookies=NZ_COOKIES, follow_redirects=True, timeout=30)
+        self._shopify_currency = {}
+        try:
+            return self.get_offer(url)[0]
+        except ScrapeError:
+            return None
+        finally:
+            self.client.close()
+            self.client, self._shopify_currency = old_client, old_cur
+
     def get_offer(self, url: str) -> tuple[Offer, dict]:
         offer, retailer = self._get_offer(url)
+        if offer.currency and offer.currency.upper() != CURRENCY:
+            # Never record a price in the wrong currency: it would look like a price change.
+            raise ScrapeError(f"{retailer['name']} answered in {offer.currency.upper()}, not {CURRENCY}; "
+                              f"reading discarded")
         if offer.genders is None:  # fall back to the URL slug, e.g. JD's ".../xt6-womens-120525865"
             offer.genders = detect_gender(re.sub(r"[-_/]+", " ", urlparse(url).path))
         return offer, retailer
@@ -107,22 +151,19 @@ class Fetcher:
         retailer = self.retailer_for(url)
         if retailer.get("blocked"):
             raise ScrapeError(f"{retailer['name']} is not supported: {retailer['blocked']}")
-        host = urlparse(url).netloc
-        self._throttle(host)
-        if retailer.get("warmup") and host not in self._warmed:
-            # Some bot filters reject a cold first request; visiting the homepage first sets their cookies.
-            self._warmed.add(host)
-            try:
-                self.client.get(f"https://{host}/")
-                time.sleep(random.uniform(2, 4))
-            except httpx.HTTPError:
-                pass
+        self._throttle(urlparse(url).netloc)
 
         offer = self._shopify(url)
         if offer:
+            if offer.in_stock is False:
+                # Shopify's JSON can say "unavailable" just because it thinks we're shipping overseas.
+                # Only believe it if the product page agrees.
+                page = self._page_offer(url, retailer)
+                if page and page.in_stock:
+                    offer.in_stock = True
             return offer, retailer
 
-        html, status = None, None
+        html, status, final_url = None, None, url
         if not retailer.get("js"):
             try:
                 r = self.client.get(url)
@@ -133,12 +174,13 @@ class Fetcher:
                 if r.status_code == 404:
                     raise ScrapeError("Product page not found (404) — the URL may have changed")
                 if r.status_code not in BLOCK_STATUSES:
-                    html = r.text
+                    html, final_url = r.text, str(r.url)
             except httpx.HTTPError as e:
                 status = str(e)
         if html:
             offer = parse_html(html, retailer)
             if offer:
+                offer.final_url = final_url
                 return offer, retailer
 
         # Fall back to a real (headless) browser for JS-rendered or bot-protected pages.
@@ -147,6 +189,8 @@ class Fetcher:
         except Exception as e:
             raise ScrapeError(f"Browser fetch failed ({status=}): {e}") from e
         offer = parse_html(html, retailer)
+        if offer:
+            offer.final_url = url
         if not offer:
             raise ScrapeError(
                 f"No price found on page (http status {status}). The site may block bots or need a "

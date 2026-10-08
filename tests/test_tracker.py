@@ -230,3 +230,120 @@ def test_gender_falls_back_to_url_slug(monkeypatch):
     monkeypatch.setattr(f, "_get_offer", lambda url: (Offer(price=1.0, title="XT-6"), {"name": "JD"}))
     assert f.get_offer("https://www.jdsports.co.nz/products/xt6-womens-120525865")[0].genders == ["women"]
     assert f.get_offer("https://www.jdsports.co.nz/products/xt6-120733321")[0].genders is None
+
+
+# ---- Phase 1: geo/currency safety, confirmation of big changes, product identity
+from tracker import verify
+
+
+def test_big_change_and_matching():
+    prev = {"price": 100.0, "in_stock": True}
+    assert not verify.is_big_change(None, {"price": 50.0, "in_stock": True})
+    assert not verify.is_big_change(prev, {"price": 90.0, "in_stock": True})  # 10%: small
+    assert verify.is_big_change(prev, {"price": 80.0, "in_stock": True})  # 20%: big
+    assert verify.is_big_change(prev, {"price": 100.0, "in_stock": False})  # stock flip
+    assert verify.readings_match({"price": 100.0, "in_stock": True}, {"price": 100.5, "in_stock": True})
+    assert not verify.readings_match({"price": 100.0, "in_stock": True}, {"price": 100.0, "in_stock": False})
+    assert not verify.readings_match(None, {"price": 1.0})
+
+
+def _offer(**kw):
+    from tracker.parse import Offer
+    return Offer(**{"price": 10.0, **kw})
+
+
+def test_identity_baseline_rename_and_swap():
+    item, slot, url = {"name": "Mat"}, {}, "https://shop.example/products/mat"
+    assert verify.identity_warning(item, url, "S", slot, _offer(product_id="shopify:1", title="Desk Mat Slim")) is None
+    # Same product id, renamed: followed quietly (Orbitkey renamed "Desk Mat Slim" → "Desk Mat Pro Slim").
+    assert verify.identity_warning(item, url, "S", slot, _offer(product_id="shopify:1", title="Desk Mat Pro Slim")) is None
+    assert slot["identity"]["title"] == "Desk Mat Pro Slim"
+    # Different product id: warn once, then accept the new baseline.
+    w = verify.identity_warning(item, url, "S", slot, _offer(product_id="shopify:2", title="Laptop Sleeve"))
+    assert w and "product id changed" in w
+    assert verify.identity_warning(item, url, "S", slot, _offer(product_id="shopify:2", title="Laptop Sleeve")) is None
+
+
+def test_identity_title_and_redirect_without_ids():
+    item, url = {"name": "Perfume"}, "https://cw.example/buy/1/dior-sauvage"
+    slot = {}
+    verify.identity_warning(item, url, "CW", slot, _offer(title="Dior Sauvage EDP 100ml"))
+    assert "name changed" in verify.identity_warning(item, url, "CW", slot, _offer(title="Panadol 20 tablets"))
+    slot = {}
+    verify.identity_warning(item, url, "CW", slot, _offer(title="A", final_url=url + "/"))  # trailing slash is fine
+    w = verify.identity_warning(item, url, "CW", slot, _offer(title="A", final_url="https://cw.example/clearance"))
+    assert w and "redirects" in w
+
+
+def test_wrong_currency_is_rejected(monkeypatch):
+    from tracker.fetch import Fetcher, ScrapeError
+    f = Fetcher({})
+    monkeypatch.setattr(f, "_get_offer", lambda url: (_offer(price=130.0, currency="AUD"), {"name": "Orbitkey"}))
+    with pytest.raises(ScrapeError, match="AUD"):
+        f.get_offer("https://www.orbitkey.com.au/products/desk-mat-slim")
+
+
+def test_shopify_unavailable_is_confirmed_on_the_product_page(monkeypatch):
+    from tracker.fetch import Fetcher
+    f = Fetcher({}, polite_delay=(0, 0))
+    monkeypatch.setattr(f, "_shopify", lambda url: _offer(in_stock=False, currency="NZD"))
+    monkeypatch.setattr(f, "_page_offer", lambda url, r: _offer(in_stock=True))
+    assert f.get_offer("https://life.example/products/prada")[0].in_stock is True
+    monkeypatch.setattr(f, "_page_offer", lambda url, r: _offer(in_stock=False))
+    assert f.get_offer("https://life.example/products/prada")[0].in_stock is False
+
+
+def _run_check(monkeypatch, tmp_path, readings, recheck=None):
+    """Run cmd_check against a fake fetcher; `readings` are returned in order for the single URL."""
+    import argparse
+    import tracker.__main__ as cli
+    from tracker import telegram
+
+    url = "https://shop.example/products/thing"
+    monkeypatch.setattr(store, "PRICES", tmp_path / "prices.json")
+    monkeypatch.setattr(store, "STATE", tmp_path / "state.json")
+    monkeypatch.setattr(store, "load_wishlist", lambda: [{"id": "thing", "name": "Thing", "urls": [url]}])
+    monkeypatch.setattr(store, "load_settings", lambda: {})
+    monkeypatch.setattr(telegram, "pending_commands", lambda off: ([], off))
+    sent = []
+    monkeypatch.setattr(telegram, "send", sent.append)
+
+    class FakeFetcher:
+        def __init__(self, *a, **k): pass
+        def __enter__(self): return self
+        def __exit__(self, *e): pass
+        def retailer_for(self, u): return {"name": "Shop"}
+        def get_offer(self, u): return readings.pop(0), {"name": "Shop"}
+        def recheck(self, u): return recheck
+
+    monkeypatch.setattr(cli, "Fetcher", FakeFetcher)
+    cli.cmd_check(argparse.Namespace(dry_run=False))
+    return store.load_prices()["items"]["thing"]["offers"][url], sent
+
+
+def test_big_drop_needs_confirmation(monkeypatch, tmp_path):
+    slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=100.0, in_stock=True)])
+    assert slot["price"] == 100.0 and not sent
+    # A 50% "drop" that a fresh-session recheck doesn't reproduce: held as pending, nothing recorded or sent.
+    slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=50.0, in_stock=True)],
+                            recheck=_offer(price=100.0, in_stock=True))
+    assert slot["price"] == 100.0 and slot["pending"]["price"] == 50.0 and len(slot["history"]) == 1 and not sent
+    # Seen again next run: confirmed, recorded and alerted.
+    slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=50.0, in_stock=True)], recheck=None)
+    assert slot["price"] == 50.0 and "pending" not in slot and len(slot["history"]) == 2
+    assert "Price drop 50%" in sent[0]
+
+
+def test_big_drop_confirmed_by_immediate_recheck(monkeypatch, tmp_path):
+    _run_check(monkeypatch, tmp_path, [_offer(price=100.0, in_stock=True)])
+    slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=70.0, in_stock=True)],
+                            recheck=_offer(price=70.0, in_stock=True))
+    assert slot["price"] == 70.0 and "Price drop 30%" in sent[0]
+
+
+def test_glitch_that_reverts_is_discarded(monkeypatch, tmp_path):
+    _run_check(monkeypatch, tmp_path, [_offer(price=100.0, in_stock=True)])
+    _run_check(monkeypatch, tmp_path, [_offer(price=100.0, in_stock=False)], recheck=_offer(price=100.0, in_stock=True))
+    slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=100.0, in_stock=True)])
+    assert "pending" not in slot and slot["in_stock"] is True and not sent
+    assert [h["in_stock"] for h in slot["history"]] == [True]

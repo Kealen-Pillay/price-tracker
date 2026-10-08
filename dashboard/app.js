@@ -148,7 +148,9 @@ function render() {
         <tbody>${[...available, ...soldOut].map(([u, o]) => `
           <tr class="${o.in_stock === false ? "oos" : ""}">
             <td>${esc(o.retailer)}${o.title ? `<div class="muted small">${esc(o.title)}</div>` : ""}${o.method === "json-ld-range" ? `<div class="err">Multi-size page: price may not be your size</div>` : ""}
-                ${o.error ? `<div class="err">${esc(o.error)}</div>` : ""}</td>
+                ${o.error ? `<div class="err">${esc(o.error)}</div>` : ""}
+                ${o.pending ? `<div class="note">Unconfirmed reading ${money(o.pending.price)}${o.pending.in_stock === false ? " (out of stock)" : ""}, rechecking next run</div>` : ""}
+                ${o.identity_note ? `<div class="err">⚠ ${esc(o.identity_note)}</div>` : ""}</td>
             <td class="num">${money(o.price)}${o.was ? `<span class="was">${money(o.was)}</span>` : ""}</td>
             <td>${o.in_stock === false ? "Out" : o.in_stock ? "In stock" : "—"}</td>
             <td class="muted small">${ago(o.checked)}</td>

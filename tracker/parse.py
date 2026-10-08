@@ -30,6 +30,8 @@ class Offer:
     currency: str | None = None
     method: str | None = None  # which extractor found the price
     genders: list[str] | None = None  # e.g. ["men"], ["men", "women"] (unisex), ["kids"]; None = unknown
+    product_id: str | None = None  # stable identity (Shopify id, GTIN, SKU) to notice a URL changing product
+    final_url: str | None = None  # where the page actually ended up after redirects
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -81,6 +83,14 @@ def _walk_jsonld(node):
         for v in node.values():
             if isinstance(v, (list, dict)):
                 yield from _walk_jsonld(v)
+
+
+def _jsonld_id(node: dict) -> str | None:
+    for key in ("productGroupID", "gtin13", "gtin", "gtin14", "gtin12", "gtin8", "sku", "productID", "mpn"):
+        v = node.get(key)
+        if isinstance(v, (str, int)) and str(v).strip():
+            return f"{key}:{str(v).strip()}"
+    return None
 
 
 def _types(node: dict) -> set[str]:
@@ -136,6 +146,7 @@ def from_jsonld(soup: BeautifulSoup) -> Offer | None:
                 best = min(live, key=lambda c: c.price)
                 if any(c.in_stock for c in cands):
                     best.in_stock = True
+                best.product_id = _jsonld_id(node)
                 best.genders = detect_gender(node.get("name"), node.get("gender"), node.get("audience"),
                                              node.get("category") if isinstance(node.get("category"), str) else None)
                 return best
@@ -152,7 +163,15 @@ def from_microdata(soup: BeautifulSoup) -> Offer | None:
     cur = soup.find(attrs={"itemprop": "priceCurrency"})
     avail = soup.find(attrs={"itemprop": "availability"})
     name = soup.find(attrs={"itemprop": "name"})
+    pid = None
+    for key in ("gtin13", "gtin", "sku", "productID", "mpn"):
+        el_id = soup.find(attrs={"itemprop": key})
+        val = el_id and (el_id.get("content") or el_id.get_text(strip=True))
+        if val:
+            pid = f"{key}:{val}"
+            break
     return Offer(
+        product_id=pid,
         price=price,
         in_stock=_availability(avail and (avail.get("content") or avail.get("href"))),
         title=name and (name.get("content") or name.get_text(" ", strip=True)),
@@ -241,6 +260,7 @@ def parse_shopify_js(data: dict) -> Offer:
         title=title,
         currency=None,
         method="shopify",
+        product_id=f"shopify:{data['id']}" if data.get("id") else None,
         # Only gender-ish tags (e.g. Birkenstock "gender:Mens"); other tags often name unrelated categories.
         genders=detect_gender(data.get("title"), data.get("type"),
                               *[t.split(":", 1)[-1] for t in data.get("tags") or [] if "gender" in t.lower()]),

@@ -80,9 +80,26 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt pytest
 .venv/bin/python -m pytest -q
 ```
 
+## Accuracy safeguards
+
+- **NZ location pinned.** Every request sends Shopify's `localization=NZ` / `cart_currency=NZD` cookies, because
+  GitHub's runners are in the US and some stores otherwise answer in AUD or mark items unavailable. Each Shopify
+  store's currency is confirmed via `/cart.js`, and any reading not in NZD is discarded, never recorded.
+- **"Unavailable" is double-checked** against the product page before an item is treated as sold out.
+- **Big changes need confirmation.** A move of ≥15% or a stock flip is re-read with a fresh session ~30s later;
+  if that doesn't agree, it's held as *unconfirmed* (shown on the dashboard) until the next run sees it again.
+  One-off glitches never reach the history or Telegram.
+- **Product identity.** The first reading of each link records its product id (Shopify id / GTIN / SKU) and
+  title. If the id changes, the name changes completely, or the link starts redirecting elsewhere, you get a
+  🔀 Telegram warning and a note on the dashboard.
+- **Cleaning history.** `python -m tracker history show <item-id>` lists points;
+  `python -m tracker history drop <item-id|all> [--url …] [--at …] [--price …] [--out-of-stock]` previews
+  removals, and `--apply` performs them (current values are re-synced to the last good point).
+
 ## Tuning
 
-- Alert thresholds: `MIN_DROP_PCT` and `FAILURES_BEFORE_WARNING` in `tracker/alerts.py`.
+- Alert thresholds: `MIN_DROP_PCT` and `FAILURES_BEFORE_WARNING` in `tracker/alerts.py`; confirmation and
+  identity thresholds in `tracker/verify.py`.
 - Check frequency: the cron lines in `.github/workflows/check.yml`.
 - Sale events: `sales_calendar.yaml` (approximate — retailers move dates each year).
 
