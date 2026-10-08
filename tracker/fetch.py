@@ -249,6 +249,14 @@ class Fetcher:
         except Exception as e:
             raise ScrapeError(f"Browser fetch failed ({status=}): {e}") from e
         offer = parse_html(html, retailer)
+        if not offer:
+            # Some sites (e.g. Dr Martens) occasionally serve a 200 page with no product data, likely a bot check.
+            time.sleep(random.uniform(5, 10))
+            try:
+                offer = parse_html(self._browser_html(page_url), retailer)
+            except Exception:
+                offer = None
+            log.info("no product data in browser page %s; retried once: %s", url, "ok" if offer else "still none")
         if offer:
             offer.final_url = url
         if not offer:
