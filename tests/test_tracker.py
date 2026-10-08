@@ -365,3 +365,25 @@ def test_shopify_currency_is_settled_before_reading_the_price(monkeypatch):
     monkeypatch.setattr(f.client, "get", lambda *a, **k: R())
     o = f._shopify("https://www.orbitkey.com.au/products/desk-mat-slim")
     assert calls == ["currency", "price"] and o.currency == "NZD" and o.price == 139.0
+
+
+def test_rate_limited_host_goes_straight_to_browser(monkeypatch):
+    import tracker.fetch as F
+    f = F.Fetcher({}, polite_delay=(0, 0))
+    monkeypatch.setattr(F.time, "sleep", lambda s: None)
+    gets = []
+
+    class R:
+        status_code = 429
+        url = "x"
+        text = ""
+        def json(self): return {}
+
+    monkeypatch.setattr(f.client, "get", lambda url, **k: gets.append(url) or R())
+    monkeypatch.setattr(f, "_store_currency", lambda p: "NZD")
+    page = '<script type="application/ld+json">{"@type":"Product","name":"A","offers":{"price":"10","priceCurrency":"NZD"}}</script>'
+    monkeypatch.setattr(f, "_browser_html", lambda url: page)
+    assert f.get_offer("https://shop.example/products/a")[0].price == 10.0
+    first = len(gets)
+    assert f.get_offer("https://shop.example/products/b")[0].price == 10.0
+    assert len(gets) == first  # second link: no plain requests at all

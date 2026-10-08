@@ -42,6 +42,9 @@ class Fetcher:
         self._browser = None
         self._last_host: dict[str, float] = {}
         self._shopify_currency: dict[str, str | None] = {}
+        # Hosts that rate-limited/blocked plain requests this run (GitHub's shared IPs get HTTP 429 from Shopify):
+        # their remaining links go straight to the headless browser instead of waiting through retries.
+        self._blocked_hosts: set[str] = set()
 
     # -- lifecycle -------------------------------------------------------
     def __enter__(self):
@@ -70,7 +73,7 @@ class Fetcher:
 
     def _shopify(self, url: str) -> Offer | None:
         p = urlparse(url)
-        if "/products/" not in p.path:
+        if "/products/" not in p.path or p.netloc in self._blocked_hosts:
             return None
         handle = p.path.split("/products/", 1)[1].strip("/").split("/")[0]
         currency = self._store_currency(p)  # settle the market first, so the price below is in this currency
@@ -78,7 +81,9 @@ class Fetcher:
             # country=NZ selects NZD pricing on multi-market stores; GitHub's runners are in the US.
             r = self.client.get(f"{p.scheme}://{p.netloc}/products/{handle}.js", params={"country": "NZ"})
             if r.status_code != 200:
-                log.info("shopify json %s -> HTTP %s (final %s); falling back to the page", handle, r.status_code, r.url)
+                log.info("shopify json %s -> HTTP %s; falling back", handle, r.status_code)
+                if r.status_code in BLOCK_STATUSES:
+                    self._blocked_hosts.add(p.netloc)
                 return None
             data = r.json()
         except (httpx.HTTPError, ValueError) as e:
@@ -187,7 +192,8 @@ class Fetcher:
             return offer, retailer
 
         html, status, final_url = None, None, url
-        if not retailer.get("js"):
+        host = urlparse(url).netloc
+        if not retailer.get("js") and host not in self._blocked_hosts:
             try:
                 r = self.client.get(url)
                 if r.status_code in BLOCK_STATUSES:  # often a transient rate limit: wait and retry once
@@ -198,12 +204,17 @@ class Fetcher:
                     raise ScrapeError("Product page not found (404) — the URL may have changed")
                 if r.status_code not in BLOCK_STATUSES:
                     html, final_url = r.text, str(r.url)
+                else:
+                    self._blocked_hosts.add(host)
             except httpx.HTTPError as e:
                 status = str(e)
             if html is None:
                 log.info("page %s -> %s; trying the headless browser", url, status)
         if html:
             offer = parse_html(html, retailer)
+            if offer and offer.currency and offer.currency.upper() != CURRENCY:
+                log.info("page %s priced in %s; retrying in the browser with NZ cookies", url, offer.currency)
+                offer = None
             if offer:
                 offer.final_url = final_url
                 return offer, retailer
