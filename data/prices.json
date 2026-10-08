@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T21:02:24+00:00",
+ "updated": "2026-10-08T21:11:03+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -24,10 +24,10 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T21:00:36+00:00",
+     "checked": "2026-10-08T21:08:38+00:00",
      "error": null,
      "identity": {
-      "id": null,
+      "ids": {},
       "title": "Christian Dior Sauvage Eau De Parfum 100ml"
      }
     },
@@ -52,10 +52,10 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:00:51+00:00",
+     "checked": "2026-10-08T21:08:56+00:00",
      "error": null,
      "identity": {
-      "id": null,
+      "ids": {},
       "title": "Dior Sauvage edp 100ml"
      }
     }
@@ -91,10 +91,10 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-08T21:00:53+00:00",
+     "checked": "2026-10-08T21:08:58+00:00",
      "error": null,
      "identity": {
-      "id": null,
+      "ids": {},
       "title": "Christian Dior Sauvage Elixir Parfum 60ml"
      }
     },
@@ -119,10 +119,12 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-08T21:00:55+00:00",
+     "checked": "2026-10-08T21:09:01+00:00",
      "error": null,
      "identity": {
-      "id": "gtin:3348901567572",
+      "ids": {
+       "gtin": "3348901567572"
+      },
       "title": "Dior Sauvage Elixir 60ml"
      }
     },
@@ -148,10 +150,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:00:57+00:00",
+     "checked": "2026-10-08T21:09:02+00:00",
      "error": null,
      "identity": {
-      "id": "sku:20012813",
+      "ids": {
+       "sku": "20012813"
+      },
       "title": "Christian Dior Sauvage Elixir 60ml"
      }
     }
@@ -188,10 +192,10 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:00:59+00:00",
+     "checked": "2026-10-08T21:09:07+00:00",
      "error": null,
      "identity": {
-      "id": null,
+      "ids": {},
       "title": "Chanel Bleu De Chanel edp 100ml"
      }
     }
@@ -226,10 +230,10 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:01+00:00",
+     "checked": "2026-10-08T21:09:09+00:00",
      "error": null,
      "identity": {
-      "id": null,
+      "ids": {},
       "title": "Chanel Bleu De Chanel Parfum 100ml"
      }
     }
@@ -265,10 +269,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:05+00:00",
+     "checked": "2026-10-08T21:09:11+00:00",
      "error": null,
      "identity": {
-      "id": "sku:20037873",
+      "ids": {
+       "sku": "20037873"
+      },
       "title": "Prada Paradigme EDP 100ml"
      }
     }
@@ -304,10 +310,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:07+00:00",
+     "checked": "2026-10-08T21:09:13+00:00",
      "error": null,
      "identity": {
-      "id": "sku:20031013",
+      "ids": {
+       "sku": "20031013"
+      },
       "title": "Yves Saint Laurent Myslf Le Parfum 100ml"
      }
     }
@@ -343,10 +351,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:10+00:00",
+     "checked": "2026-10-08T21:09:16+00:00",
      "error": null,
      "identity": {
-      "id": "sku:20010314",
+      "ids": {
+       "sku": "20010314"
+      },
       "title": "Stronger with You Intensely EDP Spray 100ml"
      }
     },
@@ -371,10 +381,10 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:13+00:00",
+     "checked": "2026-10-08T21:09:20+00:00",
      "error": null,
      "identity": {
-      "id": null,
+      "ids": {},
       "title": "Giorgio Armani Stronger With You Intensely edp 100ml"
      }
     }
@@ -410,10 +420,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:14+00:00",
+     "checked": "2026-10-08T21:09:21+00:00",
      "error": null,
      "identity": {
-      "id": "sku:22209001.BLK",
+      "ids": {
+       "sku": "22209001.BLK"
+      },
       "title": "Adrian Tassel Smooth Loafer"
      }
     },
@@ -438,10 +450,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:16+00:00",
+     "checked": "2026-10-08T21:09:26+00:00",
      "error": null,
      "identity": {
-      "id": "sku:30917201.BRN",
+      "ids": {
+       "sku": "30917201.BRN"
+      },
       "title": "Adrian Tassel Loafer Crazy Horse"
      }
     },
@@ -466,8 +480,8 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:19+00:00",
-     "error": null,
+     "checked": "2026-10-08T21:09:30+00:00",
+     "error": "No price found on page (http status 200). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "id": "sku:14573601.RED",
       "title": "Adrian Tassel Loafer Arcadia"
@@ -506,10 +520,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:23+00:00",
+     "checked": "2026-10-08T21:09:35+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8326675005738",
+      "ids": {
+       "productGroupID": "8326675005738"
+      },
       "title": "Arizona"
      }
     },
@@ -534,10 +550,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:25+00:00",
+     "checked": "2026-10-08T21:09:37+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8326706233642",
+      "ids": {
+       "productGroupID": "8326706233642"
+      },
       "title": "Arizona"
      },
      "identity_note": "product id changed (shopify:8326706233642 → productGroupID:8326706233642): was “Arizona”, now “Arizona”"
@@ -563,10 +581,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:27+00:00",
+     "checked": "2026-10-08T21:09:40+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8505714671914",
+      "ids": {
+       "productGroupID": "8505714671914"
+      },
       "title": "Arizona"
      },
      "identity_note": "product id changed (shopify:8505714671914 → productGroupID:8505714671914): was “Arizona”, now “Arizona”"
@@ -604,10 +624,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:31+00:00",
+     "checked": "2026-10-08T21:09:42+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8326831997226",
+      "ids": {
+       "productGroupID": "8326831997226"
+      },
       "title": "Boston"
      },
      "identity_note": "product id changed (shopify:8326831997226 → productGroupID:8326831997226): was “Boston”, now “Boston”"
@@ -633,10 +655,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:35+00:00",
+     "checked": "2026-10-08T21:09:46+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8573581033770",
+      "ids": {
+       "productGroupID": "8573581033770"
+      },
       "title": "Boston"
      },
      "identity_note": "product id changed (shopify:8573581033770 → productGroupID:8573581033770): was “Boston”, now “Boston”"
@@ -662,10 +686,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:39+00:00",
+     "checked": "2026-10-08T21:09:50+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:10025825796394",
+      "ids": {
+       "productGroupID": "10025825796394"
+      },
       "title": "Boston Soft Footbed"
      },
      "identity_note": "product id changed (shopify:10025825796394 → productGroupID:10025825796394): was “Boston Soft Footbed”, now “Boston Soft Footbed”"
@@ -691,10 +717,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:40+00:00",
+     "checked": "2026-10-08T21:09:54+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:9535876858154",
+      "ids": {
+       "productGroupID": "9535876858154"
+      },
       "title": "Boston"
      },
      "identity_note": "product id changed (shopify:9535876858154 → productGroupID:9535876858154): was “Boston”, now “Boston”"
@@ -720,10 +748,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:43+00:00",
+     "checked": "2026-10-08T21:09:56+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8538568327466",
+      "ids": {
+       "productGroupID": "8538568327466"
+      },
       "title": "Boston Soft Footbed"
      },
      "identity_note": "product id changed (shopify:8538568327466 → productGroupID:8538568327466): was “Boston Soft Footbed”, now “Boston Soft Footbed”"
@@ -763,10 +793,12 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:47+00:00",
+     "checked": "2026-10-08T21:09:58+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8841999712308",
+      "ids": {
+       "productGroupID": "8841999712308"
+      },
       "title": "XT-6"
      }
     },
@@ -791,10 +823,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:49+00:00",
+     "checked": "2026-10-08T21:10:03+00:00",
      "error": null,
      "identity": {
-      "id": "productGroupID:8809713631284",
+      "ids": {
+       "productGroupID": "8809713631284"
+      },
       "title": "XT-6"
      }
     }
@@ -830,10 +864,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:01:52+00:00",
+     "checked": "2026-10-08T21:10:06+00:00",
      "error": null,
      "identity": {
-      "id": "gtin:9346396003487",
+      "ids": {
+       "gtin": "9346396003487"
+      },
       "title": "Mbeat activiva Heavy Duty Single Monitor Screen Gas Spring Monitor Arm for Flat Panel & Curved Screen (Black & Space Grey)"
      }
     }
@@ -867,11 +903,13 @@
      "price": 139.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-10-08T21:01:55+00:00",
-     "error": "Orbitkey answered in AUD, not NZD; reading discarded",
+     "method": "microdata",
+     "checked": "2026-10-08T21:10:08+00:00",
+     "error": null,
      "identity": {
-      "id": "shopify:6843134705718",
+      "ids": {
+       "sku": "WDS1-BLK-105"
+      },
       "title": "Desk Mat Pro Slim"
      }
     }
@@ -901,8 +939,8 @@
       }
      ],
      "retailer": "PB Tech",
-     "error": null,
-     "checked": "2026-10-08T21:01:58+00:00",
+     "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
+     "checked": "2026-10-08T21:10:18+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -940,10 +978,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:02:15+00:00",
+     "checked": "2026-10-08T21:10:53+00:00",
      "error": null,
      "identity": {
-      "id": "gtin:745883865932",
+      "ids": {
+       "gtin": "745883865932"
+      },
       "title": "Belkin BoostCharge Pro2-in-1 Magnetic Wireless Charging Pad with Qi2 15W (Black)"
      }
     }
@@ -979,10 +1019,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:02:17+00:00",
+     "checked": "2026-10-08T21:10:55+00:00",
      "error": null,
      "identity": {
-      "id": "gtin:5397184962398",
+      "ids": {
+       "gtin": "5397184962398"
+      },
       "title": "Dell 34 Plus 34\" UWQHD 120Hz USB-C Curved Monitor"
      }
     }
@@ -1017,10 +1059,12 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-08T21:02:20+00:00",
+     "checked": "2026-10-08T21:10:59+00:00",
      "error": null,
      "identity": {
-      "id": "gtin:824142346754",
+      "ids": {
+       "gtin": "824142346754"
+      },
       "title": "MSI Modern MD342CQP 34\" Ultrawide Curved USB-C Business Monitor - Black - 3440x1440 - DisplayPort - HDMI - USB-C 98W PD - USB Hub - KVM - Speakers - Height Adjustable Stand - 75x75 VESA"
      }
     },
@@ -1045,10 +1089,10 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-08T21:02:22+00:00",
+     "checked": "2026-10-08T21:11:01+00:00",
      "error": null,
      "identity": {
-      "id": null,
+      "ids": {},
       "title": "MSI Modern MD342CQP 34\" UWQHD"
      }
     }
