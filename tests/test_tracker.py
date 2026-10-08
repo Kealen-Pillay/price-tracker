@@ -387,3 +387,25 @@ def test_rate_limited_host_goes_straight_to_browser(monkeypatch):
     first = len(gets)
     assert f.get_offer("https://shop.example/products/b")[0].price == 10.0
     assert len(gets) == first  # second link: no plain requests at all
+
+
+def test_shopify_active_currency_beats_theme_label():
+    html = ('<span itemprop="price" content="139.00"></span><meta itemprop="priceCurrency" content="AUD">'
+            '<script>Shopify.currency = {"active":"NZD","rate":"1.2669012"};</script>')
+    assert parse_html(html).currency == "NZD"
+
+
+def test_nz_page_url():
+    from tracker.fetch import Fetcher
+    assert Fetcher._nz_page_url("https://o.example/products/mat") == "https://o.example/products/mat?country=NZ"
+    assert Fetcher._nz_page_url("https://o.example/products/mat?variant=1") == "https://o.example/products/mat?variant=1&country=NZ"
+    assert Fetcher._nz_page_url("https://cw.example/buy/1/x") == "https://cw.example/buy/1/x"
+
+
+def test_identity_compares_only_same_kind_of_id():
+    item, slot, url = {"name": "Mat"}, {}, "https://o.example/products/mat"
+    verify.identity_warning(item, url, "O", slot, _offer(product_id="shopify:6843134705718", title="Desk Mat Pro Slim"))
+    # Next run read the page instead (SKU, not Shopify id): not a product swap.
+    assert verify.identity_warning(item, url, "O", slot, _offer(product_id="sku:WDS1-BLK-105", title="Desk Mat Pro Slim")) is None
+    assert slot["identity"]["ids"] == {"shopify": "6843134705718", "sku": "WDS1-BLK-105"}
+    assert "sku" in verify.identity_warning(item, url, "O", slot, _offer(product_id="sku:OTHER", title="Desk Mat Pro Slim"))

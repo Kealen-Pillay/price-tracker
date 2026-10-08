@@ -4,7 +4,7 @@ from __future__ import annotations
 import random
 import re
 import time
-from urllib.parse import urlparse
+from urllib.parse import parse_qsl, urlencode, urlparse
 
 import httpx
 import logging
@@ -123,9 +123,19 @@ class Fetcher:
             self._shopify_currency[p.netloc] = cur
         return self._shopify_currency[p.netloc]
 
+    @staticmethod
+    def _nz_page_url(url: str) -> str:
+        """Shopify product pages honour ?country=NZ even when the visitor's IP says otherwise."""
+        p = urlparse(url)
+        if "/products/" not in p.path:
+            return url
+        query = dict(parse_qsl(p.query))
+        query.setdefault("country", "NZ")
+        return p._replace(query=urlencode(query)).geturl()
+
     def _page_offer(self, url: str, retailer: dict) -> Offer | None:
         try:
-            r = self.client.get(url)
+            r = self.client.get(self._nz_page_url(url))
             return parse_html(r.text, retailer) if r.status_code == 200 else None
         except httpx.HTTPError:
             return None
@@ -199,12 +209,13 @@ class Fetcher:
 
         html, status, final_url = None, None, url
         host = urlparse(url).netloc
+        page_url = self._nz_page_url(url)
         if not retailer.get("js") and host not in self._blocked_hosts:
             try:
-                r = self.client.get(url)
+                r = self.client.get(page_url)
                 if r.status_code in BLOCK_STATUSES:  # often a transient rate limit: wait and retry once
                     time.sleep(random.uniform(8, 15))
-                    r = self.client.get(url)
+                    r = self.client.get(page_url)
                 status = r.status_code
                 if r.status_code == 404:
                     raise ScrapeError("Product page not found (404) — the URL may have changed")
@@ -227,7 +238,7 @@ class Fetcher:
 
         # Fall back to a real (headless) browser for JS-rendered or bot-protected pages.
         try:
-            html = self._browser_html(url)
+            html = self._browser_html(page_url)
         except Exception as e:
             raise ScrapeError(f"Browser fetch failed ({status=}): {e}") from e
         offer = parse_html(html, retailer)

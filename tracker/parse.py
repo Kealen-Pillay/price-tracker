@@ -18,6 +18,9 @@ GENDER_PATTERNS = {
     "kids": re.compile(r"(?i)\b(kids?'?s?|junior|youth|toddler|infant|baby|girls?'?|boys?'?|child(ren)?)(?![a-z])"),
     "unisex": re.compile(r"(?i)\bunisex\b"),
 }
+# Shopify pages state the currency actually shown to this visitor; themes often hard-code the store's home
+# currency in their microdata (Orbitkey labels NZ$139 as "AUD"), so this wins when present.
+SHOPIFY_ACTIVE_CURRENCY_RE = re.compile(r'Shopify\.currency\s*=\s*\{[^}]*"active"\s*:\s*"([A-Z]{3})"')
 MONEY_RE = re.compile(r"(\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?|\d+(?:\.\d{1,2})?)")
 
 
@@ -234,6 +237,8 @@ def parse_html(html: str, retailer: dict | None = None) -> Offer | None:
         offer.title = t.get("content") if t and t.name == "meta" else (t.get_text(strip=True) if t else None)
     if offer.genders is None:
         offer.genders = detect_gender(offer.title)
+    if m := SHOPIFY_ACTIVE_CURRENCY_RE.search(html):
+        offer.currency = m.group(1)
     return offer
 
 

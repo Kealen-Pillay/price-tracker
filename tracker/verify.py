@@ -44,25 +44,30 @@ def identity_warning(item: dict, url: str, retailer: str, slot: dict, offer) -> 
     product; the baseline is then updated so the warning isn't repeated every run.
     """
     seen = slot.get("identity")
-    now = {"id": offer.product_id, "title": offer.title}
+    kind, _, value = (offer.product_id or "").partition(":")
+    now_ids = {kind: value} if value else {}
     if not seen:
-        slot["identity"] = now
+        slot["identity"] = {"ids": now_ids, "title": offer.title}
         return None
+    seen_ids = seen.get("ids") or {}
+    # Ids come in kinds (Shopify id, SKU, GTIN) depending on which method read the page this run;
+    # only compare the same kind, and remember new kinds as they appear.
+    shared = set(seen_ids) & set(now_ids)
     reason = None
-    if seen.get("id") and now["id"] and seen["id"] != now["id"]:
-        reason = f"product id changed ({seen['id']} → {now['id']})"
-    elif not (seen.get("id") and now["id"]) and seen.get("title") and now["title"]:
-        ratio = SequenceMatcher(None, seen["title"].lower(), now["title"].lower()).ratio()
+    if any(seen_ids[k] != now_ids[k] for k in shared):
+        k = next(k for k in shared if seen_ids[k] != now_ids[k])
+        reason = f"product id changed ({k} {seen_ids[k]} → {now_ids[k]})"
+    elif not shared and seen.get("title") and offer.title:
+        ratio = SequenceMatcher(None, seen["title"].lower(), offer.title.lower()).ratio()
         if ratio < TITLE_SIMILARITY_MIN:
             reason = "product name changed"
     if offer.final_url and _norm_path(offer.final_url) != _norm_path(url):
         reason = reason or f"link now redirects to {offer.final_url}"
     if not reason:
-        if now["title"] and now["title"] != seen.get("title"):
-            slot["identity"] = {**seen, "title": now["title"]}  # minor rename: follow it quietly
+        slot["identity"] = {"ids": {**seen_ids, **now_ids}, "title": offer.title or seen.get("title")}
         return None
-    slot["identity"] = now
-    slot["identity_note"] = f"{reason}: was “{seen.get('title')}”, now “{now['title']}”"
+    slot["identity"] = {"ids": now_ids, "title": offer.title}
+    slot["identity_note"] = f"{reason}: was “{seen.get('title')}”, now “{offer.title}”"
     return (f"🔀 <b>{escape(item['name'])}</b> at {escape(retailer)}: {escape(reason)}.\n"
-            f"Was “{escape(seen.get('title') or '?')}”, now “{escape(now['title'] or '?')}”. "
+            f"Was “{escape(seen.get('title') or '?')}”, now “{escape(offer.title or '?')}”. "
             f"Check the link is still the product you want:\n{escape(url)}")
