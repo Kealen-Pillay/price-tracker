@@ -33,8 +33,5 @@
   "belkin-boostcharge-pro-2-in-1|https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black": {},
   "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": {}
  },
- "failures": {
-  "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": 3,
-  "dr-martens-adrian-tassel-loafer|https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html": 1
- }
+ "failures": {}
 }
