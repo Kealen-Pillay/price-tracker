@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T01:09:53+00:00",
+ "updated": "2026-10-09T11:24:01+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -16,6 +16,13 @@
        "price": 249.99,
        "was": 259.0,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-09T11:21:11+00:00",
+       "price": 249.99,
+       "was": 259.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -24,7 +31,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T01:07:05+00:00",
+     "checked": "2026-10-09T11:21:11+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -45,7 +52,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:20+00:00",
+     "checked": "2026-10-09T11:21:29+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -95,9 +102,9 @@
     "pct_vs_typical": null,
     "was": 259.0,
     "was_verified": false,
-    "days": 2,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7",
+     "3 day(s) of history so far; typical price needs 7",
      "store says was $259.00 (3% off), but it hasn't been seen selling at that price"
     ]
    }
@@ -117,6 +124,13 @@
        "price": 289.99,
        "was": 299.0,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-09T11:21:30+00:00",
+       "price": 289.99,
+       "was": 299.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -125,7 +139,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T01:07:21+00:00",
+     "checked": "2026-10-09T11:21:30+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -151,6 +165,13 @@
        "price": 289.99,
        "was": null,
        "in_stock": false
+      },
+      {
+       "t": "2026-10-09T11:21:34+00:00",
+       "price": 289.99,
+       "was": null,
+       "in_stock": false,
+       "cur": "NZD"
       }
      ],
      "retailer": "Bargain Chemist",
@@ -159,7 +180,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:23+00:00",
+     "checked": "2026-10-09T11:21:34+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -196,7 +217,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:25+00:00",
+     "checked": "2026-10-09T11:21:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -230,9 +251,9 @@
     "pct_vs_typical": null,
     "was": 299.0,
     "was_verified": true,
-    "days": 2,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7",
+     "3 day(s) of history so far; typical price needs 7",
      "3% off a verified RRP of $299.00",
      "$28.01 cheaper than the next store"
     ]
@@ -248,7 +269,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:27+00:00",
+     "checked": "2026-10-09T11:21:39+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -290,7 +311,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:29+00:00",
+     "checked": "2026-10-09T11:21:43+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -346,7 +367,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:32+00:00",
+     "checked": "2026-10-09T11:21:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -381,7 +402,7 @@
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T01:07:35+00:00",
+     "checked": "2026-10-09T11:21:48+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -440,7 +461,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:36+00:00",
+     "checked": "2026-10-09T11:21:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -475,7 +496,7 @@
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T01:07:39+00:00",
+     "checked": "2026-10-09T11:21:52+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -534,7 +555,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:40+00:00",
+     "checked": "2026-10-09T11:21:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -557,7 +578,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:44+00:00",
+     "checked": "2026-10-09T11:22:01+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -600,7 +621,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T01:07:43+00:00",
+     "checked": "2026-10-09T11:21:56+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -670,7 +691,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T01:07:45+00:00",
+     "checked": "2026-10-09T11:22:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -729,7 +750,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T01:07:47+00:00",
+     "checked": "2026-10-09T11:22:06+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -788,7 +809,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T01:07:51+00:00",
+     "checked": "2026-10-09T11:22:10+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -841,7 +862,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T01:07:53+00:00",
+     "checked": "2026-10-09T11:22:13+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -941,7 +962,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:55+00:00",
+     "checked": "2026-10-09T11:22:14+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1012,7 +1033,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:07:57+00:00",
+     "checked": "2026-10-09T11:22:16+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1072,7 +1093,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:01+00:00",
+     "checked": "2026-10-09T11:22:19+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1160,7 +1181,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:05+00:00",
+     "checked": "2026-10-09T11:22:23+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1220,7 +1241,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:10+00:00",
+     "checked": "2026-10-09T11:22:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1280,7 +1301,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:13+00:00",
+     "checked": "2026-10-09T11:22:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1340,7 +1361,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:17+00:00",
+     "checked": "2026-10-09T11:22:34+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1412,7 +1433,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:19+00:00",
+     "checked": "2026-10-09T11:22:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1502,7 +1523,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:22+00:00",
+     "checked": "2026-10-09T11:22:39+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1569,7 +1590,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:26+00:00",
+     "checked": "2026-10-09T11:22:42+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1637,6 +1658,13 @@
        "price": 143.99,
        "was": null,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-09T11:22:45+00:00",
+       "price": 143.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -1644,8 +1672,8 @@
      "price": 143.99,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-09T01:08:28+00:00",
+     "method": "shopify",
+     "checked": "2026-10-09T11:22:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1678,9 +1706,9 @@
     "pct_vs_typical": null,
     "was": null,
     "was_verified": false,
-    "days": 2,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7"
+     "3 day(s) of history so far; typical price needs 7"
     ]
    }
   },
@@ -1699,6 +1727,13 @@
        "price": 139.0,
        "was": null,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-09T11:22:46+00:00",
+       "price": 139.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
@@ -1706,12 +1741,13 @@
      "price": 139.0,
      "was": null,
      "in_stock": true,
-     "method": "microdata",
-     "checked": "2026-10-09T01:08:31+00:00",
+     "method": "shopify",
+     "checked": "2026-10-09T11:22:46+00:00",
      "error": null,
      "identity": {
       "ids": {
-       "sku": "WDS1-BLK-105"
+       "sku": "WDS1-BLK-105",
+       "shopify": "6843134705718"
       },
       "title": "Desk Mat Pro Slim"
      },
@@ -1739,9 +1775,9 @@
     "pct_vs_typical": null,
     "was": null,
     "was_verified": false,
-    "days": 2,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7"
+     "3 day(s) of history so far; typical price needs 7"
     ]
    }
   },
@@ -1771,7 +1807,7 @@
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-10-09T01:08:35+00:00",
+     "checked": "2026-10-09T11:22:46+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -1816,8 +1852,8 @@
      "price": 137.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-09T01:08:52+00:00",
+     "method": "shopify",
+     "checked": "2026-10-09T11:22:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1873,6 +1909,13 @@
        "price": 999.0,
        "was": null,
        "in_stock": true
+      },
+      {
+       "t": "2026-10-09T11:23:00+00:00",
+       "price": 999.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -1880,8 +1923,8 @@
      "price": 999.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-09T01:08:54+00:00",
+     "method": "shopify",
+     "checked": "2026-10-09T11:23:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1914,9 +1957,9 @@
     "pct_vs_typical": null,
     "was": null,
     "was_verified": false,
-    "days": 2,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7"
+     "3 day(s) of history so far; typical price needs 7"
     ]
    }
   },
@@ -1943,7 +1986,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:08:57+00:00",
+     "checked": "2026-10-09T11:23:04+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -1986,7 +2029,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T01:09:51+00:00",
+     "checked": "2026-10-09T11:23:57+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -2008,7 +2051,7 @@
       },
       {
        "shop": "Paradigm PC's",
-       "price": 604.82,
+       "price": 604.83,
        "was": null,
        "in_stock": true,
        "condition": "New",
