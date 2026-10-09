@@ -221,7 +221,10 @@ function drawChart(canvas, offers, target) {
   const datasets = Object.values(offers)
     .filter((o) => (o.history || []).some((h) => h.price != null && h.in_stock !== false))
     .map((o, i) => ({
-      label: o.title && o.title !== o.retailer ? `${o.retailer} – ${o.title}` : o.retailer,
+      label: (() => {
+        const full = o.title && o.title !== o.retailer ? `${o.retailer} – ${o.title}` : o.retailer;
+        return full.length > 48 ? full.slice(0, 47) + "…" : full;  // long store titles overflow the legend
+      })(),
       // Out-of-stock periods become gaps in the line.
       data: o.history.filter((h) => h.price != null).map((h) => ({ x: h.t, y: h.in_stock === false ? null : h.price })),
       borderColor: COLORS[i % COLORS.length],
