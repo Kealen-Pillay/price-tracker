@@ -1,0 +1,104 @@
+{
+ "updated": "2026-10-09T01:09:53+00:00",
+ "stores": {
+  "www.bargainchemist.co.nz": {
+   "name": "Bargain Chemist",
+   "status": "new",
+   "ok_rate": 1.0,
+   "attempts": 1,
+   "last_ok": "2026-10-09T01:07:23+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.birkenstock.co.nz": {
+   "name": "Birkenstock NZ",
+   "status": "ok",
+   "ok_rate": 1.0,
+   "attempts": 8,
+   "last_ok": "2026-10-09T01:08:19+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.chemistwarehouse.co.nz": {
+   "name": "Chemist Warehouse",
+   "status": "ok",
+   "ok_rate": 1.0,
+   "attempts": 5,
+   "last_ok": "2026-10-09T01:07:43+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.drmartens.co.nz": {
+   "name": "Dr Martens NZ",
+   "status": "new",
+   "ok_rate": 1.0,
+   "attempts": 3,
+   "last_ok": "2026-10-09T01:07:51+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.jbhifi.co.nz": {
+   "name": "JB Hi-Fi",
+   "status": "new",
+   "ok_rate": 1.0,
+   "attempts": 3,
+   "last_ok": "2026-10-09T01:08:54+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.jdsports.co.nz": {
+   "name": "JD Sports",
+   "status": "new",
+   "ok_rate": 1.0,
+   "attempts": 2,
+   "last_ok": "2026-10-09T01:08:26+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.lifepharmacy.co.nz": {
+   "name": "Life Pharmacy",
+   "status": "ok",
+   "ok_rate": 1.0,
+   "attempts": 4,
+   "last_ok": "2026-10-09T01:07:40+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.orbitkey.com.au": {
+   "name": "Orbitkey",
+   "status": "new",
+   "ok_rate": 1.0,
+   "attempts": 1,
+   "last_ok": "2026-10-09T01:08:31+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "www.pbtech.co.nz": {
+   "name": "PB Tech",
+   "status": "new",
+   "ok_rate": 0.5,
+   "attempts": 2,
+   "last_ok": "2026-10-09T01:08:35+00:00",
+   "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+   "last_error_at": "2026-10-09T01:08:57+00:00"
+  },
+  "www.platypusshoes.co.nz": {
+   "name": "Platypus",
+   "status": "new",
+   "ok_rate": 1.0,
+   "attempts": 1,
+   "last_ok": "2026-10-09T01:07:53+00:00",
+   "last_error": null,
+   "last_error_at": null
+  },
+  "pricespy.co.nz": {
+   "name": "PriceSpy",
+   "status": "ok",
+   "ok_rate": 1.0,
+   "attempts": 5,
+   "last_ok": "2026-10-09T01:09:51+00:00",
+   "last_error": null,
+   "last_error_at": null
+  }
+ }
+}

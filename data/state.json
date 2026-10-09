@@ -37,7 +37,9 @@
   "armani-stronger-with-you-intensely-100ml|https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml": {},
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
- "failures": {},
+ "failures": {
+  "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": 1
+ },
  "deals": {
   "dior-sauvage-edp-100ml": "unknown",
   "dior-sauvage-elixir-60ml": "unknown",
@@ -55,5 +57,117 @@
   "belkin-boostcharge-pro-2-in-1": "unknown",
   "dell-34-plus-ultrawide": "unknown",
   "msi-modern-md342cqp": "unknown"
- }
+ },
+ "health": {
+  "www.chemistwarehouse.co.nz": {
+   "name": "Chemist Warehouse",
+   "attempts": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "last_ok": "2026-10-09T01:07:43+00:00"
+  },
+  "pricespy.co.nz": {
+   "name": "PriceSpy",
+   "attempts": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "last_ok": "2026-10-09T01:09:51+00:00"
+  },
+  "www.bargainchemist.co.nz": {
+   "name": "Bargain Chemist",
+   "attempts": [
+    1
+   ],
+   "last_ok": "2026-10-09T01:07:23+00:00"
+  },
+  "www.lifepharmacy.co.nz": {
+   "name": "Life Pharmacy",
+   "attempts": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "last_ok": "2026-10-09T01:07:40+00:00"
+  },
+  "www.drmartens.co.nz": {
+   "name": "Dr Martens NZ",
+   "attempts": [
+    1,
+    1,
+    1
+   ],
+   "last_ok": "2026-10-09T01:07:51+00:00"
+  },
+  "www.platypusshoes.co.nz": {
+   "name": "Platypus",
+   "attempts": [
+    1
+   ],
+   "last_ok": "2026-10-09T01:07:53+00:00"
+  },
+  "www.birkenstock.co.nz": {
+   "name": "Birkenstock NZ",
+   "attempts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "last_ok": "2026-10-09T01:08:19+00:00"
+  },
+  "www.jdsports.co.nz": {
+   "name": "JD Sports",
+   "attempts": [
+    1,
+    1
+   ],
+   "last_ok": "2026-10-09T01:08:26+00:00"
+  },
+  "www.jbhifi.co.nz": {
+   "name": "JB Hi-Fi",
+   "attempts": [
+    1,
+    1,
+    1
+   ],
+   "last_ok": "2026-10-09T01:08:54+00:00"
+  },
+  "www.orbitkey.com.au": {
+   "name": "Orbitkey",
+   "attempts": [
+    1
+   ],
+   "last_ok": "2026-10-09T01:08:31+00:00"
+  },
+  "www.pbtech.co.nz": {
+   "name": "PB Tech",
+   "attempts": [
+    1,
+    0
+   ],
+   "last_ok": "2026-10-09T01:08:35+00:00",
+   "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+   "last_error_at": "2026-10-09T01:08:57+00:00"
+  }
+ },
+ "store_status": {
+  "www.chemistwarehouse.co.nz": "ok",
+  "pricespy.co.nz": "ok",
+  "www.lifepharmacy.co.nz": "ok",
+  "www.birkenstock.co.nz": "ok"
+ },
+ "queued_alerts": []
 }
