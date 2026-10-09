@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T00:04:02+00:00",
+ "updated": "2026-10-09T00:08:13+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -24,7 +24,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:02:12+00:00",
+     "checked": "2026-10-09T00:05:54+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -55,7 +55,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:27+00:00",
+     "checked": "2026-10-09T00:06:06+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -97,7 +97,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:02:28+00:00",
+     "checked": "2026-10-09T00:06:09+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -128,7 +128,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:30+00:00",
+     "checked": "2026-10-09T00:06:10+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -162,7 +162,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:32+00:00",
+     "checked": "2026-10-09T00:06:12+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -207,7 +207,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:36+00:00",
+     "checked": "2026-10-09T00:06:15+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -248,7 +248,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:37+00:00",
+     "checked": "2026-10-09T00:06:17+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -290,7 +290,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:40+00:00",
+     "checked": "2026-10-09T00:06:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -334,7 +334,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:43+00:00",
+     "checked": "2026-10-09T00:06:23+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -378,7 +378,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:46+00:00",
+     "checked": "2026-10-09T00:06:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -411,7 +411,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:50+00:00",
+     "checked": "2026-10-09T00:06:32+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -464,7 +464,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:02:51+00:00",
+     "checked": "2026-10-09T00:06:34+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -520,7 +520,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:02:53+00:00",
+     "checked": "2026-10-09T00:06:34+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -576,7 +576,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:02:56+00:00",
+     "checked": "2026-10-09T00:06:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -638,6 +638,17 @@
         "EU 44",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-09T00:06:41+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -646,7 +657,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:02:58+00:00",
+     "checked": "2026-10-09T00:06:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -656,21 +667,11 @@
      },
      "sizes_in": [
       "EU 43",
-      "EU 43",
-      "EU 44",
       "EU 44"
      ],
      "my_sizes": [
       {
        "label": "EU 43",
-       "in_stock": true
-      },
-      {
-       "label": "EU 43",
-       "in_stock": true
-      },
-      {
-       "label": "EU 44",
        "in_stock": true
       },
       {
@@ -705,6 +706,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-09T00:06:43+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -713,7 +725,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:00+00:00",
+     "checked": "2026-10-09T00:06:43+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -724,14 +736,9 @@
      "identity_note": "product id changed (shopify:8326706233642 → productGroupID:8326706233642): was “Arizona”, now “Arizona”",
      "sizes_in": [
       "EU 43",
-      "EU 43",
       "EU 44"
      ],
      "my_sizes": [
-      {
-       "label": "EU 43",
-       "in_stock": true
-      },
       {
        "label": "EU 43",
        "in_stock": true
@@ -775,7 +782,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:02+00:00",
+     "checked": "2026-10-09T00:06:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -794,16 +801,8 @@
        "in_stock": true
       },
       {
-       "label": "EU 43",
-       "in_stock": false
-      },
-      {
        "label": "EU 44",
        "in_stock": true
-      },
-      {
-       "label": "EU 44",
-       "in_stock": false
       }
      ],
      "size_status": "ok"
@@ -852,7 +851,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:07+00:00",
+     "checked": "2026-10-09T00:06:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -909,7 +908,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:10+00:00",
+     "checked": "2026-10-09T00:06:55+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -966,7 +965,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:13+00:00",
+     "checked": "2026-10-09T00:06:58+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1023,7 +1022,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:15+00:00",
+     "checked": "2026-10-09T00:07:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1073,6 +1072,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-09T00:07:03+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -1081,7 +1091,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:18+00:00",
+     "checked": "2026-10-09T00:07:03+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1092,14 +1102,9 @@
      "identity_note": "product id changed (shopify:8538568327466 → productGroupID:8538568327466): was “Boston Soft Footbed”, now “Boston Soft Footbed”",
      "sizes_in": [
       "EU 43",
-      "EU 43",
       "EU 44"
      ],
      "my_sizes": [
-      {
-       "label": "EU 43",
-       "in_stock": true
-      },
       {
        "label": "EU 43",
        "in_stock": true
@@ -1157,7 +1162,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:22+00:00",
+     "checked": "2026-10-09T00:07:07+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1221,7 +1226,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:26+00:00",
+     "checked": "2026-10-09T00:07:10+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1277,7 +1282,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:30+00:00",
+     "checked": "2026-10-09T00:07:14+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1320,7 +1325,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:03:34+00:00",
+     "checked": "2026-10-09T00:07:17+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1366,7 +1371,7 @@
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-10-09T00:03:37+00:00",
+     "checked": "2026-10-09T00:07:21+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -1409,7 +1414,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:50+00:00",
+     "checked": "2026-10-09T00:08:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1453,7 +1458,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:53+00:00",
+     "checked": "2026-10-09T00:08:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1496,7 +1501,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:03:58+00:00",
+     "checked": "2026-10-09T00:08:10+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1529,7 +1534,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:04:01+00:00",
+     "checked": "2026-10-09T00:08:12+00:00",
      "error": null,
      "identity": {
       "ids": {},
