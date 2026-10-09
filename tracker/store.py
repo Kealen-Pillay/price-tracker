@@ -14,6 +14,7 @@ RETAILERS = ROOT / "retailers.yaml"
 CALENDAR = ROOT / "sales_calendar.yaml"
 PRICES = ROOT / "data" / "prices.json"
 STATE = ROOT / "data" / "state.json"
+HEALTH = ROOT / "data" / "health.json"
 
 # Keep one history point per day when the price is unchanged; always record changes.
 UNCHANGED_RECORD_INTERVAL_H = 24
@@ -101,6 +102,10 @@ def load_state() -> dict:
 
 def save_state(data: dict) -> None:
     _save_json(STATE, data)
+
+
+def save_health(stores: dict) -> None:
+    _save_json(HEALTH, {"updated": now_iso(), "stores": stores})
 
 
 def record(history: list[dict], point: dict) -> bool:

@@ -6,6 +6,8 @@
 profile:
   gender: men
   shoe_size: {system: US, min: 10, max: 11.5}
+  # Alerts in these NZ hours wait for a morning batch, except 🎯 target hits and 🔥 great deals (sent immediately).
+  quiet_hours: "22:00-07:00"
   brand_sizes:
     Dr Martens: {UK: [9, 10]}
     Birkenstock: {EU: [43, 44], width: Regular}

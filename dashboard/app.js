@@ -89,6 +89,7 @@ async function load() {
   }
   $("#updated").textContent = prices.updated ? `Prices checked ${ago(prices.updated)}` : "No price checks yet";
   render();
+  renderHealth(await fetch("data/health.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null));
 }
 
 function bestOffer(offers) {
@@ -196,6 +197,26 @@ function render() {
     const canvas = card.querySelector("canvas");
     if (canvas) drawChart(canvas, offers, target);
   }
+}
+
+function renderHealth(h) {
+  const stores = Object.values(h?.stores || {});
+  if (!stores.length) return;
+  const LABEL = { ok: ["good", "OK"], degraded: ["bad", "Failing"], new: ["", "Learning"] };
+  const failing = stores.filter((s) => s.status === "degraded");
+  $("#healthSummary").textContent = failing.length
+    ? `Store status: ${failing.length} failing (${failing.map((s) => s.name).join(", ")})`
+    : `Store status: all ${stores.length} stores readable`;
+  $("#healthRows").innerHTML = stores.map((s) => `
+    <tr>
+      <td>${esc(s.name)}</td>
+      <td><span class="badge ${LABEL[s.status]?.[0] || ""}">${LABEL[s.status]?.[1] || esc(s.status)}</span></td>
+      <td class="num">${s.ok_rate == null ? "—" : Math.round(s.ok_rate * 100) + "%"} of ${s.attempts}</td>
+      <td class="muted small">${ago(s.last_ok)}</td>
+      <td class="muted small">${s.last_error ? `${esc(s.last_error.slice(0, 90))} (${ago(s.last_error_at)})` : "—"}</td>
+    </tr>`).join("");
+  $("#health").hidden = false;
+  if (failing.length) $("#health details").open = true;
 }
 
 function sellersLine(o) {

@@ -302,6 +302,7 @@ def _run_check(monkeypatch, tmp_path, readings, recheck=None):
     url = "https://shop.example/products/thing"
     monkeypatch.setattr(store, "PRICES", tmp_path / "prices.json")
     monkeypatch.setattr(store, "STATE", tmp_path / "state.json")
+    monkeypatch.setattr(store, "HEALTH", tmp_path / "health.json")
     monkeypatch.setattr(store, "load_wishlist", lambda: [{"id": "thing", "name": "Thing", "urls": [url]}])
     monkeypatch.setattr(store, "load_settings", lambda: {})
     monkeypatch.setattr(telegram, "pending_commands", lambda off: ([], off))
@@ -669,3 +670,70 @@ def test_discover_exact_sku_match(monkeypatch):
                           F(), {}, known_ids={"14573601.RED"})
     assert found and found[0]["exact"] and found[0]["score"] == 1.0
     assert disc.known_ids({"offers": {"u": {"identity": {"ids": {"sku": "A", "shopify": "1"}}}}}) == {"A", "1"}
+
+
+# ---- Phase 5: health, quiet hours, heartbeat, deal lines
+from tracker import health, notify
+
+
+def test_store_health_degrades_once_and_recovers():
+    h, state = {}, {}
+    for ok in [True, True, True, True]:
+        health.record(h, "pb", "PB Tech", ok, "t")
+    assert health.status(h["pb"]) == "ok" and health.alerts(h, state) == []
+    for _ in range(5):
+        health.record(h, "pb", "PB Tech", False, "t2", "HTTP 403")
+    msgs = health.alerts(h, state)
+    assert len(msgs) == 1 and "PB Tech" in msgs[0] and "403" in msgs[0]
+    assert health.alerts(h, state) == []  # not repeated
+    for _ in range(10):
+        health.record(h, "pb", "PB Tech", True, "t3")
+    assert "readable again" in health.alerts(h, state)[0]
+    assert health.summary(h)["pb"]["ok_rate"] == 0.83  # last 12 reads: 10 ok, 2 failed
+
+
+def test_new_store_is_not_judged_yet():
+    h = {}
+    health.record(h, "x", "X", False, "t", "boom")
+    assert health.status(h["x"]) == "new" and health.alerts(h, {}) == []
+
+
+def _nz(hh, mm=0):
+    from datetime import datetime
+    return datetime(2026, 10, 9, hh, mm, tzinfo=notify.NZ)
+
+
+def test_quiet_hours_window_over_midnight():
+    assert notify.in_quiet_hours("22:00-07:00", _nz(23))
+    assert notify.in_quiet_hours("22:00-07:00", _nz(3))
+    assert not notify.in_quiet_hours("22:00-07:00", _nz(7))
+    assert not notify.in_quiet_hours("22:00-07:00", _nz(12))
+    assert notify.in_quiet_hours("13:00-14:00", _nz(13, 30)) and not notify.in_quiet_hours(None, _nz(3))
+
+
+def test_quiet_hours_queue_then_morning_batch(monkeypatch):
+    from tracker import telegram
+    sent = []
+    monkeypatch.setattr(telegram, "send", sent.append)
+    profile, state = {"quiet_hours": "22:00-07:00"}, {}
+    out = notify.deliver(["📉 Price drop A", "🔥 Great deal B"], profile, state, _nz(2))
+    assert out == ["🔥 Great deal B"] and state["queued_alerts"] == ["📉 Price drop A"]
+    out = notify.deliver(["✅ Back in stock C"], profile, state, _nz(7, 30))
+    assert out[0].startswith("🌅") and out[1:] == ["📉 Price drop A", "✅ Back in stock C"]
+    assert state["queued_alerts"] == []
+    assert notify.deliver([], profile, state, _nz(9)) == [] and len(sent) == 2
+
+
+def test_heartbeat_warning_windows():
+    from tracker.heartbeat import should_warn
+    assert not should_warn(5) and not should_warn(17.9)
+    assert should_warn(18.5) and not should_warn(22)
+    assert should_warn(43) and not should_warn(46)
+
+
+def test_deal_line_is_added_before_the_link():
+    deal = {"label": "good", "reasons": ["24% off a verified RRP of $275.00"]}
+    msg = alerts.with_deal_line('📉 Price drop 10% — X\n<a href="u">View deal</a>', deal)
+    assert msg.index("Deal rating: good") < msg.index("<a href")
+    assert alerts.with_deal_line("🔀 identity", deal) == "🔀 identity"
+    assert alerts.with_deal_line("📉 drop", None) == "📉 drop"

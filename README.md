@@ -145,11 +145,26 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt pytest
   `python -m tracker history drop <item-id|all> [--url …] [--at …] [--price …] [--out-of-stock]` previews
   removals, and `--apply` performs them (current values are re-synced to the last good point).
 
+## Staying reliable
+
+- **Schedule:** checks run every 4 hours at :17 past (GitHub delays on-the-hour jobs the most), plus the weekly
+  digest on Monday morning.
+- **Failed run:** a ❌ Telegram message with a link to the run.
+- **Heartbeat:** a separate, dependency-free workflow (`heartbeat.yml`, every 3 hours) sends 💤 if prices haven't
+  updated for 18 hours, then once a day while they stay stale — this catches GitHub skipping the schedule entirely.
+- **Store health:** every read is recorded per store (last 12). If a store's success rate drops below 50% you get
+  one 🩺 alert, and another when it recovers. The dashboard's *Store status* panel shows each store's recent
+  success rate, last success and last error (and opens itself when something is failing).
+- **Quiet hours:** `profile.quiet_hours: "22:00-07:00"` (NZ time) holds non-urgent alerts and sends them as one
+  🌅 morning batch. 🎯 target hits and 🔥 great deals still go out immediately.
+- Every price/stock alert includes the item's deal rating.
+
 ## Tuning
 
 - Alert thresholds: `MIN_DROP_PCT` and `FAILURES_BEFORE_WARNING` in `tracker/alerts.py`; confirmation and
   identity thresholds in `tracker/verify.py`.
-- Check frequency: the cron lines in `.github/workflows/check.yml`.
+- Check frequency: the cron lines in `.github/workflows/check.yml`; heartbeat timing in `tracker/heartbeat.py`;
+  store-health thresholds in `tracker/health.py`.
 - Sale events: `sales_calendar.yaml` (approximate — retailers move dates each year).
 
 ## Limitations

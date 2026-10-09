@@ -46,6 +46,10 @@ a { color: var(--accent); }
 .badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 99px; }
 .badge.good { background: var(--good-bg); color: var(--good); }
 .badge.warn { background: var(--warn-bg); color: var(--warn); }
+.badge.bad { background: var(--warn-bg); color: var(--bad); }
+.health { max-width: 960px; margin: 0 auto 40px; padding: 0 16px; }
+.health details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 18px; }
+.health summary { cursor: pointer; color: var(--muted); font-size: 14px; }
 .deal-why { margin: 2px 0 4px; max-width: 70ch; }
 .chart { position: relative; height: 220px; margin: 14px 0 6px; }
 

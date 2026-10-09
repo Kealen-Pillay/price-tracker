@@ -69,6 +69,15 @@ def evaluate(item: dict, url: str, retailer: str, offer: dict, prev: dict | None
 DEAL_EMOJI = {"great": "🔥", "good": "👍", "typical": "•", "high": "⬆️", "unknown": "•"}
 
 
+def with_deal_line(message: str, deal: dict | None) -> str:
+    """Add the item's deal rating to a price/stock alert, so every alert says how good the price really is."""
+    if not deal or not message.startswith(("🎯", "📉", "✅", "⏳")):
+        return message
+    head, sep, link = message.rpartition("\n<a href=")
+    line = f"\n{DEAL_EMOJI[deal['label']]} Deal rating: {deal['label']} — {escape(deal['reasons'][0])}"
+    return f"{head}{line}{sep}{link}" if sep else message + line
+
+
 def deal_alert(item: dict, deal: dict | None, state: dict) -> list[str]:
     """One alert when an item becomes a great deal (re-armed once it stops being one)."""
     deals_state = state.setdefault("deals", {})

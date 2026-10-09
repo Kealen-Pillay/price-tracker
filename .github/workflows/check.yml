@@ -2,7 +2,7 @@ name: Check prices
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # price check 4x a day
+    - cron: "17 */4 * * *"  # price check 6x a day (off the hour: GitHub delays on-the-hour jobs most)
     - cron: "0 20 * * 0"    # weekly digest: Monday ~8–9am NZ time
   push:
     branches: [main]
@@ -68,6 +68,13 @@ jobs:
           # If another run pushed meanwhile, keep this run's (newer) data on conflict.
           git pull --rebase -X theirs origin main
           git push
+
+      - name: Tell Telegram the check failed
+        if: failure()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=❌ Price check failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null
 
       - name: Build dashboard
         run: python -m tracker build-site

@@ -24,6 +24,16 @@
 
   <main id="items"></main>
 
+  <section id="health" class="health" hidden>
+    <details>
+      <summary><span id="healthSummary">Store status</span></summary>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Store</th><th>Status</th><th>Recent reads</th><th>Last success</th><th>Last error</th></tr></thead>
+        <tbody id="healthRows"></tbody>
+      </table></div>
+    </details>
+  </section>
+
   <dialog id="addDialog">
     <form method="dialog" id="addForm">
       <h2>Track a new item</h2>

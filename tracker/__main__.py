@@ -19,15 +19,14 @@ import functools
 import http.server
 import shutil
 import sys
-from datetime import date, timedelta, timezone, datetime
+from datetime import datetime
 from html import escape
 from urllib.parse import urlparse
 
-from . import alerts, deals, discover, sales, sizes, store, telegram, trust, verify
+from . import alerts, deals, discover, health, notify, sales, sizes, store, telegram, trust, verify
 from .fetch import Fetcher, ScrapeError
 from .parse import excluded_for
 
-NZ = timezone(timedelta(hours=12))  # good enough for "which day is it" in NZ
 
 
 # ---------------------------------------------------------------- helpers
@@ -165,6 +164,7 @@ def cmd_check(args) -> int:
     profile = store.load_profile()
     only_for = profile.get("gender")
     messages: list[str] = []
+    store_health = state.setdefault("health", {})
 
     with Fetcher(store.load_retailers()) as fetcher:
         if not args.dry_run and handle_commands(fetcher, items, prices, state):
@@ -179,7 +179,9 @@ def cmd_check(args) -> int:
             entry.update(name=item["name"], target_price=item.get("target_price"), tracked=True,
                          urls=list(item["urls"]))
             hosts = [urlparse(u).netloc for u in item["urls"]]
+            item_msgs: list[str] = []
             for url in item["urls"]:
+                host = urlparse(url).netloc
                 retailer_name = fetcher.retailer_for(url)["name"]
                 shared_host = hosts.count(urlparse(url).netloc) > 1  # e.g. several colours at one store
                 slot = entry["offers"].setdefault(url, {"history": []})
@@ -193,7 +195,10 @@ def cmd_check(args) -> int:
                     print(f"  ✗ {item['name']} @ {retailer_name}: {e}")
                     slot.update(retailer=retailer_name, error=str(e), checked=checked)
                     messages += alerts.failure(item, url, retailer_name, str(e), state)
+                    if "is not supported" not in str(e):
+                        health.record(store_health, host, retailer_name, False, checked, str(e))
                     continue
+                health.record(store_health, host, retailer["name"], True, checked)
                 if excluded_for(offer.genders, only_for):
                     reason = f"Skipped: detected as a {'/'.join(offer.genders)} product (wishlist is {only_for}'s only)"
                     print(f"  – {item['name']} @ {retailer['name']}: {reason}")
@@ -222,7 +227,7 @@ def cmd_check(args) -> int:
                     label = f"{retailer['name']} → {offer.shop}"
                 alerts.recovered(item, url, state)
                 if warning := verify.identity_warning(item, url, label, slot, offer):
-                    messages.append(warning)
+                    item_msgs.append(warning)
 
                 # Big moves (≥15% or a stock flip) must be seen twice before they're believed: once now and
                 # again from a fresh session, or else on the next run. One-off glitches never reach history.
@@ -245,7 +250,7 @@ def cmd_check(args) -> int:
                       f"{' (was ' + alerts.fmt(offer.was_price) + ')' if offer.was_price else ''}"
                       f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}{size_info}  [{offer.method}, "
                       f"{time.monotonic() - started:.0f}s]")
-                messages += alerts.evaluate(item, url, label, point, prev, slot["history"], state)
+                item_msgs += alerts.evaluate(item, url, label, point, prev, slot["history"], state)
                 store.record(slot["history"], point)
                 slot.update(retailer=retailer["name"], title=offer.title, price=offer.price, was=offer.was_price,
                             in_stock=offer.in_stock, method=offer.method, checked=checked, error=None,
@@ -256,16 +261,19 @@ def cmd_check(args) -> int:
 
             # Deal quality across all stores; alert when an item first becomes a great deal.
             entry["deal"] = deals.compute(entry)
+            messages += [alerts.with_deal_line(m, entry["deal"]) for m in item_msgs]
             messages += alerts.deal_alert(item, entry["deal"], state)
+
+    messages += health.alerts(store_health, state)
 
     prices["updated"] = store.now_iso()
     if args.dry_run:
         print("\n[dry run] alerts that would be sent:\n" + ("\n\n".join(messages) or "(none)"))
         return 0
     store.save_prices(prices)
+    store.save_health(health.summary(store_health))
+    notify.deliver(messages, profile, state)  # quiet hours: queue non-urgent alerts for the morning
     store.save_state(state)
-    if messages:
-        telegram.send("\n\n".join(messages))
     return 0
 
 
@@ -346,7 +354,7 @@ def cmd_probe(args) -> int:
 def cmd_digest(args) -> int:
     items = store.load_wishlist()
     prices = store.load_prices()
-    today = datetime.now(NZ).date()
+    today = datetime.now(notify.NZ).date()
     parts = ["🗓 <b>Weekly wishlist digest</b>"]
     events = sales.upcoming(store.load_calendar(), today, within_days=14)
     if events:
@@ -371,8 +379,9 @@ def cmd_build_site(args) -> int:
     shutil.rmtree(site, ignore_errors=True)
     shutil.copytree(store.ROOT / "dashboard", site)
     (site / "data").mkdir(exist_ok=True)
-    if store.PRICES.exists():
-        shutil.copy(store.PRICES, site / "data" / "prices.json")
+    for src in (store.PRICES, store.HEALTH):
+        if src.exists():
+            shutil.copy(src, site / "data" / src.name)
     shutil.copy(store.WISHLIST, site / "wishlist.yaml")
     print(f"Built {site}")
     return 0
