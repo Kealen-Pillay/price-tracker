@@ -1,7 +1,15 @@
 # Wishlist — items to track. Edit by hand, from the dashboard, or via Telegram (/add, /link, /target, /remove).
 # Each item lists one product URL per retailer. target_price (NZD) is optional: you get an alert when any retailer is at or below it.
-# only_for: men skips products detected as women's or kids' (unisex and unlabelled products are kept).
-only_for: men
+# profile: who you're shopping for. gender skips products detected for other audiences (unisex/unlabelled kept).
+# shoe_size applies to items with `kind: shoes`: stock and price come only from your sizes. brand_sizes overrides the
+# built-in US->UK/EU conversion for a brand (half sizes a brand doesn't make map to both neighbouring sizes).
+profile:
+  gender: men
+  shoe_size: {system: US, min: 10, max: 11.5}
+  brand_sizes:
+    Dr Martens: {UK: [9, 10]}
+    Birkenstock: {EU: [43, 44], width: Regular}
+    Salomon: {UK: [9.5, 11]}
 items:
 # ---------------------------------------------------------------- Perfume
 - id: dior-sauvage-edp-100ml
@@ -39,18 +47,24 @@ items:
   - https://pricespy.co.nz/product.php?p=5010999
 # ---------------------------------------------------------------- Shoes
 - id: dr-martens-adrian-tassel-loafer
+  kind: shoes
+  brand: Dr Martens
   name: Dr Martens Adrian Tassel Loafer (black / brown / red)
   urls:
   - https://www.drmartens.co.nz/adrian-tassel-smooth-loafer-22209001-blk.html
   - https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html
   - https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html
 - id: birkenstock-arizona
+  kind: shoes
+  brand: Birkenstock
   name: Birkenstock Arizona oiled leather (black / brown)
   urls:
   - https://www.birkenstock.co.nz/products/arizona-oiled-leather-black
   - https://www.birkenstock.co.nz/products/arizona-oiled-leather-tobacco-brown
   - https://www.birkenstock.co.nz/products/arizona-oiled-leather-habana
 - id: birkenstock-boston
+  kind: shoes
+  brand: Birkenstock
   name: Birkenstock Boston (brown / olive / taupe)
   urls:
   - https://www.birkenstock.co.nz/products/boston-oiled-leather-habana
@@ -59,6 +73,8 @@ items:
   - https://www.birkenstock.co.nz/products/boston-suede-leather-faded-khaki
   - https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-taupe
 - id: salomon-xt-6
+  kind: shoes
+  brand: Salomon
   name: Salomon XT-6 (white)
   urls:
   - https://www.jdsports.co.nz/products/xt6-120733321

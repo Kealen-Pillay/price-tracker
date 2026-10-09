@@ -55,6 +55,10 @@ td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .was { color: var(--muted); text-decoration: line-through; font-size: 13px; margin-left: 4px; }
 .err { color: var(--bad); font-size: 13px; }
 .note { color: var(--warn); font-size: 13px; }
+.sizes { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.size { font-size: 12px; padding: 1px 7px; border-radius: 99px; border: 1px solid var(--border); white-space: nowrap; }
+.size.in { color: var(--good); background: var(--good-bg); border-color: transparent; }
+.size.out { color: var(--muted); text-decoration: line-through; }
 .table-wrap { overflow-x: auto; }
 .card:not(.show-oos) tr.oos { display: none; }
 tr.oos td { color: var(--muted); }

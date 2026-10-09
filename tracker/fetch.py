@@ -35,6 +35,14 @@ PRODUCT_DATA_READY_JS = """() =>
         .some(s => /"@type"\\s*:\\s*\\[?\\s*"Product(Group)?"/.test(s.textContent))"""
 
 
+MAGENTO_QUERY = """query ($key: String) { products(filter: {url_key: {eq: $key}}) { items {
+  sku name stock_status
+  price_range { minimum_price { final_price { value currency } regular_price { value } } }
+  ... on ConfigurableProduct { variants { attributes { code label } product {
+    sku stock_status price_range { minimum_price { final_price { value currency } regular_price { value } } } } } }
+} } }"""
+
+
 class ScrapeError(Exception):
     pass
 
@@ -106,6 +114,42 @@ class Fetcher:
             return (self.client.get(f"{base}/cart.js").json().get("currency") or "").upper() or None
         except (httpx.HTTPError, ValueError, AttributeError):
             return None
+
+    def _magento(self, url: str, store_code: str | None) -> Offer | None:
+        """Magento stores (Dr Martens NZ) answer a public GraphQL query with price, RRP and stock per size."""
+        p = urlparse(url)
+        key = p.path.rstrip("/").rsplit("/", 1)[-1].removesuffix(".html")
+        try:
+            # Without a Store header the API answers for the store's default view (Dr Martens: Australia, AUD).
+            r = self.client.post(f"{p.scheme}://{p.netloc}/graphql", headers={"Store": store_code} if store_code else {},
+                                 json={"query": MAGENTO_QUERY, "variables": {"key": key}})
+            items = (r.json().get("data") or {}).get("products", {}).get("items") or []
+        except (httpx.HTTPError, ValueError, AttributeError) as e:
+            log.info("magento graphql %s failed: %r; falling back to the page", key, e)
+            return None
+        if not items:
+            log.info("magento graphql %s -> HTTP %s, no product; falling back to the page", key, r.status_code)
+            return None
+        it = items[0]
+
+        def prices(node):
+            mp = node["price_range"]["minimum_price"]
+            return mp["final_price"]["value"], mp["regular_price"]["value"], mp["final_price"].get("currency")
+
+        sizes = []
+        for v in it.get("variants") or []:
+            size = next((a["label"] for a in v["attributes"] if "size" in a["code"].lower()), None)
+            if size is None:
+                continue
+            final, regular, _ = prices(v["product"])
+            sizes.append({"size": size, "width": None, "in_stock": v["product"]["stock_status"] == "IN_STOCK",
+                          "price": final, "was": regular if regular and regular > final else None})
+        final, regular, currency = prices(it)
+        live = [s for s in sizes if s["in_stock"]]
+        return Offer(price=min((s["price"] for s in live), default=final), was_price=regular if regular > final else None,
+                     in_stock=bool(live) if sizes else it["stock_status"] == "IN_STOCK", title=it["name"],
+                     currency=currency, method="magento", product_id=f"sku:{it['sku']}",
+                     sizes=sorted(sizes, key=lambda s: float(s["size"]) if s["size"].replace(".", "").isdigit() else 0) or None)
 
     def _store_currency(self, p) -> str | None:
         """Currency a Shopify store is pricing this session in (from /cart.js), cached per host.
@@ -203,6 +247,9 @@ class Fetcher:
         if retailer.get("blocked"):
             raise ScrapeError(f"{retailer['name']} is not supported: {retailer['blocked']}")
         self._throttle(urlparse(url).netloc)
+
+        if retailer.get("platform") == "magento" and (offer := self._magento(url, retailer.get("magento_store"))):
+            return offer, retailer
 
         offer = self._shopify(url)
         if offer:

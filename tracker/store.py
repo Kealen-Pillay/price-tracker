@@ -21,7 +21,9 @@ WISHLIST_HEADER = (
     "# Wishlist — items to track. Edit by hand, from the dashboard, or via Telegram (/add, /link, /target, /remove).\n"
     "# Each item lists one product URL per retailer. target_price (NZD) is optional: you get an alert when any "
     "retailer is at or below it.\n"
-    "# only_for: men skips products detected as women's or kids' (unisex and unlabelled products are kept).\n"
+    "# profile: who you're shopping for. gender skips products detected for other audiences (unisex/unlabelled kept).\n"
+    "# shoe_size applies to items with `kind: shoes`: stock and price come only from your sizes. brand_sizes overrides the\n"
+    "# built-in US->UK/EU conversion for a brand (half sizes a brand doesn't make map to both neighbouring sizes).\n"
 )
 
 
@@ -52,6 +54,15 @@ def load_calendar() -> list[dict]:
 def load_settings() -> dict:
     """Top-level wishlist settings (everything except `items`), e.g. only_for: men."""
     return {k: v for k, v in _load_yaml(WISHLIST).items() if k != "items"}
+
+
+def load_profile() -> dict:
+    """The `profile:` block (gender, shoe_size, brand_sizes). The older top-level `only_for` still sets gender."""
+    settings = load_settings()
+    profile = dict(settings.get("profile") or {})
+    if settings.get("only_for") and not profile.get("gender"):
+        profile["gender"] = settings["only_for"]
+    return profile
 
 
 def load_wishlist() -> list[dict]:
@@ -96,7 +107,7 @@ def record(history: list[dict], point: dict) -> bool:
     """Append a price point if it differs from the last one or the last is stale. Returns True if appended."""
     if history:
         last = history[-1]
-        same = all(last.get(k) == point.get(k) for k in ("price", "was", "in_stock"))
+        same = all(last.get(k) == point.get(k) for k in ("price", "was", "in_stock", "sizes_in"))
         age_h = (parse_iso(point["t"]) - parse_iso(last["t"])).total_seconds() / 3600
         if same and age_h < UNCHANGED_RECORD_INTERVAL_H:
             return False

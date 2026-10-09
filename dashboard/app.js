@@ -150,7 +150,8 @@ function render() {
             <td>${esc(o.retailer)}${o.title ? `<div class="muted small">${esc(o.title)}</div>` : ""}${o.method === "json-ld-range" ? `<div class="err">Multi-size page: price may not be your size</div>` : ""}
                 ${o.error ? `<div class="err">${esc(o.error)}</div>` : ""}
                 ${o.pending ? `<div class="note">Unconfirmed reading ${money(o.pending.price)}${o.pending.in_stock === false ? " (out of stock)" : ""}, rechecking next run</div>` : ""}
-                ${o.identity_note ? `<div class="err">⚠ ${esc(o.identity_note)}</div>` : ""}</td>
+                ${o.identity_note ? `<div class="err">⚠ ${esc(o.identity_note)}</div>` : ""}
+                ${sizeLine(o)}</td>
             <td class="num">${money(o.price)}${o.was ? `<span class="was">${money(o.was)}</span>` : ""}</td>
             <td>${o.in_stock === false ? "Out" : o.in_stock ? "In stock" : "—"}</td>
             <td class="muted small">${ago(o.checked)}</td>
@@ -190,6 +191,15 @@ function render() {
     const canvas = card.querySelector("canvas");
     if (canvas) drawChart(canvas, offers, target);
   }
+}
+
+function sizeLine(o) {
+  if (o.size_status === "ok" && o.my_sizes?.length)
+    return `<div class="sizes">${o.my_sizes.map((s) =>
+      `<span class="size ${s.in_stock ? "in" : "out"}" title="${s.in_stock ? "In stock" : "Sold out"}">${esc(s.label)} ${s.in_stock ? "✓" : "✗"}</span>`).join("")}</div>`;
+  if (o.size_status === "none") return `<div class="note">Your sizes aren't listed at this store</div>`;
+  if (o.size_status === "unknown") return `<div class="note">Couldn't read sizes here; stock shown is for any size</div>`;
+  return "";
 }
 
 function drawChart(canvas, offers, target) {

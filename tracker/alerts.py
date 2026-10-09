@@ -27,6 +27,9 @@ def evaluate(item: dict, url: str, retailer: str, offer: dict, prev: dict | None
     label = f"<b>{escape(item['name'])}</b> at {escape(retailer)}: {fmt(price)}"
     if offer.get("was"):
         label += f" (was {fmt(offer['was'])}, save {fmt(offer['was'] - price)})"
+    sizes_in = offer.get("sizes_in")
+    if sizes_in is not None:
+        label += f"\nYour sizes in stock: {escape(', '.join(sizes_in))}"
     link = f'\n<a href="{escape(url)}">View deal</a>'
 
     back_in_stock = bool(prev) and prev.get("in_stock") is False
@@ -46,13 +49,19 @@ def evaluate(item: dict, url: str, retailer: str, offer: dict, prev: dict | None
 
     # 2. Back in stock (replaces the drop check, since there's no buyable previous price to compare).
     if back_in_stock and not lines:
-        lines.append(f"✅ Back in stock — {label}{atl}{link}")
+        what = "Your size is back in stock" if sizes_in is not None else "Back in stock"
+        lines.append(f"✅ {what} — {label}{atl}{link}")
 
     # 3. Meaningful drop vs the previous check.
     elif prev_price and price < prev_price and not lines:
         pct = (prev_price - price) / prev_price * 100
         if pct >= MIN_DROP_PCT:
             lines.append(f"📉 Price drop {pct:.0f}% (from {fmt(prev_price)}) — {label}{atl}{link}")
+
+    # 4. Down to the last of your sizes (once each time it happens).
+    prev_in = (prev or {}).get("sizes_in")
+    if sizes_in is not None and len(sizes_in) == 1 and prev_in and len(prev_in) > 1 and not lines:
+        lines.append(f"⏳ Only {escape(sizes_in[0])} left in your sizes — {label}{link}")
 
     return lines
 

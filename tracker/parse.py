@@ -35,6 +35,11 @@ class Offer:
     genders: list[str] | None = None  # e.g. ["men"], ["men", "women"] (unisex), ["kids"]; None = unknown
     product_id: str | None = None  # stable identity (Shopify id, GTIN, SKU) to notice a URL changing product
     final_url: str | None = None  # where the page actually ended up after redirects
+    # Per-size availability when the store exposes it: [{"size": "10", "width": "Regular", "in_stock": True,
+    # "price": 200.0, "was": 340.0}]. Narrowed to your sizes by sizes.apply_profile.
+    sizes: list[dict] | None = None
+    my_sizes: list[dict] | None = None
+    size_status: str | None = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -96,6 +101,29 @@ def _jsonld_id(node: dict) -> str | None:
     return None
 
 
+def _variant_sizes(group: dict, variants: list) -> list[dict]:
+    """Sizes from a JSON-LD ProductGroup's variants: their `size` field, or the name suffix ("XT-6 - 10")."""
+    base = (group.get("name") or "").strip()
+    out = []
+    for v in variants:
+        if not isinstance(v, dict):
+            continue
+        size = v.get("size")
+        if isinstance(size, dict):
+            size = size.get("name")
+        if not size:
+            name = (v.get("name") or "").strip()
+            if base and name.startswith(base) and " - " in name:
+                size = name.rsplit(" - ", 1)[1]
+        if not size:
+            continue
+        o = v.get("offers")
+        o = (o[0] if isinstance(o, list) and o else o) or {}
+        out.append({"size": str(size), "width": None, "in_stock": _availability(o.get("availability")),
+                    "price": money(o.get("price")), "was": None})
+    return out
+
+
 def _types(node: dict) -> set[str]:
     t = node.get("@type", [])
     return {x.lower() for x in (t if isinstance(t, list) else [t]) if isinstance(x, str)}
@@ -110,8 +138,10 @@ def from_jsonld(soup: BeautifulSoup) -> Offer | None:
         nodes = list(_walk_jsonld(data))
         # A ProductGroup (one Product per size/colour) is checked first, with all its variants' offers pooled.
         groups = [n for n in nodes if "productgroup" in _types(n)]
+        group_sizes: dict[int, list[dict]] = {}
         for g in groups:
             variants = g.get("hasVariant") or []
+            group_sizes[id(g)] = _variant_sizes(g, variants if isinstance(variants, list) else [variants])
             g["offers"] = [o for v in (variants if isinstance(variants, list) else [variants]) if isinstance(v, dict)
                            for o in (v.get("offers") if isinstance(v.get("offers"), list) else [v.get("offers")]) if o]
         for node in groups + nodes:
@@ -150,6 +180,7 @@ def from_jsonld(soup: BeautifulSoup) -> Offer | None:
                 if any(c.in_stock for c in cands):
                     best.in_stock = True
                 best.product_id = _jsonld_id(node)
+                best.sizes = group_sizes.get(id(node)) or None
                 best.genders = detect_gender(node.get("name"), node.get("gender"), node.get("audience"),
                                              node.get("category") if isinstance(node.get("category"), str) else None)
                 return best
@@ -247,6 +278,26 @@ def excluded_for(genders: list[str] | None, wanted: str | None) -> bool:
     return bool(wanted and genders and wanted not in genders)
 
 
+def _shopify_sizes(data: dict) -> list[dict] | None:
+    names = [(o.get("name") if isinstance(o, dict) else str(o)) or "" for o in data.get("options") or []]
+    size_i = next((i for i, n in enumerate(names) if re.search(r"(?i)\bsize\b", n)), None)
+    if size_i is None:
+        return None
+    width_i = next((i for i, n in enumerate(names) if re.search(r"(?i)\b(width|fit)\b", n)), None)
+    out = []
+    for v in data.get("variants") or []:
+        opts = v.get("options") or [v.get(f"option{i + 1}") for i in range(len(names))]
+        if size_i >= len(opts) or opts[size_i] is None:
+            continue
+        price, was = v.get("price"), v.get("compare_at_price")
+        out.append({"size": str(opts[size_i]),
+                    "width": str(opts[width_i]) if width_i is not None and width_i < len(opts) else None,
+                    "in_stock": bool(v.get("available")),
+                    "price": price / 100 if price is not None else None,
+                    "was": was / 100 if was else None})
+    return out or None
+
+
 def parse_shopify_js(data: dict) -> Offer:
     """Parse Shopify's public /products/<handle>.js JSON (prices are in cents)."""
     variants = data.get("variants") or []
@@ -254,6 +305,7 @@ def parse_shopify_js(data: dict) -> Offer:
     v = min(avail, key=lambda x: x.get("price") or 0) if avail else {}
     price = (v.get("price") if v else data.get("price")) or 0
     was = v.get("compare_at_price") if v else data.get("compare_at_price")
+    sizes = _shopify_sizes(data)
     title = data.get("title")
     colour = next((t.split(":", 1)[1] for t in data.get("tags") or [] if "PRIMARYCOLOUR:" in t.upper()), None)
     if title and colour and colour.lower() not in title.lower():  # e.g. JD Sports titles every colourway "XT-6"
@@ -266,6 +318,7 @@ def parse_shopify_js(data: dict) -> Offer:
         currency=None,
         method="shopify",
         product_id=f"shopify:{data['id']}" if data.get("id") else None,
+        sizes=sizes,
         # Only gender-ish tags (e.g. Birkenstock "gender:Mens"); other tags often name unrelated categories.
         genders=detect_gender(data.get("title"), data.get("type"),
                               *[t.split(":", 1)[-1] for t in data.get("tags") or [] if "gender" in t.lower()]),

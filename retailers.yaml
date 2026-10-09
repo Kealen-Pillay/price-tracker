@@ -4,6 +4,8 @@
 #   js: true            always render with headless Chromium (Playwright)
 #   price_selector:     CSS selector override for the current price
 #   was_price_selector: CSS selector for the RRP / "was" price
+#   platform: magento  read price/stock per size from the store's public GraphQL API
+#   size_system:       UK | US | EU — how unlabelled sizes on this store should be read
 #   blocked: "<reason>" skip this retailer and explain why
 www.chemistwarehouse.co.nz:
   name: Chemist Warehouse
@@ -30,10 +32,15 @@ www.pbtech.co.nz:
   name: PB Tech
 www.drmartens.co.nz:
   name: Dr Martens NZ
+  platform: magento   # public GraphQL: price, RRP and stock per size
+  magento_store: nz    # without it the API answers for the Australian store
+  size_system: UK
 www.birkenstock.co.nz:
   name: Birkenstock NZ
+  size_system: EU
 www.jdsports.co.nz:
   name: JD Sports
+  size_system: US   # footwear sizes are US men's (its size guide)
   was_price_selector: .compare-at-price  # used when its Shopify JSON is blocked
 www.orbitkey.com.au:
   name: Orbitkey

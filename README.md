@@ -12,7 +12,8 @@ GitHub Actions + GitHub Pages — no paid APIs.
 | Chemist Warehouse NZ | schema.org microdata in page HTML | also reads the "Why pay $X" RRP |
 | PriceSpy NZ | JSON-LD `AggregateOffer` | lowest price across the NZ shops PriceSpy lists |
 | Bargain Chemist, Life Pharmacy, JB Hi-Fi, Birkenstock, JD Sports, Orbitkey (any Shopify store) | public `/products/<handle>.js?country=NZ` JSON | exact variant price + compare-at price, in NZD |
-| Dr Martens NZ, PB Tech | JSON-LD | |
+| Dr Martens NZ | Magento GraphQL (`Store: nz`) | price, RRP and stock per UK size |
+| PB Tech | JSON-LD (often via headless browser) | |
 | MECCA | JSON-LD via headless Chromium | use the **size-specific** URL (ends in `I-xxxxxx`) |
 | Any other store | JSON-LD → microdata → meta tags, browser fallback | add CSS selectors in `retailers.yaml` if needed |
 | **Farmers** | ❌ blocked | Akamai firewall rejects all automated traffic. Add Farmers' PriceSpy listing instead. |
@@ -32,12 +33,30 @@ Three ways, all editing `wishlist.yaml`:
    (processed at the next scheduled run).
 3. **By hand** — edit `wishlist.yaml` and push.
 
-### Men's only
+### Your profile: gender and sizes
 
-`only_for: men` at the top of `wishlist.yaml` skips any product detected as women's or kids' — from the product
-name, category, gender tags/fields, or the URL (e.g. `…/xt6-womens-…`). Unisex and unlabelled products are kept.
-Skipped links show the reason on the dashboard and never alert; Telegram `/add` refuses them. Remove the line to
-turn the filter off.
+The `profile:` block at the top of `wishlist.yaml`:
+
+```yaml
+profile:
+  gender: men                                  # skip products detected as women's/kids' (unisex & unlabelled kept)
+  shoe_size: {system: US, min: 10, max: 11.5}  # US men's 10, 10.5, 11, 11.5
+  brand_sizes:                                 # optional per-brand overrides of the built-in conversion
+    Dr Martens: {UK: [9, 10]}
+    Birkenstock: {EU: [43, 44], width: Regular}
+    Salomon: {UK: [9.5, 11]}
+```
+
+For items marked `kind: shoes` (add `brand:` so the right size chart is used), **stock and price come only from
+your sizes**: an item is "in stock" only if one of your sizes is, the price is the cheapest of your sizes, and
+alerts say which of your sizes are available ("✅ Your size is back in stock", "⏳ Only US 11 left"). Without a
+`brand_sizes` entry, the US range is converted with the brand's chart (Dr Martens, Birkenstock, Salomon, or a
+generic one); a size the brand doesn't make maps to both neighbouring sizes. Telegram `/add` marks an item as
+shoes automatically when the store lists numeric sizes.
+
+Where sizes come from: Shopify size/width options (Birkenstock EU, JD Sports US), JSON-LD product-group variants
+(JD's page fallback), and Dr Martens' Magento GraphQL API (UK sizes, stock per size, RRP). If a store's sizes
+can't be read, the dashboard says so and any-size stock is used.
 
 ## Setup (one-off, ~10 minutes)
 

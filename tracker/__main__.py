@@ -21,7 +21,7 @@ from datetime import date, timedelta, timezone, datetime
 from html import escape
 from urllib.parse import urlparse
 
-from . import alerts, sales, store, telegram, verify
+from . import alerts, sales, sizes, store, telegram, verify
 from .fetch import Fetcher, ScrapeError
 from .parse import excluded_for
 
@@ -74,11 +74,11 @@ def handle_commands(fetcher: Fetcher, items: list[dict], prices: dict, state: di
                 url = args[0]
                 target = float(args[1]) if len(args) > 1 else None
                 try:
-                    offer, _ = fetcher.get_offer(url)
+                    offer, retailer = fetcher.get_offer(url)
                     name = (offer.title or "").strip() or None
                 except ScrapeError:
-                    offer, name = None, None
-                only_for = store.load_settings().get("only_for")
+                    offer, retailer, name = None, {}, None
+                only_for = store.load_profile().get("gender")
                 if offer and excluded_for(offer.genders, only_for):
                     telegram.send(f"🚫 Not added: <b>{escape(name or url)}</b> looks like a "
                                   f"{'/'.join(offer.genders)} product, and your wishlist is {escape(only_for)}'s only.")
@@ -91,6 +91,10 @@ def handle_commands(fetcher: Fetcher, items: list[dict], prices: dict, state: di
                 item = {"id": iid, "name": name, "target_price": target, "urls": [url]}
                 if target is None:
                     del item["target_price"]
+                # Sized footwear (numeric sizes at a store with a known size system): filter to your sizes.
+                if offer and offer.sizes and retailer.get("size_system") and any(
+                        sizes.parse_size(s["size"], retailer["size_system"])[1] for s in offer.sizes):
+                    item["kind"] = "shoes"
                 items.append(item)
                 by_id[iid] = item
                 changed = True
@@ -127,7 +131,8 @@ def cmd_check(args) -> int:
     items = store.load_wishlist()
     prices = store.load_prices()
     state = store.load_state()
-    only_for = store.load_settings().get("only_for")
+    profile = store.load_profile()
+    only_for = profile.get("gender")
     messages: list[str] = []
 
     with Fetcher(store.load_retailers()) as fetcher:
@@ -147,7 +152,8 @@ def cmd_check(args) -> int:
                 retailer_name = fetcher.retailer_for(url)["name"]
                 shared_host = hosts.count(urlparse(url).netloc) > 1  # e.g. several colours at one store
                 slot = entry["offers"].setdefault(url, {"history": []})
-                prev = {k: slot.get(k) for k in ("price", "was", "in_stock")} if slot.get("price") is not None else None
+                prev = ({k: slot.get(k) for k in ("price", "was", "in_stock", "sizes_in")}
+                        if slot.get("price") is not None else None)
                 checked = store.now_iso()
                 started = time.monotonic()
                 try:
@@ -164,8 +170,11 @@ def cmd_check(args) -> int:
                                 checked=checked, error=reason)
                     alerts.recovered(item, url, state)  # not a scrape failure, so no warning
                     continue
+                sizes.apply_profile(offer, item, profile, retailer)
                 point = {"t": checked, "price": offer.price, "was": offer.was_price, "in_stock": offer.in_stock,
                          "cur": offer.currency or "NZD"}
+                if offer.size_status == "ok":
+                    point["sizes_in"] = [s["label"] for s in offer.my_sizes if s["in_stock"]]
                 label = f"{retailer['name']} ({offer.title})" if shared_host and offer.title else retailer["name"]
                 alerts.recovered(item, url, state)
                 if warning := verify.identity_warning(item, url, label, slot, offer):
@@ -184,14 +193,18 @@ def cmd_check(args) -> int:
                         continue
                 slot.pop("pending", None)
 
+                size_info = {"ok": f" · your sizes in stock: {', '.join(point['sizes_in']) or 'none'}" if
+                             offer.size_status == "ok" else "", "none": " · your sizes not listed",
+                             "unknown": " · sizes unreadable (any-size stock)"}.get(offer.size_status, "")
                 print(f"  ✓ {item['name']} @ {retailer['name']}: {alerts.fmt(offer.price)}"
                       f"{' (was ' + alerts.fmt(offer.was_price) + ')' if offer.was_price else ''}"
-                      f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}  [{offer.method}, "
+                      f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}{size_info}  [{offer.method}, "
                       f"{time.monotonic() - started:.0f}s]")
                 messages += alerts.evaluate(item, url, label, point, prev, slot["history"], state)
                 store.record(slot["history"], point)
                 slot.update(retailer=retailer["name"], title=offer.title, price=offer.price, was=offer.was_price,
-                            in_stock=offer.in_stock, method=offer.method, checked=checked, error=None)
+                            in_stock=offer.in_stock, method=offer.method, checked=checked, error=None,
+                            sizes_in=point.get("sizes_in"), my_sizes=offer.my_sizes, size_status=offer.size_status)
             for stale in set(entry["offers"]) - set(item["urls"]):
                 entry["offers"][stale]["tracked"] = False
 

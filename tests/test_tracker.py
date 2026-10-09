@@ -409,3 +409,105 @@ def test_identity_compares_only_same_kind_of_id():
     assert verify.identity_warning(item, url, "O", slot, _offer(product_id="sku:WDS1-BLK-105", title="Desk Mat Pro Slim")) is None
     assert slot["identity"]["ids"] == {"shopify": "6843134705718", "sku": "WDS1-BLK-105"}
     assert "sku" in verify.identity_warning(item, url, "O", slot, _offer(product_id="sku:OTHER", title="Desk Mat Pro Slim"))
+
+
+# ---- Phase 2: sizes
+from tracker import sizes
+
+PROFILE = {"gender": "men", "shoe_size": {"system": "US", "min": 10, "max": 11.5},
+           "brand_sizes": {"Dr Martens": {"UK": [9, 10]}, "Birkenstock": {"EU": [43, 44], "width": "Regular"},
+                           "Salomon": {"UK": [9.5, 11]}}}
+
+
+def test_wanted_sizes_overrides_and_conversion():
+    assert sizes.wanted_sizes(PROFILE, "Salomon", "US") == {10, 10.5, 11, 11.5}  # same system: as given
+    assert sizes.wanted_sizes(PROFILE, "Dr Martens", "UK") == {9, 9.5, 10}  # override range
+    assert sizes.wanted_sizes(PROFILE, "Birkenstock", "EU") == {43, 43.5, 44}
+    bare = {"shoe_size": PROFILE["shoe_size"]}
+    # Without overrides, the brand chart converts; sizes a brand doesn't make map to both neighbours.
+    assert sizes.wanted_sizes(bare, "Dr Martens", "UK") == {9, 10, 11}  # US 11.5 -> UK 10.5 -> 10 and 11
+    assert sizes.wanted_sizes(bare, "Birkenstock", "EU") == {43, 44, 45}
+    assert sizes.wanted_sizes(bare, "Salomon", "UK") == {9.5, 10, 10.5, 11}
+    assert sizes.wanted_sizes({}, "Salomon", "US") is None
+
+
+@pytest.mark.parametrize("label,default,expected", [
+    ("UK 9", None, ("UK", 9.0)), ("10.5", "US", ("US", 10.5)), ("EU 43", "UK", ("EU", 43.0)),
+    ("One Size", "US", (None, None)), ("44", None, (None, 44.0)),
+])
+def test_parse_size(label, default, expected):
+    assert sizes.parse_size(label, default) == expected
+
+
+def _shoe_offer(size_rows, **kw):
+    from tracker.parse import Offer
+    return Offer(**{"price": 999.0, "in_stock": True, "sizes": size_rows, **kw})
+
+
+SHOES = {"kind": "shoes", "brand": "Salomon"}
+
+
+def test_apply_profile_uses_only_your_sizes():
+    rows = [{"size": "9", "in_stock": True, "price": 150.0}, {"size": "10", "in_stock": False, "price": 200.0},
+            {"size": "11", "in_stock": True, "price": 220.0}, {"size": "12", "in_stock": True, "price": 100.0}]
+    o = _shoe_offer(rows, was_price=340.0)
+    sizes.apply_profile(o, SHOES, PROFILE, {"size_system": "US"})
+    assert (o.price, o.in_stock, o.size_status, o.was_price) == (220.0, True, "ok", 340.0)  # cheaper 9/12 ignored
+    assert [(s["label"], s["in_stock"]) for s in o.my_sizes] == [("US 10", False), ("US 11", True)]
+
+
+def test_apply_profile_sold_out_in_your_sizes_and_not_listed():
+    o = _shoe_offer([{"size": "10", "in_stock": False, "price": 200.0}, {"size": "9", "in_stock": True, "price": 150.0}])
+    sizes.apply_profile(o, SHOES, PROFILE, {"size_system": "US"})
+    assert o.in_stock is False and o.price == 200.0
+    o = _shoe_offer([{"size": "6", "in_stock": True, "price": 150.0}])
+    sizes.apply_profile(o, SHOES, PROFILE, {"size_system": "US"})
+    assert o.size_status == "none" and o.in_stock is False
+    o = _shoe_offer(None)
+    sizes.apply_profile(o, SHOES, PROFILE, {"size_system": "US"})
+    assert o.size_status == "unknown" and o.in_stock is True  # falls back to any-size stock
+    o = _shoe_offer([{"size": "10", "in_stock": False, "price": 1.0}])
+    sizes.apply_profile(o, {"name": "Perfume"}, PROFILE, {})  # not shoes: untouched
+    assert o.in_stock is True and o.size_status is None
+
+
+def test_birkenstock_width_and_eu_sizes_from_shopify():
+    o = parse_shopify_js(json.loads(fixture("birkenstock_boston_habana.json")))
+    assert {s["width"] for s in o.sizes} >= {"Regular"}
+    sizes.apply_profile(o, {"kind": "shoes", "brand": "Birkenstock"}, PROFILE, {"size_system": "EU"})
+    assert [s["label"] for s in o.my_sizes] == ["EU 43", "EU 44"] and o.size_status == "ok"
+
+
+def test_jd_product_group_sizes():
+    o = parse_html(fixture("jdsports_xt6_white.html"))
+    assert len(o.sizes) > 20 and all(s["price"] == 200.0 for s in o.sizes)
+    sizes.apply_profile(o, SHOES, PROFILE, {"size_system": "US"})
+    assert [s["label"] for s in o.my_sizes] == ["US 10", "US 10.5", "US 11", "US 11.5"]
+
+
+def test_magento_graphql_sizes_and_rrp(monkeypatch):
+    from tracker.fetch import Fetcher
+    f = Fetcher({}, polite_delay=(0, 0))
+    seen = {}
+
+    class R:
+        status_code = 200
+        def json(self): return json.loads(fixture("drmartens_adrian_black_graphql.json"))
+
+    monkeypatch.setattr(f.client, "post", lambda url, headers=None, json=None: seen.update(headers=headers) or R())
+    o = f._magento("https://www.drmartens.co.nz/adrian-tassel-smooth-loafer-22209001-blk.html", "nz")
+    assert seen["headers"] == {"Store": "nz"}
+    assert (o.currency, o.method, o.product_id) == ("NZD", "magento", "sku:22209001.BLK")
+    assert o.was_price and o.was_price > o.price
+    sizes.apply_profile(o, {"kind": "shoes", "brand": "Dr Martens"}, PROFILE, {"size_system": "UK"})
+    assert [s["label"] for s in o.my_sizes] == ["UK 9", "UK 10"]
+
+
+def test_size_alerts():
+    item = {"id": "s", "name": "XT-6"}
+    msgs = alerts.evaluate(item, "u", "JD", {"price": 200.0, "in_stock": True, "sizes_in": ["US 11"]},
+                           {"price": 200.0, "in_stock": True, "sizes_in": ["US 10", "US 11"]}, [], {})
+    assert len(msgs) == 1 and "Only US 11 left" in msgs[0]
+    msgs = alerts.evaluate(item, "u", "JD", {"price": 200.0, "in_stock": True, "sizes_in": ["US 10"]},
+                           {"price": 200.0, "in_stock": False, "sizes_in": []}, [], {})
+    assert "Your size is back in stock" in msgs[0] and "Your sizes in stock: US 10" in msgs[0]
