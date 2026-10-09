@@ -31,7 +31,11 @@
   "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": {},
   "msi-modern-md342cqp|https://pricespy.co.nz/product.php?p=14502997": {},
   "belkin-boostcharge-pro-2-in-1|https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black": {},
-  "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": {}
+  "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": {},
+  "prada-paradigme-edp-100ml|https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml": {},
+  "ysl-myslf-le-parfum-100ml|https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml": {},
+  "armani-stronger-with-you-intensely-100ml|https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml": {},
+  "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {},
  "deals": {
@@ -39,10 +43,10 @@
   "dior-sauvage-elixir-60ml": "unknown",
   "bleu-de-chanel-edp-100ml": null,
   "bleu-de-chanel-parfum-100ml": null,
-  "prada-paradigme-edp-100ml": "unknown",
-  "ysl-myslf-le-parfum-100ml": "unknown",
-  "armani-stronger-with-you-intensely-100ml": "unknown",
-  "dr-martens-adrian-tassel-loafer": "unknown",
+  "prada-paradigme-edp-100ml": "good",
+  "ysl-myslf-le-parfum-100ml": "good",
+  "armani-stronger-with-you-intensely-100ml": "good",
+  "dr-martens-adrian-tassel-loafer": "good",
   "birkenstock-arizona": "unknown",
   "birkenstock-boston": "unknown",
   "salomon-xt-6": "good",

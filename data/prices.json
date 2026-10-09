@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T00:28:42+00:00",
+ "updated": "2026-10-09T00:58:56+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -24,7 +24,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:26:00+00:00",
+     "checked": "2026-10-09T00:56:57+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -45,7 +45,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:12+00:00",
+     "checked": "2026-10-09T00:57:13+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -125,7 +125,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:26:14+00:00",
+     "checked": "2026-10-09T00:57:14+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -159,7 +159,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:15+00:00",
+     "checked": "2026-10-09T00:57:16+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -196,7 +196,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:17+00:00",
+     "checked": "2026-10-09T00:57:19+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -248,7 +248,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:20+00:00",
+     "checked": "2026-10-09T00:57:21+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -290,7 +290,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:21+00:00",
+     "checked": "2026-10-09T00:57:22+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -346,7 +346,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:24+00:00",
+     "checked": "2026-10-09T00:57:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -360,27 +360,59 @@
      "shop": null,
      "shop_offers": null,
      "note": null
+    },
+    "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml": {
+     "history": [
+      {
+       "t": "2026-10-09T00:57:32+00:00",
+       "price": 209.99,
+       "was": 275.0,
+       "in_stock": true,
+       "cur": "NZD"
+      }
+     ],
+     "identity": {
+      "ids": {},
+      "title": "Prada Paradigme For Men Eau De Parfum 100ml"
+     },
+     "retailer": "Chemist Warehouse",
+     "title": "Prada Paradigme For Men Eau De Parfum 100ml",
+     "price": 209.99,
+     "was": 275.0,
+     "in_stock": true,
+     "method": "microdata",
+     "checked": "2026-10-09T00:57:32+00:00",
+     "error": null,
+     "sizes_in": null,
+     "my_sizes": null,
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Prada Paradigme EDP 100ml",
    "target_price": null,
    "tracked": true,
    "urls": [
-    "https://www.lifepharmacy.co.nz/products/prada-paradigme-edp-100ml"
+    "https://www.lifepharmacy.co.nz/products/prada-paradigme-edp-100ml",
+    "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml"
    ],
    "deal": {
-    "label": "unknown",
-    "price": 275.0,
-    "retailer": "Life Pharmacy",
+    "label": "good",
+    "price": 209.99,
+    "retailer": "Chemist Warehouse",
     "shop": null,
-    "url": "https://www.lifepharmacy.co.nz/products/prada-paradigme-edp-100ml",
+    "url": "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml",
     "typical": null,
     "pct_vs_typical": null,
-    "was": null,
-    "was_verified": false,
-    "days": 2,
+    "was": 275.0,
+    "was_verified": true,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7"
+     "3 day(s) of history so far; typical price needs 7",
+     "24% off a verified RRP of $275.00",
+     "$65.01 cheaper than the next store"
     ]
    }
   },
@@ -408,7 +440,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:26+00:00",
+     "checked": "2026-10-09T00:57:34+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -422,27 +454,59 @@
      "shop": null,
      "shop_offers": null,
      "note": null
+    },
+    "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml": {
+     "history": [
+      {
+       "t": "2026-10-09T00:57:37+00:00",
+       "price": 239.99,
+       "was": 319.0,
+       "in_stock": true,
+       "cur": "NZD"
+      }
+     ],
+     "identity": {
+      "ids": {},
+      "title": "Yves Saint Laurent Myslf Le Parfum 100ml"
+     },
+     "retailer": "Chemist Warehouse",
+     "title": "Yves Saint Laurent Myslf Le Parfum 100ml",
+     "price": 239.99,
+     "was": 319.0,
+     "in_stock": true,
+     "method": "microdata",
+     "checked": "2026-10-09T00:57:37+00:00",
+     "error": null,
+     "sizes_in": null,
+     "my_sizes": null,
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "YSL MYSLF Le Parfum 100ml",
    "target_price": null,
    "tracked": true,
    "urls": [
-    "https://www.lifepharmacy.co.nz/products/yves-saint-laurent-myslf-le-parfum-100ml"
+    "https://www.lifepharmacy.co.nz/products/yves-saint-laurent-myslf-le-parfum-100ml",
+    "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml"
    ],
    "deal": {
-    "label": "unknown",
-    "price": 319.0,
-    "retailer": "Life Pharmacy",
+    "label": "good",
+    "price": 239.99,
+    "retailer": "Chemist Warehouse",
     "shop": null,
-    "url": "https://www.lifepharmacy.co.nz/products/yves-saint-laurent-myslf-le-parfum-100ml",
+    "url": "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml",
     "typical": null,
     "pct_vs_typical": null,
-    "was": null,
-    "was_verified": false,
-    "days": 2,
+    "was": 319.0,
+    "was_verified": true,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7"
+     "3 day(s) of history so far; typical price needs 7",
+     "25% off a verified RRP of $319.00",
+     "$79.01 cheaper than the next store"
     ]
    }
   },
@@ -470,7 +534,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:30+00:00",
+     "checked": "2026-10-09T00:57:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -493,7 +557,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:34+00:00",
+     "checked": "2026-10-09T00:57:42+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -515,6 +579,35 @@
        "trusted": false
       }
      ]
+    },
+    "https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml": {
+     "history": [
+      {
+       "t": "2026-10-09T00:57:40+00:00",
+       "price": 169.99,
+       "was": 226.0,
+       "in_stock": true,
+       "cur": "NZD"
+      }
+     ],
+     "identity": {
+      "ids": {},
+      "title": "Emporio Armani Stronger With You Intensely Eau De Parfum 100ml"
+     },
+     "retailer": "Chemist Warehouse",
+     "title": "Emporio Armani Stronger With You Intensely Eau De Parfum 100ml",
+     "price": 169.99,
+     "was": 226.0,
+     "in_stock": true,
+     "method": "microdata",
+     "checked": "2026-10-09T00:57:40+00:00",
+     "error": null,
+     "sizes_in": null,
+     "my_sizes": null,
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Armani Stronger With You Intensely EDP 100ml",
@@ -522,21 +615,24 @@
    "tracked": true,
    "urls": [
     "https://www.lifepharmacy.co.nz/products/stronger-with-you-intensely-edp-spray-100ml",
+    "https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml",
     "https://pricespy.co.nz/product.php?p=5010999"
    ],
    "deal": {
-    "label": "unknown",
-    "price": 226.0,
-    "retailer": "Life Pharmacy",
+    "label": "good",
+    "price": 169.99,
+    "retailer": "Chemist Warehouse",
     "shop": null,
-    "url": "https://www.lifepharmacy.co.nz/products/stronger-with-you-intensely-edp-spray-100ml",
+    "url": "https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml",
     "typical": null,
     "pct_vs_typical": null,
-    "was": null,
-    "was_verified": false,
-    "days": 2,
+    "was": 226.0,
+    "was_verified": true,
+    "days": 3,
     "reasons": [
-     "2 day(s) of history so far; typical price needs 7"
+     "3 day(s) of history so far; typical price needs 7",
+     "25% off a verified RRP of $226.00",
+     "$56.01 cheaper than the next store"
     ]
    }
   },
@@ -574,7 +670,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:26:35+00:00",
+     "checked": "2026-10-09T00:57:43+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -633,7 +729,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:26:36+00:00",
+     "checked": "2026-10-09T00:57:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -692,7 +788,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:26:40+00:00",
+     "checked": "2026-10-09T00:57:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -718,6 +814,57 @@
      "shop": null,
      "shop_offers": null,
      "note": null
+    },
+    "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {
+     "history": [
+      {
+       "t": "2026-10-09T00:57:51+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
+      }
+     ],
+     "identity": {
+      "ids": {
+       "sku": "14573601.RED"
+      },
+      "title": "Adrian Tassel Loafer"
+     },
+     "retailer": "Platypus",
+     "title": "Adrian Tassel Loafer",
+     "price": 399.99,
+     "was": null,
+     "in_stock": true,
+     "method": "magento",
+     "checked": "2026-10-09T00:57:51+00:00",
+     "error": null,
+     "sizes_in": [
+      "UK 9",
+      "UK 10"
+     ],
+     "my_sizes": [
+      {
+       "label": "UK 9",
+       "in_stock": true
+      },
+      {
+       "label": "UK 9.5",
+       "in_stock": false
+      },
+      {
+       "label": "UK 10",
+       "in_stock": true
+      }
+     ],
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Dr Martens Adrian Tassel Loafer (black / brown / red)",
@@ -726,10 +873,11 @@
    "urls": [
     "https://www.drmartens.co.nz/adrian-tassel-smooth-loafer-22209001-blk.html",
     "https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html",
-    "https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html"
+    "https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html",
+    "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html"
    ],
    "deal": {
-    "label": "unknown",
+    "label": "good",
     "price": 319.99,
     "retailer": "Dr Martens NZ",
     "shop": null,
@@ -737,11 +885,11 @@
     "typical": null,
     "pct_vs_typical": null,
     "was": 399.99,
-    "was_verified": false,
+    "was_verified": true,
     "days": 3,
     "reasons": [
      "3 day(s) of history so far; typical price needs 7",
-     "store says was $399.99 (20% off), but it hasn't been seen selling at that price",
+     "20% off a verified RRP of $399.99",
      "same price as another store"
     ]
    }
@@ -793,7 +941,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:45+00:00",
+     "checked": "2026-10-09T00:57:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -864,7 +1012,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:46+00:00",
+     "checked": "2026-10-09T00:57:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -924,7 +1072,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:50+00:00",
+     "checked": "2026-10-09T00:57:58+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1012,7 +1160,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:53+00:00",
+     "checked": "2026-10-09T00:58:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1072,7 +1220,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:56+00:00",
+     "checked": "2026-10-09T00:58:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1132,7 +1280,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:26:59+00:00",
+     "checked": "2026-10-09T00:58:07+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1192,7 +1340,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:27:02+00:00",
+     "checked": "2026-10-09T00:58:12+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1264,7 +1412,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:27:05+00:00",
+     "checked": "2026-10-09T00:58:16+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1354,7 +1502,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:27:09+00:00",
+     "checked": "2026-10-09T00:58:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1421,7 +1569,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:27:13+00:00",
+     "checked": "2026-10-09T00:58:24+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1496,12 +1644,13 @@
      "price": 143.99,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-09T00:27:16+00:00",
+     "method": "shopify",
+     "checked": "2026-10-09T00:58:27+00:00",
      "error": null,
      "identity": {
       "ids": {
-       "gtin": "9346396003487"
+       "gtin": "9346396003487",
+       "shopify": "7336966357193"
       },
       "title": "Mbeat activiva Heavy Duty Single Monitor Screen Gas Spring Monitor Arm for Flat Panel & Curved Screen (Black & Space Grey)"
      },
@@ -1558,7 +1707,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:27:19+00:00",
+     "checked": "2026-10-09T00:58:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1622,7 +1771,7 @@
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-10-09T00:27:22+00:00",
+     "checked": "2026-10-09T00:58:31+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -1667,12 +1816,13 @@
      "price": 137.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-09T00:28:02+00:00",
+     "method": "shopify",
+     "checked": "2026-10-09T00:58:47+00:00",
      "error": null,
      "identity": {
       "ids": {
-       "gtin": "745883865932"
+       "gtin": "745883865932",
+       "shopify": "7332510564553"
       },
       "title": "Belkin BoostCharge Pro2-in-1 Magnetic Wireless Charging Pad with Qi2 15W (Black)"
      },
@@ -1730,12 +1880,13 @@
      "price": 999.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-09T00:28:04+00:00",
+     "method": "shopify",
+     "checked": "2026-10-09T00:58:48+00:00",
      "error": null,
      "identity": {
       "ids": {
-       "gtin": "5397184962398"
+       "gtin": "5397184962398",
+       "shopify": "7334200934601"
       },
       "title": "Dell 34 Plus 34\" UWQHD 120Hz USB-C Curved Monitor"
      },
@@ -1792,7 +1943,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:28:07+00:00",
+     "checked": "2026-10-09T00:58:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1835,7 +1986,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:28:41+00:00",
+     "checked": "2026-10-09T00:58:55+00:00",
      "error": null,
      "identity": {
       "ids": {},
