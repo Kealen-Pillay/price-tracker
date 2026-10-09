@@ -511,3 +511,16 @@ def test_size_alerts():
     msgs = alerts.evaluate(item, "u", "JD", {"price": 200.0, "in_stock": True, "sizes_in": ["US 10"]},
                            {"price": 200.0, "in_stock": False, "sizes_in": []}, [], {})
     assert "Your size is back in stock" in msgs[0] and "Your sizes in stock: US 10" in msgs[0]
+
+
+def test_birkenstock_page_fallback_reads_width_from_variant_names():
+    o = parse_html(fixture("birkenstock_arizona_black.html"))
+    assert ("43", "Narrow") in {(s["size"], s["width"]) for s in o.sizes}
+    sizes.apply_profile(o, {"kind": "shoes", "brand": "Birkenstock"}, PROFILE, {"size_system": "EU"})
+    assert [s["label"] for s in o.my_sizes] == ["EU 43", "EU 44"]  # Regular only, no duplicates
+
+
+def test_duplicate_sizes_are_merged():
+    o = _shoe_offer([{"size": "10", "in_stock": False, "price": 200.0}, {"size": "10", "in_stock": True, "price": 210.0}])
+    sizes.apply_profile(o, SHOES, PROFILE, {"size_system": "US"})
+    assert [(s["label"], s["in_stock"]) for s in o.my_sizes] == [("US 10", True)] and o.price == 210.0

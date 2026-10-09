@@ -123,7 +123,14 @@ def apply_profile(offer, item: dict, profile: dict, retailer: dict) -> None:
     if not mine:
         offer.size_status, offer.in_stock, offer.my_sizes = "none", False, []
         return
-    mine.sort(key=lambda s: s["n"])
+    # One entry per size (a store can list a size more than once, e.g. per width or colour): in stock if any is.
+    merged: dict[str, dict] = {}
+    for s in mine:
+        m = merged.get(s["label"])
+        if m is None or (s.get("in_stock") and not m.get("in_stock")) or (
+                s.get("in_stock") == m.get("in_stock") and (s.get("price") or 1e9) < (m.get("price") or 1e9)):
+            merged[s["label"]] = s
+    mine = sorted(merged.values(), key=lambda s: s["n"])
     live = [s for s in mine if s.get("in_stock")]
     pool = live or mine
     priced = [s for s in pool if s.get("price") is not None]

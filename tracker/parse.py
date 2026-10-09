@@ -21,6 +21,7 @@ GENDER_PATTERNS = {
 # Shopify pages state the currency actually shown to this visitor; themes often hard-code the store's home
 # currency in their microdata (Orbitkey labels NZ$139 as "AUD"), so this wins when present.
 SHOPIFY_ACTIVE_CURRENCY_RE = re.compile(r'Shopify\.currency\s*=\s*\{[^}]*"active"\s*:\s*"([A-Z]{3})"')
+WIDTH_RE = re.compile(r"(?i)regular|narrow|wide|extra wide|medium|standard")
 MONEY_RE = re.compile(r"(\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?|\d+(?:\.\d{1,2})?)")
 
 
@@ -108,18 +109,21 @@ def _variant_sizes(group: dict, variants: list) -> list[dict]:
     for v in variants:
         if not isinstance(v, dict):
             continue
-        size = v.get("size")
+        size, width = v.get("size"), None
         if isinstance(size, dict):
             size = size.get("name")
         if not size:
             name = (v.get("name") or "").strip()
             if base and name.startswith(base) and " - " in name:
-                size = name.rsplit(" - ", 1)[1]
+                # Shopify joins options with " / ", e.g. "Arizona - 43 / Regular / Black": size, width, colour.
+                parts = [p.strip() for p in name.rsplit(" - ", 1)[1].split(" / ")]
+                size = next((p for p in parts if re.search(r"\d", p)), None)
+                width = next((p for p in parts if WIDTH_RE.fullmatch(p)), None)
         if not size:
             continue
         o = v.get("offers")
         o = (o[0] if isinstance(o, list) and o else o) or {}
-        out.append({"size": str(size), "width": None, "in_stock": _availability(o.get("availability")),
+        out.append({"size": str(size), "width": width, "in_stock": _availability(o.get("availability")),
                     "price": money(o.get("price")), "was": None})
     return out
 
