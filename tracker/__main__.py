@@ -21,7 +21,7 @@ from datetime import date, timedelta, timezone, datetime
 from html import escape
 from urllib.parse import urlparse
 
-from . import alerts, sales, sizes, store, telegram, verify
+from . import alerts, deals, sales, sizes, store, telegram, trust, verify
 from .fetch import Fetcher, ScrapeError
 from .parse import excluded_for
 
@@ -55,6 +55,9 @@ def summary_line(item: dict, entry: dict | None) -> str:
     atl = all_time_low(entry)
     if atl:
         s += f" · lowest seen {alerts.fmt(atl)}"
+    deal = entry.get("deal") or {}
+    if deal.get("label") in ("great", "good", "high"):
+        s += f"\n  {alerts.DEAL_EMOJI[deal['label']]} {escape(deal['reasons'][0])}"
     if target is not None:
         s += f" · target {alerts.fmt(float(target))}"
     return s
@@ -170,12 +173,25 @@ def cmd_check(args) -> int:
                                 checked=checked, error=reason)
                     alerts.recovered(item, url, state)  # not a scrape failure, so no warning
                     continue
+                trust.apply_trust(offer, profile)
+                if offer.trust_status == "untrusted_only":
+                    ub = offer.untrusted_best or {}
+                    reason = (f"Only untrusted sellers listed (cheapest: {ub.get('shop')} {alerts.fmt(ub.get('price'))}); "
+                              f"not counted")
+                    print(f"  – {item['name']} @ {retailer['name']}: {reason}")
+                    slot.update(retailer=retailer["name"], title=offer.title, price=None, was=None, in_stock=None,
+                                checked=checked, error=None, note=reason, shop=None, shop_offers=offer.shop_offers)
+                    slot.pop("pending", None)
+                    alerts.recovered(item, url, state)
+                    continue
                 sizes.apply_profile(offer, item, profile, retailer)
                 point = {"t": checked, "price": offer.price, "was": offer.was_price, "in_stock": offer.in_stock,
                          "cur": offer.currency or "NZD"}
                 if offer.size_status == "ok":
                     point["sizes_in"] = [s["label"] for s in offer.my_sizes if s["in_stock"]]
                 label = f"{retailer['name']} ({offer.title})" if shared_host and offer.title else retailer["name"]
+                if offer.shop:
+                    label = f"{retailer['name']} → {offer.shop}"
                 alerts.recovered(item, url, state)
                 if warning := verify.identity_warning(item, url, label, slot, offer):
                     messages.append(warning)
@@ -196,7 +212,8 @@ def cmd_check(args) -> int:
                 size_info = {"ok": f" · your sizes in stock: {', '.join(point['sizes_in']) or 'none'}" if
                              offer.size_status == "ok" else "", "none": " · your sizes not listed",
                              "unknown": " · sizes unreadable (any-size stock)"}.get(offer.size_status, "")
-                print(f"  ✓ {item['name']} @ {retailer['name']}: {alerts.fmt(offer.price)}"
+                print(f"  ✓ {item['name']} @ {retailer['name']}{' → ' + offer.shop if offer.shop else ''}: "
+                      f"{alerts.fmt(offer.price)}"
                       f"{' (was ' + alerts.fmt(offer.was_price) + ')' if offer.was_price else ''}"
                       f"{'' if offer.in_stock is not False else ' OUT OF STOCK'}{size_info}  [{offer.method}, "
                       f"{time.monotonic() - started:.0f}s]")
@@ -204,9 +221,14 @@ def cmd_check(args) -> int:
                 store.record(slot["history"], point)
                 slot.update(retailer=retailer["name"], title=offer.title, price=offer.price, was=offer.was_price,
                             in_stock=offer.in_stock, method=offer.method, checked=checked, error=None,
-                            sizes_in=point.get("sizes_in"), my_sizes=offer.my_sizes, size_status=offer.size_status)
+                            sizes_in=point.get("sizes_in"), my_sizes=offer.my_sizes, size_status=offer.size_status,
+                            shop=offer.shop, shop_offers=offer.shop_offers, note=None)
             for stale in set(entry["offers"]) - set(item["urls"]):
                 entry["offers"][stale]["tracked"] = False
+
+            # Deal quality across all stores; alert when an item first becomes a great deal.
+            entry["deal"] = deals.compute(entry)
+            messages += alerts.deal_alert(item, entry["deal"], state)
 
     prices["updated"] = store.now_iso()
     if args.dry_run:

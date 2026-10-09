@@ -11,7 +11,8 @@ www.chemistwarehouse.co.nz:
   name: Chemist Warehouse
   was_price_selector: .retailPrice
 pricespy.co.nz:
-  name: PriceSpy (lowest NZ price)
+  name: PriceSpy
+  platform: pricespy   # read every shop's offer; only trusted shops count (profile.trusted_shops)
 www.bargainchemist.co.nz:
   name: Bargain Chemist
 www.lifepharmacy.co.nz:

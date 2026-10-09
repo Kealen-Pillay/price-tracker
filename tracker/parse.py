@@ -41,6 +41,12 @@ class Offer:
     sizes: list[dict] | None = None
     my_sizes: list[dict] | None = None
     size_status: str | None = None
+    # Comparison sites (PriceSpy): every shop's offer, [{"shop", "price", "was", "in_stock", "condition"}].
+    # trust.apply_trust picks the best offer from a trusted shop and records it in `shop`.
+    shop_offers: list[dict] | None = None
+    shop: str | None = None
+    trust_status: str | None = None  # "trusted" | "untrusted_only"
+    untrusted_best: dict | None = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -275,6 +281,66 @@ def parse_html(html: str, retailer: dict | None = None) -> Offer | None:
     if m := SHOPIFY_ACTIVE_CURRENCY_RE.search(html):
         offer.currency = m.group(1)
     return offer
+
+
+def _next_flight_data(html: str) -> str:
+    """The Next.js "flight" payload (self.__next_f.push chunks) that PriceSpy embeds its page data in."""
+    chunks = re.findall(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)', html, re.S)
+    out = []
+    for c in chunks:
+        try:
+            out.append(json.loads(f'"{c}"'))
+        except json.JSONDecodeError:
+            continue
+    return "".join(out)
+
+
+def _json_array_after(text: str, key: str):
+    """Decode the JSON array that follows `key` in a larger non-JSON text (bracket-matched, string-aware)."""
+    i = text.find(key)
+    if i < 0:
+        return None
+    i = text.find("[", i)
+    depth, in_str, esc = 0, False, False
+    for j in range(i, len(text)):
+        ch = text[j]
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+        elif ch == '"':
+            in_str = True
+        elif ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth -= 1
+            if depth == 0:
+                try:
+                    return json.loads(text[i:j + 1])
+                except json.JSONDecodeError:
+                    return None
+    return None
+
+
+def parse_pricespy_offers(html: str) -> list[dict] | None:
+    """Every shop offer on a PriceSpy product page (its "offerRows"), cheapest first."""
+    rows = _json_array_after(_next_flight_data(html), '"offerRows":')
+    if not rows:
+        return None
+    out = []
+    for r in rows:
+        if not isinstance(r, dict) or not isinstance(r.get("price"), dict):
+            continue
+        orig = r.get("originalPrice") if isinstance(r.get("originalPrice"), dict) else {}
+        price, was = money(r["price"].get("amount")), money(orig.get("amount"))
+        out.append({"shop": ((r.get("shop") or {}).get("name") or "?").strip(), "price": price,
+                    "was": was if was and price and was > price else None,
+                    "in_stock": _availability(r.get("stockStatus")), "condition": r.get("condition"),
+                    "membership": bool(r.get("isPaidMembership"))})
+    return sorted((o for o in out if o["price"] is not None), key=lambda o: o["price"]) or None
 
 
 def excluded_for(genders: list[str] | None, wanted: str | None) -> bool:

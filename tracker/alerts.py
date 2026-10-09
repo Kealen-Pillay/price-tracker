@@ -66,6 +66,25 @@ def evaluate(item: dict, url: str, retailer: str, offer: dict, prev: dict | None
     return lines
 
 
+DEAL_EMOJI = {"great": "🔥", "good": "👍", "typical": "•", "high": "⬆️", "unknown": "•"}
+
+
+def deal_alert(item: dict, deal: dict | None, state: dict) -> list[str]:
+    """One alert when an item becomes a great deal (re-armed once it stops being one)."""
+    deals_state = state.setdefault("deals", {})
+    label = (deal or {}).get("label")
+    was_great = deals_state.get(item["id"]) == "great"
+    deals_state[item["id"]] = label
+    if label != "great" or was_great:
+        return []
+    where = deal.get("retailer") or "?"
+    if deal.get("shop"):
+        where += f" → {deal['shop']}"
+    return [f"🔥 <b>Great deal: {escape(item['name'])}</b> — {fmt(deal['price'])} at {escape(where)}\n"
+            + "\n".join(f"• {escape(r)}" for r in deal["reasons"])
+            + f'\n<a href="{escape(deal["url"])}">View deal</a>']
+
+
 def failure(item: dict, url: str, retailer: str, error: str, state: dict) -> list[str]:
     key = f"{item['id']}|{url}"
     fails = state.setdefault("failures", {})

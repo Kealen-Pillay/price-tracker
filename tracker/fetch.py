@@ -9,7 +9,7 @@ from urllib.parse import parse_qsl, urlencode, urlparse
 import httpx
 import logging
 
-from .parse import Offer, detect_gender, parse_html, parse_shopify_js
+from .parse import Offer, detect_gender, parse_html, parse_pricespy_offers, parse_shopify_js
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -283,6 +283,8 @@ class Fetcher:
                 log.info("page %s -> %s; trying the headless browser", url, status)
         if html:
             offer = parse_html(html, retailer)
+            if offer and retailer.get("platform") == "pricespy":
+                offer.shop_offers = parse_pricespy_offers(html)
             if offer and offer.currency and offer.currency.upper() != CURRENCY:
                 log.info("page %s priced in %s; retrying in the browser with NZ cookies", url, offer.currency)
                 offer = None

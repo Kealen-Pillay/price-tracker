@@ -119,10 +119,12 @@ function render() {
     const available = rows.filter(([, o]) => o.in_stock !== false);
     const low = allHist.length ? Math.min(...allHist.map((h) => h.price)) : null;
     const target = item.target_price;
+    const deal = entry.deal;
+    const DEAL_BADGE = { great: ["good", "🔥 Great deal"], good: ["good", "Good deal"], high: ["warn", "Above typical"] };
     let badge = "";
     if (best && target != null && best[1].price <= target) badge = `<span class="badge good">At or below target</span>`;
-    else if (best && low != null && best[1].price <= low && (best[1].history || []).length > 1) badge = `<span class="badge good">Lowest seen</span>`;
-    else if (best && best[1].was) badge = `<span class="badge warn">On sale</span>`;
+    else if (deal && DEAL_BADGE[deal.label]) badge = `<span class="badge ${DEAL_BADGE[deal.label][0]}">${DEAL_BADGE[deal.label][1]}</span>`;
+    const dealWhy = deal?.reasons?.length ? `<div class="muted small deal-why">${deal.reasons.map(esc).join(" · ")}</div>` : "";
 
     const card = document.createElement("section");
     card.className = "card";
@@ -138,20 +140,23 @@ function render() {
       <div class="stats">
         <div class="stat"><div class="label">Best now</div>
           <div class="price">${best ? money(best[1].price) : "—"}</div>
-          <div class="muted small">${best ? esc(best[1].retailer) : soldOut.length === rows.length && rows.length ? "Out of stock everywhere" : "Waiting for first check"} ${badge}</div></div>
+          <div class="muted small">${best ? esc(best[1].retailer) + (best[1].shop ? " → " + esc(best[1].shop) : "") : soldOut.length === rows.length && rows.length ? "Out of stock everywhere" : rows.some(([, o]) => o.note) ? "No trusted shop lists it" : "Waiting for first check"} ${badge}</div></div>
         <div class="stat"><div class="label">Target</div><div class="price">${money(target)}</div></div>
         <div class="stat"><div class="label">Lowest seen</div><div class="price">${money(low)}</div></div>
       </div>
+      ${dealWhy}
       ${allHist.length > 1 ? `<div class="chart"><canvas></canvas></div>` : ""}
       <div class="table-wrap"><table>
         <thead><tr><th>Store</th><th>Price</th><th>Stock</th><th>Checked</th><th></th></tr></thead>
         <tbody>${[...available, ...soldOut].map(([u, o]) => `
           <tr class="${o.in_stock === false ? "oos" : ""}">
-            <td>${esc(o.retailer)}${o.title ? `<div class="muted small">${esc(o.title)}</div>` : ""}${o.method === "json-ld-range" ? `<div class="err">Multi-size page: price may not be your size</div>` : ""}
+            <td>${esc(o.retailer)}${o.shop ? ` → ${esc(o.shop)}` : ""}${o.title ? `<div class="muted small">${esc(o.title)}</div>` : ""}${o.method === "json-ld-range" ? `<div class="err">Multi-size page: price may not be your size</div>` : ""}
                 ${o.error ? `<div class="err">${esc(o.error)}</div>` : ""}
                 ${o.pending ? `<div class="note">Unconfirmed reading ${money(o.pending.price)}${o.pending.in_stock === false ? " (out of stock)" : ""}, rechecking next run</div>` : ""}
                 ${o.identity_note ? `<div class="err">⚠ ${esc(o.identity_note)}</div>` : ""}
-                ${sizeLine(o)}</td>
+                ${sizeLine(o)}
+                ${o.note ? `<div class="note">${esc(o.note)}</div>` : ""}
+                ${sellersLine(o)}</td>
             <td class="num">${money(o.price)}${o.was ? `<span class="was">${money(o.was)}</span>` : ""}</td>
             <td>${o.in_stock === false ? "Out" : o.in_stock ? "In stock" : "—"}</td>
             <td class="muted small">${ago(o.checked)}</td>
@@ -191,6 +196,13 @@ function render() {
     const canvas = card.querySelector("canvas");
     if (canvas) drawChart(canvas, offers, target);
   }
+}
+
+function sellersLine(o) {
+  const others = (o.shop_offers || []).filter((r) => !(r.trusted && r.shop === o.shop && r.price === o.price));
+  if (!others.length) return "";
+  return `<div class="muted small">Also listed: ${others.map((r) =>
+    `${esc(r.shop)} ${money(r.price)}${r.trusted ? "" : " (untrusted)"}${r.in_stock === false ? " (out of stock)" : ""}`).join(" · ")}</div>`;
 }
 
 function sizeLine(o) {

@@ -524,3 +524,83 @@ def test_duplicate_sizes_are_merged():
     o = _shoe_offer([{"size": "10", "in_stock": False, "price": 200.0}, {"size": "10", "in_stock": True, "price": 210.0}])
     sizes.apply_profile(o, SHOES, PROFILE, {"size_system": "US"})
     assert [(s["label"], s["in_stock"]) for s in o.my_sizes] == [("US 10", True)] and o.price == 210.0
+
+
+# ---- Phase 3: trusted shops and deal quality
+from tracker import deals, trust
+from tracker.parse import parse_pricespy_offers
+
+
+def test_pricespy_offer_rows():
+    rows = parse_pricespy_offers(fixture("pricespy_msi_md342cqp.html"))
+    assert [r["shop"] for r in rows][:3] == ["PB Tech", "Paradigm PC's", "Ascent"] and rows[0]["price"] == 599.0
+    swy = parse_pricespy_offers(fixture("pricespy_swy_intensely.html"))
+    assert swy == [{"shop": "Gadgets Online", "price": 169.0, "was": 210.0, "in_stock": True, "condition": "New",
+                    "membership": False}]
+
+
+def test_trust_picks_best_trusted_offer():
+    o = _offer(shop_offers=[{"shop": "Gadgets Online", "price": 100.0, "in_stock": True, "condition": "New"},
+                            {"shop": "PB Tech", "price": 599.0, "in_stock": True, "condition": "New"},
+                            {"shop": "Ascent", "price": 550.0, "in_stock": False, "condition": "New"},
+                            {"shop": "JB Hi-Fi", "price": 500.0, "in_stock": True, "condition": "Refurbished"}])
+    trust.apply_trust(o, {})
+    assert (o.price, o.shop, o.in_stock, o.trust_status) == (599.0, "PB Tech", True, "trusted")
+    assert [r["trusted"] for r in o.shop_offers] == [False, True, True, False]  # refurbished doesn't count
+
+
+def test_trust_untrusted_only_and_custom_list():
+    o = _offer(shop_offers=[{"shop": "Gadgets Online", "price": 169.0, "in_stock": True, "condition": "New"}])
+    trust.apply_trust(o, {})
+    assert o.trust_status == "untrusted_only" and o.price is None and o.untrusted_best["shop"] == "Gadgets Online"
+    o = _offer(shop_offers=[{"shop": "Gadgets Online", "price": 169.0, "in_stock": True, "condition": "New"}])
+    trust.apply_trust(o, {"trusted_shops": ["gadgets-online"]})  # case/punctuation-insensitive
+    assert o.price == 169.0
+    o = _offer(price=50.0)
+    trust.apply_trust(o, {})  # not a comparison site: untouched
+    assert o.price == 50.0 and o.trust_status is None
+
+
+def _hist(prices, start="2026-07-01", in_stock=True):
+    from datetime import date, timedelta
+    d0 = date.fromisoformat(start)
+    return [{"t": f"{d0 + timedelta(days=i)}T00:00:00+00:00", "price": p, "in_stock": in_stock} for i, p in enumerate(prices)]
+
+
+def test_deal_vs_typical_price():
+    from datetime import datetime, timezone
+    now = datetime(2026, 7, 20, tzinfo=timezone.utc)
+    entry = {"urls": ["a", "b"], "offers": {
+        "a": {"retailer": "A", "price": 80.0, "in_stock": True, "history": _hist([100.0] * 10 + [80.0])},
+        "b": {"retailer": "B", "price": 95.0, "in_stock": True, "history": _hist([105.0] * 10)}}}
+    d = deals.compute(entry, now)
+    assert d["label"] == "great" and d["typical"] == 100.0 and d["retailer"] == "A"
+    assert "20% below" in d["reasons"][0] and "$15.00 cheaper than the next store" in d["reasons"][-1]
+    entry["offers"]["a"]["price"] = 98.0
+    assert deals.compute(entry, now)["label"] == "typical"
+
+
+def test_deal_fake_rrp_and_short_history():
+    entry = {"urls": ["a"], "offers": {"a": {"retailer": "A", "price": 200.0, "was": 340.0, "in_stock": True,
+                                             "history": _hist([200.0, 200.0])}}}
+    d = deals.compute(entry)
+    assert d["label"] == "unknown" and not d["was_verified"] and "hasn't been seen selling" in d["reasons"][1]
+    entry["offers"]["a"]["history"] = _hist([340.0, 200.0])  # it really did sell at $340
+    d = deals.compute(entry)
+    assert d["was_verified"] and d["label"] == "good"
+
+
+def test_deal_ignores_out_of_stock_and_untrusted():
+    entry = {"urls": ["a", "b"], "offers": {
+        "a": {"retailer": "A", "price": 10.0, "in_stock": False, "history": _hist([10.0] * 10, in_stock=False)},
+        "b": {"retailer": "PriceSpy", "price": None, "note": "Only untrusted sellers", "history": []}}}
+    assert deals.compute(entry) is None
+
+
+def test_great_deal_alert_once():
+    state, item = {}, {"id": "x", "name": "Thing"}
+    deal = {"label": "great", "price": 80.0, "retailer": "A", "shop": None, "url": "u", "reasons": ["20% below"]}
+    assert "Great deal" in alerts.deal_alert(item, deal, state)[0]
+    assert alerts.deal_alert(item, deal, state) == []
+    alerts.deal_alert(item, {**deal, "label": "typical"}, state)
+    assert alerts.deal_alert(item, deal, state)  # re-armed

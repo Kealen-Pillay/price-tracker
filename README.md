@@ -10,7 +10,7 @@ GitHub Actions + GitHub Pages — no paid APIs.
 | Source | Method | Notes |
 |---|---|---|
 | Chemist Warehouse NZ | schema.org microdata in page HTML | also reads the "Why pay $X" RRP |
-| PriceSpy NZ | JSON-LD `AggregateOffer` | lowest price across the NZ shops PriceSpy lists |
+| PriceSpy NZ | page data (`offerRows`) | every shop's offer; only trusted shops count |
 | Bargain Chemist, Life Pharmacy, JB Hi-Fi, Birkenstock, JD Sports, Orbitkey (any Shopify store) | public `/products/<handle>.js?country=NZ` JSON | exact variant price + compare-at price, in NZD |
 | Dr Martens NZ | Magento GraphQL (`Store: nz`) | price, RRP and stock per UK size |
 | PB Tech | JSON-LD (often via headless browser) | |
@@ -98,6 +98,17 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt pytest
 .venv/bin/python -m tracker serve             # dashboard at http://localhost:8000
 .venv/bin/python -m pytest -q
 ```
+
+## Trusted shops and deal quality
+
+- **Trusted shops only.** PriceSpy lists every seller, including grey importers with no reviews. Each shop offer
+  on a PriceSpy page is read, and only offers from `profile.trusted_shops` (new condition) count: the dashboard
+  shows "PriceSpy → PB Tech". If only untrusted sellers list an item, that's shown but never priced or alerted.
+- **Deal score.** Each item's best trusted, in-stock price is rated against its 90-day typical price (median of
+  daily lows, once there are 7 days of history), the store's "was" price, and the next-cheapest store:
+  🔥 great (≥15% below typical), good (≥7% below), typical, or above typical. A "was" price only counts as a real
+  discount once the item has actually been seen selling at that price. You get a 🔥 alert when an item first
+  becomes a great deal; the dashboard and weekly digest show the rating and why.
 
 ## Accuracy safeguards
 

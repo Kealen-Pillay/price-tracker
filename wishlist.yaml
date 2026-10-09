@@ -10,6 +10,12 @@ profile:
     Dr Martens: {UK: [9, 10]}
     Birkenstock: {EU: [43, 44], width: Regular}
     Salomon: {UK: [9.5, 11]}
+  # Prices from comparison sites (PriceSpy) only count when they come from one of these shops, new and in stock.
+  # Other sellers are shown on the dashboard but never set the price or alert.
+  trusted_shops: [Chemist Warehouse, Farmers, Life Pharmacy, Unichem, Bargain Chemist, MECCA, Sephora,
+    Ballantynes, David Jones, "Smith & Caughey's", PB Tech, JB Hi-Fi, Noel Leeming, Harvey Norman, Mighty Ape,
+    Computer Lounge, Ascent, The Warehouse, Warehouse Stationery, JD Sports, Foot Locker, Platypus, Hype DC,
+    Rebel Sport, Dr Martens, Birkenstock]
 items:
 # ---------------------------------------------------------------- Perfume
 - id: dior-sauvage-edp-100ml

@@ -35,23 +35,10 @@
      "size_status": null
     },
     "https://pricespy.co.nz/product.php?p=4682013": {
-     "history": [
-      {
-       "t": "2026-10-07T01:43:48+00:00",
-       "price": 255.0,
-       "was": null,
-       "in_stock": null
-      },
-      {
-       "t": "2026-10-08T05:11:52+00:00",
-       "price": 255.0,
-       "was": null,
-       "in_stock": null
-      }
-     ],
+     "history": [],
      "retailer": "PriceSpy (lowest NZ price)",
      "title": "Dior Sauvage edp 100ml",
-     "price": 255.0,
+     "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
@@ -187,23 +174,10 @@
   "bleu-de-chanel-edp-100ml": {
    "offers": {
     "https://pricespy.co.nz/product.php?p=2766059": {
-     "history": [
-      {
-       "t": "2026-10-07T03:44:23+00:00",
-       "price": 259.0,
-       "was": null,
-       "in_stock": null
-      },
-      {
-       "t": "2026-10-08T05:13:02+00:00",
-       "price": 259.0,
-       "was": null,
-       "in_stock": null
-      }
-     ],
+     "history": [],
      "retailer": "PriceSpy (lowest NZ price)",
      "title": "Chanel Bleu De Chanel edp 100ml",
-     "price": 259.0,
+     "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
@@ -228,23 +202,10 @@
   "bleu-de-chanel-parfum-100ml": {
    "offers": {
     "https://pricespy.co.nz/product.php?p=4932165": {
-     "history": [
-      {
-       "t": "2026-10-07T03:44:25+00:00",
-       "price": 303.0,
-       "was": null,
-       "in_stock": null
-      },
-      {
-       "t": "2026-10-08T05:13:04+00:00",
-       "price": 303.0,
-       "was": null,
-       "in_stock": null
-      }
-     ],
+     "history": [],
      "retailer": "PriceSpy (lowest NZ price)",
      "title": "Chanel Bleu De Chanel Parfum 100ml",
-     "price": 303.0,
+     "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
@@ -391,23 +352,10 @@
      "size_status": null
     },
     "https://pricespy.co.nz/product.php?p=5010999": {
-     "history": [
-      {
-       "t": "2026-10-07T03:44:37+00:00",
-       "price": 169.0,
-       "was": null,
-       "in_stock": null
-      },
-      {
-       "t": "2026-10-08T05:14:30+00:00",
-       "price": 169.0,
-       "was": null,
-       "in_stock": null
-      }
-     ],
+     "history": [],
      "retailer": "PriceSpy (lowest NZ price)",
      "title": "Giorgio Armani Stronger With You Intensely edp 100ml",
-     "price": 169.0,
+     "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
