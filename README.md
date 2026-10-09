@@ -18,6 +18,25 @@ GitHub Actions + GitHub Pages — no paid APIs.
 | Any other store | JSON-LD → microdata → meta tags, browser fallback | add CSS selectors in `retailers.yaml` if needed |
 | **Farmers** | ❌ blocked | Akamai firewall rejects all automated traffic. Add Farmers' PriceSpy listing instead. |
 
+Also supported: Unichem, Merchant 1948, Computer Lounge (Shopify) and Platypus (Magento, `Store: nz`).
+Checked and **not** supported, because they block automated access even from a real headless browser
+(Cloudflare/PerimeterX): Sephora NZ, Adore Beauty, Beauty Bliss, The Warehouse, Noel Leeming, Mighty Ape,
+Hype DC, Torpedo7, Hannahs/Number One Shoes. Rebel Sport's API answers for Briscoes.
+
+### Finding an item at more stores
+
+```bash
+python -m tracker discover <item-id>        # or: all
+python -m tracker discover <item-id> --add 1 3
+```
+
+Or from Telegram: `/discover <item-id>`, then `/approve <item-id> 1 3`. It searches every store in
+`retailers.yaml` with a `search:` block whose `categories` include the item's `kind`, reads each candidate like a
+normal link, and only suggests close matches — the size (100ml), fragrance concentration (EDP ≠ EDT ≠ Elixir) and
+modifiers (Intensely ≠ Powerfully), "2-in-1" vs "3-in-1", and the model name must all agree. A candidate with the
+same SKU/barcode as a product you already track is marked as the same product. Shoe searches also surface other
+colourways/models of the same line, so check those before approving.
+
 Test any product URL before adding it:
 
 ```bash

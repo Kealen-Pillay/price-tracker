@@ -3,6 +3,7 @@
   python -m tracker check [--dry-run]   scrape every wishlist URL, record prices, send alerts
   python -m tracker probe <url>...      test what the scraper sees on any product page
   python -m tracker digest              send the weekly summary + upcoming sale events
+  python -m tracker discover <id|all>   find an item at other stores (--add N… to track candidates)
   python -m tracker history show|drop   inspect or remove bad history points (preview unless --apply)
   python -m tracker build-site          assemble the dashboard into _site/
   python -m tracker serve               build and serve the dashboard at http://localhost:8000
@@ -10,6 +11,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import logging
 import os
 import time
@@ -21,7 +23,7 @@ from datetime import date, timedelta, timezone, datetime
 from html import escape
 from urllib.parse import urlparse
 
-from . import alerts, deals, sales, sizes, store, telegram, trust, verify
+from . import alerts, deals, discover, sales, sizes, store, telegram, trust, verify
 from .fetch import Fetcher, ScrapeError
 from .parse import excluded_for
 
@@ -64,6 +66,20 @@ def summary_line(item: dict, entry: dict | None) -> str:
 
 
 # ---------------------------------------------------------------- telegram commands
+def format_candidates(item: dict, found: list[dict], telegram_hint: bool = False) -> str:
+    if not found:
+        return f"No other stores found for <b>{escape(item['name'])}</b>."
+    lines = [f"🔎 <b>{escape(item['name'])}</b> — other stores:"]
+    for i, c in enumerate(found, 1):
+        stock = "" if c["in_stock"] is not False else " (out of stock)"
+        match = "same product (SKU/barcode)" if c.get("exact") else f"match {c['score']:.0%}"
+        lines.append(f"{i}. {escape(c['store'])}: {escape(c['title'] or '?')} — {alerts.fmt(c['price'])}{stock}"
+                     f" [{match}]\n   {escape(c['url'])}")
+    if telegram_hint:
+        lines.append(f"Reply <code>/approve {item['id']} 1 2</code> to track the ones that are the same product.")
+    return "\n".join(lines)
+
+
 def handle_commands(fetcher: Fetcher, items: list[dict], prices: dict, state: dict) -> bool:
     """Process pending Telegram commands. Returns True if the wishlist changed."""
     texts, state["telegram_offset"] = telegram.pending_commands(state.get("telegram_offset", 0))
@@ -119,6 +135,18 @@ def handle_commands(fetcher: Fetcher, items: list[dict], prices: dict, state: di
                 items.remove(by_id.pop(args[0]))
                 changed = True
                 telegram.send(f"🗑 Stopped tracking <code>{args[0]}</code>")
+            elif cmd == "/discover" and args and args[0] in by_id:
+                found = discover.discover(by_id[args[0]], store.load_retailers(), fetcher, store.load_profile(),
+                                          discover.known_ids(prices["items"].get(args[0])))
+                state.setdefault("discover", {})[args[0]] = [c["url"] for c in found]
+                telegram.send(format_candidates(by_id[args[0]], found, telegram_hint=True))
+            elif cmd == "/approve" and len(args) >= 2 and args[0] in by_id:
+                pool = state.get("discover", {}).get(args[0], [])
+                picks = [pool[int(n) - 1] for n in args[1:] if n.isdigit() and 0 < int(n) <= len(pool)]
+                added = [u for u in picks if u not in by_id[args[0]]["urls"]]
+                by_id[args[0]]["urls"] += added
+                changed = changed or bool(added)
+                telegram.send(f"🔗 Added {len(added)} store(s) to <code>{args[0]}</code>" if added else "Nothing to add")
             elif cmd == "/list":
                 lines = [summary_line(it, prices["items"].get(it["id"])) for it in items]
                 telegram.send("\n\n".join(lines) or "Wishlist is empty. Use /add &lt;url&gt;")
@@ -281,6 +309,26 @@ def cmd_history(args) -> int:
     return 0
 
 
+def cmd_discover(args) -> int:
+    items = store.load_wishlist()
+    targets = items if args.item == "all" else [i for i in items if i["id"] == args.item]
+    if not targets:
+        sys.exit(f"Unknown item id: {args.item}")
+    if args.add and len(targets) != 1:
+        sys.exit("--add needs a single item id")
+    with Fetcher(store.load_retailers(), polite_delay=(1, 2)) as fetcher:
+        for item in targets:
+            found = discover.discover(item, store.load_retailers(), fetcher, store.load_profile(),
+                                      discover.known_ids(store.load_prices()["items"].get(item["id"])))
+            print(re.sub(r"<[^>]+>", "", format_candidates(item, found)) + "\n")
+            if args.add:
+                picks = [found[n - 1]["url"] for n in args.add if 0 < n <= len(found)]
+                item["urls"] += [u for u in picks if u not in item["urls"]]
+                store.save_wishlist(items)
+                print(f"Added {len(picks)} link(s) to {item['id']}.")
+    return 0
+
+
 def cmd_probe(args) -> int:
     with Fetcher(store.load_retailers(), polite_delay=(0, 0)) as fetcher:
         for url in args.urls:
@@ -350,6 +398,10 @@ def main(argv=None) -> int:
     d = sub.add_parser("digest")
     d.add_argument("--dry-run", action="store_true")
     d.set_defaults(fn=cmd_digest)
+    dsc = sub.add_parser("discover", help="find an item at other stores")
+    dsc.add_argument("item", help="item id, or 'all'")
+    dsc.add_argument("--add", type=int, nargs="*", help="add these numbered candidates to the item")
+    dsc.set_defaults(fn=cmd_discover)
     h = sub.add_parser("history", help="show or remove bad price-history points")
     h.add_argument("action", choices=["show", "drop"])
     h.add_argument("item", help="item id, or 'all'")

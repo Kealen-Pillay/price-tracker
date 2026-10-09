@@ -19,37 +19,47 @@ profile:
 items:
 # ---------------------------------------------------------------- Perfume
 - id: dior-sauvage-edp-100ml
+  kind: fragrance
   name: Dior Sauvage EDP 100ml
   target_price: 220
   urls:
   - https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml
   - https://pricespy.co.nz/product.php?p=4682013
 - id: dior-sauvage-elixir-60ml
+  kind: fragrance
   name: Dior Sauvage Elixir 60ml
   urls:
   - https://www.chemistwarehouse.co.nz/buy/112579/christian-dior-sauvage-elixir-parfum-60ml
   - https://www.bargainchemist.co.nz/products/cd-sauvage-elixir-60ml
   - https://www.lifepharmacy.co.nz/products/christian-dior-sauvage-elixir-60ml
 - id: bleu-de-chanel-edp-100ml
+  kind: fragrance
   name: Bleu de Chanel EDP 100ml
   urls:
   - https://pricespy.co.nz/product.php?p=2766059
 - id: bleu-de-chanel-parfum-100ml
+  kind: fragrance
   name: Bleu de Chanel Parfum 100ml
   urls:
   - https://pricespy.co.nz/product.php?p=4932165
 - id: prada-paradigme-edp-100ml
+  kind: fragrance
   name: Prada Paradigme EDP 100ml
   urls:
   - https://www.lifepharmacy.co.nz/products/prada-paradigme-edp-100ml
+  - https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml
 - id: ysl-myslf-le-parfum-100ml
+  kind: fragrance
   name: YSL MYSLF Le Parfum 100ml
   urls:
   - https://www.lifepharmacy.co.nz/products/yves-saint-laurent-myslf-le-parfum-100ml
+  - https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml
 - id: armani-stronger-with-you-intensely-100ml
+  kind: fragrance
   name: Armani Stronger With You Intensely EDP 100ml
   urls:
   - https://www.lifepharmacy.co.nz/products/stronger-with-you-intensely-edp-spray-100ml
+  - https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml
   - https://pricespy.co.nz/product.php?p=5010999
 # ---------------------------------------------------------------- Shoes
 - id: dr-martens-adrian-tassel-loafer
@@ -60,6 +70,7 @@ items:
   - https://www.drmartens.co.nz/adrian-tassel-smooth-loafer-22209001-blk.html
   - https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html
   - https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html
+  - https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html
 - id: birkenstock-arizona
   kind: shoes
   brand: Birkenstock
@@ -87,23 +98,28 @@ items:
   - https://www.jdsports.co.nz/products/xt6-120119224
 # ---------------------------------------------------------------- Desk setup
 - id: monitor-arm
+  kind: electronics
   name: Mbeat Activiva Heavy Duty Monitor Arm (curved screens)
   urls:
   - https://www.jbhifi.co.nz/products/mbeat-activiva-heavy-duty-single-monitor-screen-gas-spring-monitor-arm-for-flat-panel-curved-screen-black-space-grey
 - id: orbitkey-desk-mat-slim
+  kind: electronics
   name: Orbitkey Desk Mat Slim
   urls:
   - https://www.orbitkey.com.au/products/desk-mat-slim
 - id: belkin-boostcharge-pro-2-in-1
+  kind: electronics
   name: Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger
   urls:
   - https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch
   - https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black
 - id: dell-34-plus-ultrawide
+  kind: electronics
   name: Dell 34 Plus 34" UWQHD 120Hz Curved Monitor
   urls:
   - https://www.jbhifi.co.nz/products/dell-34-plus-34-uwqhd-120hz-usb-c-curved-monitor
 - id: msi-modern-md342cqp
+  kind: electronics
   name: MSI Modern MD342CQP 34" Ultrawide Curved Monitor
   urls:
   - https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi

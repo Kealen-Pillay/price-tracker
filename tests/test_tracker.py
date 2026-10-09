@@ -604,3 +604,68 @@ def test_great_deal_alert_once():
     assert alerts.deal_alert(item, deal, state) == []
     alerts.deal_alert(item, {**deal, "label": "typical"}, state)
     assert alerts.deal_alert(item, deal, state)  # re-armed
+
+
+# ---- Phase 4: discovery matching
+from tracker import discover as disc
+
+
+@pytest.mark.parametrize("query,title,same", [
+    ("Dior Sauvage Elixir 60ml", "Dior Sauvage EDT 60ml", False),
+    ("Dior Sauvage Elixir 60ml", "Christian Dior Sauvage Elixir Parfum 60ml", True),
+    ("Dior Sauvage Elixir 60ml", "Christian Dior Sauvage Elixir Parfum 100ml", False),
+    ("Dior Sauvage EDP 100ml", "Christian Dior Sauvage Eau De Parfum 100ml", True),
+    ("Bleu de Chanel Parfum 100ml", "Chanel Bleu De Chanel EDP 100ml", False),
+    ("YSL MYSLF Le Parfum 100ml", "Yves Saint Laurent Myslf Le Parfum 100ml", True),
+    ("YSL MYSLF Le Parfum 100ml", "Yves Saint Laurent Myslf L'Absolu Parfum 100ml", False),
+    ("Armani Stronger With You Intensely EDP 100ml", "Stronger with You Intensely EDP Spray 100ml", True),
+    ("Armani Stronger With You Intensely EDP 100ml", "Emporio Armani Stronger With You Powerfully EDP 100ml", False),
+    ("Dr Martens Adrian Tassel Loafer", "Adrian Tassel Loafer", True),
+    ("Dr Martens Adrian Tassel Loafer", "Adrian Mule", False),
+])
+def test_discover_match(query, title, same):
+    assert (disc.score(query, title) >= disc.MIN_SCORE) == same
+
+
+def test_search_query_drops_colour_notes():
+    assert disc.search_query({"name": "Birkenstock Boston (brown / olive / taupe)"}) == "Birkenstock Boston"
+    assert disc.search_query({"name": "X", "search": "custom words"}) == "custom words"
+
+
+@pytest.mark.parametrize("query,title,same", [
+    ("Prada Paradigme EDP 100ml", "Prada Luna Rossa Ocean EDP 100ml", False),
+    ("Prada Paradigme EDP 100ml", "Prada Paradigme Eau de Parfum 100ml", True),
+    ("Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger",
+     "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W (Black)", True),
+    ("Birkenstock Boston", "Boston Soft Footbed", True),
+])
+def test_discover_name_words_must_match(query, title, same):
+    assert (disc.score(query, title) >= disc.MIN_SCORE) == same
+
+
+@pytest.mark.parametrize("query,title,same", [
+    ("Birkenstock Arizona oiled leather", "Hawaii Oiled Leather Sandal", False),
+    ("Birkenstock Arizona oiled leather", "Arizona Oiled Leather", True),
+    ("Mbeat Activiva Heavy Duty Monitor Arm", 'Brateck LDT80-C012 17-57" Heavy Duty Gas Spring Single Monitor Arm', False),
+    ("Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger",
+     "Belkin BoostCharge Pro Travel 3-in-1 Magnetic 15W Wireless Charging Pad with Qi2", False),
+    ("Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger",
+     "Belkin BoostCharge Pro2-in-1 Magnetic Wireless Charging Pad with Qi2 15W (White)", True),
+])
+def test_discover_model_word_and_n_in_m(query, title, same):
+    assert (disc.score(query, title) >= disc.MIN_SCORE) == same
+
+
+def test_discover_exact_sku_match(monkeypatch):
+    from tracker.parse import Offer
+
+    class F:
+        client = None
+        def get_offer(self, url):
+            return Offer(price=399.99, title="Adrian Tassel Loafer Arcadia Red", product_id="sku:14573601.RED"), {"name": "Platypus"}
+
+    monkeypatch.setattr(disc.Searcher, "store", lambda self, host, cfg, q: ["https://p.example/adrian-14573601-red.html"])
+    found = disc.discover({"name": "Totally different words", "urls": []}, {"p.example": {"search": {"type": "magento"}}},
+                          F(), {}, known_ids={"14573601.RED"})
+    assert found and found[0]["exact"] and found[0]["score"] == 1.0
+    assert disc.known_ids({"offers": {"u": {"identity": {"ids": {"sku": "A", "shopify": "1"}}}}}) == {"A", "1"}

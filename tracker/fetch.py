@@ -123,7 +123,7 @@ class Fetcher:
             # Without a Store header the API answers for the store's default view (Dr Martens: Australia, AUD).
             r = self.client.post(f"{p.scheme}://{p.netloc}/graphql", headers={"Store": store_code} if store_code else {},
                                  json={"query": MAGENTO_QUERY, "variables": {"key": key}})
-            items = (r.json().get("data") or {}).get("products", {}).get("items") or []
+            items = [i for i in (r.json().get("data") or {}).get("products", {}).get("items") or [] if i]
         except (httpx.HTTPError, ValueError, AttributeError) as e:
             log.info("magento graphql %s failed: %r; falling back to the page", key, e)
             return None

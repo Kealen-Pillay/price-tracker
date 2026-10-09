@@ -6,17 +6,25 @@
 #   was_price_selector: CSS selector for the RRP / "was" price
 #   platform: magento  read price/stock per size from the store's public GraphQL API
 #   size_system:       UK | US | EU — how unlabelled sizes on this store should be read
+#   categories:        [fragrance, shoes, electronics] — what `discover` searches this store for
+#   search:            how `discover` searches it: {type: shopify} | {type: magento} | {type: browser, url, link}
 #   blocked: "<reason>" skip this retailer and explain why
 www.chemistwarehouse.co.nz:
   name: Chemist Warehouse
+  categories: [fragrance]
+  search: {type: browser, url: "https://www.chemistwarehouse.co.nz/search?searchtext={q}", link: "/buy/\\d+/[^\"?#]+"}
   was_price_selector: .retailPrice
 pricespy.co.nz:
   name: PriceSpy
   platform: pricespy   # read every shop's offer; only trusted shops count (profile.trusted_shops)
 www.bargainchemist.co.nz:
   name: Bargain Chemist
+  categories: [fragrance]
+  search: {type: shopify}
 www.lifepharmacy.co.nz:
   name: Life Pharmacy
+  categories: [fragrance]
+  search: {type: shopify}
 www.mecca.com:
   name: MECCA
   js: true
@@ -29,19 +37,51 @@ www.farmers.co.nz:
   blocked: Farmers' Akamai firewall blocks automated requests (even headless Chrome). Track it via its PriceSpy listing instead.
 www.jbhifi.co.nz:
   name: JB Hi-Fi
+  categories: [electronics]
+  search: {type: shopify}
 www.pbtech.co.nz:
   name: PB Tech
 www.drmartens.co.nz:
   name: Dr Martens NZ
+  categories: [shoes]
+  search: {type: magento}
   platform: magento   # public GraphQL: price, RRP and stock per size
   magento_store: nz    # without it the API answers for the Australian store
   size_system: UK
 www.birkenstock.co.nz:
   name: Birkenstock NZ
+  categories: [shoes]
+  search: {type: shopify}
   size_system: EU
 www.jdsports.co.nz:
   name: JD Sports
+  categories: [shoes]
+  search: {type: shopify}
   size_system: US   # footwear sizes are US men's (its size guide)
   was_price_selector: .compare-at-price  # used when its Shopify JSON is blocked
 www.orbitkey.com.au:
   name: Orbitkey
+  categories: [electronics]
+  search: {type: shopify}
+www.unichem.co.nz:
+  name: Unichem
+  categories: [fragrance]
+  search: {type: shopify}
+www.platypusshoes.co.nz:
+  name: Platypus
+  platform: magento
+  magento_store: nz
+  size_system: UK
+  categories: [shoes]
+  search: {type: magento}
+www.merchant1948.co.nz:
+  name: Merchant 1948
+  categories: [shoes]
+  search: {type: shopify}
+computerlounge.co.nz:
+  name: Computer Lounge
+  categories: [electronics]
+  search: {type: shopify}
+# Checked 2026-10-09 and left out: these block automated access even from a real (headless) browser —
+# Sephora NZ, Adore Beauty, Beauty Bliss, The Warehouse, Noel Leeming, Mighty Ape, Hype DC, Torpedo7,
+# Hannahs/Number One Shoes (Cloudflare / PerimeterX challenges). Rebel Sport's API answers for Briscoes.

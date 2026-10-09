@@ -5,6 +5,8 @@ Commands (only accepted from TELEGRAM_CHAT_ID):
   /link <item-id> <url>      add another retailer's URL to an existing item
   /target <item-id> <price>  set or change the target price ("none" to clear)
   /remove <item-id>          stop tracking an item
+  /discover <item-id>        search other stores for this item; replies with numbered candidates
+  /approve <item-id> 1 3     track the numbered candidates from /discover
   /list                      show tracked items and current best prices
   /help                      show this list
 Commands are processed at the start of each scheduled run, so replies can take up to a few hours.
