@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T00:08:13+00:00",
+ "updated": "2026-10-09T00:24:04+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -24,7 +24,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:05:54+00:00",
+     "checked": "2026-10-09T00:22:17+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -32,17 +32,20 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://pricespy.co.nz/product.php?p=4682013": {
      "history": [],
-     "retailer": "PriceSpy (lowest NZ price)",
+     "retailer": "PriceSpy",
      "title": "Dior Sauvage edp 100ml",
      "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:06+00:00",
+     "checked": "2026-10-09T00:22:34+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -50,7 +53,29 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "note": "Only untrusted sellers listed (cheapest: Gadgets Online $255.00); not counted",
+     "shop": null,
+     "shop_offers": [
+      {
+       "shop": "Gadgets Online",
+       "price": 255.0,
+       "was": 274.0,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": false
+      },
+      {
+       "shop": "Gadgets Online",
+       "price": 289.0,
+       "was": 319.0,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": false
+      }
+     ]
     }
    },
    "name": "Dior Sauvage EDP 100ml",
@@ -59,7 +84,23 @@
    "urls": [
     "https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml",
     "https://pricespy.co.nz/product.php?p=4682013"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 249.99,
+    "retailer": "Chemist Warehouse",
+    "shop": null,
+    "url": "https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": 259.0,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7",
+     "store says was $259.00 (3% off), but it hasn't been seen selling at that price"
+    ]
+   }
   },
   "dior-sauvage-elixir-60ml": {
    "offers": {
@@ -84,7 +125,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:06:09+00:00",
+     "checked": "2026-10-09T00:22:35+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -92,7 +133,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.bargainchemist.co.nz/products/cd-sauvage-elixir-60ml": {
      "history": [
@@ -115,7 +159,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:10+00:00",
+     "checked": "2026-10-09T00:22:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -125,7 +169,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.lifepharmacy.co.nz/products/christian-dior-sauvage-elixir-60ml": {
      "history": [
@@ -149,7 +196,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:12+00:00",
+     "checked": "2026-10-09T00:22:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -159,7 +206,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Dior Sauvage Elixir 60ml",
@@ -169,19 +219,36 @@
     "https://www.chemistwarehouse.co.nz/buy/112579/christian-dior-sauvage-elixir-parfum-60ml",
     "https://www.bargainchemist.co.nz/products/cd-sauvage-elixir-60ml",
     "https://www.lifepharmacy.co.nz/products/christian-dior-sauvage-elixir-60ml"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 289.99,
+    "retailer": "Chemist Warehouse",
+    "shop": null,
+    "url": "https://www.chemistwarehouse.co.nz/buy/112579/christian-dior-sauvage-elixir-parfum-60ml",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": 299.0,
+    "was_verified": true,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7",
+     "3% off a verified RRP of $299.00",
+     "$28.01 cheaper than the next store"
+    ]
+   }
   },
   "bleu-de-chanel-edp-100ml": {
    "offers": {
     "https://pricespy.co.nz/product.php?p=2766059": {
      "history": [],
-     "retailer": "PriceSpy (lowest NZ price)",
+     "retailer": "PriceSpy",
      "title": "Chanel Bleu De Chanel edp 100ml",
      "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:15+00:00",
+     "checked": "2026-10-09T00:22:40+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -189,7 +256,20 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "note": "Only untrusted sellers listed (cheapest: Gadgets Online $259.00); not counted",
+     "shop": null,
+     "shop_offers": [
+      {
+       "shop": "Gadgets Online",
+       "price": 259.0,
+       "was": 276.0,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": false
+      }
+     ]
     }
    },
    "name": "Bleu de Chanel EDP 100ml",
@@ -197,19 +277,20 @@
    "tracked": true,
    "urls": [
     "https://pricespy.co.nz/product.php?p=2766059"
-   ]
+   ],
+   "deal": null
   },
   "bleu-de-chanel-parfum-100ml": {
    "offers": {
     "https://pricespy.co.nz/product.php?p=4932165": {
      "history": [],
-     "retailer": "PriceSpy (lowest NZ price)",
+     "retailer": "PriceSpy",
      "title": "Chanel Bleu De Chanel Parfum 100ml",
      "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:17+00:00",
+     "checked": "2026-10-09T00:22:41+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -217,7 +298,20 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "note": "Only untrusted sellers listed (cheapest: Gadgets Online $303.00); not counted",
+     "shop": null,
+     "shop_offers": [
+      {
+       "shop": "Gadgets Online",
+       "price": 303.0,
+       "was": 319.0,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": false
+      }
+     ]
     }
    },
    "name": "Bleu de Chanel Parfum 100ml",
@@ -225,7 +319,8 @@
    "tracked": true,
    "urls": [
     "https://pricespy.co.nz/product.php?p=4932165"
-   ]
+   ],
+   "deal": null
   },
   "prada-paradigme-edp-100ml": {
    "offers": {
@@ -251,7 +346,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:21+00:00",
+     "checked": "2026-10-09T00:22:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -261,7 +356,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Prada Paradigme EDP 100ml",
@@ -269,7 +367,22 @@
    "tracked": true,
    "urls": [
     "https://www.lifepharmacy.co.nz/products/prada-paradigme-edp-100ml"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 275.0,
+    "retailer": "Life Pharmacy",
+    "shop": null,
+    "url": "https://www.lifepharmacy.co.nz/products/prada-paradigme-edp-100ml",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7"
+    ]
+   }
   },
   "ysl-myslf-le-parfum-100ml": {
    "offers": {
@@ -295,7 +408,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:23+00:00",
+     "checked": "2026-10-09T00:22:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -305,7 +418,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "YSL MYSLF Le Parfum 100ml",
@@ -313,7 +429,22 @@
    "tracked": true,
    "urls": [
     "https://www.lifepharmacy.co.nz/products/yves-saint-laurent-myslf-le-parfum-100ml"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 319.0,
+    "retailer": "Life Pharmacy",
+    "shop": null,
+    "url": "https://www.lifepharmacy.co.nz/products/yves-saint-laurent-myslf-le-parfum-100ml",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7"
+    ]
+   }
   },
   "armani-stronger-with-you-intensely-100ml": {
    "offers": {
@@ -339,7 +470,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:26+00:00",
+     "checked": "2026-10-09T00:22:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -349,17 +480,20 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://pricespy.co.nz/product.php?p=5010999": {
      "history": [],
-     "retailer": "PriceSpy (lowest NZ price)",
+     "retailer": "PriceSpy",
      "title": "Giorgio Armani Stronger With You Intensely edp 100ml",
      "price": null,
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:32+00:00",
+     "checked": "2026-10-09T00:22:57+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -367,7 +501,20 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "note": "Only untrusted sellers listed (cheapest: Gadgets Online $169.00); not counted",
+     "shop": null,
+     "shop_offers": [
+      {
+       "shop": "Gadgets Online",
+       "price": 169.0,
+       "was": 210.0,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": false
+      }
+     ]
     }
    },
    "name": "Armani Stronger With You Intensely EDP 100ml",
@@ -376,7 +523,22 @@
    "urls": [
     "https://www.lifepharmacy.co.nz/products/stronger-with-you-intensely-edp-spray-100ml",
     "https://pricespy.co.nz/product.php?p=5010999"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 226.0,
+    "retailer": "Life Pharmacy",
+    "shop": null,
+    "url": "https://www.lifepharmacy.co.nz/products/stronger-with-you-intensely-edp-spray-100ml",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7"
+    ]
+   }
   },
   "dr-martens-adrian-tassel-loafer": {
    "offers": {
@@ -412,7 +574,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:06:34+00:00",
+     "checked": "2026-10-09T00:22:58+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -434,7 +596,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html": {
      "history": [
@@ -468,7 +633,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:06:34+00:00",
+     "checked": "2026-10-09T00:22:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -490,7 +655,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html": {
      "history": [
@@ -524,7 +692,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-09T00:06:38+00:00",
+     "checked": "2026-10-09T00:23:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -546,7 +714,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Dr Martens Adrian Tassel Loafer (black / brown / red)",
@@ -556,7 +727,24 @@
     "https://www.drmartens.co.nz/adrian-tassel-smooth-loafer-22209001-blk.html",
     "https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html",
     "https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 319.99,
+    "retailer": "Dr Martens NZ",
+    "shop": null,
+    "url": "https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": 399.99,
+    "was_verified": false,
+    "days": 3,
+    "reasons": [
+     "3 day(s) of history so far; typical price needs 7",
+     "store says was $399.99 (20% off), but it hasn't been seen selling at that price",
+     "same price as another store"
+    ]
+   }
   },
   "birkenstock-arizona": {
    "offers": {
@@ -605,7 +793,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:41+00:00",
+     "checked": "2026-10-09T00:23:06+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -627,7 +815,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-tobacco-brown": {
      "history": [
@@ -673,7 +864,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:43+00:00",
+     "checked": "2026-10-09T00:23:08+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -696,7 +887,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-habana": {
      "history": [
@@ -730,7 +924,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:45+00:00",
+     "checked": "2026-10-09T00:23:12+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -753,7 +947,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Birkenstock Arizona oiled leather (black / brown)",
@@ -763,7 +960,23 @@
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-black",
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-tobacco-brown",
     "https://www.birkenstock.co.nz/products/arizona-oiled-leather-habana"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 300.0,
+    "retailer": "Birkenstock NZ",
+    "shop": null,
+    "url": "https://www.birkenstock.co.nz/products/arizona-oiled-leather-black",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 3,
+    "reasons": [
+     "3 day(s) of history so far; typical price needs 7",
+     "same price as another store"
+    ]
+   }
   },
   "birkenstock-boston": {
    "offers": {
@@ -799,7 +1012,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:50+00:00",
+     "checked": "2026-10-09T00:23:14+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -822,7 +1035,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.birkenstock.co.nz/products/boston-oiled-leather-tobacco-brown": {
      "history": [
@@ -856,7 +1072,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:55+00:00",
+     "checked": "2026-10-09T00:23:17+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -879,7 +1095,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-leather-thyme": {
      "history": [
@@ -913,7 +1132,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:06:58+00:00",
+     "checked": "2026-10-09T00:23:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -936,7 +1155,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.birkenstock.co.nz/products/boston-suede-leather-faded-khaki": {
      "history": [
@@ -970,7 +1192,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:07:00+00:00",
+     "checked": "2026-10-09T00:23:23+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -993,7 +1215,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-taupe": {
      "history": [
@@ -1039,7 +1264,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:07:03+00:00",
+     "checked": "2026-10-09T00:23:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1062,7 +1287,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Birkenstock Boston (brown / olive / taupe)",
@@ -1074,7 +1302,23 @@
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-leather-thyme",
     "https://www.birkenstock.co.nz/products/boston-suede-leather-faded-khaki",
     "https://www.birkenstock.co.nz/products/boston-soft-footbed-suede-taupe"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 360.0,
+    "retailer": "Birkenstock NZ",
+    "shop": null,
+    "url": "https://www.birkenstock.co.nz/products/boston-oiled-leather-habana",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 3,
+    "reasons": [
+     "3 day(s) of history so far; typical price needs 7",
+     "same price as another store"
+    ]
+   }
   },
   "salomon-xt-6": {
    "offers": {
@@ -1110,7 +1354,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:07:07+00:00",
+     "checked": "2026-10-09T00:23:31+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1140,7 +1384,10 @@
        "in_stock": false
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.jdsports.co.nz/products/xt6-120119224": {
      "history": [
@@ -1174,7 +1421,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:07:10+00:00",
+     "checked": "2026-10-09T00:23:34+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1196,7 +1443,10 @@
        "in_stock": true
       }
      ],
-     "size_status": "ok"
+     "size_status": "ok",
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Salomon XT-6 (white)",
@@ -1205,7 +1455,24 @@
    "urls": [
     "https://www.jdsports.co.nz/products/xt6-120733321",
     "https://www.jdsports.co.nz/products/xt6-120119224"
-   ]
+   ],
+   "deal": {
+    "label": "good",
+    "price": 200.0,
+    "retailer": "JD Sports",
+    "shop": null,
+    "url": "https://www.jdsports.co.nz/products/xt6-120733321",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": 340.0,
+    "was_verified": true,
+    "days": 3,
+    "reasons": [
+     "3 day(s) of history so far; typical price needs 7",
+     "41% off a verified RRP of $340.00",
+     "$160.00 cheaper than the next store"
+    ]
+   }
   },
   "monitor-arm": {
    "offers": {
@@ -1230,7 +1497,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:07:14+00:00",
+     "checked": "2026-10-09T00:23:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1240,7 +1507,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Mbeat Activiva Heavy Duty Monitor Arm (curved screens)",
@@ -1248,7 +1518,22 @@
    "tracked": true,
    "urls": [
     "https://www.jbhifi.co.nz/products/mbeat-activiva-heavy-duty-single-monitor-screen-gas-spring-monitor-arm-for-flat-panel-curved-screen-black-space-grey"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 143.99,
+    "retailer": "JB Hi-Fi",
+    "shop": null,
+    "url": "https://www.jbhifi.co.nz/products/mbeat-activiva-heavy-duty-single-monitor-screen-gas-spring-monitor-arm-for-flat-panel-curved-screen-black-space-grey",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7"
+    ]
+   }
   },
   "orbitkey-desk-mat-slim": {
    "offers": {
@@ -1273,7 +1558,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-09T00:07:17+00:00",
+     "checked": "2026-10-09T00:23:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1283,7 +1568,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Orbitkey Desk Mat Slim",
@@ -1291,7 +1579,22 @@
    "tracked": true,
    "urls": [
     "https://www.orbitkey.com.au/products/desk-mat-slim"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 139.0,
+    "retailer": "Orbitkey",
+    "shop": null,
+    "url": "https://www.orbitkey.com.au/products/desk-mat-slim",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7"
+    ]
+   }
   },
   "belkin-boostcharge-pro-2-in-1": {
    "offers": {
@@ -1319,7 +1622,7 @@
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-10-09T00:07:21+00:00",
+     "checked": "2026-10-09T00:23:41+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -1333,7 +1636,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black": {
      "history": [
@@ -1362,7 +1668,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:08:02+00:00",
+     "checked": "2026-10-09T00:23:55+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1372,7 +1678,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger",
@@ -1381,7 +1690,23 @@
    "urls": [
     "https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch",
     "https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 129.0,
+    "retailer": "PB Tech",
+    "shop": null,
+    "url": "https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7",
+     "$8.00 cheaper than the next store"
+    ]
+   }
   },
   "dell-34-plus-ultrawide": {
    "offers": {
@@ -1406,7 +1731,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:08:04+00:00",
+     "checked": "2026-10-09T00:23:56+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1416,7 +1741,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     }
    },
    "name": "Dell 34 Plus 34\" UWQHD 120Hz Curved Monitor",
@@ -1424,7 +1752,22 @@
    "tracked": true,
    "urls": [
     "https://www.jbhifi.co.nz/products/dell-34-plus-34-uwqhd-120hz-usb-c-curved-monitor"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 999.0,
+    "retailer": "JB Hi-Fi",
+    "shop": null,
+    "url": "https://www.jbhifi.co.nz/products/dell-34-plus-34-uwqhd-120hz-usb-c-curved-monitor",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 2,
+    "reasons": [
+     "2 day(s) of history so far; typical price needs 7"
+    ]
+   }
   },
   "msi-modern-md342cqp": {
    "offers": {
@@ -1449,7 +1792,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:08:10+00:00",
+     "checked": "2026-10-09T00:24:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1459,7 +1802,10 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": null,
+     "shop_offers": null,
+     "note": null
     },
     "https://pricespy.co.nz/product.php?p=14502997": {
      "history": [
@@ -1474,15 +1820,22 @@
        "price": 599.0,
        "was": null,
        "in_stock": null
+      },
+      {
+       "t": "2026-10-09T00:24:02+00:00",
+       "price": 599.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
-     "retailer": "PriceSpy (lowest NZ price)",
+     "retailer": "PriceSpy",
      "title": "MSI Modern MD342CQP 34\" UWQHD",
      "price": 599.0,
      "was": null,
-     "in_stock": null,
+     "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-09T00:08:12+00:00",
+     "checked": "2026-10-09T00:24:02+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1490,7 +1843,38 @@
      },
      "sizes_in": null,
      "my_sizes": null,
-     "size_status": null
+     "size_status": null,
+     "shop": "PB Tech",
+     "shop_offers": [
+      {
+       "shop": "PB Tech",
+       "price": 599.0,
+       "was": null,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": true
+      },
+      {
+       "shop": "Paradigm PC's",
+       "price": 604.82,
+       "was": null,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": false
+      },
+      {
+       "shop": "Ascent",
+       "price": 637.61,
+       "was": null,
+       "in_stock": true,
+       "condition": "New",
+       "membership": false,
+       "trusted": true
+      }
+     ],
+     "note": null
     }
    },
    "name": "MSI Modern MD342CQP 34\" Ultrawide Curved Monitor",
@@ -1499,7 +1883,23 @@
    "urls": [
     "https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi",
     "https://pricespy.co.nz/product.php?p=14502997"
-   ]
+   ],
+   "deal": {
+    "label": "unknown",
+    "price": 599.0,
+    "retailer": "PB Tech",
+    "shop": null,
+    "url": "https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi",
+    "typical": null,
+    "pct_vs_typical": null,
+    "was": null,
+    "was_verified": false,
+    "days": 3,
+    "reasons": [
+     "3 day(s) of history so far; typical price needs 7",
+     "same price as another store"
+    ]
+   }
   }
  }
 }
