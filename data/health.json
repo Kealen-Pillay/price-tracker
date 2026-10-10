@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-10T00:06:45+00:00",
+ "updated": "2026-10-10T05:58:18+00:00",
  "stores": {
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
    "status": "ok",
    "ok_rate": 1.0,
-   "attempts": 4,
-   "last_ok": "2026-10-10T00:04:18+00:00",
+   "attempts": 5,
+   "last_ok": "2026-10-10T05:56:08+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -15,7 +15,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-10T00:05:17+00:00",
+   "last_ok": "2026-10-10T05:57:05+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -24,7 +24,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-10T00:04:43+00:00",
+   "last_ok": "2026-10-10T05:56:30+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -33,7 +33,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-10T00:04:51+00:00",
+   "last_ok": "2026-10-10T05:56:38+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -42,7 +42,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-10T00:06:37+00:00",
+   "last_ok": "2026-10-10T05:57:40+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -50,8 +50,8 @@
    "name": "JD Sports",
    "status": "ok",
    "ok_rate": 1.0,
-   "attempts": 8,
-   "last_ok": "2026-10-10T00:05:23+00:00",
+   "attempts": 10,
+   "last_ok": "2026-10-10T05:57:12+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -60,7 +60,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-10T00:04:39+00:00",
+   "last_ok": "2026-10-10T05:56:28+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -68,17 +68,17 @@
    "name": "Orbitkey",
    "status": "ok",
    "ok_rate": 1.0,
-   "attempts": 4,
-   "last_ok": "2026-10-10T00:05:28+00:00",
+   "attempts": 5,
+   "last_ok": "2026-10-10T05:57:18+00:00",
    "last_error": null,
    "last_error_at": null
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "status": "ok",
-   "ok_rate": 0.62,
-   "attempts": 8,
-   "last_ok": "2026-10-10T00:06:42+00:00",
+   "ok_rate": 0.7,
+   "attempts": 10,
+   "last_ok": "2026-10-10T05:57:43+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-10T00:05:31+00:00"
   },
@@ -86,8 +86,8 @@
    "name": "Platypus",
    "status": "ok",
    "ok_rate": 1.0,
-   "attempts": 4,
-   "last_ok": "2026-10-10T00:04:54+00:00",
+   "attempts": 5,
+   "last_ok": "2026-10-10T05:56:40+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -96,7 +96,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-10T00:06:44+00:00",
+   "last_ok": "2026-10-10T05:58:16+00:00",
    "last_error": null,
    "last_error_at": null
   }
