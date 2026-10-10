@@ -73,7 +73,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:30:10+00:00"
+   "last_ok": "2026-10-10T20:06:02+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -91,7 +91,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:31:51+00:00"
+   "last_ok": "2026-10-10T20:07:16+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -101,9 +101,10 @@
     1,
     1,
     1,
+    1,
     1
    ],
-   "last_ok": "2026-10-10T14:29:52+00:00"
+   "last_ok": "2026-10-10T20:05:41+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -121,7 +122,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:30:08+00:00"
+   "last_ok": "2026-10-10T20:05:59+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -139,7 +140,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:30:20+00:00"
+   "last_ok": "2026-10-10T20:06:09+00:00"
   },
   "www.platypusshoes.co.nz": {
    "name": "Platypus",
@@ -149,9 +150,10 @@
     1,
     1,
     1,
+    1,
     1
    ],
-   "last_ok": "2026-10-10T14:30:22+00:00"
+   "last_ok": "2026-10-10T20:06:12+00:00"
   },
   "www.birkenstock.co.nz": {
    "name": "Birkenstock NZ",
@@ -169,7 +171,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:30:47+00:00"
+   "last_ok": "2026-10-10T20:06:37+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -187,7 +189,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:30:53+00:00"
+   "last_ok": "2026-10-10T20:06:44+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -205,7 +207,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:31:16+00:00"
+   "last_ok": "2026-10-10T20:07:11+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -215,9 +217,10 @@
     1,
     1,
     1,
+    1,
     1
    ],
-   "last_ok": "2026-10-10T14:30:57+00:00"
+   "last_ok": "2026-10-10T20:06:51+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
@@ -225,17 +228,17 @@
     1,
     0,
     1,
+    1,
     0,
     1,
     1,
-    0,
     1,
     1,
     1,
     1,
     1
    ],
-   "last_ok": "2026-10-10T14:31:19+00:00",
+   "last_ok": "2026-10-10T20:07:14+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-10T00:05:31+00:00"
   }
@@ -253,7 +256,5 @@
   "www.platypusshoes.co.nz": "ok",
   "www.orbitkey.com.au": "ok"
  },
- "queued_alerts": [
-  "⏳ Only US 10 left in your sizes — <b>Salomon XT-6 (white)</b> at JD Sports (XT-6): $200.00 (was $340.00, save $140.00)\nYour sizes in stock: US 10\n👍 Deal rating: good — 4 day(s) of history so far; typical price needs 7\n<a href=\"https://www.jdsports.co.nz/products/xt6-120733321\">View deal</a>"
- ]
+ "queued_alerts": []
 }
