@@ -73,7 +73,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:57:07+00:00"
+   "last_ok": "2026-10-11T20:20:05+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -91,7 +91,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:58:19+00:00"
+   "last_ok": "2026-10-11T20:21:43+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -105,9 +105,10 @@
     1,
     1,
     1,
+    1,
     1
    ],
-   "last_ok": "2026-10-11T14:56:49+00:00"
+   "last_ok": "2026-10-11T20:19:49+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -125,7 +126,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:57:05+00:00"
+   "last_ok": "2026-10-11T20:20:03+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -143,7 +144,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:57:15+00:00"
+   "last_ok": "2026-10-11T20:20:13+00:00"
   },
   "www.platypusshoes.co.nz": {
    "name": "Platypus",
@@ -157,9 +158,10 @@
     1,
     1,
     1,
+    1,
     1
    ],
-   "last_ok": "2026-10-11T14:57:18+00:00"
+   "last_ok": "2026-10-11T20:20:15+00:00"
   },
   "www.birkenstock.co.nz": {
    "name": "Birkenstock NZ",
@@ -177,7 +179,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:57:46+00:00"
+   "last_ok": "2026-10-11T20:20:37+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -195,7 +197,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:57:53+00:00"
+   "last_ok": "2026-10-11T20:20:41+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -213,7 +215,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:58:13+00:00"
+   "last_ok": "2026-10-11T20:21:05+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -227,9 +229,10 @@
     1,
     1,
     1,
+    1,
     1
    ],
-   "last_ok": "2026-10-11T14:57:57+00:00"
+   "last_ok": "2026-10-11T20:20:47+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
@@ -247,7 +250,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-11T14:58:17+00:00",
+   "last_ok": "2026-10-11T20:21:09+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-10T00:05:31+00:00"
   }
