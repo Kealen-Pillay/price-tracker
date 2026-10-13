@@ -52,9 +52,9 @@
   "salomon-xt-6": "good",
   "monitor-arm": "unknown",
   "orbitkey-desk-mat-slim": "unknown",
-  "belkin-boostcharge-pro-2-in-1": "unknown",
+  "belkin-boostcharge-pro-2-in-1": "typical",
   "dell-34-plus-ultrawide": "unknown",
-  "msi-modern-md342cqp": "unknown"
+  "msi-modern-md342cqp": "typical"
  },
  "health": {
   "www.chemistwarehouse.co.nz": {
@@ -73,7 +73,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T17:58:55+00:00"
+   "last_ok": "2026-10-13T02:02:42+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -91,7 +91,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T18:01:15+00:00"
+   "last_ok": "2026-10-13T02:04:06+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -109,7 +109,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T17:58:31+00:00"
+   "last_ok": "2026-10-13T02:02:25+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -127,7 +127,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T17:58:53+00:00"
+   "last_ok": "2026-10-13T02:02:40+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -145,7 +145,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T17:59:33+00:00"
+   "last_ok": "2026-10-13T02:02:52+00:00"
   },
   "www.platypusshoes.co.nz": {
    "name": "Platypus",
@@ -163,7 +163,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T17:59:35+00:00"
+   "last_ok": "2026-10-13T02:02:56+00:00"
   },
   "www.birkenstock.co.nz": {
    "name": "Birkenstock NZ",
@@ -181,7 +181,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T18:00:33+00:00"
+   "last_ok": "2026-10-13T02:03:18+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -199,7 +199,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T18:00:40+00:00"
+   "last_ok": "2026-10-13T02:03:25+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -217,7 +217,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T18:01:10+00:00"
+   "last_ok": "2026-10-13T02:03:59+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -235,7 +235,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-12T18:00:47+00:00"
+   "last_ok": "2026-10-13T02:03:32+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
@@ -246,14 +246,14 @@
     1,
     1,
     1,
-    1,
-    1,
     0,
+    1,
+    1,
     1,
     1,
     1
    ],
-   "last_ok": "2026-10-12T18:01:13+00:00",
+   "last_ok": "2026-10-13T02:04:04+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-12T06:03:16+00:00"
   }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T18:01:17+00:00",
+ "updated": "2026-10-13T02:04:08+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -52,7 +52,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-12T17:58:09+00:00",
+     "checked": "2026-10-13T02:02:07+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -73,7 +73,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:28+00:00",
+     "checked": "2026-10-13T02:02:20+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -181,7 +181,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-12T17:58:29+00:00",
+     "checked": "2026-10-13T02:02:23+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -243,7 +243,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:31+00:00",
+     "checked": "2026-10-13T02:02:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -301,7 +301,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:33+00:00",
+     "checked": "2026-10-13T02:02:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -354,7 +354,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:38+00:00",
+     "checked": "2026-10-13T02:02:29+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -396,7 +396,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:39+00:00",
+     "checked": "2026-10-13T02:02:30+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -473,7 +473,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:41+00:00",
+     "checked": "2026-10-13T02:02:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -530,7 +530,7 @@
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-12T17:58:44+00:00",
+     "checked": "2026-10-13T02:02:34+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -610,7 +610,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:48+00:00",
+     "checked": "2026-10-13T02:02:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -667,7 +667,7 @@
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-12T17:58:51+00:00",
+     "checked": "2026-10-13T02:02:39+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -747,7 +747,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:53+00:00",
+     "checked": "2026-10-13T02:02:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -771,7 +771,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-12T17:58:57+00:00",
+     "checked": "2026-10-13T02:02:45+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -835,7 +835,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-12T17:58:55+00:00",
+     "checked": "2026-10-13T02:02:42+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -949,7 +949,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-12T17:58:58+00:00",
+     "checked": "2026-10-13T02:02:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1041,7 +1041,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-12T17:59:31+00:00",
+     "checked": "2026-10-13T02:02:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1133,7 +1133,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-12T17:59:33+00:00",
+     "checked": "2026-10-13T02:02:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1219,7 +1219,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-12T17:59:35+00:00",
+     "checked": "2026-10-13T02:02:56+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -1352,7 +1352,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:14+00:00",
+     "checked": "2026-10-13T02:02:57+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1456,7 +1456,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:16+00:00",
+     "checked": "2026-10-13T02:03:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1549,7 +1549,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:18+00:00",
+     "checked": "2026-10-13T02:03:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1670,7 +1670,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:21+00:00",
+     "checked": "2026-10-13T02:03:05+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1763,7 +1763,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:25+00:00",
+     "checked": "2026-10-13T02:03:09+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1856,7 +1856,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:28+00:00",
+     "checked": "2026-10-13T02:03:12+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1949,7 +1949,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:31+00:00",
+     "checked": "2026-10-13T02:03:15+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2054,7 +2054,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:33+00:00",
+     "checked": "2026-10-13T02:03:18+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2185,7 +2185,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:37+00:00",
+     "checked": "2026-10-13T02:03:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2284,7 +2284,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:40+00:00",
+     "checked": "2026-10-13T02:03:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2388,7 +2388,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:00:43+00:00",
+     "checked": "2026-10-13T02:03:28+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2478,7 +2478,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-12T18:00:47+00:00",
+     "checked": "2026-10-13T02:03:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2564,7 +2564,7 @@
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-10-12T18:00:51+00:00",
+     "checked": "2026-10-13T02:03:42+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -2623,6 +2623,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T02:03:57+00:00",
+       "price": 137.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -2631,7 +2638,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:01:07+00:00",
+     "checked": "2026-10-13T02:03:57+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2656,18 +2663,18 @@
     "https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black"
    ],
    "deal": {
-    "label": "unknown",
+    "label": "typical",
     "price": 129.0,
     "retailer": "PB Tech",
     "shop": null,
     "url": "https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch",
-    "typical": null,
-    "pct_vs_typical": null,
+    "typical": 129.0,
+    "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 6,
+    "days": 7,
     "reasons": [
-     "6 day(s) of history so far; typical price needs 7",
+     "0% below its 90-day typical $129.00",
      "$8.00 cheaper than the next store"
     ]
    }
@@ -2723,7 +2730,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:01:10+00:00",
+     "checked": "2026-10-13T02:03:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2798,6 +2805,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T02:04:04+00:00",
+       "price": 599.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "PB Tech",
@@ -2806,7 +2820,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:01:13+00:00",
+     "checked": "2026-10-13T02:04:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2870,7 +2884,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-12T18:01:15+00:00",
+     "checked": "2026-10-13T02:04:06+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -2920,18 +2934,18 @@
     "https://pricespy.co.nz/product.php?p=14502997"
    ],
    "deal": {
-    "label": "unknown",
+    "label": "typical",
     "price": 599.0,
     "retailer": "PB Tech",
     "shop": null,
     "url": "https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi",
-    "typical": null,
-    "pct_vs_typical": null,
+    "typical": 599.0,
+    "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 6,
+    "days": 7,
     "reasons": [
-     "6 day(s) of history so far; typical price needs 7",
+     "0% below its 90-day typical $599.00",
      "same price as another store"
     ]
    }
