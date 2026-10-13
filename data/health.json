@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-13T02:04:08+00:00",
+ "updated": "2026-10-13T11:54:01+00:00",
  "stores": {
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:02:25+00:00",
+   "last_ok": "2026-10-13T11:51:11+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -15,7 +15,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:03:18+00:00",
+   "last_ok": "2026-10-13T11:53:26+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -24,25 +24,25 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:02:42+00:00",
+   "last_ok": "2026-10-13T11:51:31+00:00",
    "last_error": null,
    "last_error_at": null
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
    "status": "ok",
-   "ok_rate": 1.0,
+   "ok_rate": 0.75,
    "attempts": 12,
    "last_ok": "2026-10-13T02:02:52+00:00",
-   "last_error": null,
-   "last_error_at": null
+   "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+   "last_error_at": "2026-10-13T11:52:37+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:03:59+00:00",
+   "last_ok": "2026-10-13T11:53:55+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -51,7 +51,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:03:25+00:00",
+   "last_ok": "2026-10-13T11:53:34+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -60,7 +60,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:02:40+00:00",
+   "last_ok": "2026-10-13T11:51:29+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -69,7 +69,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:03:32+00:00",
+   "last_ok": "2026-10-13T11:53:38+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -78,7 +78,7 @@
    "status": "ok",
    "ok_rate": 0.92,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:04:04+00:00",
+   "last_ok": "2026-10-13T11:53:58+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-12T06:03:16+00:00"
   },
@@ -87,7 +87,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:02:56+00:00",
+   "last_ok": "2026-10-13T11:53:02+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -96,7 +96,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T02:04:06+00:00",
+   "last_ok": "2026-10-13T11:54:00+00:00",
    "last_error": null,
    "last_error_at": null
   }
