@@ -37,27 +37,23 @@
   "armani-stronger-with-you-intensely-100ml|https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml": {},
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
- "failures": {
-  "dr-martens-adrian-tassel-loafer|https://www.drmartens.co.nz/adrian-tassel-smooth-loafer-22209001-blk.html": 1,
-  "dr-martens-adrian-tassel-loafer|https://www.drmartens.co.nz/adrian-tassel-loafer-30917201-brn.html": 1,
-  "dr-martens-adrian-tassel-loafer|https://www.drmartens.co.nz/adrian-tassel-loafer-arcadia-14573601-red.html": 1
- },
+ "failures": {},
  "deals": {
-  "dior-sauvage-edp-100ml": "unknown",
+  "dior-sauvage-edp-100ml": "typical",
   "dior-sauvage-elixir-60ml": "typical",
   "bleu-de-chanel-edp-100ml": null,
   "bleu-de-chanel-parfum-100ml": null,
   "prada-paradigme-edp-100ml": "typical",
   "ysl-myslf-le-parfum-100ml": "typical",
   "armani-stronger-with-you-intensely-100ml": "typical",
-  "dr-martens-adrian-tassel-loafer": "good",
+  "dr-martens-adrian-tassel-loafer": "typical",
   "birkenstock-arizona": "typical",
   "birkenstock-boston": "typical",
   "salomon-xt-6": "typical",
-  "monitor-arm": "unknown",
-  "orbitkey-desk-mat-slim": "unknown",
+  "monitor-arm": "typical",
+  "orbitkey-desk-mat-slim": "typical",
   "belkin-boostcharge-pro-2-in-1": "typical",
-  "dell-34-plus-ultrawide": "unknown",
+  "dell-34-plus-ultrawide": "typical",
   "msi-modern-md342cqp": "typical"
  },
  "health": {
@@ -77,7 +73,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:51:31+00:00"
+   "last_ok": "2026-10-13T19:20:05+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -95,7 +91,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:54:00+00:00"
+   "last_ok": "2026-10-13T19:21:53+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -113,7 +109,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:51:11+00:00"
+   "last_ok": "2026-10-13T19:19:43+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -131,7 +127,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:51:29+00:00"
+   "last_ok": "2026-10-13T19:20:02+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -142,14 +138,14 @@
     1,
     1,
     1,
-    1,
-    1,
-    1,
     0,
     0,
-    0
+    0,
+    1,
+    1,
+    1
    ],
-   "last_ok": "2026-10-13T02:02:52+00:00",
+   "last_ok": "2026-10-13T19:20:14+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -169,7 +165,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:53:02+00:00"
+   "last_ok": "2026-10-13T19:20:19+00:00"
   },
   "www.birkenstock.co.nz": {
    "name": "Birkenstock NZ",
@@ -187,7 +183,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:53:26+00:00"
+   "last_ok": "2026-10-13T19:20:44+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -205,7 +201,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:53:34+00:00"
+   "last_ok": "2026-10-13T19:20:50+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -223,7 +219,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:53:55+00:00"
+   "last_ok": "2026-10-13T19:21:46+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -241,13 +237,11 @@
     1,
     1
    ],
-   "last_ok": "2026-10-13T11:53:38+00:00"
+   "last_ok": "2026-10-13T19:20:54+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "attempts": [
-    1,
-    1,
     1,
     1,
     0,
@@ -257,9 +251,11 @@
     1,
     1,
     1,
+    1,
+    1,
     1
    ],
-   "last_ok": "2026-10-13T11:53:58+00:00",
+   "last_ok": "2026-10-13T19:21:51+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-12T06:03:16+00:00"
   }

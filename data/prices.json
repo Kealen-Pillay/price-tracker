@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T11:54:01+00:00",
+ "updated": "2026-10-13T19:21:54+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -44,6 +44,13 @@
        "was": 259.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:19:23+00:00",
+       "price": 249.99,
+       "was": 259.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -52,7 +59,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-13T11:50:51+00:00",
+     "checked": "2026-10-13T19:19:23+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -73,7 +80,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:05+00:00",
+     "checked": "2026-10-13T19:19:39+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -114,18 +121,18 @@
     "https://pricespy.co.nz/product.php?p=4682013"
    ],
    "deal": {
-    "label": "unknown",
+    "label": "typical",
     "price": 249.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml",
-    "typical": null,
-    "pct_vs_typical": null,
+    "typical": 249.99,
+    "pct_vs_typical": 0.0,
     "was": 259.0,
     "was_verified": false,
-    "days": 6,
+    "days": 7,
     "reasons": [
-     "6 day(s) of history so far; typical price needs 7",
+     "0% below its 90-day typical $249.99",
      "store says was $259.00 (3% off), but it hasn't been seen selling at that price"
     ]
    }
@@ -173,6 +180,13 @@
        "was": 299.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:19:41+00:00",
+       "price": 289.99,
+       "was": 299.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -181,7 +195,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-13T11:51:09+00:00",
+     "checked": "2026-10-13T19:19:41+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -235,6 +249,13 @@
        "was": null,
        "in_stock": false,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:19:43+00:00",
+       "price": 289.99,
+       "was": null,
+       "in_stock": false,
+       "cur": "NZD"
       }
      ],
      "retailer": "Bargain Chemist",
@@ -243,7 +264,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:11+00:00",
+     "checked": "2026-10-13T19:19:43+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -308,7 +329,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:12+00:00",
+     "checked": "2026-10-13T19:19:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -361,7 +382,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:15+00:00",
+     "checked": "2026-10-13T19:19:48+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -403,7 +424,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:18+00:00",
+     "checked": "2026-10-13T19:19:50+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -487,7 +508,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:20+00:00",
+     "checked": "2026-10-13T19:19:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -532,6 +553,13 @@
        "was": 275.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:19:55+00:00",
+       "price": 209.99,
+       "was": 275.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -544,7 +572,7 @@
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-13T11:51:22+00:00",
+     "checked": "2026-10-13T19:19:55+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -631,7 +659,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:23+00:00",
+     "checked": "2026-10-13T19:19:57+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -676,6 +704,13 @@
        "was": 319.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:19:59+00:00",
+       "price": 239.99,
+       "was": 319.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -688,7 +723,7 @@
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-13T11:51:26+00:00",
+     "checked": "2026-10-13T19:19:59+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -775,7 +810,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:29+00:00",
+     "checked": "2026-10-13T19:20:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -799,7 +834,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-13T11:51:34+00:00",
+     "checked": "2026-10-13T19:20:07+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -851,6 +886,13 @@
        "was": 226.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:20:05+00:00",
+       "price": 169.99,
+       "was": 226.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -863,7 +905,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-13T11:51:31+00:00",
+     "checked": "2026-10-13T19:20:05+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -969,6 +1011,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:09+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -977,8 +1030,8 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-13T11:51:37+00:00",
-     "error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
+     "checked": "2026-10-13T19:20:09+00:00",
+     "error": null,
      "identity": {
       "ids": {
        "sku": "22209001.BLK"
@@ -1061,6 +1114,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:10+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1069,8 +1133,8 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-13T11:52:12+00:00",
-     "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+     "checked": "2026-10-13T19:20:10+00:00",
+     "error": null,
      "identity": {
       "ids": {
        "sku": "30917201.BRN"
@@ -1153,6 +1217,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:14+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1161,8 +1236,8 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-13T11:52:37+00:00",
-     "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+     "checked": "2026-10-13T19:20:14+00:00",
+     "error": null,
      "identity": {
       "ids": {
        "sku": "14573601.RED"
@@ -1233,6 +1308,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:19+00:00",
+       "price": 299.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "identity": {
@@ -1247,7 +1333,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-13T11:53:02+00:00",
+     "checked": "2026-10-13T19:20:19+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -1283,19 +1369,20 @@
     "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html"
    ],
    "deal": {
-    "label": "good",
+    "label": "typical",
     "price": 299.99,
     "retailer": "Platypus",
     "shop": null,
     "url": "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html",
-    "typical": null,
-    "pct_vs_typical": null,
+    "typical": 319.99,
+    "pct_vs_typical": 6.250195318603706,
     "was": 399.99,
     "was_verified": true,
-    "days": 6,
+    "days": 7,
     "reasons": [
-     "6 day(s) of history so far; typical price needs 7",
-     "25% off a verified RRP of $399.99"
+     "6% below its 90-day typical $319.99",
+     "25% off a verified RRP of $399.99",
+     "$20.00 cheaper than the next store"
     ]
    }
   },
@@ -1371,6 +1458,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:20+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -1379,7 +1477,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:03+00:00",
+     "checked": "2026-10-13T19:20:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1475,6 +1573,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:21+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -1483,7 +1592,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:05+00:00",
+     "checked": "2026-10-13T19:20:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1587,7 +1696,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:09+00:00",
+     "checked": "2026-10-13T19:20:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1719,7 +1828,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:12+00:00",
+     "checked": "2026-10-13T19:20:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1823,7 +1932,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:16+00:00",
+     "checked": "2026-10-13T19:20:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1927,7 +2036,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:20+00:00",
+     "checked": "2026-10-13T19:20:37+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2031,7 +2140,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:24+00:00",
+     "checked": "2026-10-13T19:20:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2128,6 +2237,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:44+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -2136,7 +2256,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:26+00:00",
+     "checked": "2026-10-13T19:20:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2259,6 +2379,16 @@
        "sizes_in": [
         "US 10"
        ]
+      },
+      {
+       "t": "2026-10-13T19:20:47+00:00",
+       "price": 200.0,
+       "was": 340.0,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "US 10"
+       ]
       }
      ],
      "retailer": "JD Sports",
@@ -2267,7 +2397,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:29+00:00",
+     "checked": "2026-10-13T19:20:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2377,7 +2507,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:34+00:00",
+     "checked": "2026-10-13T19:20:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2473,6 +2603,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:20:53+00:00",
+       "price": 143.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -2480,8 +2617,8 @@
      "price": 143.99,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-13T11:53:36+00:00",
+     "method": "shopify",
+     "checked": "2026-10-13T19:20:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2505,18 +2642,18 @@
     "https://www.jbhifi.co.nz/products/mbeat-activiva-heavy-duty-single-monitor-screen-gas-spring-monitor-arm-for-flat-panel-curved-screen-black-space-grey"
    ],
    "deal": {
-    "label": "unknown",
+    "label": "typical",
     "price": 143.99,
     "retailer": "JB Hi-Fi",
     "shop": null,
     "url": "https://www.jbhifi.co.nz/products/mbeat-activiva-heavy-duty-single-monitor-screen-gas-spring-monitor-arm-for-flat-panel-curved-screen-black-space-grey",
-    "typical": null,
-    "pct_vs_typical": null,
+    "typical": 143.99,
+    "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 6,
+    "days": 7,
     "reasons": [
-     "6 day(s) of history so far; typical price needs 7"
+     "0% below its 90-day typical $143.99"
     ]
    }
   },
@@ -2563,6 +2700,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:20:54+00:00",
+       "price": 139.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
@@ -2571,7 +2715,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-13T11:53:38+00:00",
+     "checked": "2026-10-13T19:20:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2595,18 +2739,18 @@
     "https://www.orbitkey.com.au/products/desk-mat-slim"
    ],
    "deal": {
-    "label": "unknown",
+    "label": "typical",
     "price": 139.0,
     "retailer": "Orbitkey",
     "shop": null,
     "url": "https://www.orbitkey.com.au/products/desk-mat-slim",
-    "typical": null,
-    "pct_vs_typical": null,
+    "typical": 139.0,
+    "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 6,
+    "days": 7,
     "reasons": [
-     "6 day(s) of history so far; typical price needs 7"
+     "0% below its 90-day typical $139.00"
     ]
    }
   },
@@ -2653,11 +2797,18 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:20:58+00:00",
+       "price": 129.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-10-13T11:53:42+00:00",
+     "checked": "2026-10-13T19:20:58+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -2730,8 +2881,8 @@
      "price": 137.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-13T11:53:53+00:00",
+     "method": "shopify",
+     "checked": "2026-10-13T19:21:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2815,6 +2966,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:21:46+00:00",
+       "price": 999.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -2822,8 +2980,8 @@
      "price": 999.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-13T11:53:55+00:00",
+     "method": "shopify",
+     "checked": "2026-10-13T19:21:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2847,18 +3005,18 @@
     "https://www.jbhifi.co.nz/products/dell-34-plus-34-uwqhd-120hz-usb-c-curved-monitor"
    ],
    "deal": {
-    "label": "unknown",
+    "label": "typical",
     "price": 999.0,
     "retailer": "JB Hi-Fi",
     "shop": null,
     "url": "https://www.jbhifi.co.nz/products/dell-34-plus-34-uwqhd-120hz-usb-c-curved-monitor",
-    "typical": null,
-    "pct_vs_typical": null,
+    "typical": 999.0,
+    "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 6,
+    "days": 7,
     "reasons": [
-     "6 day(s) of history so far; typical price needs 7"
+     "0% below its 90-day typical $999.00"
     ]
    }
   },
@@ -2913,7 +3071,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:53:58+00:00",
+     "checked": "2026-10-13T19:21:51+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2969,6 +3127,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-13T19:21:53+00:00",
+       "price": 599.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "PriceSpy",
@@ -2977,7 +3142,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-13T11:54:00+00:00",
+     "checked": "2026-10-13T19:21:53+00:00",
      "error": null,
      "identity": {
       "ids": {},
