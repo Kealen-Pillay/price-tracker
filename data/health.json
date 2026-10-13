@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-13T19:21:54+00:00",
+ "updated": "2026-10-13T23:48:40+00:00",
  "stores": {
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:19:43+00:00",
+   "last_ok": "2026-10-13T23:45:30+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -15,7 +15,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:20:44+00:00",
+   "last_ok": "2026-10-13T23:46:23+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -24,7 +24,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:20:05+00:00",
+   "last_ok": "2026-10-13T23:45:49+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -33,7 +33,7 @@
    "status": "ok",
    "ok_rate": 0.75,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:20:14+00:00",
+   "last_ok": "2026-10-13T23:45:55+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -42,7 +42,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:21:46+00:00",
+   "last_ok": "2026-10-13T23:47:42+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -51,7 +51,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:20:50+00:00",
+   "last_ok": "2026-10-13T23:46:28+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -60,7 +60,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:20:02+00:00",
+   "last_ok": "2026-10-13T23:45:46+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -69,25 +69,25 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:20:54+00:00",
+   "last_ok": "2026-10-13T23:46:33+00:00",
    "last_error": null,
    "last_error_at": null
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "status": "ok",
-   "ok_rate": 0.92,
+   "ok_rate": 0.75,
    "attempts": 12,
    "last_ok": "2026-10-13T19:21:51+00:00",
-   "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-10-12T06:03:16+00:00"
+   "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+   "last_error_at": "2026-10-13T23:47:44+00:00"
   },
   "www.platypusshoes.co.nz": {
    "name": "Platypus",
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:20:19+00:00",
+   "last_ok": "2026-10-13T23:45:59+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -96,7 +96,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-10-13T19:21:53+00:00",
+   "last_ok": "2026-10-13T23:48:39+00:00",
    "last_error": null,
    "last_error_at": null
   }
