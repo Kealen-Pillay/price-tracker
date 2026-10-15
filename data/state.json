@@ -37,9 +37,7 @@
   "armani-stronger-with-you-intensely-100ml|https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml": {},
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
- "failures": {
-  "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": 1
- },
+ "failures": {},
  "deals": {
   "dior-sauvage-edp-100ml": "typical",
   "dior-sauvage-elixir-60ml": "typical",
@@ -75,7 +73,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:17:18+00:00"
+   "last_ok": "2026-10-15T04:44:08+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -93,7 +91,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:19:18+00:00"
+   "last_ok": "2026-10-15T04:45:29+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -111,7 +109,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:16:55+00:00"
+   "last_ok": "2026-10-15T04:43:49+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -129,7 +127,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:17:15+00:00"
+   "last_ok": "2026-10-15T04:44:06+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -147,7 +145,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:17:24+00:00",
+   "last_ok": "2026-10-15T04:44:17+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -167,7 +165,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:17:26+00:00"
+   "last_ok": "2026-10-15T04:44:20+00:00"
   },
   "www.birkenstock.co.nz": {
    "name": "Birkenstock NZ",
@@ -185,7 +183,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:17:49+00:00"
+   "last_ok": "2026-10-15T04:44:46+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -203,7 +201,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:17:56+00:00"
+   "last_ok": "2026-10-15T04:44:54+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -221,7 +219,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:18:24+00:00"
+   "last_ok": "2026-10-15T04:45:22+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -239,13 +237,11 @@
     1,
     1
    ],
-   "last_ok": "2026-10-14T23:18:01+00:00"
+   "last_ok": "2026-10-15T04:44:58+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "attempts": [
-    1,
-    1,
     0,
     0,
     0,
@@ -255,9 +251,11 @@
     0,
     1,
     1,
-    0
+    0,
+    1,
+    1
    ],
-   "last_ok": "2026-10-14T23:18:06+00:00",
+   "last_ok": "2026-10-15T04:45:27+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-14T23:18:26+00:00"
   }
