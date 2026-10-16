@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T13:20:23+00:00",
+ "updated": "2026-10-16T19:38:21+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -73,7 +73,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-16T13:17:07+00:00",
+     "checked": "2026-10-16T19:34:41+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -94,7 +94,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-16T13:17:24+00:00",
+     "checked": "2026-10-16T19:34:59+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -223,7 +223,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-16T13:17:26+00:00",
+     "checked": "2026-10-16T19:35:00+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -327,7 +327,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-16T13:17:30+00:00",
+     "checked": "2026-10-16T19:35:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -406,8 +406,8 @@
      "price": 318.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-10-16T13:17:33+00:00",
+     "method": "json-ld",
+     "checked": "2026-10-16T19:35:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -460,7 +460,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-16T13:17:34+00:00",
+     "checked": "2026-10-16T19:35:07+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -502,7 +502,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-16T13:17:37+00:00",
+     "checked": "2026-10-16T19:35:09+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -599,8 +599,8 @@
      "price": 275.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-10-16T13:17:38+00:00",
+     "method": "json-ld",
+     "checked": "2026-10-16T19:35:13+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -678,7 +678,7 @@
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-16T13:17:39+00:00",
+     "checked": "2026-10-16T19:35:15+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -778,8 +778,8 @@
      "price": 319.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-10-16T13:17:41+00:00",
+     "method": "json-ld",
+     "checked": "2026-10-16T19:35:18+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -857,7 +857,7 @@
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-16T13:17:42+00:00",
+     "checked": "2026-10-16T19:35:20+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -957,8 +957,8 @@
      "price": 226.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-10-16T13:17:44+00:00",
+     "method": "json-ld",
+     "checked": "2026-10-16T19:35:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -982,7 +982,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-16T13:17:50+00:00",
+     "checked": "2026-10-16T19:35:24+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1067,7 +1067,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-16T13:17:45+00:00",
+     "checked": "2026-10-16T19:35:23+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1214,7 +1214,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-16T13:17:51+00:00",
+     "checked": "2026-10-16T19:35:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1339,7 +1339,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-16T13:17:53+00:00",
+     "checked": "2026-10-16T19:35:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1464,7 +1464,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-16T13:17:57+00:00",
+     "checked": "2026-10-16T19:35:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1583,7 +1583,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-16T13:17:59+00:00",
+     "checked": "2026-10-16T19:35:35+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -1748,8 +1748,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:00+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1886,8 +1886,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:02+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2013,8 +2013,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:05+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2168,8 +2168,8 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:08+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:42+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2295,8 +2295,8 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:12+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2422,8 +2422,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:14+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2549,8 +2549,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:18+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2688,8 +2688,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-10-16T13:18:21+00:00",
+     "method": "shopify",
+     "checked": "2026-10-16T19:35:57+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2851,7 +2851,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-16T13:18:23+00:00",
+     "checked": "2026-10-16T19:36:01+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -2983,7 +2983,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-16T13:18:57+00:00",
+     "checked": "2026-10-16T19:36:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3106,7 +3106,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-16T13:19:00+00:00",
+     "checked": "2026-10-16T19:36:28+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3217,7 +3217,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-16T13:19:03+00:00",
+     "checked": "2026-10-16T19:36:30+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3324,7 +3324,7 @@
      ],
      "retailer": "PB Tech",
      "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-     "checked": "2026-10-16T13:19:07+00:00",
+     "checked": "2026-10-16T19:36:33+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -3404,6 +3404,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-16T19:37:40+00:00",
+       "price": 137.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -3412,7 +3419,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-16T13:20:14+00:00",
+     "checked": "2026-10-16T19:37:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3524,7 +3531,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-16T13:20:16+00:00",
+     "checked": "2026-10-16T19:37:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3628,7 +3635,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-16T13:20:19+00:00",
+     "checked": "2026-10-16T19:37:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3713,7 +3720,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-16T13:20:21+00:00",
+     "checked": "2026-10-16T19:38:19+00:00",
      "error": null,
      "identity": {
       "ids": {},
