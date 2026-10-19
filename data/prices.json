@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T04:47:20+00:00",
+ "updated": "2026-10-19T15:42:33+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -79,15 +79,22 @@
        "was": 259.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:39:00+00:00",
+       "price": 249.99,
+       "was": 259.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
      "title": "Christian Dior Sauvage Eau De Parfum 100ml",
-     "price": 224.99,
+     "price": 249.99,
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-19T04:44:22+00:00",
+     "checked": "2026-10-19T15:39:00+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -108,7 +115,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-19T04:44:38+00:00",
+     "checked": "2026-10-19T15:39:16+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -149,19 +156,19 @@
     "https://pricespy.co.nz/product.php?p=4682013"
    ],
    "deal": {
-    "label": "good",
-    "price": 224.99,
+    "label": "typical",
+    "price": 249.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml",
     "typical": 249.99,
-    "pct_vs_typical": 10.00040001600064,
+    "pct_vs_typical": 0.0,
     "was": 259.0,
     "was_verified": false,
-    "days": 11,
+    "days": 12,
     "reasons": [
-     "10% below its 90-day typical $249.99",
-     "store says was $259.00 (13% off), but it hasn't been seen selling at that price"
+     "0% below its 90-day typical $249.99",
+     "store says was $259.00 (3% off), but it hasn't been seen selling at that price"
     ]
    }
   },
@@ -243,15 +250,22 @@
        "was": 299.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:39:17+00:00",
+       "price": 289.99,
+       "was": 299.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
      "title": "Christian Dior Sauvage Elixir Parfum 60ml",
-     "price": 260.99,
+     "price": 289.99,
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-19T04:44:39+00:00",
+     "checked": "2026-10-19T15:39:17+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -383,7 +397,7 @@
      "was": null,
      "in_stock": false,
      "method": "json-ld",
-     "checked": "2026-10-19T04:44:41+00:00",
+     "checked": "2026-10-19T15:39:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -484,7 +498,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:44:43+00:00",
+     "checked": "2026-10-19T15:39:22+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -510,20 +524,20 @@
     "https://www.lifepharmacy.co.nz/products/christian-dior-sauvage-elixir-60ml"
    ],
    "deal": {
-    "label": "good",
-    "price": 260.99,
+    "label": "typical",
+    "price": 289.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/112579/christian-dior-sauvage-elixir-parfum-60ml",
     "typical": 289.99,
-    "pct_vs_typical": 10.000344839477222,
+    "pct_vs_typical": 0.0,
     "was": 299.0,
     "was_verified": true,
     "days": 13,
     "reasons": [
-     "10% below its 90-day typical $289.99",
-     "13% off a verified RRP of $299.00",
-     "$57.01 cheaper than the next store"
+     "0% below its 90-day typical $289.99",
+     "3% off a verified RRP of $299.00",
+     "$28.01 cheaper than the next store"
     ]
    }
   },
@@ -537,7 +551,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-19T04:44:47+00:00",
+     "checked": "2026-10-19T15:39:25+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -579,7 +593,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-19T04:44:48+00:00",
+     "checked": "2026-10-19T15:39:26+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -698,7 +712,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:44:52+00:00",
+     "checked": "2026-10-19T15:39:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -778,6 +792,13 @@
        "was": 275.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:39:35+00:00",
+       "price": 209.99,
+       "was": 275.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -786,11 +807,11 @@
      },
      "retailer": "Chemist Warehouse",
      "title": "Prada Paradigme For Men Eau De Parfum 100ml",
-     "price": 188.99,
+     "price": 209.99,
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-19T04:44:55+00:00",
+     "checked": "2026-10-19T15:39:35+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -808,20 +829,20 @@
     "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml"
    ],
    "deal": {
-    "label": "good",
-    "price": 188.99,
+    "label": "typical",
+    "price": 209.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml",
     "typical": 209.99,
-    "pct_vs_typical": 10.000476213153005,
+    "pct_vs_typical": 0.0,
     "was": 275.0,
     "was_verified": true,
     "days": 13,
     "reasons": [
-     "10% below its 90-day typical $209.99",
-     "31% off a verified RRP of $275.00",
-     "$86.01 cheaper than the next store"
+     "0% below its 90-day typical $209.99",
+     "24% off a verified RRP of $275.00",
+     "$65.01 cheaper than the next store"
     ]
    }
   },
@@ -912,7 +933,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:44:57+00:00",
+     "checked": "2026-10-19T15:39:37+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -992,6 +1013,13 @@
        "was": 319.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:39:39+00:00",
+       "price": 239.99,
+       "was": 319.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -1000,11 +1028,11 @@
      },
      "retailer": "Chemist Warehouse",
      "title": "Yves Saint Laurent Myslf Le Parfum 100ml",
-     "price": 215.99,
+     "price": 239.99,
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-19T04:45:00+00:00",
+     "checked": "2026-10-19T15:39:39+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1022,20 +1050,20 @@
     "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml"
    ],
    "deal": {
-    "label": "good",
-    "price": 215.99,
+    "label": "typical",
+    "price": 239.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml",
     "typical": 239.99,
-    "pct_vs_typical": 10.000416684028501,
+    "pct_vs_typical": 0.0,
     "was": 319.0,
     "was_verified": true,
     "days": 13,
     "reasons": [
-     "10% below its 90-day typical $239.99",
-     "32% off a verified RRP of $319.00",
-     "$103.01 cheaper than the next store"
+     "0% below its 90-day typical $239.99",
+     "25% off a verified RRP of $319.00",
+     "$79.01 cheaper than the next store"
     ]
    }
   },
@@ -1126,7 +1154,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:02+00:00",
+     "checked": "2026-10-19T15:39:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1150,7 +1178,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:07+00:00",
+     "checked": "2026-10-19T15:39:45+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1237,6 +1265,13 @@
        "was": 226.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:39:43+00:00",
+       "price": 169.99,
+       "was": 226.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -1245,11 +1280,11 @@
      },
      "retailer": "Chemist Warehouse",
      "title": "Emporio Armani Stronger With You Intensely Eau De Parfum 100ml",
-     "price": 152.99,
+     "price": 169.99,
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-19T04:45:05+00:00",
+     "checked": "2026-10-19T15:39:43+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1268,20 +1303,20 @@
     "https://pricespy.co.nz/product.php?p=5010999"
    ],
    "deal": {
-    "label": "good",
-    "price": 152.99,
+    "label": "typical",
+    "price": 169.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml",
     "typical": 169.99,
-    "pct_vs_typical": 10.000588269898229,
+    "pct_vs_typical": 0.0,
     "was": 226.0,
     "was_verified": true,
     "days": 13,
     "reasons": [
-     "10% below its 90-day typical $169.99",
-     "32% off a verified RRP of $226.00",
-     "$73.01 cheaper than the next store"
+     "0% below its 90-day typical $169.99",
+     "25% off a verified RRP of $226.00",
+     "$56.01 cheaper than the next store"
     ]
    }
   },
@@ -1410,6 +1445,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-19T15:39:47+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1418,7 +1464,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-19T04:45:08+00:00",
+     "checked": "2026-10-19T15:39:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1557,6 +1603,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-19T15:39:48+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1565,7 +1622,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-19T04:45:10+00:00",
+     "checked": "2026-10-19T15:39:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1704,6 +1761,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-19T15:39:51+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1712,7 +1780,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-19T04:45:14+00:00",
+     "checked": "2026-10-19T15:39:51+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1839,6 +1907,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-19T15:39:53+00:00",
+       "price": 299.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "identity": {
@@ -1853,7 +1932,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-19T04:45:19+00:00",
+     "checked": "2026-10-19T15:39:53+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -1898,7 +1977,7 @@
     "pct_vs_typical": 0.0,
     "was": 399.99,
     "was_verified": true,
-    "days": 11,
+    "days": 12,
     "reasons": [
      "0% below its 90-day typical $299.99",
      "25% off a verified RRP of $399.99",
@@ -2033,6 +2112,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-19T15:39:54+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -2041,7 +2131,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:20+00:00",
+     "checked": "2026-10-19T15:39:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2193,6 +2283,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-19T15:39:56+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -2201,7 +2302,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:21+00:00",
+     "checked": "2026-10-19T15:39:56+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2361,7 +2462,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:24+00:00",
+     "checked": "2026-10-19T15:40:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2549,7 +2650,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:28+00:00",
+     "checked": "2026-10-19T15:40:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2709,7 +2810,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:32+00:00",
+     "checked": "2026-10-19T15:40:07+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2869,7 +2970,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:36+00:00",
+     "checked": "2026-10-19T15:40:09+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3029,7 +3130,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:39+00:00",
+     "checked": "2026-10-19T15:40:13+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3182,6 +3283,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-19T15:40:16+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -3190,7 +3302,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:42+00:00",
+     "checked": "2026-10-19T15:40:16+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3352,7 +3464,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:45:45+00:00",
+     "checked": "2026-10-19T15:40:21+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -3517,7 +3629,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:46:16+00:00",
+     "checked": "2026-10-19T15:40:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3646,6 +3758,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:40:57+00:00",
+       "price": 143.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -3654,7 +3773,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:46:19+00:00",
+     "checked": "2026-10-19T15:40:57+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3687,7 +3806,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 11,
+    "days": 12,
     "reasons": [
      "0% below its 90-day typical $143.99"
     ]
@@ -3771,6 +3890,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:40:59+00:00",
+       "price": 139.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
@@ -3779,7 +3905,7 @@
      "was": null,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-19T04:46:22+00:00",
+     "checked": "2026-10-19T15:40:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3812,7 +3938,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 11,
+    "days": 12,
     "reasons": [
      "0% below its 90-day typical $139.00"
     ]
@@ -3900,7 +4026,7 @@
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-10-19T04:46:27+00:00",
+     "checked": "2026-10-19T15:41:03+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -4009,7 +4135,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:46:40+00:00",
+     "checked": "2026-10-19T15:41:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4143,7 +4269,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:46:43+00:00",
+     "checked": "2026-10-19T15:41:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4268,7 +4394,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:46:48+00:00",
+     "checked": "2026-10-19T15:41:56+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4359,6 +4485,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-19T15:42:30+00:00",
+       "price": 599.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "PriceSpy",
@@ -4367,7 +4500,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-19T04:47:18+00:00",
+     "checked": "2026-10-19T15:42:30+00:00",
      "error": null,
      "identity": {
       "ids": {},
