@@ -38,7 +38,7 @@
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 17
+  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 18
  },
  "deals": {
   "dior-sauvage-edp-100ml": "typical",
@@ -75,7 +75,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:35:37+00:00"
+   "last_ok": "2026-10-20T20:01:24+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -93,7 +93,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:39:12+00:00"
+   "last_ok": "2026-10-20T20:03:00+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -111,7 +111,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:35:20+00:00"
+   "last_ok": "2026-10-20T20:01:09+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -129,7 +129,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:35:34+00:00"
+   "last_ok": "2026-10-20T20:01:22+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -147,7 +147,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:35:44+00:00",
+   "last_ok": "2026-10-20T20:01:33+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -167,7 +167,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:35:46+00:00",
+   "last_ok": "2026-10-20T20:01:38+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -187,7 +187,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:36:15+00:00"
+   "last_ok": "2026-10-20T20:01:59+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -205,9 +205,9 @@
     0,
     1
    ],
-   "last_ok": "2026-10-20T13:36:48+00:00",
+   "last_ok": "2026-10-20T20:02:33+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-10-20T13:36:19+00:00"
+   "last_error_at": "2026-10-20T20:02:02+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -225,7 +225,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:38:37+00:00"
+   "last_ok": "2026-10-20T20:02:54+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -243,25 +243,25 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:36:51+00:00"
+   "last_ok": "2026-10-20T20:02:36+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "attempts": [
-    0,
-    0,
     1,
     1,
     1,
     1,
     0,
+    1,
+    1,
     1,
     1,
     1,
     1,
     1
    ],
-   "last_ok": "2026-10-20T13:38:40+00:00",
+   "last_ok": "2026-10-20T20:02:58+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-19T21:07:16+00:00"
   }
@@ -279,10 +279,5 @@
   "www.platypusshoes.co.nz": "ok",
   "www.orbitkey.com.au": "ok"
  },
- "queued_alerts": [
-  "📉 Price drop 20% (from $129.00) — <b>Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger</b> at PB Tech: $103.20\n🔥 Deal rating: great — 20% below its 90-day typical $129.00\n<a href=\"https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch\">View deal</a>",
-  "📉 Price drop 20% (from $137.00) — <b>Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger</b> at JB Hi-Fi: $109.60 (was $137.00, save $27.40) — 🏆 lowest price seen\n🔥 Deal rating: great — 20% below its 90-day typical $129.00\n<a href=\"https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black\">View deal</a>",
-  "📉 Price drop 8% (from $599.00) — <b>MSI Modern MD342CQP 34&quot; Ultrawide Curved Monitor</b> at PB Tech: $549.00 — 🏆 lowest price seen\n👍 Deal rating: good — 8% below its 90-day typical $599.00\n<a href=\"https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi\">View deal</a>",
-  "📉 Price drop 8% (from $599.00) — <b>MSI Modern MD342CQP 34&quot; Ultrawide Curved Monitor</b> at PriceSpy → PB Tech: $549.00 (was $599.00, save $50.00) — 🏆 lowest price seen\n👍 Deal rating: good — 8% below its 90-day typical $599.00\n<a href=\"https://pricespy.co.nz/product.php?p=14502997\">View deal</a>"
- ]
+ "queued_alerts": []
 }
