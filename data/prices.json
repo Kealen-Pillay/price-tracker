@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T20:14:32+00:00",
+ "updated": "2026-10-21T23:25:43+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -108,7 +108,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-21T20:11:41+00:00",
+     "checked": "2026-10-21T23:22:44+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -129,7 +129,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-21T20:11:54+00:00",
+     "checked": "2026-10-21T23:23:00+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -293,7 +293,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-21T20:11:55+00:00",
+     "checked": "2026-10-21T23:23:01+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -431,6 +431,13 @@
        "was": 299.99,
        "in_stock": false,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-21T23:23:04+00:00",
+       "price": 289.99,
+       "was": 299.99,
+       "in_stock": false,
+       "cur": "NZD"
       }
      ],
      "retailer": "Bargain Chemist",
@@ -439,7 +446,7 @@
      "was": 299.99,
      "in_stock": false,
      "method": "shopify",
-     "checked": "2026-10-21T20:11:58+00:00",
+     "checked": "2026-10-21T23:23:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -554,7 +561,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:11:59+00:00",
+     "checked": "2026-10-21T23:23:05+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -607,7 +614,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-21T20:11:59+00:00",
+     "checked": "2026-10-21T23:23:05+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -649,7 +656,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-21T20:12:01+00:00",
+     "checked": "2026-10-21T23:23:06+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -782,7 +789,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:05+00:00",
+     "checked": "2026-10-21T23:23:11+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -895,7 +902,7 @@
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-21T20:12:05+00:00",
+     "checked": "2026-10-21T23:23:11+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1031,7 +1038,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:08+00:00",
+     "checked": "2026-10-21T23:23:13+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1144,7 +1151,7 @@
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-21T20:12:08+00:00",
+     "checked": "2026-10-21T23:23:14+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1280,7 +1287,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:10+00:00",
+     "checked": "2026-10-21T23:23:15+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1304,7 +1311,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-21T20:12:15+00:00",
+     "checked": "2026-10-21T23:23:19+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1424,7 +1431,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-21T20:12:12+00:00",
+     "checked": "2026-10-21T23:23:16+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1626,7 +1633,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-21T20:12:16+00:00",
+     "checked": "2026-10-21T23:23:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1798,6 +1805,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-21T23:23:21+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1806,7 +1824,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-21T20:12:17+00:00",
+     "checked": "2026-10-21T23:23:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1978,6 +1996,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-21T23:23:25+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1986,7 +2015,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-21T20:12:20+00:00",
+     "checked": "2026-10-21T23:23:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2160,7 +2189,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-21T20:12:23+00:00",
+     "checked": "2026-10-21T23:23:27+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -2381,7 +2410,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:24+00:00",
+     "checked": "2026-10-21T23:23:28+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2574,7 +2603,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:25+00:00",
+     "checked": "2026-10-21T23:23:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2756,7 +2785,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:29+00:00",
+     "checked": "2026-10-21T23:23:30+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2966,7 +2995,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:32+00:00",
+     "checked": "2026-10-21T23:23:33+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3148,7 +3177,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:36+00:00",
+     "checked": "2026-10-21T23:23:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3330,7 +3359,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:39+00:00",
+     "checked": "2026-10-21T23:23:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3512,7 +3541,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:43+00:00",
+     "checked": "2026-10-21T23:23:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3706,7 +3735,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:12:46+00:00",
+     "checked": "2026-10-21T23:23:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3868,7 +3897,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-21T20:12:49+00:00",
+     "checked": "2026-10-21T23:23:54+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -4055,7 +4084,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-21T20:13:18+00:00",
+     "checked": "2026-10-21T23:24:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4213,7 +4242,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:13:20+00:00",
+     "checked": "2026-10-21T23:24:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4359,7 +4388,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:13:20+00:00",
+     "checked": "2026-10-21T23:24:30+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4500,8 +4529,8 @@
       }
      ],
      "retailer": "PB Tech",
-     "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-     "checked": "2026-10-21T20:13:21+00:00",
+     "error": null,
+     "checked": "2026-10-21T23:24:30+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 103.2,
      "was": null,
@@ -4631,7 +4660,7 @@
      "was": 137.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:14:24+00:00",
+     "checked": "2026-10-21T23:24:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4657,18 +4686,18 @@
    ],
    "deal": {
     "label": "great",
-    "price": 109.6,
-    "retailer": "JB Hi-Fi",
+    "price": 103.2,
+    "retailer": "PB Tech",
     "shop": null,
-    "url": "https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black",
+    "url": "https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch",
     "typical": 129.0,
-    "pct_vs_typical": 15.038759689922484,
-    "was": 137.0,
-    "was_verified": true,
+    "pct_vs_typical": 20.0,
+    "was": null,
+    "was_verified": false,
     "days": 15,
     "reasons": [
-     "15% below its 90-day typical $129.00",
-     "20% off a verified RRP of $137.00"
+     "20% below its 90-day typical $129.00",
+     "$6.40 cheaper than the next store"
     ]
    }
   },
@@ -4793,7 +4822,7 @@
      "was": 978.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-21T20:14:24+00:00",
+     "checked": "2026-10-21T23:24:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4940,8 +4969,8 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-21T20:14:27+00:00",
-     "error": null,
+     "checked": "2026-10-21T23:24:49+00:00",
+     "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
        "gtin": "824142346754"
@@ -5060,7 +5089,7 @@
      "was": 599.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-21T20:14:29+00:00",
+     "checked": "2026-10-21T23:25:42+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -5112,17 +5141,17 @@
    "deal": {
     "label": "good",
     "price": 549.0,
-    "retailer": "PB Tech",
-    "shop": null,
-    "url": "https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi",
+    "retailer": "PriceSpy",
+    "shop": "PB Tech",
+    "url": "https://pricespy.co.nz/product.php?p=14502997",
     "typical": 599.0,
     "pct_vs_typical": 8.347245409015025,
-    "was": null,
-    "was_verified": false,
+    "was": 599.0,
+    "was_verified": true,
     "days": 15,
     "reasons": [
      "8% below its 90-day typical $599.00",
-     "same price as another store"
+     "8% off a verified RRP of $599.00"
     ]
    }
   }
