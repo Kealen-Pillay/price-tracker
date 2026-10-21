@@ -38,8 +38,8 @@
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 19,
-  "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": 1
+  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 20,
+  "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": 1
  },
  "deals": {
   "dior-sauvage-edp-100ml": "typical",
@@ -76,7 +76,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:13:04+00:00"
+   "last_ok": "2026-10-21T04:52:42+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -94,7 +94,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:17:03+00:00"
+   "last_ok": "2026-10-21T04:55:11+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -112,7 +112,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:12:50+00:00"
+   "last_ok": "2026-10-21T04:52:26+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -130,7 +130,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:13:03+00:00"
+   "last_ok": "2026-10-21T04:52:39+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -148,7 +148,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:13:38+00:00",
+   "last_ok": "2026-10-21T04:52:52+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -168,7 +168,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:14:13+00:00",
+   "last_ok": "2026-10-21T04:52:56+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -188,7 +188,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:14:35+00:00"
+   "last_ok": "2026-10-21T04:53:17+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -206,9 +206,9 @@
     0,
     1
    ],
-   "last_ok": "2026-10-20T23:15:25+00:00",
+   "last_ok": "2026-10-21T04:53:54+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-10-20T23:14:40+00:00"
+   "last_error_at": "2026-10-21T04:53:21+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -226,7 +226,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:16:29+00:00"
+   "last_ok": "2026-10-21T04:54:12+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -244,13 +244,11 @@
     1,
     1
    ],
-   "last_ok": "2026-10-20T23:15:28+00:00"
+   "last_ok": "2026-10-21T04:53:57+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "attempts": [
-    1,
-    1,
     0,
     1,
     1,
@@ -260,11 +258,13 @@
     1,
     1,
     0,
-    1
+    1,
+    1,
+    0
    ],
-   "last_ok": "2026-10-20T23:16:33+00:00",
-   "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-10-20T23:15:29+00:00"
+   "last_ok": "2026-10-21T04:53:57+00:00",
+   "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+   "last_error_at": "2026-10-21T04:54:15+00:00"
   }
  },
  "store_status": {
