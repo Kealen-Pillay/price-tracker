@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T22:33:03+00:00",
+ "updated": "2026-10-25T04:47:47+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -114,6 +114,13 @@
        "was": 259.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:44:39+00:00",
+       "price": 249.99,
+       "was": 259.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -122,7 +129,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-24T22:30:02+00:00",
+     "checked": "2026-10-25T04:44:39+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -143,7 +150,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-24T22:30:16+00:00",
+     "checked": "2026-10-25T04:44:55+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -193,7 +200,7 @@
     "pct_vs_typical": 0.0,
     "was": 259.0,
     "was_verified": false,
-    "days": 16,
+    "days": 17,
     "reasons": [
      "0% below its 90-day typical $249.99",
      "store says was $259.00 (3% off), but it hasn't been seen selling at that price"
@@ -313,6 +320,13 @@
        "was": 299.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:44:57+00:00",
+       "price": 289.99,
+       "was": 299.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -321,7 +335,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-24T22:30:18+00:00",
+     "checked": "2026-10-25T04:44:57+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -480,6 +494,13 @@
        "was": 299.99,
        "in_stock": false,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:00+00:00",
+       "price": 289.99,
+       "was": 299.99,
+       "in_stock": false,
+       "cur": "NZD"
       }
      ],
      "retailer": "Bargain Chemist",
@@ -488,7 +509,7 @@
      "was": 299.99,
      "in_stock": false,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:19+00:00",
+     "checked": "2026-10-25T04:45:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -609,6 +630,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:02+00:00",
+       "price": 318.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -617,7 +645,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:21+00:00",
+     "checked": "2026-10-25T04:45:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -652,7 +680,7 @@
     "pct_vs_typical": 0.0,
     "was": 299.0,
     "was_verified": true,
-    "days": 18,
+    "days": 19,
     "reasons": [
      "0% below its 90-day typical $289.99",
      "3% off a verified RRP of $299.00",
@@ -670,7 +698,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-24T22:30:22+00:00",
+     "checked": "2026-10-25T04:45:02+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -712,7 +740,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-24T22:30:23+00:00",
+     "checked": "2026-10-25T04:45:04+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -851,6 +879,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:09+00:00",
+       "price": 275.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -859,7 +894,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:27+00:00",
+     "checked": "2026-10-25T04:45:09+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -974,6 +1009,13 @@
        "was": 275.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:09+00:00",
+       "price": 209.99,
+       "was": 275.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -986,7 +1028,7 @@
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-24T22:30:28+00:00",
+     "checked": "2026-10-25T04:45:09+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1013,7 +1055,7 @@
     "pct_vs_typical": 0.0,
     "was": 275.0,
     "was_verified": true,
-    "days": 18,
+    "days": 19,
     "reasons": [
      "0% below its 90-day typical $209.99",
      "24% off a verified RRP of $275.00",
@@ -1128,6 +1170,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:12+00:00",
+       "price": 319.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -1136,7 +1185,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:29+00:00",
+     "checked": "2026-10-25T04:45:12+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1251,6 +1300,13 @@
        "was": 319.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:12+00:00",
+       "price": 239.99,
+       "was": 319.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -1263,7 +1319,7 @@
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-24T22:30:31+00:00",
+     "checked": "2026-10-25T04:45:12+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1290,7 +1346,7 @@
     "pct_vs_typical": 0.0,
     "was": 319.0,
     "was_verified": true,
-    "days": 18,
+    "days": 19,
     "reasons": [
      "0% below its 90-day typical $239.99",
      "25% off a verified RRP of $319.00",
@@ -1405,6 +1461,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:13+00:00",
+       "price": 226.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Life Pharmacy",
@@ -1413,7 +1476,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:33+00:00",
+     "checked": "2026-10-25T04:45:13+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1437,7 +1500,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-24T22:30:37+00:00",
+     "checked": "2026-10-25T04:45:18+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1559,6 +1622,13 @@
        "was": 226.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:45:14+00:00",
+       "price": 169.99,
+       "was": 226.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -1571,7 +1641,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-24T22:30:34+00:00",
+     "checked": "2026-10-25T04:45:14+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1599,7 +1669,7 @@
     "pct_vs_typical": 0.0,
     "was": 226.0,
     "was_verified": true,
-    "days": 18,
+    "days": 19,
     "reasons": [
      "0% below its 90-day typical $169.99",
      "25% off a verified RRP of $226.00",
@@ -1787,6 +1857,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:20+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -1795,7 +1876,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-24T22:30:39+00:00",
+     "checked": "2026-10-25T04:45:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2000,6 +2081,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:21+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -2008,7 +2100,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-24T22:30:40+00:00",
+     "checked": "2026-10-25T04:45:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2213,6 +2305,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:26+00:00",
+       "price": 399.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -2221,7 +2324,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-24T22:30:42+00:00",
+     "checked": "2026-10-25T04:45:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2403,6 +2506,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:30+00:00",
+       "price": 299.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "identity": {
@@ -2417,7 +2531,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-24T22:30:45+00:00",
+     "checked": "2026-10-25T04:45:30+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -2462,7 +2576,7 @@
     "pct_vs_typical": 0.0,
     "was": 399.99,
     "was_verified": true,
-    "days": 16,
+    "days": 17,
     "reasons": [
      "0% below its 90-day typical $299.99",
      "25% off a verified RRP of $399.99",
@@ -2652,6 +2766,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:31+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -2660,7 +2785,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:47+00:00",
+     "checked": "2026-10-25T04:45:31+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2867,6 +2992,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:32+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -2875,7 +3011,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:47+00:00",
+     "checked": "2026-10-25T04:45:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3071,6 +3207,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:36+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -3079,7 +3226,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:51+00:00",
+     "checked": "2026-10-25T04:45:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3127,7 +3274,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 18,
+    "days": 19,
     "reasons": [
      "0% below its 90-day typical $300.00",
      "same price as another store"
@@ -3303,6 +3450,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:40+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -3311,7 +3469,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:30:55+00:00",
+     "checked": "2026-10-25T04:45:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3507,6 +3665,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:44+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -3515,7 +3684,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:31:00+00:00",
+     "checked": "2026-10-25T04:45:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3711,6 +3880,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:49+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -3719,7 +3899,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:31:05+00:00",
+     "checked": "2026-10-25T04:45:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3915,6 +4095,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:51+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -3923,7 +4114,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:31:07+00:00",
+     "checked": "2026-10-25T04:45:51+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4131,6 +4322,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-10-25T04:45:53+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -4139,7 +4341,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:31:11+00:00",
+     "checked": "2026-10-25T04:45:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4189,7 +4391,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 18,
+    "days": 19,
     "reasons": [
      "0% below its 90-day typical $360.00",
      "same price as another store"
@@ -4301,7 +4503,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-24T22:31:14+00:00",
+     "checked": "2026-10-25T04:45:57+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -4502,6 +4704,17 @@
         "US 10",
         "US 11"
        ]
+      },
+      {
+       "t": "2026-10-25T04:46:26+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "US 10",
+        "US 11"
+       ]
       }
      ],
      "retailer": "JD Sports",
@@ -4510,7 +4723,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-24T22:31:45+00:00",
+     "checked": "2026-10-25T04:46:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4555,7 +4768,7 @@
     "pct_vs_typical": -80.0,
     "was": null,
     "was_verified": false,
-    "days": 16,
+    "days": 17,
     "reasons": [
      "80% above its 90-day typical $200.00"
     ]
@@ -4674,6 +4887,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:46:29+00:00",
+       "price": 143.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -4682,7 +4902,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:31:47+00:00",
+     "checked": "2026-10-25T04:46:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4715,7 +4935,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 16,
+    "days": 17,
     "reasons": [
      "0% below its 90-day typical $143.99"
     ]
@@ -4834,6 +5054,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:46:29+00:00",
+       "price": 139.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
@@ -4842,7 +5069,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:31:48+00:00",
+     "checked": "2026-10-25T04:46:29+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4875,7 +5102,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 16,
+    "days": 17,
     "reasons": [
      "0% below its 90-day typical $139.00"
     ]
@@ -4994,11 +5221,18 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:46:30+00:00",
+       "price": 103.2,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "PB Tech",
-     "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-     "checked": "2026-10-24T22:31:49+00:00",
+     "error": null,
+     "checked": "2026-10-25T04:46:30+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 103.2,
      "was": null,
@@ -5134,6 +5368,13 @@
        "was": 137.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:46:46+00:00",
+       "price": 109.6,
+       "was": 137.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -5142,7 +5383,7 @@
      "was": 137.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:32:53+00:00",
+     "checked": "2026-10-25T04:46:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5168,18 +5409,18 @@
    ],
    "deal": {
     "label": "great",
-    "price": 109.6,
-    "retailer": "JB Hi-Fi",
+    "price": 103.2,
+    "retailer": "PB Tech",
     "shop": null,
-    "url": "https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black",
+    "url": "https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch",
     "typical": 129.0,
-    "pct_vs_typical": 15.038759689922484,
-    "was": 137.0,
-    "was_verified": true,
-    "days": 17,
+    "pct_vs_typical": 20.0,
+    "was": null,
+    "was_verified": false,
+    "days": 18,
     "reasons": [
-     "15% below its 90-day typical $129.00",
-     "20% off a verified RRP of $137.00"
+     "20% below its 90-day typical $129.00",
+     "$6.40 cheaper than the next store"
     ]
    }
   },
@@ -5310,6 +5551,13 @@
        "was": 978.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-25T04:46:46+00:00",
+       "price": 718.0,
+       "was": 978.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -5318,7 +5566,7 @@
      "was": 978.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-24T22:32:54+00:00",
+     "checked": "2026-10-25T04:46:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5351,7 +5599,7 @@
     "pct_vs_typical": 26.58486707566462,
     "was": 978.0,
     "was_verified": true,
-    "days": 16,
+    "days": 17,
     "reasons": [
      "27% below its 90-day typical $978.00",
      "27% off a verified RRP of $978.00"
@@ -5479,8 +5727,8 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-24T22:32:58+00:00",
-     "error": null,
+     "checked": "2026-10-25T04:46:51+00:00",
+     "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
        "gtin": "824142346754"
@@ -5620,7 +5868,7 @@
      "was": 599.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-24T22:33:00+00:00",
+     "checked": "2026-10-25T04:47:46+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -5672,17 +5920,17 @@
    "deal": {
     "label": "good",
     "price": 549.0,
-    "retailer": "PB Tech",
-    "shop": null,
-    "url": "https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi",
+    "retailer": "PriceSpy",
+    "shop": "PB Tech",
+    "url": "https://pricespy.co.nz/product.php?p=14502997",
     "typical": 599.0,
     "pct_vs_typical": 8.347245409015025,
-    "was": null,
-    "was_verified": false,
+    "was": 599.0,
+    "was_verified": true,
     "days": 18,
     "reasons": [
      "8% below its 90-day typical $599.00",
-     "same price as another store"
+     "8% off a verified RRP of $599.00"
     ]
    }
   }
