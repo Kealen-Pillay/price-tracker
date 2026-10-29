@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T05:55:08+00:00",
+ "updated": "2026-10-29T15:19:37+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -157,7 +157,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-29T05:51:35+00:00",
+     "checked": "2026-10-29T15:15:22+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -178,7 +178,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-29T05:51:50+00:00",
+     "checked": "2026-10-29T15:15:37+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -391,7 +391,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-29T05:51:53+00:00",
+     "checked": "2026-10-29T15:15:39+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -593,7 +593,7 @@
      "was": 299.99,
      "in_stock": false,
      "method": "shopify",
-     "checked": "2026-10-29T05:51:55+00:00",
+     "checked": "2026-10-29T15:15:43+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -757,7 +757,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:51:56+00:00",
+     "checked": "2026-10-29T15:15:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -810,7 +810,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-29T05:51:57+00:00",
+     "checked": "2026-10-29T15:15:44+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -852,7 +852,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-29T05:51:58+00:00",
+     "checked": "2026-10-29T15:15:47+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1034,7 +1034,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:02+00:00",
+     "checked": "2026-10-29T15:15:51+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1184,6 +1184,13 @@
        "was": 275.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-29T15:15:51+00:00",
+       "price": 189.99,
+       "was": 275.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -1192,11 +1199,11 @@
      },
      "retailer": "Chemist Warehouse",
      "title": "Prada Paradigme For Men Eau De Parfum 100ml",
-     "price": 209.99,
+     "price": 189.99,
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-29T05:52:02+00:00",
+     "checked": "2026-10-29T15:15:51+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1214,20 +1221,20 @@
     "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml"
    ],
    "deal": {
-    "label": "typical",
-    "price": 209.99,
+    "label": "good",
+    "price": 189.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml",
     "typical": 209.99,
-    "pct_vs_typical": 0.0,
+    "pct_vs_typical": 9.52426306014572,
     "was": 275.0,
     "was_verified": true,
     "days": 23,
     "reasons": [
-     "0% below its 90-day typical $209.99",
-     "24% off a verified RRP of $275.00",
-     "$65.01 cheaper than the next store"
+     "10% below its 90-day typical $209.99",
+     "31% off a verified RRP of $275.00",
+     "$85.01 cheaper than the next store"
     ]
    }
   },
@@ -1381,7 +1388,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:04+00:00",
+     "checked": "2026-10-29T15:15:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1531,6 +1538,13 @@
        "was": 319.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-29T15:15:54+00:00",
+       "price": 199.99,
+       "was": 319.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -1539,11 +1553,11 @@
      },
      "retailer": "Chemist Warehouse",
      "title": "Yves Saint Laurent Myslf Le Parfum 100ml",
-     "price": 239.99,
+     "price": 199.99,
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-29T05:52:05+00:00",
+     "checked": "2026-10-29T15:15:54+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1561,20 +1575,20 @@
     "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml"
    ],
    "deal": {
-    "label": "typical",
-    "price": 239.99,
+    "label": "great",
+    "price": 199.99,
     "retailer": "Chemist Warehouse",
     "shop": null,
     "url": "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml",
     "typical": 239.99,
-    "pct_vs_typical": 0.0,
+    "pct_vs_typical": 16.6673611400475,
     "was": 319.0,
     "was_verified": true,
     "days": 23,
     "reasons": [
-     "0% below its 90-day typical $239.99",
-     "25% off a verified RRP of $319.00",
-     "$79.01 cheaper than the next store"
+     "17% below its 90-day typical $239.99",
+     "37% off a verified RRP of $319.00",
+     "$119.01 cheaper than the next store"
     ]
    }
   },
@@ -1728,7 +1742,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:07+00:00",
+     "checked": "2026-10-29T15:16:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1752,7 +1766,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-10-29T05:52:11+00:00",
+     "checked": "2026-10-29T15:16:37+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1921,7 +1935,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-10-29T05:52:09+00:00",
+     "checked": "2026-10-29T15:16:32+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -2200,7 +2214,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-29T05:52:12+00:00",
+     "checked": "2026-10-29T15:16:39+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2468,7 +2482,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-29T05:52:13+00:00",
+     "checked": "2026-10-29T15:16:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2736,7 +2750,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-29T05:52:17+00:00",
+     "checked": "2026-10-29T15:16:42+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2987,7 +3001,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-10-29T05:52:22+00:00",
+     "checked": "2026-10-29T15:16:47+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -3285,7 +3299,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:23+00:00",
+     "checked": "2026-10-29T15:16:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3555,7 +3569,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:24+00:00",
+     "checked": "2026-10-29T15:16:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3814,7 +3828,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:26+00:00",
+     "checked": "2026-10-29T15:16:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4101,7 +4115,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:30+00:00",
+     "checked": "2026-10-29T15:16:56+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4360,7 +4374,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:34+00:00",
+     "checked": "2026-10-29T15:17:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4619,7 +4633,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:39+00:00",
+     "checked": "2026-10-29T15:17:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4878,7 +4892,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:41+00:00",
+     "checked": "2026-10-29T15:17:09+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5149,7 +5163,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:52:45+00:00",
+     "checked": "2026-10-29T15:17:13+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5311,7 +5325,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-29T05:52:47+00:00",
+     "checked": "2026-10-29T15:17:17+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -5575,7 +5589,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-29T05:53:18+00:00",
+     "checked": "2026-10-29T15:17:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5782,7 +5796,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:53:21+00:00",
+     "checked": "2026-10-29T15:17:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5977,7 +5991,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:53:22+00:00",
+     "checked": "2026-10-29T15:17:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6150,13 +6164,20 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-29T15:17:53+00:00",
+       "price": 129.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "PB Tech",
-     "error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-     "checked": "2026-10-29T05:53:22+00:00",
+     "error": null,
+     "checked": "2026-10-29T15:17:53+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
-     "price": 103.2,
+     "price": 129.0,
      "was": null,
      "in_stock": true,
      "method": "json-ld",
@@ -6325,6 +6346,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-10-29T15:18:39+00:00",
+       "price": 137.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -6333,7 +6361,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:54:28+00:00",
+     "checked": "2026-10-29T15:18:39+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6359,17 +6387,18 @@
    ],
    "deal": {
     "label": "typical",
-    "price": 137.0,
-    "retailer": "JB Hi-Fi",
+    "price": 129.0,
+    "retailer": "PB Tech",
     "shop": null,
-    "url": "https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black",
+    "url": "https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch",
     "typical": 129.0,
-    "pct_vs_typical": -6.2015503875969,
+    "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 21,
+    "days": 22,
     "reasons": [
-     "6% above its 90-day typical $129.00"
+     "0% below its 90-day typical $129.00",
+     "$8.00 cheaper than the next store"
     ]
    }
   },
@@ -6543,7 +6572,7 @@
      "was": 978.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-10-29T05:54:28+00:00",
+     "checked": "2026-10-29T15:18:39+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6725,8 +6754,8 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-29T05:54:32+00:00",
-     "error": null,
+     "checked": "2026-10-29T15:18:41+00:00",
+     "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
        "gtin": "824142346754"
@@ -6894,7 +6923,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-10-29T05:55:06+00:00",
+     "checked": "2026-10-29T15:19:34+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -6916,7 +6945,7 @@
       },
       {
        "shop": "Paradigm PC's",
-       "price": 604.7,
+       "price": 604.71,
        "was": null,
        "in_stock": true,
        "condition": "New",
@@ -6946,17 +6975,16 @@
    "deal": {
     "label": "typical",
     "price": 599.0,
-    "retailer": "PB Tech",
-    "shop": null,
-    "url": "https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi",
+    "retailer": "PriceSpy",
+    "shop": "PB Tech",
+    "url": "https://pricespy.co.nz/product.php?p=14502997",
     "typical": 599.0,
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
     "days": 22,
     "reasons": [
-     "0% below its 90-day typical $599.00",
-     "same price as another store"
+     "0% below its 90-day typical $599.00"
     ]
    }
   }

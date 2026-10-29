@@ -38,16 +38,16 @@
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 49,
-  "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": 3
+  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 50,
+  "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": 1
  },
  "deals": {
   "dior-sauvage-edp-100ml": "typical",
   "dior-sauvage-elixir-60ml": "typical",
   "bleu-de-chanel-edp-100ml": null,
   "bleu-de-chanel-parfum-100ml": null,
-  "prada-paradigme-edp-100ml": "typical",
-  "ysl-myslf-le-parfum-100ml": "typical",
+  "prada-paradigme-edp-100ml": "good",
+  "ysl-myslf-le-parfum-100ml": "great",
   "armani-stronger-with-you-intensely-100ml": "good",
   "dr-martens-adrian-tassel-loafer": "typical",
   "birkenstock-arizona": "typical",
@@ -76,7 +76,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:52:09+00:00"
+   "last_ok": "2026-10-29T15:16:32+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -94,7 +94,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:55:06+00:00"
+   "last_ok": "2026-10-29T15:19:34+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -112,7 +112,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:51:55+00:00"
+   "last_ok": "2026-10-29T15:15:43+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -130,7 +130,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:52:07+00:00"
+   "last_ok": "2026-10-29T15:16:32+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -148,7 +148,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:52:17+00:00",
+   "last_ok": "2026-10-29T15:16:42+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -168,7 +168,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:52:22+00:00",
+   "last_ok": "2026-10-29T15:16:47+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -188,7 +188,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:52:45+00:00"
+   "last_ok": "2026-10-29T15:17:13+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -206,9 +206,9 @@
     0,
     1
    ],
-   "last_ok": "2026-10-29T05:53:18+00:00",
+   "last_ok": "2026-10-29T15:17:49+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-10-29T05:52:47+00:00"
+   "last_error_at": "2026-10-29T15:17:17+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -226,7 +226,7 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:54:28+00:00"
+   "last_ok": "2026-10-29T15:18:39+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -244,13 +244,11 @@
     1,
     1
    ],
-   "last_ok": "2026-10-29T05:53:22+00:00"
+   "last_ok": "2026-10-29T15:17:53+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "attempts": [
-    1,
-    1,
     0,
     1,
     1,
@@ -260,11 +258,13 @@
     0,
     1,
     0,
-    1
+    1,
+    1,
+    0
    ],
-   "last_ok": "2026-10-29T05:54:32+00:00",
-   "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-10-29T05:53:22+00:00"
+   "last_ok": "2026-10-29T15:17:53+00:00",
+   "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+   "last_error_at": "2026-10-29T15:18:41+00:00"
   }
  },
  "store_status": {
@@ -280,5 +280,8 @@
   "www.platypusshoes.co.nz": "ok",
   "www.orbitkey.com.au": "ok"
  },
- "queued_alerts": []
+ "queued_alerts": [
+  "📉 Price drop 10% (from $209.99) — <b>Prada Paradigme EDP 100ml</b> at Chemist Warehouse: $189.99 (was $275.00, save $85.01)\n👍 Deal rating: good — 10% below its 90-day typical $209.99\n<a href=\"https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml\">View deal</a>",
+  "📉 Price drop 17% (from $239.99) — <b>YSL MYSLF Le Parfum 100ml</b> at Chemist Warehouse: $199.99 (was $319.00, save $119.01) — 🏆 lowest price seen\n🔥 Deal rating: great — 17% below its 90-day typical $239.99\n<a href=\"https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml\">View deal</a>"
+ ]
 }
