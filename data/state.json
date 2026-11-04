@@ -38,16 +38,16 @@
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 67
+  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 68
  },
  "deals": {
-  "dior-sauvage-edp-100ml": "typical",
-  "dior-sauvage-elixir-60ml": "typical",
+  "dior-sauvage-edp-100ml": "good",
+  "dior-sauvage-elixir-60ml": "good",
   "bleu-de-chanel-edp-100ml": null,
   "bleu-de-chanel-parfum-100ml": null,
-  "prada-paradigme-edp-100ml": "good",
+  "prada-paradigme-edp-100ml": "great",
   "ysl-myslf-le-parfum-100ml": "great",
-  "armani-stronger-with-you-intensely-100ml": "good",
+  "armani-stronger-with-you-intensely-100ml": "great",
   "dr-martens-adrian-tassel-loafer": "high",
   "birkenstock-arizona": "typical",
   "birkenstock-boston": "typical",
@@ -75,7 +75,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:38:47+00:00"
+   "last_ok": "2026-11-04T12:11:54+00:00"
   },
   "pricespy.co.nz": {
    "name": "PriceSpy",
@@ -93,7 +93,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:41:28+00:00"
+   "last_ok": "2026-11-04T12:13:22+00:00"
   },
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -111,7 +111,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:38:32+00:00"
+   "last_ok": "2026-11-04T12:11:41+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -129,7 +129,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:38:46+00:00"
+   "last_ok": "2026-11-04T12:11:53+00:00"
   },
   "www.drmartens.co.nz": {
    "name": "Dr Martens NZ",
@@ -147,7 +147,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:38:55+00:00",
+   "last_ok": "2026-11-04T12:12:02+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -167,7 +167,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:38:58+00:00",
+   "last_ok": "2026-11-04T12:12:07+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -187,7 +187,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:39:23+00:00"
+   "last_ok": "2026-11-04T12:12:29+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -205,9 +205,9 @@
     0,
     1
    ],
-   "last_ok": "2026-11-04T00:40:06+00:00",
+   "last_ok": "2026-11-04T12:13:02+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-11-04T00:39:27+00:00"
+   "last_error_at": "2026-11-04T12:12:32+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -225,7 +225,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:40:53+00:00"
+   "last_ok": "2026-11-04T12:13:18+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -243,25 +243,25 @@
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:40:10+00:00"
+   "last_ok": "2026-11-04T12:13:05+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
    "attempts": [
     1,
+    0,
+    0,
+    0,
+    0,
     1,
     1,
-    0,
-    0,
-    0,
-    0,
     1,
     1,
     1,
     1,
     1
    ],
-   "last_ok": "2026-11-04T00:40:56+00:00",
+   "last_ok": "2026-11-04T12:13:20+00:00",
    "last_error": "No price found on page (http status 403). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-11-03T11:59:27+00:00"
   }
@@ -279,5 +279,11 @@
   "www.platypusshoes.co.nz": "ok",
   "www.orbitkey.com.au": "ok"
  },
- "queued_alerts": []
+ "queued_alerts": [
+  "📉 Price drop 10% (from $249.99) — <b>Dior Sauvage EDP 100ml</b> at Chemist Warehouse: $224.99 (was $259.00, save $34.01)\n👍 Deal rating: good — 10% below its 90-day typical $249.99\n<a href=\"https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml\">View deal</a>",
+  "📉 Price drop 10% (from $289.99) — <b>Dior Sauvage Elixir 60ml</b> at Chemist Warehouse: $260.99 (was $299.00, save $38.01)\n👍 Deal rating: good — 10% below its 90-day typical $289.99\n<a href=\"https://www.chemistwarehouse.co.nz/buy/112579/christian-dior-sauvage-elixir-parfum-60ml\">View deal</a>",
+  "📉 Price drop 10% (from $189.99) — <b>Prada Paradigme EDP 100ml</b> at Chemist Warehouse: $170.99 (was $275.00, save $104.01) — 🏆 lowest price seen\n🔥 Deal rating: great — 19% below its 90-day typical $209.99\n<a href=\"https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml\">View deal</a>",
+  "📉 Price drop 10% (from $199.99) — <b>YSL MYSLF Le Parfum 100ml</b> at Chemist Warehouse: $179.99 (was $319.00, save $139.01) — 🏆 lowest price seen\n🔥 Deal rating: great — 25% below its 90-day typical $239.99\n<a href=\"https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml\">View deal</a>",
+  "📉 Price drop 10% (from $149.99) — <b>Armani Stronger With You Intensely EDP 100ml</b> at Chemist Warehouse: $134.99 (was $226.00, save $91.01) — 🏆 lowest price seen\n🔥 Deal rating: great — 21% below its 90-day typical $169.99\n<a href=\"https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml\">View deal</a>"
+ ]
 }
