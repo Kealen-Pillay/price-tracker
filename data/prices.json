@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T21:52:28+00:00",
+ "updated": "2026-11-11T06:29:38+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -226,6 +226,13 @@
        "was": 259.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-11T06:27:06+00:00",
+       "price": 249.99,
+       "was": 259.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -234,7 +241,7 @@
      "was": 259.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-11-10T21:49:16+00:00",
+     "checked": "2026-11-11T06:27:06+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -255,7 +262,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-11-10T21:49:34+00:00",
+     "checked": "2026-11-11T06:27:21+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -305,7 +312,7 @@
     "pct_vs_typical": 0.0,
     "was": 259.0,
     "was_verified": false,
-    "days": 32,
+    "days": 33,
     "reasons": [
      "0% below its 90-day typical $249.99",
      "store says was $259.00 (3% off), but it hasn't been seen selling at that price"
@@ -537,6 +544,13 @@
        "was": 299.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-11T06:27:24+00:00",
+       "price": 289.99,
+       "was": 299.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Chemist Warehouse",
@@ -545,7 +559,7 @@
      "was": 299.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-11-10T21:49:37+00:00",
+     "checked": "2026-11-11T06:27:24+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -824,7 +838,7 @@
      "was": 299.99,
      "in_stock": false,
      "method": "shopify",
-     "checked": "2026-11-10T21:49:39+00:00",
+     "checked": "2026-11-11T06:27:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1065,7 +1079,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:49:40+00:00",
+     "checked": "2026-11-11T06:27:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1100,7 +1114,7 @@
     "pct_vs_typical": 0.0,
     "was": 299.0,
     "was_verified": true,
-    "days": 35,
+    "days": 36,
     "reasons": [
      "0% below its 90-day typical $289.99",
      "3% off a verified RRP of $299.00",
@@ -1118,7 +1132,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-11-10T21:49:40+00:00",
+     "checked": "2026-11-11T06:27:27+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1160,7 +1174,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-11-10T21:49:41+00:00",
+     "checked": "2026-11-11T06:27:28+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -1419,7 +1433,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:49:46+00:00",
+     "checked": "2026-11-11T06:27:33+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -1646,6 +1660,13 @@
        "was": 275.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-11T06:27:33+00:00",
+       "price": 189.99,
+       "was": 275.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -1658,7 +1679,7 @@
      "was": 275.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-11-10T21:49:46+00:00",
+     "checked": "2026-11-11T06:27:33+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -1685,7 +1706,7 @@
     "pct_vs_typical": 9.52426306014572,
     "was": 275.0,
     "was_verified": true,
-    "days": 35,
+    "days": 36,
     "reasons": [
      "10% below its 90-day typical $209.99",
      "31% off a verified RRP of $275.00",
@@ -1920,7 +1941,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:49:48+00:00",
+     "checked": "2026-11-11T06:27:35+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2147,6 +2168,13 @@
        "was": 319.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-11T06:27:38+00:00",
+       "price": 199.99,
+       "was": 319.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -2159,7 +2187,7 @@
      "was": 319.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-11-10T21:49:51+00:00",
+     "checked": "2026-11-11T06:27:38+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -2186,7 +2214,7 @@
     "pct_vs_typical": 16.6673611400475,
     "was": 319.0,
     "was_verified": true,
-    "days": 35,
+    "days": 36,
     "reasons": [
      "17% below its 90-day typical $239.99",
      "37% off a verified RRP of $319.00",
@@ -2421,7 +2449,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:49:52+00:00",
+     "checked": "2026-11-11T06:27:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -2445,7 +2473,7 @@
      "was": null,
      "in_stock": null,
      "method": "json-ld",
-     "checked": "2026-11-10T21:49:56+00:00",
+     "checked": "2026-11-11T06:27:44+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -2679,6 +2707,13 @@
        "was": 226.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-11T06:27:42+00:00",
+       "price": 149.99,
+       "was": 226.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "identity": {
@@ -2691,7 +2726,7 @@
      "was": 226.0,
      "in_stock": true,
      "method": "microdata",
-     "checked": "2026-11-10T21:49:54+00:00",
+     "checked": "2026-11-11T06:27:42+00:00",
      "error": null,
      "sizes_in": null,
      "my_sizes": null,
@@ -2719,7 +2754,7 @@
     "pct_vs_typical": 11.765397964586152,
     "was": 226.0,
     "was_verified": true,
-    "days": 35,
+    "days": 36,
     "reasons": [
      "12% below its 90-day typical $169.99",
      "34% off a verified RRP of $226.00",
@@ -3091,7 +3126,7 @@
      "was": null,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-10T21:49:58+00:00",
+     "checked": "2026-11-11T06:27:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3472,6 +3507,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-11T06:27:47+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3480,7 +3526,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-10T21:49:59+00:00",
+     "checked": "2026-11-11T06:27:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3861,6 +3907,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-11T06:27:52+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3869,7 +3926,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-10T21:50:02+00:00",
+     "checked": "2026-11-11T06:27:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4241,7 +4298,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-10T21:50:06+00:00",
+     "checked": "2026-11-11T06:27:53+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -4286,7 +4343,7 @@
     "pct_vs_typical": 12.500390637207412,
     "was": 399.99,
     "was_verified": true,
-    "days": 32,
+    "days": 33,
     "reasons": [
      "13% below its 90-day typical $319.99",
      "30% off a verified RRP of $399.99",
@@ -4660,7 +4717,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:08+00:00",
+     "checked": "2026-11-11T06:27:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5051,7 +5108,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:09+00:00",
+     "checked": "2026-11-11T06:27:55+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5431,7 +5488,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:11+00:00",
+     "checked": "2026-11-11T06:27:58+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5839,7 +5896,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:15+00:00",
+     "checked": "2026-11-11T06:28:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6219,7 +6276,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:17+00:00",
+     "checked": "2026-11-11T06:28:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6599,7 +6656,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:21+00:00",
+     "checked": "2026-11-11T06:28:08+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6979,7 +7036,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:25+00:00",
+     "checked": "2026-11-11T06:28:13+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7371,7 +7428,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:50:28+00:00",
+     "checked": "2026-11-11T06:28:15+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7533,7 +7590,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-10T21:50:30+00:00",
+     "checked": "2026-11-11T06:28:18+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -7918,7 +7975,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-10T21:51:01+00:00",
+     "checked": "2026-11-11T06:28:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8202,7 +8259,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:51:03+00:00",
+     "checked": "2026-11-11T06:28:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8474,7 +8531,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:51:04+00:00",
+     "checked": "2026-11-11T06:28:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8728,7 +8785,7 @@
      ],
      "retailer": "PB Tech",
      "error": null,
-     "checked": "2026-11-10T21:51:04+00:00",
+     "checked": "2026-11-11T06:28:50+00:00",
      "title": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charging Pad with Qi2 15W - Black",
      "price": 129.0,
      "was": null,
@@ -8976,6 +9033,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-11T06:29:03+00:00",
+       "price": 137.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -8984,7 +9048,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:51:47+00:00",
+     "checked": "2026-11-11T06:29:03+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9018,7 +9082,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 34,
+    "days": 35,
     "reasons": [
      "0% below its 90-day typical $129.00",
      "$8.00 cheaper than the next store"
@@ -9272,7 +9336,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-10T21:51:48+00:00",
+     "checked": "2026-11-11T06:29:03+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9516,7 +9580,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-10T21:51:51+00:00",
+     "checked": "2026-11-11T06:29:07+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9762,7 +9826,7 @@
      "was": 599.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-10T21:52:25+00:00",
+     "checked": "2026-11-11T06:29:37+00:00",
      "error": null,
      "identity": {
       "ids": {},
@@ -9784,7 +9848,7 @@
       },
       {
        "shop": "Paradigm PC's",
-       "price": 522.22,
+       "price": 522.23,
        "was": null,
        "in_stock": true,
        "condition": "New",
@@ -9793,7 +9857,7 @@
       },
       {
        "shop": "Ascent",
-       "price": 637.61,
+       "price": 650.57,
        "was": null,
        "in_stock": true,
        "condition": "New",
