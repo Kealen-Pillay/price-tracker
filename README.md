@@ -48,8 +48,14 @@ python -m tracker probe "https://www.chemistwarehouse.co.nz/buy/93191/christian-
 Three ways, all editing `wishlist.yaml`:
 
 1. **Dashboard** (GitHub Pages) — *+ Add item*, edit target, add store, remove.
-2. **Telegram** — `/add <url> [target]`, `/link <item-id> <url>`, `/target <item-id> <price>`, `/remove <item-id>`, `/list`
-   (processed at the next scheduled run).
+2. **Telegram** (processed at the next scheduled run; type `/` in the chat for the command menu):
+   - `/wishlist` or `/list` — a **numbered** list of your items (with ids).
+   - `/remove 2 5 7` or `/remove 3-6` — remove several at once by those numbers. An item id or a unique part
+     of the name works too (`/remove sauvage`). `/undo` brings back the last removal.
+   - `/add <url> [target]` — put several URLs in one message, one per line, each optionally followed by a target.
+   - `/link <item> <url>`, `/target <item> <price>`, `/discover <item>` — `<item>` can also be a list number.
+
+   Numbers refer to the last list the bot sent you, so items added in the meantime don't shift them.
 3. **By hand** — edit `wishlist.yaml` and push.
 
 ### Your profile: gender and sizes
@@ -158,6 +164,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt pytest
 - **Quiet hours:** `profile.quiet_hours: "22:00-07:00"` (NZ time) holds non-urgent alerts and sends them as one
   🌅 morning batch. 🎯 target hits and 🔥 great deals still go out immediately.
 - Every price/stock alert includes the item's deal rating.
+- **Message layout:** each run's alerts arrive as one message, grouped under headings in this order: 🎯 target
+  price reached, 🔥 great deals, 📉 price drops, ✅ back in stock, ⏳ running low in your sizes, 🛠 needs attention
+  (🔀 link changed, ⚠️ can't read, 🩺 store health). Preview it with `python -m tracker check --dry-run`.
 
 ## Tuning
 

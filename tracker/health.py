@@ -38,10 +38,10 @@ def alerts(health: dict, state: dict) -> list[str]:
         now, before = status(s), seen.get(host)
         if now == "degraded" and before != "degraded":
             a = s["attempts"]
-            out.append(f"🩺 <b>{escape(s['name'])}</b> is failing: {len(a) - sum(a)} of the last {len(a)} reads failed. "
+            out.append(f"🩺 <b>{escape(s['name'])}</b> is failing\n{len(a) - sum(a)} of the last {len(a)} reads failed\n"
                        f"Last error: {escape((s.get('last_error') or '?')[:160])}")
         elif now == "ok" and before == "degraded":
-            out.append(f"🩺 <b>{escape(s['name'])}</b> is readable again.")
+            out.append(f"🩺 <b>{escape(s['name'])}</b> is readable again")
         if now != "new":
             seen[host] = now
     return out

@@ -68,6 +68,7 @@ def identity_warning(item: dict, url: str, retailer: str, slot: dict, offer) -> 
         return None
     slot["identity"] = {"ids": now_ids, "title": offer.title}
     slot["identity_note"] = f"{reason}: was “{seen.get('title')}”, now “{offer.title}”"
-    return (f"🔀 <b>{escape(item['name'])}</b> at {escape(retailer)}: {escape(reason)}.\n"
-            f"Was “{escape(seen.get('title') or '?')}”, now “{escape(offer.title or '?')}”. "
-            f"Check the link is still the product you want:\n{escape(url)}")
+    return (f"🔀 <b>{escape(item['name'])}</b> at {escape(retailer)}\n"
+            f"{escape(reason[:1].upper() + reason[1:])}: was “{escape(seen.get('title') or '?')}”, "
+            f"now “{escape(offer.title or '?')}”\n"
+            f'<a href="{escape(url)}">Check the link →</a>')

@@ -41,11 +41,11 @@ def all_time_low(entry: dict) -> float | None:
     return min(prices) if prices else None
 
 
-def summary_line(item: dict, entry: dict | None) -> str:
+def summary_line(item: dict, entry: dict | None, number: int | None = None) -> str:
     entry = entry or {}
     best = best_offer(entry)
     target = item.get("target_price")
-    s = f"<b>{escape(item['name'])}</b> <code>{item['id']}</code>\n"
+    s = f"{f'{number}. ' if number else ''}<b>{escape(item['name'])}</b> <code>{item['id']}</code>\n"
     if best:
         url, o = best
         s += f"  Best now: {alerts.fmt(o['price'])} at {escape(o['retailer'])}"
@@ -79,9 +79,126 @@ def format_candidates(item: dict, found: list[dict], telegram_hint: bool = False
     return "\n".join(lines)
 
 
+def _groups(items: list[dict]) -> dict[str, list[dict]]:
+    groups: dict[str, list[dict]] = {}
+    for it in items:
+        groups.setdefault((it.get("kind") or "other").capitalize(), []).append(it)
+    return groups
+
+
+def display_order(items: list[dict]) -> list[dict]:
+    """Items in the order /wishlist and /list number them (grouped by kind)."""
+    return [it for group in _groups(items).values() for it in group]
+
+
+def format_wishlist(items: list[dict]) -> str:
+    if not items:
+        return "Wishlist is empty. Use /add &lt;url&gt;"
+    lines = [f"📋 <b>Wishlist</b> ({len(items)} items)"]
+    number = 0
+    for kind, group in _groups(items).items():
+        lines.append(f"\n<b>{escape(kind)}</b>")
+        for it in group:
+            number += 1
+            n = len({urlparse(u).netloc for u in it["urls"]})
+            s = f"{number}. {escape(it['name'])} <code>{it['id']}</code> · {n} store{'s' if n != 1 else ''}"
+            if it.get("target_price") is not None:
+                s += f" · target {alerts.fmt(float(it['target_price']))}"
+            lines.append(s)
+    lines.append("\nRemove with the numbers, e.g. <code>/remove 2 5</code> or <code>/remove 3-6</code>")
+    return "\n".join(lines)
+
+
+def resolve_items(refs: list[str], items: list[dict], state: dict) -> tuple[list[dict], list[str]]:
+    """Turn refs into items. A ref is a number from the last /wishlist or /list (or a range like 3-6),
+    an item id, or a part of an id/name that matches exactly one item. Returns (items, problems)."""
+    by_id = {it["id"]: it for it in items}
+    # Numbers refer to the list the user last saw, so items added since don't shift them.
+    order = state.get("wishlist_order") or [it["id"] for it in display_order(items)]
+    found: list[dict] = []
+    problems: list[str] = []
+
+    def take(it: dict) -> None:
+        if it not in found:
+            found.append(it)
+
+    for ref in " ".join(refs).replace(",", " ").split():
+        if m := re.fullmatch(r"(\d+)(?:-(\d+))?", ref):
+            lo, hi = int(m[1]), int(m[2] or m[1])
+            for n in range(min(lo, hi), max(lo, hi) + 1):
+                if not 0 < n <= len(order):
+                    problems.append(f"no item {n} (send /wishlist to see the numbers)")
+                elif order[n - 1] in by_id:
+                    take(by_id[order[n - 1]])
+                else:
+                    problems.append(f"item {n} (<code>{escape(order[n - 1])}</code>) is already gone")
+        elif ref in by_id:
+            take(by_id[ref])
+        else:
+            q = ref.lower()
+            hits = [it for it in items if q in it["id"].lower() or q in it["name"].lower()]
+            if len(hits) == 1:
+                take(hits[0])
+            elif hits:
+                problems.append(f"“{escape(ref)}” matches {len(hits)} items: "
+                                + ", ".join(f"<code>{h['id']}</code>" for h in hits[:6]))
+            else:
+                problems.append(f"nothing matches “{escape(ref)}”")
+    return found, problems
+
+
+def resolve_one(ref: str, items: list[dict], state: dict) -> dict:
+    found, problems = resolve_items([ref], items, state)
+    if problems or len(found) != 1:
+        raise ValueError("; ".join(problems) or f"“{ref}” should name one item")
+    return found[0]
+
+
+def parse_add_args(args: list[str]) -> list[tuple[str, float | None]]:
+    """`/add url [target] url [target] …` (spaces or one per line) → [(url, target)]."""
+    out: list[tuple[str, float | None]] = []
+    for tok in args:
+        if tok.lower().startswith(("http://", "https://")):
+            out.append((tok, None))
+        elif out and out[-1][1] is None:
+            out[-1] = (out[-1][0], float(tok.lstrip("$").replace(",", "")))
+        else:
+            raise ValueError(f"expected a URL, got “{tok}”")
+    return out
+
+
+def add_item(fetcher: Fetcher, url: str, target: float | None, items: list[dict], by_id: dict) -> tuple[str, bool]:
+    """Start tracking one URL. Returns (reply line, added?)."""
+    try:
+        offer, retailer = fetcher.get_offer(url)
+        name = (offer.title or "").strip() or None
+    except ScrapeError:
+        offer, retailer, name = None, {}, None
+    only_for = store.load_profile().get("gender")
+    if offer and excluded_for(offer.genders, only_for):
+        return (f"🚫 Not added: <b>{escape(name or url)}</b> looks like a "
+                f"{'/'.join(offer.genders)} product, and your wishlist is {escape(only_for)}'s only."), False
+    name = name or urlparse(url).path.rstrip("/").split("/")[-1].replace("-", " ").title()
+    base = store.slugify(name)
+    iid, n = base, 2
+    while iid in by_id:
+        iid, n = f"{base}-{n}", n + 1
+    item = {"id": iid, "name": name, "target_price": target, "urls": [url]}
+    if target is None:
+        del item["target_price"]
+    # Sized footwear (numeric sizes at a store with a known size system): filter to your sizes.
+    if offer and offer.sizes and retailer.get("size_system") and any(
+            sizes.parse_size(s["size"], retailer["size_system"])[1] for s in offer.sizes):
+        item["kind"] = "shoes"
+    items.append(item)
+    by_id[iid] = item
+    return f"➕ Tracking <b>{escape(name)}</b> as <code>{iid}</code>", True
+
+
 def handle_commands(fetcher: Fetcher, items: list[dict], prices: dict, state: dict) -> bool:
     """Process pending Telegram commands. Returns True if the wishlist changed."""
     texts, state["telegram_offset"] = telegram.pending_commands(state.get("telegram_offset", 0))
+    telegram.sync_menu(state)  # only calls Telegram when the command list has changed
     changed = False
     by_id = {it["id"]: it for it in items}
     for text in texts:
@@ -89,66 +206,73 @@ def handle_commands(fetcher: Fetcher, items: list[dict], prices: dict, state: di
         cmd = cmd.split("@")[0].lower()
         try:
             if cmd == "/add" and args:
-                url = args[0]
-                target = float(args[1]) if len(args) > 1 else None
-                try:
-                    offer, retailer = fetcher.get_offer(url)
-                    name = (offer.title or "").strip() or None
-                except ScrapeError:
-                    offer, retailer, name = None, {}, None
-                only_for = store.load_profile().get("gender")
-                if offer and excluded_for(offer.genders, only_for):
-                    telegram.send(f"🚫 Not added: <b>{escape(name or url)}</b> looks like a "
-                                  f"{'/'.join(offer.genders)} product, and your wishlist is {escape(only_for)}'s only.")
-                    continue
-                name = name or urlparse(url).path.rstrip("/").split("/")[-1].replace("-", " ").title()
-                base = store.slugify(name)
-                iid, n = base, 2
-                while iid in by_id:
-                    iid, n = f"{base}-{n}", n + 1
-                item = {"id": iid, "name": name, "target_price": target, "urls": [url]}
-                if target is None:
-                    del item["target_price"]
-                # Sized footwear (numeric sizes at a store with a known size system): filter to your sizes.
-                if offer and offer.sizes and retailer.get("size_system") and any(
-                        sizes.parse_size(s["size"], retailer["size_system"])[1] for s in offer.sizes):
-                    item["kind"] = "shoes"
-                items.append(item)
-                by_id[iid] = item
-                changed = True
-                telegram.send(f"➕ Tracking <b>{escape(name)}</b> as <code>{iid}</code>. "
-                              f"Add other stores with /link {iid} &lt;url&gt;")
-            elif cmd == "/link" and len(args) == 2 and args[0] in by_id:
-                if args[1] not in by_id[args[0]]["urls"]:
-                    by_id[args[0]]["urls"].append(args[1])
-                    changed = True
-                telegram.send(f"🔗 Added {escape(urlparse(args[1]).netloc)} to <code>{args[0]}</code>")
-            elif cmd == "/target" and len(args) == 2 and args[0] in by_id:
-                if args[1].lower() in ("none", "off", "clear"):
-                    by_id[args[0]].pop("target_price", None)
-                else:
-                    by_id[args[0]]["target_price"] = float(args[1].lstrip("$"))
-                changed = True
-                telegram.send(f"🎯 Target for <code>{args[0]}</code> set to {escape(args[1])}")
-            elif cmd == "/remove" and args and args[0] in by_id:
-                items.remove(by_id.pop(args[0]))
-                changed = True
-                telegram.send(f"🗑 Stopped tracking <code>{args[0]}</code>")
-            elif cmd == "/discover" and args and args[0] in by_id:
-                found = discover.discover(by_id[args[0]], store.load_retailers(), fetcher, store.load_profile(),
-                                          discover.known_ids(prices["items"].get(args[0])))
-                state.setdefault("discover", {})[args[0]] = [c["url"] for c in found]
-                telegram.send(format_candidates(by_id[args[0]], found, telegram_hint=True))
-            elif cmd == "/approve" and len(args) >= 2 and args[0] in by_id:
-                pool = state.get("discover", {}).get(args[0], [])
-                picks = [pool[int(n) - 1] for n in args[1:] if n.isdigit() and 0 < int(n) <= len(pool)]
-                added = [u for u in picks if u not in by_id[args[0]]["urls"]]
-                by_id[args[0]]["urls"] += added
+                lines, added = [], 0
+                for url, target in parse_add_args(args):
+                    line, ok = add_item(fetcher, url, target, items, by_id)
+                    lines.append(line)
+                    added += ok
                 changed = changed or bool(added)
-                telegram.send(f"🔗 Added {len(added)} store(s) to <code>{args[0]}</code>" if added else "Nothing to add")
+                if added == 1 and len(lines) == 1:
+                    lines.append(f"Add other stores with /link {items[-1]['id']} &lt;url&gt;")
+                telegram.send("\n".join(lines))
+            elif cmd == "/link" and len(args) == 2:
+                item = resolve_one(args[0], items, state)
+                if args[1] not in item["urls"]:
+                    item["urls"].append(args[1])
+                    changed = True
+                telegram.send(f"🔗 Added {escape(urlparse(args[1]).netloc)} to <code>{item['id']}</code>")
+            elif cmd == "/target" and len(args) == 2:
+                item = resolve_one(args[0], items, state)
+                if args[1].lower() in ("none", "off", "clear"):
+                    item.pop("target_price", None)
+                else:
+                    item["target_price"] = float(args[1].lstrip("$"))
+                changed = True
+                telegram.send(f"🎯 Target for <code>{item['id']}</code> set to {escape(args[1])}")
+            elif cmd == "/remove" and args:
+                found, problems = resolve_items(args, items, state)
+                for it in found:
+                    items.remove(it)
+                    by_id.pop(it["id"], None)
+                if found:
+                    changed = True
+                    state["last_removed"] = found
+                lines = ([f"🗑 Stopped tracking {len(found)} item(s):"] + [f"• {escape(it['name'])}" for it in found]
+                         + ["Wrong one? Send /undo to bring them back."] if found else [])
+                lines += [f"⚠️ {p}" for p in problems]
+                telegram.send("\n".join(lines) or "Nothing removed")
+            elif cmd == "/undo":
+                back = [it for it in state.pop("last_removed", []) if it["id"] not in by_id]
+                for it in back:
+                    items.append(it)
+                    by_id[it["id"]] = it
+                changed = changed or bool(back)
+                telegram.send("↩️ Tracking again: " + ", ".join(escape(it["name"]) for it in back)
+                              if back else "Nothing to undo")
+            elif cmd == "/discover" and args:
+                item = resolve_one(args[0], items, state)
+                found = discover.discover(item, store.load_retailers(), fetcher, store.load_profile(),
+                                          discover.known_ids(prices["items"].get(item["id"])))
+                state.setdefault("discover", {})[item["id"]] = [c["url"] for c in found]
+                telegram.send(format_candidates(item, found, telegram_hint=True))
+            elif cmd == "/approve" and len(args) >= 2:
+                item = resolve_one(args[0], items, state)
+                pool = state.get("discover", {}).get(item["id"], [])
+                picks = [pool[int(n) - 1] for n in args[1:] if n.isdigit() and 0 < int(n) <= len(pool)]
+                added = [u for u in picks if u not in item["urls"]]
+                item["urls"] += added
+                changed = changed or bool(added)
+                telegram.send(f"🔗 Added {len(added)} store(s) to <code>{item['id']}</code>" if added else "Nothing to add")
             elif cmd == "/list":
-                lines = [summary_line(it, prices["items"].get(it["id"])) for it in items]
+                ordered = display_order(items)
+                state["wishlist_order"] = [it["id"] for it in ordered]
+                lines = [summary_line(it, prices["items"].get(it["id"]), n) for n, it in enumerate(ordered, 1)]
                 telegram.send("\n\n".join(lines) or "Wishlist is empty. Use /add &lt;url&gt;")
+            elif cmd == "/wishlist":
+                state["wishlist_order"] = [it["id"] for it in display_order(items)]
+                telegram.send(format_wishlist(items))
+            elif cmd in ("/help", "/start"):
+                telegram.send(escape(telegram.HELP))
             else:
                 telegram.send(f"Didn't understand <code>{escape(text)}</code>\n\n{escape(telegram.HELP)}")
         except Exception as e:  # never let a bad command break the price check
@@ -268,7 +392,7 @@ def cmd_check(args) -> int:
 
     prices["updated"] = store.now_iso()
     if args.dry_run:
-        print("\n[dry run] alerts that would be sent:\n" + ("\n\n".join(messages) or "(none)"))
+        print("\n[dry run] alerts that would be sent:\n" + (notify.render(messages) if messages else "(none)"))
         return 0
     store.save_prices(prices)
     store.save_health(health.summary(store_health))

@@ -67,7 +67,7 @@ def test_drop_threshold_and_all_time_low():
     item = {"id": "y", "name": "Thing"}
     assert alerts.evaluate(item, "u", "S", {"price": 98.0}, {"price": 100.0}, [], {}) == []  # 2% → ignored
     msgs = alerts.evaluate(item, "u", "S", {"price": 80.0}, {"price": 100.0}, [{"price": 100.0}, {"price": 90.0}], {})
-    assert "20%" in msgs[0] and "lowest price seen" in msgs[0]
+    assert "20%" in msgs[0] and "Lowest price seen" in msgs[0]
 
 
 def test_back_in_stock_and_failure_warning_once():
@@ -107,7 +107,7 @@ def test_telegram_commands(monkeypatch):
 
     sent = []
     cmds = ["/add https://shop.example/products/foo-100ml 150", "/link foo-eau-de-parfum https://other.example/p/1",
-            "/target foo-eau-de-parfum 140", "/list", "/bogus", "/remove nothing-here"]
+            "/target foo-eau-de-parfum 140", "/list", "/wishlist", "/bogus", "/remove nothing-here"]
     monkeypatch.setattr(telegram, "pending_commands", lambda off: (cmds, off + len(cmds)))
     monkeypatch.setattr(telegram, "send", sent.append)
 
@@ -119,9 +119,11 @@ def test_telegram_commands(monkeypatch):
     assert cli.handle_commands(FakeFetcher(), items, {"items": {}}, state)
     assert items == [{"id": "foo-eau-de-parfum", "name": "Foo Eau de Parfum", "target_price": 140.0,
                       "urls": ["https://shop.example/products/foo-100ml", "https://other.example/p/1"]}]
-    assert state["telegram_offset"] == 16
+    assert state["telegram_offset"] == 17
     assert "Tracking" in sent[0] and "Foo Eau de Parfum" in sent[3]
-    assert all("Didn't understand" in s for s in sent[4:6])  # unknown command and unknown item id
+    assert "foo-eau-de-parfum" in sent[4] and "2 stores" in sent[4] and "target $140" in sent[4]
+    assert "Didn't understand" in sent[5]  # unknown command
+    assert "nothing matches" in sent[6]  # unknown item id
 
 
 def test_jsonld_per_size_offers_prefer_in_stock():
@@ -156,7 +158,7 @@ def test_lowest_seen_ignores_out_of_stock_history():
     item = {"id": "o", "name": "Thing"}
     history = [{"price": 100.0, "in_stock": True}, {"price": 60.0, "in_stock": False}]
     msgs = alerts.evaluate(item, "u", "S", {"price": 80.0, "in_stock": True}, {"price": 100.0, "in_stock": True}, history, {})
-    assert "20%" in msgs[0] and "lowest price seen" in msgs[0]
+    assert "20%" in msgs[0] and "Lowest price seen" in msgs[0]
     assert alerts.buyable_prices(history) == [100.0]
 
 
@@ -260,7 +262,7 @@ def test_identity_baseline_rename_and_swap():
     assert slot["identity"]["title"] == "Desk Mat Pro Slim"
     # Different product id: warn once, then accept the new baseline.
     w = verify.identity_warning(item, url, "S", slot, _offer(product_id="shopify:2", title="Laptop Sleeve"))
-    assert w and "product id changed" in w
+    assert w and "Product id changed" in w
     assert verify.identity_warning(item, url, "S", slot, _offer(product_id="shopify:2", title="Laptop Sleeve")) is None
 
 
@@ -332,14 +334,14 @@ def test_big_drop_needs_confirmation(monkeypatch, tmp_path):
     # Seen again next run: confirmed, recorded and alerted.
     slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=50.0, in_stock=True)], recheck=None)
     assert slot["price"] == 50.0 and "pending" not in slot and len(slot["history"]) == 2
-    assert "Price drop 50%" in sent[0]
+    assert "Down 50%" in sent[0]
 
 
 def test_big_drop_confirmed_by_immediate_recheck(monkeypatch, tmp_path):
     _run_check(monkeypatch, tmp_path, [_offer(price=100.0, in_stock=True)])
     slot, sent = _run_check(monkeypatch, tmp_path, [_offer(price=70.0, in_stock=True)],
                             recheck=_offer(price=70.0, in_stock=True))
-    assert slot["price"] == 70.0 and "Price drop 30%" in sent[0]
+    assert slot["price"] == 70.0 and "Down 30%" in sent[0]
 
 
 def test_glitch_that_reverts_is_discarded(monkeypatch, tmp_path):
@@ -511,7 +513,7 @@ def test_size_alerts():
     assert len(msgs) == 1 and "Only US 11 left" in msgs[0]
     msgs = alerts.evaluate(item, "u", "JD", {"price": 200.0, "in_stock": True, "sizes_in": ["US 10"]},
                            {"price": 200.0, "in_stock": False, "sizes_in": []}, [], {})
-    assert "Your size is back in stock" in msgs[0] and "Your sizes in stock: US 10" in msgs[0]
+    assert "Your size is back in stock" in msgs[0] and "Your sizes: US 10" in msgs[0]
 
 
 def test_birkenstock_page_fallback_reads_width_from_variant_names():
@@ -601,7 +603,7 @@ def test_deal_ignores_out_of_stock_and_untrusted():
 def test_great_deal_alert_once():
     state, item = {}, {"id": "x", "name": "Thing"}
     deal = {"label": "great", "price": 80.0, "retailer": "A", "shop": None, "url": "u", "reasons": ["20% below"]}
-    assert "Great deal" in alerts.deal_alert(item, deal, state)[0]
+    assert alerts.deal_alert(item, deal, state)[0].startswith("🔥 <b>Thing</b>")
     assert alerts.deal_alert(item, deal, state) == []
     alerts.deal_alert(item, {**deal, "label": "typical"}, state)
     assert alerts.deal_alert(item, deal, state)  # re-armed
@@ -719,9 +721,20 @@ def test_quiet_hours_queue_then_morning_batch(monkeypatch):
     out = notify.deliver(["📉 Price drop A", "🔥 Great deal B"], profile, state, _nz(2))
     assert out == ["🔥 Great deal B"] and state["queued_alerts"] == ["📉 Price drop A"]
     out = notify.deliver(["✅ Back in stock C"], profile, state, _nz(7, 30))
-    assert out[0].startswith("🌅") and out[1:] == ["📉 Price drop A", "✅ Back in stock C"]
+    assert out == ["📉 Price drop A", "✅ Back in stock C"] and "1 held overnight" in sent[-1]
     assert state["queued_alerts"] == []
     assert notify.deliver([], profile, state, _nz(9)) == [] and len(sent) == 2
+
+
+def test_render_groups_alerts_into_ordered_sections():
+    msg = notify.render(["⚠️ <b>A</b> unreadable", "📉 <b>B</b> drop", "🎯 <b>C</b> target", "📉 <b>D</b> drop",
+                         "legacy text"])
+    assert msg.startswith("🛍 <b>Price tracker</b> · 5 updates")
+    order = [msg.index(h) for h in ("TARGET PRICE REACHED", "PRICE DROPS", "NEEDS ATTENTION", "OTHER")]
+    assert order == sorted(order)
+    assert "PRICE DROPS</b>\n<b>B</b> drop\n\n<b>D</b> drop" in msg  # section emoji not repeated per alert
+    assert "⚠️ <b>A</b> unreadable" in msg  # mixed section keeps each alert's emoji
+    assert "GREAT DEALS" not in msg and "overnight" not in msg
 
 
 def test_heartbeat_warning_windows():
@@ -734,6 +747,6 @@ def test_heartbeat_warning_windows():
 def test_deal_line_is_added_before_the_link():
     deal = {"label": "good", "reasons": ["24% off a verified RRP of $275.00"]}
     msg = alerts.with_deal_line('📉 Price drop 10% — X\n<a href="u">View deal</a>', deal)
-    assert msg.index("Deal rating: good") < msg.index("<a href")
+    assert msg.index("Good deal: 24% off") < msg.index("<a href")
     assert alerts.with_deal_line("🔀 identity", deal) == "🔀 identity"
     assert alerts.with_deal_line("📉 drop", None) == "📉 drop"

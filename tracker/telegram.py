@@ -1,19 +1,24 @@
 """Telegram bot: send alerts and handle wishlist commands sent from your phone.
 
 Commands (only accepted from TELEGRAM_CHAT_ID):
-  /add <url> [target]        start tracking a new item (name taken from the product page)
-  /link <item-id> <url>      add another retailer's URL to an existing item
-  /target <item-id> <price>  set or change the target price ("none" to clear)
-  /remove <item-id>          stop tracking an item
-  /discover <item-id>        search other stores for this item; replies with numbered candidates
-  /approve <item-id> 1 3     track the numbered candidates from /discover
-  /list                      show tracked items and current best prices
+  /wishlist                  numbered list of your items with their ids
+  /list                      numbered list with current best prices
+  /add <url> [target]        track new items; put several URLs (one per line) in one message to add them all
+  /remove <item> ...         stop tracking items, e.g. /remove 2 5 7 or /remove 3-6
+  /undo                      bring back the items removed by the last /remove
+  /link <item> <url>         add another retailer's URL to an existing item
+  /target <item> <price>     set or change the target price ("none" to clear)
+  /discover <item>           search other stores for this item; replies with numbered candidates
+  /approve <item> 1 3        track the numbered candidates from /discover
   /help                      show this list
+<item> is a number from the last /wishlist or /list, an item id, or a unique part of its name.
 Commands are processed at the start of each scheduled run, so replies can take up to a few hours.
 """
 from __future__ import annotations
 
+import hashlib
 import os
+import re
 
 import httpx
 
@@ -48,6 +53,30 @@ def send(text: str) -> None:
     for c in chunks:
         _call("sendMessage", chat_id=os.environ["TELEGRAM_CHAT_ID"], text=c,
               parse_mode="HTML", disable_web_page_preview=True)
+
+
+def menu_commands() -> list[dict]:
+    """The commands in HELP, in the shape Telegram's setMyCommands wants (shown when you type "/")."""
+    out = []
+    for line in HELP.splitlines():
+        if m := re.match(r"\s*/(\w+)\S*(?:\s+\S+)*?\s{2,}(.+)", line):
+            out.append({"command": m[1], "description": m[2].strip()[:256]})
+    return out
+
+
+def sync_menu(state: dict) -> None:
+    """Register the command menu with Telegram once, and again whenever the command list changes."""
+    if not configured():
+        return
+    cmds = menu_commands()
+    digest = hashlib.sha1(repr(cmds).encode()).hexdigest()
+    if state.get("menu_hash") == digest:
+        return
+    try:
+        _call("setMyCommands", commands=cmds)
+        state["menu_hash"] = digest
+    except httpx.HTTPError as e:  # cosmetic only; never fail a run over it
+        print(f"[telegram] couldn't set command menu: {e}")
 
 
 def pending_commands(offset: int) -> tuple[list[str], int]:
