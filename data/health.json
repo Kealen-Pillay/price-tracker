@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-15T21:06:24+00:00",
+ "updated": "2026-11-16T06:38:49+00:00",
  "stores": {
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:04:08+00:00",
+   "last_ok": "2026-11-16T06:34:00+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -15,7 +15,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:04:57+00:00",
+   "last_ok": "2026-11-16T06:35:18+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -24,7 +24,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:04:23+00:00",
+   "last_ok": "2026-11-16T06:34:12+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -33,7 +33,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:04:31+00:00",
+   "last_ok": "2026-11-16T06:34:48+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -42,25 +42,25 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:06:16+00:00",
+   "last_ok": "2026-11-16T06:37:51+00:00",
    "last_error": null,
    "last_error_at": null
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
-   "status": "ok",
-   "ok_rate": 0.5,
+   "status": "degraded",
+   "ok_rate": 0.42,
    "attempts": 12,
    "last_ok": "2026-11-15T21:05:30+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-11-15T21:05:00+00:00"
+   "last_error_at": "2026-11-16T06:35:54+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:04:20+00:00",
+   "last_ok": "2026-11-16T06:34:09+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -69,7 +69,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:05:33+00:00",
+   "last_ok": "2026-11-16T06:36:48+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -80,14 +80,14 @@
    "attempts": 12,
    "last_ok": "2026-11-15T21:06:21+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-11-14T11:33:33+00:00"
+   "last_error_at": "2026-11-16T06:37:56+00:00"
   },
   "www.platypusshoes.co.nz": {
    "name": "Platypus",
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:04:36+00:00",
+   "last_ok": "2026-11-16T06:34:52+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -96,7 +96,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-15T21:06:23+00:00",
+   "last_ok": "2026-11-16T06:38:47+00:00",
    "last_error": null,
    "last_error_at": null
   }
