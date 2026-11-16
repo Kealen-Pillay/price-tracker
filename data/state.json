@@ -38,7 +38,7 @@
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 102,
+  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 103,
   "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": 1,
   "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": 1
  },
@@ -149,7 +149,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T08:20:38+00:00",
+   "last_ok": "2026-11-16T18:36:02+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -169,7 +169,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T08:20:40+00:00",
+   "last_ok": "2026-11-16T18:36:04+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -189,7 +189,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T08:21:02+00:00"
+   "last_ok": "2026-11-16T18:36:25+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -201,15 +201,15 @@
     0,
     1,
     0,
+    0,
+    0,
     1,
-    0,
-    0,
     0,
     1
    ],
-   "last_ok": "2026-11-16T08:21:39+00:00",
+   "last_ok": "2026-11-16T18:36:57+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-11-16T08:21:06+00:00"
+   "last_error_at": "2026-11-16T18:36:28+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -227,7 +227,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T08:21:41+00:00"
+   "last_ok": "2026-11-16T18:36:59+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -245,7 +245,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T08:21:41+00:00"
+   "last_ok": "2026-11-16T18:36:59+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
