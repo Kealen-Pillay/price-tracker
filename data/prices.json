@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T06:38:49+00:00",
+ "updated": "2026-11-16T08:21:43+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -325,7 +325,7 @@
    },
    "name": "Dior Sauvage EDP 100ml",
    "target_price": 220,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml",
     "https://pricespy.co.nz/product.php?p=4682013"
@@ -1210,7 +1210,7 @@
    },
    "name": "Dior Sauvage Elixir 60ml",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://www.chemistwarehouse.co.nz/buy/112579/christian-dior-sauvage-elixir-parfum-60ml",
     "https://www.bargainchemist.co.nz/products/cd-sauvage-elixir-60ml",
@@ -1270,7 +1270,7 @@
    },
    "name": "Bleu de Chanel EDP 100ml",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://pricespy.co.nz/product.php?p=2766059"
    ],
@@ -1312,7 +1312,7 @@
    },
    "name": "Bleu de Chanel Parfum 100ml",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://pricespy.co.nz/product.php?p=4932165"
    ],
@@ -1859,7 +1859,7 @@
    },
    "name": "Prada Paradigme EDP 100ml",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://www.lifepharmacy.co.nz/products/prada-paradigme-edp-100ml",
     "https://www.chemistwarehouse.co.nz/buy/159074/prada-paradigme-for-men-eau-de-parfum-100ml"
@@ -2423,7 +2423,7 @@
    },
    "name": "YSL MYSLF Le Parfum 100ml",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://www.lifepharmacy.co.nz/products/yves-saint-laurent-myslf-le-parfum-100ml",
     "https://www.chemistwarehouse.co.nz/buy/165255/yves-saint-laurent-myslf-le-parfum-100ml"
@@ -3018,7 +3018,7 @@
    },
    "name": "Armani Stronger With You Intensely EDP 100ml",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://www.lifepharmacy.co.nz/products/stronger-with-you-intensely-edp-spray-100ml",
     "https://www.chemistwarehouse.co.nz/buy/144254/emporio-armani-stronger-with-you-intensely-eau-de-parfum-100ml",
@@ -3461,7 +3461,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T06:34:14+00:00",
+     "checked": "2026-11-16T08:20:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3905,7 +3905,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T06:34:46+00:00",
+     "checked": "2026-11-16T08:20:33+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4348,7 +4348,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T06:34:48+00:00",
+     "checked": "2026-11-16T08:20:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4763,7 +4763,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T06:34:52+00:00",
+     "checked": "2026-11-16T08:20:40+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -5226,7 +5226,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:34:54+00:00",
+     "checked": "2026-11-16T08:20:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5661,7 +5661,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:34:54+00:00",
+     "checked": "2026-11-16T08:20:42+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6085,7 +6085,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:34:57+00:00",
+     "checked": "2026-11-16T08:20:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6537,7 +6537,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:35:02+00:00",
+     "checked": "2026-11-16T08:20:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6961,7 +6961,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:35:07+00:00",
+     "checked": "2026-11-16T08:20:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7385,7 +7385,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:35:10+00:00",
+     "checked": "2026-11-16T08:20:55+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7809,7 +7809,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:35:13+00:00",
+     "checked": "2026-11-16T08:20:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8245,7 +8245,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:35:18+00:00",
+     "checked": "2026-11-16T08:21:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8407,7 +8407,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-16T06:35:22+00:00",
+     "checked": "2026-11-16T08:21:06+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -8836,8 +8836,8 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-16T06:35:54+00:00",
-     "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
+     "checked": "2026-11-16T08:21:39+00:00",
+     "error": null,
      "identity": {
       "ids": {
        "productGroupID": "8809713631284"
@@ -8871,7 +8871,21 @@
     "https://www.jdsports.co.nz/products/xt6-120733321",
     "https://www.jdsports.co.nz/products/xt6-120119224"
    ],
-   "deal": null
+   "deal": {
+    "label": "typical",
+    "price": 360.0,
+    "retailer": "JD Sports",
+    "shop": null,
+    "url": "https://www.jdsports.co.nz/products/xt6-120119224",
+    "typical": 360.0,
+    "pct_vs_typical": 0.0,
+    "was": null,
+    "was_verified": false,
+    "days": 36,
+    "reasons": [
+     "0% below its 90-day typical $360.00"
+    ]
+   }
   },
   "monitor-arm": {
    "offers": {
@@ -9134,7 +9148,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:36:47+00:00",
+     "checked": "2026-11-16T08:21:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9434,7 +9448,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:36:48+00:00",
+     "checked": "2026-11-16T08:21:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -10026,7 +10040,7 @@
    },
    "name": "Belkin BoostCharge Pro 2-in-1 Magnetic Wireless Charger",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch",
     "https://www.jbhifi.co.nz/products/belkin-boostcharge-pro2-in-1-magnetic-wireless-charging-pad-with-qi2-15w-black"
@@ -10322,7 +10336,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T06:37:51+00:00",
+     "checked": "2026-11-16T08:21:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -10912,7 +10926,7 @@
    },
    "name": "MSI Modern MD342CQP 34\" Ultrawide Curved Monitor",
    "target_price": null,
-   "tracked": true,
+   "tracked": false,
    "urls": [
     "https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi",
     "https://pricespy.co.nz/product.php?p=14502997"

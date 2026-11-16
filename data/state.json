@@ -38,8 +38,7 @@
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 101,
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120119224": 1,
+  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 102,
   "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": 1,
   "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": 1
  },
@@ -54,7 +53,7 @@
   "dr-martens-adrian-tassel-loafer": "good",
   "birkenstock-arizona": "typical",
   "birkenstock-boston": "typical",
-  "salomon-xt-6": null,
+  "salomon-xt-6": "typical",
   "monitor-arm": "typical",
   "orbitkey-desk-mat-slim": "typical",
   "belkin-boostcharge-pro-2-in-1": "typical",
@@ -150,7 +149,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T06:34:48+00:00",
+   "last_ok": "2026-11-16T08:20:38+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -170,7 +169,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T06:34:52+00:00",
+   "last_ok": "2026-11-16T08:20:40+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -190,7 +189,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T06:35:18+00:00"
+   "last_ok": "2026-11-16T08:21:02+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
@@ -204,13 +203,13 @@
     0,
     1,
     0,
-    1,
     0,
-    0
+    0,
+    1
    ],
-   "last_ok": "2026-11-15T21:05:30+00:00",
+   "last_ok": "2026-11-16T08:21:39+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-11-16T06:35:54+00:00"
+   "last_error_at": "2026-11-16T08:21:06+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -228,7 +227,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T06:37:51+00:00"
+   "last_ok": "2026-11-16T08:21:41+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -246,7 +245,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-16T06:36:48+00:00"
+   "last_ok": "2026-11-16T08:21:41+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
@@ -282,5 +281,6 @@
   "www.platypusshoes.co.nz": "ok",
   "www.orbitkey.com.au": "ok"
  },
- "queued_alerts": []
+ "queued_alerts": [],
+ "menu_hash": "39588481ea7d21cb7f644748bdbeaa5b665e4f7b"
 }
