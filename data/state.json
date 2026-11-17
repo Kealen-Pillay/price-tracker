@@ -1,5 +1,5 @@
 {
- "telegram_offset": 640168649,
+ "telegram_offset": 640168650,
  "alerts": {
   "dior-sauvage-edp-100ml|https://www.chemistwarehouse.co.nz/buy/93191/christian-dior-sauvage-eau-de-parfum-100ml": {},
   "dior-sauvage-edp-100ml|https://pricespy.co.nz/product.php?p=4682013": {},
@@ -38,7 +38,7 @@
   "dr-martens-adrian-tassel-loafer|https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html": {}
  },
  "failures": {
-  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 105,
+  "salomon-xt-6|https://www.jdsports.co.nz/products/xt6-120733321": 106,
   "belkin-boostcharge-pro-2-in-1|https://www.pbtech.co.nz/product/MPPBEL6142274/Belkin-BoostCharge-Pro-2-in-1-Magnetic-Wireless-Ch": 1,
   "msi-modern-md342cqp|https://www.pbtech.co.nz/product/MONMSI624342/MSI-Modern-MD342CQP-34-Ultrawide-Curved-USB-C-Busi": 1
  },
@@ -50,7 +50,7 @@
   "prada-paradigme-edp-100ml": "good",
   "ysl-myslf-le-parfum-100ml": "great",
   "armani-stronger-with-you-intensely-100ml": "good",
-  "dr-martens-adrian-tassel-loafer": "good",
+  "dr-martens-adrian-tassel-loafer": "typical",
   "birkenstock-arizona": "typical",
   "birkenstock-boston": "typical",
   "salomon-xt-6": "typical",
@@ -149,7 +149,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-17T13:29:25+00:00",
+   "last_ok": "2026-11-17T22:34:43+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -169,7 +169,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-17T13:29:29+00:00",
+   "last_ok": "2026-11-17T22:34:47+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
@@ -189,15 +189,15 @@
     1,
     1
    ],
-   "last_ok": "2026-11-17T13:29:51+00:00"
+   "last_ok": "2026-11-17T22:35:04+00:00"
   },
   "www.jdsports.co.nz": {
    "name": "JD Sports",
    "attempts": [
     0,
+    0,
+    0,
     1,
-    0,
-    0,
     0,
     1,
     0,
@@ -207,9 +207,9 @@
     0,
     1
    ],
-   "last_ok": "2026-11-17T13:30:30+00:00",
+   "last_ok": "2026-11-17T22:35:35+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-11-17T13:29:54+00:00"
+   "last_error_at": "2026-11-17T22:35:06+00:00"
   },
   "www.jbhifi.co.nz": {
    "name": "JB Hi-Fi",
@@ -227,7 +227,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-17T13:30:33+00:00"
+   "last_ok": "2026-11-17T22:35:38+00:00"
   },
   "www.orbitkey.com.au": {
    "name": "Orbitkey",
@@ -245,7 +245,7 @@
     1,
     1
    ],
-   "last_ok": "2026-11-17T13:30:32+00:00"
+   "last_ok": "2026-11-17T22:35:38+00:00"
   },
   "www.pbtech.co.nz": {
    "name": "PB Tech",
@@ -281,8 +281,14 @@
   "www.platypusshoes.co.nz": "ok",
   "www.orbitkey.com.au": "ok"
  },
- "queued_alerts": [
-  "📉 <b>Dell 34 Plus 34&quot; UWQHD 120Hz Curved Monitor</b>\n<b>$748.00</b> at JB Hi-Fi · was $999.00 (save $251.00)\nDown 25% from $999.00\n🔥 Great deal: 25% below its 90-day typical $999.00\n<a href=\"https://www.jbhifi.co.nz/products/dell-34-plus-34-uwqhd-120hz-usb-c-curved-monitor\">View deal →</a>"
- ],
- "menu_hash": "39588481ea7d21cb7f644748bdbeaa5b665e4f7b"
+ "queued_alerts": [],
+ "menu_hash": "39588481ea7d21cb7f644748bdbeaa5b665e4f7b",
+ "wishlist_order": [
+  "dr-martens-adrian-tassel-loafer",
+  "birkenstock-arizona",
+  "birkenstock-boston",
+  "salomon-xt-6",
+  "monitor-arm",
+  "orbitkey-desk-mat-slim"
+ ]
 }
