@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T18:37:02+00:00",
+ "updated": "2026-11-17T02:59:12+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3461,7 +3461,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T18:35:56+00:00",
+     "checked": "2026-11-17T02:57:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3905,7 +3905,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T18:35:57+00:00",
+     "checked": "2026-11-17T02:57:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4358,7 +4358,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T18:36:02+00:00",
+     "checked": "2026-11-17T02:57:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4784,7 +4784,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-16T18:36:04+00:00",
+     "checked": "2026-11-17T02:57:53+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -5258,7 +5258,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:05+00:00",
+     "checked": "2026-11-17T02:57:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5704,7 +5704,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:05+00:00",
+     "checked": "2026-11-17T02:57:55+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6139,7 +6139,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:09+00:00",
+     "checked": "2026-11-17T02:57:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6602,7 +6602,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:12+00:00",
+     "checked": "2026-11-17T02:58:03+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7037,7 +7037,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:17+00:00",
+     "checked": "2026-11-17T02:58:05+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7472,7 +7472,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:19+00:00",
+     "checked": "2026-11-17T02:58:08+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7907,7 +7907,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:22+00:00",
+     "checked": "2026-11-17T02:58:11+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8354,7 +8354,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:25+00:00",
+     "checked": "2026-11-17T02:58:14+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8516,7 +8516,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-16T18:36:28+00:00",
+     "checked": "2026-11-17T02:58:17+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -8956,7 +8956,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-16T18:36:57+00:00",
+     "checked": "2026-11-17T02:58:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9275,7 +9275,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:58+00:00",
+     "checked": "2026-11-17T02:58:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9574,15 +9574,22 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-17T02:58:50+00:00",
+       "price": 104.25,
+       "was": 139.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
      "title": "Desk Mat Pro Slim",
-     "price": 139.0,
-     "was": null,
+     "price": 104.25,
+     "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:59+00:00",
+     "checked": "2026-11-17T02:58:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9606,18 +9613,19 @@
     "https://www.orbitkey.com.au/products/desk-mat-slim"
    ],
    "deal": {
-    "label": "typical",
-    "price": 139.0,
+    "label": "great",
+    "price": 104.25,
     "retailer": "Orbitkey",
     "shop": null,
     "url": "https://www.orbitkey.com.au/products/desk-mat-slim",
     "typical": 139.0,
-    "pct_vs_typical": 0.0,
-    "was": null,
-    "was_verified": false,
-    "days": 37,
+    "pct_vs_typical": 25.0,
+    "was": 139.0,
+    "was_verified": true,
+    "days": 38,
     "reasons": [
-     "0% below its 90-day typical $139.00"
+     "25% below its 90-day typical $139.00",
+     "25% off a verified RRP of $139.00"
     ]
    }
   },
@@ -10477,7 +10485,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-16T18:36:59+00:00",
+     "checked": "2026-11-17T02:59:12+00:00",
      "error": null,
      "identity": {
       "ids": {
