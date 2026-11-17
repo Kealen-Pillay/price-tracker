@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T02:59:12+00:00",
+ "updated": "2026-11-17T13:31:10+00:00",
  "stores": {
   "www.bargainchemist.co.nz": {
    "name": "Bargain Chemist",
@@ -15,7 +15,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-17T02:58:14+00:00",
+   "last_ok": "2026-11-17T13:29:51+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -33,7 +33,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-17T02:57:50+00:00",
+   "last_ok": "2026-11-17T13:29:25+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-13T11:52:37+00:00"
   },
@@ -42,7 +42,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-17T02:59:12+00:00",
+   "last_ok": "2026-11-17T13:30:33+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -51,9 +51,9 @@
    "status": "degraded",
    "ok_rate": 0.42,
    "attempts": 12,
-   "last_ok": "2026-11-17T02:58:48+00:00",
+   "last_ok": "2026-11-17T13:30:30+00:00",
    "last_error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
-   "last_error_at": "2026-11-17T02:58:17+00:00"
+   "last_error_at": "2026-11-17T13:29:54+00:00"
   },
   "www.lifepharmacy.co.nz": {
    "name": "Life Pharmacy",
@@ -69,7 +69,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-17T02:58:50+00:00",
+   "last_ok": "2026-11-17T13:30:32+00:00",
    "last_error": null,
    "last_error_at": null
   },
@@ -87,7 +87,7 @@
    "status": "ok",
    "ok_rate": 1.0,
    "attempts": 12,
-   "last_ok": "2026-11-17T02:57:53+00:00",
+   "last_ok": "2026-11-17T13:29:29+00:00",
    "last_error": "No price found on page (http status 401). The site may block bots or need a price_selector in retailers.yaml",
    "last_error_at": "2026-10-15T13:29:03+00:00"
   },
