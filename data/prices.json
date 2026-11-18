@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T07:32:27+00:00",
+ "updated": "2026-11-18T17:18:42+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3464,6 +3464,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-18T17:17:21+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3472,7 +3483,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T07:31:20+00:00",
+     "checked": "2026-11-18T17:17:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3919,6 +3930,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-18T17:17:22+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3927,7 +3949,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T07:31:21+00:00",
+     "checked": "2026-11-18T17:17:22+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4390,7 +4412,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T07:31:25+00:00",
+     "checked": "2026-11-18T17:17:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4827,7 +4849,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T07:31:30+00:00",
+     "checked": "2026-11-18T17:17:29+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -4863,18 +4885,18 @@
     "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html"
    ],
    "deal": {
-    "label": "typical",
+    "label": "good",
     "price": 279.99,
     "retailer": "Platypus",
     "shop": null,
     "url": "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html",
-    "typical": 299.99,
-    "pct_vs_typical": 6.666888896296543,
+    "typical": 309.99,
+    "pct_vs_typical": 9.677731539727088,
     "was": 399.99,
     "was_verified": true,
-    "days": 39,
+    "days": 40,
     "reasons": [
-     "7% below its 90-day typical $299.99",
+     "10% below its 90-day typical $309.99",
      "30% off a verified RRP of $399.99",
      "$40.00 cheaper than the next store"
     ]
@@ -5312,7 +5334,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:32+00:00",
+     "checked": "2026-11-18T17:17:30+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5769,7 +5791,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:32+00:00",
+     "checked": "2026-11-18T17:17:31+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6215,7 +6237,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:35+00:00",
+     "checked": "2026-11-18T17:17:35+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6689,7 +6711,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:39+00:00",
+     "checked": "2026-11-18T17:17:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7135,7 +7157,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:41+00:00",
+     "checked": "2026-11-18T17:17:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7581,7 +7603,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:44+00:00",
+     "checked": "2026-11-18T17:17:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8027,7 +8049,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:49+00:00",
+     "checked": "2026-11-18T17:17:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8485,7 +8507,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:31:53+00:00",
+     "checked": "2026-11-18T17:17:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8647,7 +8669,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-18T07:31:56+00:00",
+     "checked": "2026-11-18T17:17:56+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9098,7 +9120,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-18T07:32:25+00:00",
+     "checked": "2026-11-18T17:18:39+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9432,7 +9454,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:32:27+00:00",
+     "checked": "2026-11-18T17:18:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9753,7 +9775,7 @@
      "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T07:32:27+00:00",
+     "checked": "2026-11-18T17:18:41+00:00",
      "error": null,
      "identity": {
       "ids": {
