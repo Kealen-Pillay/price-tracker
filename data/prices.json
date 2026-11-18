@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T23:36:24+00:00",
+ "updated": "2026-11-18T07:32:27+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3472,7 +3472,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-17T23:35:16+00:00",
+     "checked": "2026-11-18T07:31:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3927,7 +3927,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-17T23:35:17+00:00",
+     "checked": "2026-11-18T07:31:21+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4390,7 +4390,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-17T23:35:20+00:00",
+     "checked": "2026-11-18T07:31:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4827,7 +4827,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-17T23:35:24+00:00",
+     "checked": "2026-11-18T07:31:30+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -5312,7 +5312,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-17T23:35:25+00:00",
+     "checked": "2026-11-18T07:31:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5768,8 +5768,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-11-17T23:35:26+00:00",
+     "method": "shopify",
+     "checked": "2026-11-18T07:31:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6214,8 +6214,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-11-17T23:35:34+00:00",
+     "method": "shopify",
+     "checked": "2026-11-18T07:31:35+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6688,8 +6688,8 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-11-17T23:35:35+00:00",
+     "method": "shopify",
+     "checked": "2026-11-18T07:31:39+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7134,8 +7134,8 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-11-17T23:35:39+00:00",
+     "method": "shopify",
+     "checked": "2026-11-18T07:31:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7580,8 +7580,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-11-17T23:35:42+00:00",
+     "method": "shopify",
+     "checked": "2026-11-18T07:31:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8026,8 +8026,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-11-17T23:35:45+00:00",
+     "method": "shopify",
+     "checked": "2026-11-18T07:31:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8484,8 +8484,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "json-ld",
-     "checked": "2026-11-17T23:35:48+00:00",
+     "method": "shopify",
+     "checked": "2026-11-18T07:31:53+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8647,7 +8647,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-17T23:35:52+00:00",
+     "checked": "2026-11-18T07:31:56+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9098,7 +9098,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-17T23:36:21+00:00",
+     "checked": "2026-11-18T07:32:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9432,7 +9432,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-17T23:36:23+00:00",
+     "checked": "2026-11-18T07:32:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9738,6 +9738,13 @@
        "was": 139.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-18T07:32:27+00:00",
+       "price": 104.25,
+       "was": 139.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
@@ -9746,7 +9753,7 @@
      "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-17T23:36:23+00:00",
+     "checked": "2026-11-18T07:32:27+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9779,7 +9786,7 @@
     "pct_vs_typical": 25.0,
     "was": 139.0,
     "was_verified": true,
-    "days": 38,
+    "days": 39,
     "reasons": [
      "25% below its 90-day typical $139.00",
      "25% off a verified RRP of $139.00"
