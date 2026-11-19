@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T13:13:56+00:00",
+ "updated": "2026-11-19T23:06:06+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3475,6 +3475,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-19T23:05:01+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3483,7 +3494,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-19T13:12:48+00:00",
+     "checked": "2026-11-19T23:05:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3941,6 +3952,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-19T23:05:01+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3949,7 +3971,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-19T13:12:49+00:00",
+     "checked": "2026-11-19T23:05:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4422,7 +4444,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-19T13:12:52+00:00",
+     "checked": "2026-11-19T23:05:06+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4870,7 +4892,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-19T13:12:56+00:00",
+     "checked": "2026-11-19T23:05:09+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -5365,8 +5387,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:12:57+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:11+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5833,8 +5855,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:12:58+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:15+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6290,8 +6312,8 @@
      "price": 300.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:02+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:16+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6775,8 +6797,8 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:07+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:18+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7232,8 +7254,8 @@
      "price": 360.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:12+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:22+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7689,8 +7711,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:14+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:25+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8146,8 +8168,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:17+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:28+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8615,8 +8637,8 @@
      "price": 380.0,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:21+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:05:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8778,7 +8800,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-19T13:13:26+00:00",
+     "checked": "2026-11-19T23:05:34+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9240,7 +9262,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-19T13:13:54+00:00",
+     "checked": "2026-11-19T23:06:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9580,8 +9602,8 @@
      "price": 143.99,
      "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:55+00:00",
+     "method": "json-ld",
+     "checked": "2026-11-19T23:06:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9901,15 +9923,22 @@
        "was": 139.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-19T23:06:04+00:00",
+       "price": 104.25,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
      "title": "Desk Mat Pro Slim",
      "price": 104.25,
-     "was": 139.0,
+     "was": null,
      "in_stock": true,
-     "method": "shopify",
-     "checked": "2026-11-19T13:13:56+00:00",
+     "method": "microdata",
+     "checked": "2026-11-19T23:06:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9940,12 +9969,11 @@
     "url": "https://www.orbitkey.com.au/products/desk-mat-slim",
     "typical": 139.0,
     "pct_vs_typical": 25.0,
-    "was": 139.0,
-    "was_verified": true,
+    "was": null,
+    "was_verified": false,
     "days": 40,
     "reasons": [
-     "25% below its 90-day typical $139.00",
-     "25% off a verified RRP of $139.00"
+     "25% below its 90-day typical $139.00"
     ]
    }
   },
