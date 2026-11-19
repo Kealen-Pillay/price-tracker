@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T17:18:42+00:00",
+ "updated": "2026-11-19T01:54:48+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3483,7 +3483,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T17:17:21+00:00",
+     "checked": "2026-11-19T01:53:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3949,7 +3949,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T17:17:22+00:00",
+     "checked": "2026-11-19T01:53:46+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4404,6 +4404,16 @@
        "sizes_in": [
         "UK 9"
        ]
+      },
+      {
+       "t": "2026-11-19T01:53:51+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -4412,7 +4422,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T17:17:27+00:00",
+     "checked": "2026-11-19T01:53:51+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4835,6 +4845,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-19T01:53:53+00:00",
+       "price": 279.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "identity": {
@@ -4849,7 +4870,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-18T17:17:29+00:00",
+     "checked": "2026-11-19T01:53:53+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -4885,18 +4906,18 @@
     "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html"
    ],
    "deal": {
-    "label": "good",
+    "label": "typical",
     "price": 279.99,
     "retailer": "Platypus",
     "shop": null,
     "url": "https://www.platypusshoes.co.nz/adrian-tassel-loafer-14573601-red.html",
-    "typical": 309.99,
-    "pct_vs_typical": 9.677731539727088,
+    "typical": 299.99,
+    "pct_vs_typical": 6.666888896296543,
     "was": 399.99,
     "was_verified": true,
-    "days": 40,
+    "days": 41,
     "reasons": [
-     "10% below its 90-day typical $309.99",
+     "7% below its 90-day typical $299.99",
      "30% off a verified RRP of $399.99",
      "$40.00 cheaper than the next store"
     ]
@@ -5326,6 +5347,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:53:54+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -5334,7 +5366,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:30+00:00",
+     "checked": "2026-11-19T01:53:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5783,6 +5815,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:53:54+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -5791,7 +5834,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:31+00:00",
+     "checked": "2026-11-19T01:53:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6229,6 +6272,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:53:59+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -6237,7 +6291,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:35+00:00",
+     "checked": "2026-11-19T01:53:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6285,7 +6339,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 40,
+    "days": 41,
     "reasons": [
      "0% below its 90-day typical $300.00",
      "same price as another store"
@@ -6703,6 +6757,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:54:01+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -6711,7 +6776,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:38+00:00",
+     "checked": "2026-11-19T01:54:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7149,6 +7214,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:54:03+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -7157,7 +7233,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:40+00:00",
+     "checked": "2026-11-19T01:54:03+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7595,6 +7671,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:54:06+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -7603,7 +7690,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:44+00:00",
+     "checked": "2026-11-19T01:54:06+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8041,6 +8128,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:54:10+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -8049,7 +8147,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:48+00:00",
+     "checked": "2026-11-19T01:54:10+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8499,6 +8597,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-19T01:54:12+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -8507,7 +8616,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:17:52+00:00",
+     "checked": "2026-11-19T01:54:12+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8557,7 +8666,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 40,
+    "days": 41,
     "reasons": [
      "0% below its 90-day typical $360.00",
      "same price as another store"
@@ -8669,7 +8778,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-18T17:17:56+00:00",
+     "checked": "2026-11-19T01:54:16+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9112,6 +9221,17 @@
         "US 10",
         "US 11"
        ]
+      },
+      {
+       "t": "2026-11-19T01:54:45+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "US 10",
+        "US 11"
+       ]
       }
      ],
      "retailer": "JD Sports",
@@ -9120,7 +9240,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-18T17:18:39+00:00",
+     "checked": "2026-11-19T01:54:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9173,7 +9293,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 38,
+    "days": 39,
     "reasons": [
      "0% below its 90-day typical $360.00"
     ]
@@ -9446,6 +9566,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-19T01:54:47+00:00",
+       "price": 143.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -9454,7 +9581,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:18:41+00:00",
+     "checked": "2026-11-19T01:54:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9487,7 +9614,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 38,
+    "days": 39,
     "reasons": [
      "0% below its 90-day typical $143.99"
     ]
@@ -9775,7 +9902,7 @@
      "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-18T17:18:41+00:00",
+     "checked": "2026-11-19T01:54:47+00:00",
      "error": null,
      "identity": {
       "ids": {
