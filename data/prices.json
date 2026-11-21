@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T12:42:38+00:00",
+ "updated": "2026-11-21T21:41:48+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3505,7 +3505,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-21T12:41:27+00:00",
+     "checked": "2026-11-21T21:40:43+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3993,7 +3993,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-21T12:41:28+00:00",
+     "checked": "2026-11-21T21:40:44+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4486,7 +4486,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-21T12:41:32+00:00",
+     "checked": "2026-11-21T21:40:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4956,7 +4956,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-21T12:41:37+00:00",
+     "checked": "2026-11-21T21:40:49+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -5474,7 +5474,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:38+00:00",
+     "checked": "2026-11-21T21:40:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5964,7 +5964,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:38+00:00",
+     "checked": "2026-11-21T21:40:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6443,7 +6443,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:42+00:00",
+     "checked": "2026-11-21T21:40:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6950,7 +6950,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:47+00:00",
+     "checked": "2026-11-21T21:40:56+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7429,7 +7429,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:49+00:00",
+     "checked": "2026-11-21T21:40:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7908,7 +7908,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:53+00:00",
+     "checked": "2026-11-21T21:41:02+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8387,7 +8387,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:56+00:00",
+     "checked": "2026-11-21T21:41:07+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8878,7 +8878,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:41:59+00:00",
+     "checked": "2026-11-21T21:41:10+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9040,7 +9040,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-21T12:42:03+00:00",
+     "checked": "2026-11-21T21:41:13+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9524,7 +9524,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-21T12:42:35+00:00",
+     "checked": "2026-11-21T21:41:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9879,7 +9879,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:42:37+00:00",
+     "checked": "2026-11-21T21:41:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -10228,7 +10228,7 @@
      "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-21T12:42:37+00:00",
+     "checked": "2026-11-21T21:41:47+00:00",
      "error": null,
      "identity": {
       "ids": {
