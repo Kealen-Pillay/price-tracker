@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T17:00:24+00:00",
+ "updated": "2026-11-21T01:33:39+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3486,6 +3486,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-21T01:32:30+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3494,7 +3505,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-20T16:59:15+00:00",
+     "checked": "2026-11-21T01:32:30+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -3963,6 +3974,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-21T01:32:32+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3971,7 +3993,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-20T16:59:16+00:00",
+     "checked": "2026-11-21T01:32:32+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4454,7 +4476,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-20T16:59:20+00:00",
+     "checked": "2026-11-21T01:32:33+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4913,7 +4935,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-20T16:59:25+00:00",
+     "checked": "2026-11-21T01:32:36+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -4958,7 +4980,7 @@
     "pct_vs_typical": 6.666888896296543,
     "was": 399.99,
     "was_verified": true,
-    "days": 42,
+    "days": 43,
     "reasons": [
      "7% below its 90-day typical $299.99",
      "30% off a verified RRP of $399.99",
@@ -5420,7 +5442,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:27+00:00",
+     "checked": "2026-11-21T01:32:37+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5899,7 +5921,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:27+00:00",
+     "checked": "2026-11-21T01:32:37+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6367,7 +6389,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:30+00:00",
+     "checked": "2026-11-21T01:32:41+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6863,7 +6885,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:34+00:00",
+     "checked": "2026-11-21T01:32:45+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7331,7 +7353,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:38+00:00",
+     "checked": "2026-11-21T01:32:49+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7799,7 +7821,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:40+00:00",
+     "checked": "2026-11-21T01:32:51+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8267,7 +8289,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:45+00:00",
+     "checked": "2026-11-21T01:32:54+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8747,7 +8769,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T16:59:47+00:00",
+     "checked": "2026-11-21T01:32:57+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8909,7 +8931,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-20T16:59:50+00:00",
+     "checked": "2026-11-21T01:33:00+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9382,7 +9404,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-20T17:00:21+00:00",
+     "checked": "2026-11-21T01:33:36+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9730,7 +9752,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T17:00:22+00:00",
+     "checked": "2026-11-21T01:33:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -10072,7 +10094,7 @@
      "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-20T17:00:23+00:00",
+     "checked": "2026-11-21T01:33:38+00:00",
      "error": null,
      "identity": {
       "ids": {
