@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T06:53:53+00:00",
+ "updated": "2026-11-22T16:19:43+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3516,7 +3516,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-22T06:52:44+00:00",
+     "checked": "2026-11-22T16:18:38+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4015,7 +4015,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-22T06:52:46+00:00",
+     "checked": "2026-11-22T16:18:39+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4500,6 +4500,16 @@
        "sizes_in": [
         "UK 9"
        ]
+      },
+      {
+       "t": "2026-11-22T16:18:43+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -4508,7 +4518,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-22T06:52:49+00:00",
+     "checked": "2026-11-22T16:18:43+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4964,6 +4974,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-22T16:18:46+00:00",
+       "price": 279.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "identity": {
@@ -4978,7 +4999,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-22T06:52:53+00:00",
+     "checked": "2026-11-22T16:18:46+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -5488,6 +5509,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-22T16:18:47+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -5496,7 +5528,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:52:54+00:00",
+     "checked": "2026-11-22T16:18:47+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5978,6 +6010,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-22T16:18:48+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -5986,7 +6029,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:52:54+00:00",
+     "checked": "2026-11-22T16:18:48+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6457,6 +6500,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-22T16:18:50+00:00",
+       "price": 300.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -6465,7 +6519,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:52:58+00:00",
+     "checked": "2026-11-22T16:18:50+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6513,7 +6567,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 43,
+    "days": 44,
     "reasons": [
      "0% below its 90-day typical $300.00",
      "same price as another store"
@@ -6982,7 +7036,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:53:01+00:00",
+     "checked": "2026-11-22T16:18:52+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7452,6 +7506,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-22T16:18:55+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -7460,7 +7525,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:53:03+00:00",
+     "checked": "2026-11-22T16:18:55+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7931,6 +7996,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-22T16:18:57+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -7939,7 +8015,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:53:07+00:00",
+     "checked": "2026-11-22T16:18:57+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8410,6 +8486,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-22T16:19:01+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -8418,7 +8505,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:53:12+00:00",
+     "checked": "2026-11-22T16:19:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8901,6 +8988,17 @@
         "EU 43",
         "EU 44"
        ]
+      },
+      {
+       "t": "2026-11-22T16:19:04+00:00",
+       "price": 380.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -8909,7 +9007,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:53:15+00:00",
+     "checked": "2026-11-22T16:19:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9071,7 +9169,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-22T06:53:19+00:00",
+     "checked": "2026-11-22T16:19:08+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9547,6 +9645,17 @@
         "US 10",
         "US 11"
        ]
+      },
+      {
+       "t": "2026-11-22T16:19:40+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "US 10",
+        "US 11"
+       ]
       }
      ],
      "retailer": "JD Sports",
@@ -9555,7 +9664,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-22T06:53:51+00:00",
+     "checked": "2026-11-22T16:19:40+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9608,7 +9717,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 41,
+    "days": 42,
     "reasons": [
      "0% below its 90-day typical $360.00"
     ]
@@ -9902,6 +10011,13 @@
        "was": null,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-22T16:19:42+00:00",
+       "price": 143.99,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "JB Hi-Fi",
@@ -9910,7 +10026,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:53:52+00:00",
+     "checked": "2026-11-22T16:19:42+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9943,7 +10059,7 @@
     "pct_vs_typical": 0.0,
     "was": null,
     "was_verified": false,
-    "days": 41,
+    "days": 42,
     "reasons": [
      "0% below its 90-day typical $143.99"
     ]
@@ -10251,6 +10367,13 @@
        "was": 139.0,
        "in_stock": true,
        "cur": "NZD"
+      },
+      {
+       "t": "2026-11-22T16:19:43+00:00",
+       "price": 104.25,
+       "was": 139.0,
+       "in_stock": true,
+       "cur": "NZD"
       }
      ],
      "retailer": "Orbitkey",
@@ -10259,7 +10382,7 @@
      "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-22T06:53:53+00:00",
+     "checked": "2026-11-22T16:19:43+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -10292,7 +10415,7 @@
     "pct_vs_typical": 25.0,
     "was": 139.0,
     "was_verified": true,
-    "days": 42,
+    "days": 43,
     "reasons": [
      "25% below its 90-day typical $139.00",
      "25% off a verified RRP of $139.00"
