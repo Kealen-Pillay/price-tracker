@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T02:56:06+00:00",
+ "updated": "2026-11-24T14:56:02+00:00",
  "items": {
   "dior-sauvage-edp-100ml": {
    "offers": {
@@ -3519,6 +3519,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-24T14:54:59+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -3527,7 +3538,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-24T02:54:57+00:00",
+     "checked": "2026-11-24T14:54:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4029,6 +4040,17 @@
         "UK 9",
         "UK 10"
        ]
+      },
+      {
+       "t": "2026-11-24T14:55:00+00:00",
+       "price": 319.99,
+       "was": 399.99,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "UK 9",
+        "UK 10"
+       ]
       }
      ],
      "retailer": "Dr Martens NZ",
@@ -4037,7 +4059,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-24T02:54:58+00:00",
+     "checked": "2026-11-24T14:55:00+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -4550,7 +4572,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-24T02:55:01+00:00",
+     "checked": "2026-11-24T14:55:04+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -5042,7 +5064,7 @@
      "was": 399.99,
      "in_stock": true,
      "method": "magento",
-     "checked": "2026-11-24T02:55:04+00:00",
+     "checked": "2026-11-24T14:55:06+00:00",
      "error": null,
      "sizes_in": [
       "UK 9",
@@ -5582,7 +5604,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:05+00:00",
+     "checked": "2026-11-24T14:55:08+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6094,7 +6116,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:05+00:00",
+     "checked": "2026-11-24T14:55:08+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -6595,7 +6617,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:10+00:00",
+     "checked": "2026-11-24T14:55:10+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7114,6 +7136,17 @@
        "sizes_in": [
         "EU 43"
        ]
+      },
+      {
+       "t": "2026-11-24T14:55:14+00:00",
+       "price": 360.0,
+       "was": null,
+       "in_stock": true,
+       "cur": "NZD",
+       "sizes_in": [
+        "EU 43",
+        "EU 44"
+       ]
       }
      ],
      "retailer": "Birkenstock NZ",
@@ -7122,7 +7155,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:13+00:00",
+     "checked": "2026-11-24T14:55:14+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -7133,7 +7166,8 @@
      },
      "identity_note": "product id changed (shopify:8326831997226 → productGroupID:8326831997226): was “Boston”, now “Boston”",
      "sizes_in": [
-      "EU 43"
+      "EU 43",
+      "EU 44"
      ],
      "my_sizes": [
       {
@@ -7142,7 +7176,7 @@
       },
       {
        "label": "EU 44",
-       "in_stock": false
+       "in_stock": true
       }
      ],
      "size_status": "ok",
@@ -7622,7 +7656,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:18+00:00",
+     "checked": "2026-11-24T14:55:17+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8123,7 +8157,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:23+00:00",
+     "checked": "2026-11-24T14:55:20+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -8624,7 +8658,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:26+00:00",
+     "checked": "2026-11-24T14:55:23+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9137,7 +9171,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:55:29+00:00",
+     "checked": "2026-11-24T14:55:26+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -9299,7 +9333,7 @@
      "was": 340.0,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-24T02:55:33+00:00",
+     "checked": "2026-11-24T14:55:28+00:00",
      "error": "No price found on page (http status None). The site may block bots or need a price_selector in retailers.yaml",
      "identity": {
       "ids": {
@@ -9805,7 +9839,7 @@
      "was": null,
      "in_stock": true,
      "method": "json-ld",
-     "checked": "2026-11-24T02:56:04+00:00",
+     "checked": "2026-11-24T14:55:59+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -10174,7 +10208,7 @@
      "was": null,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:56:06+00:00",
+     "checked": "2026-11-24T14:56:01+00:00",
      "error": null,
      "identity": {
       "ids": {
@@ -10537,7 +10571,7 @@
      "was": 139.0,
      "in_stock": true,
      "method": "shopify",
-     "checked": "2026-11-24T02:56:06+00:00",
+     "checked": "2026-11-24T14:56:01+00:00",
      "error": null,
      "identity": {
       "ids": {
